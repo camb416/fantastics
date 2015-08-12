@@ -1,8 +1,28 @@
 [![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
 
-_s
+Fantastics Wordpress Theme
 ===
 
+**Dependencies:**
+wp-better-attachments in particular is very useful for seeing attached image that are not explicitly embedded in the post body:
+
+```
+$> wp plugin install wp-better-attachments
+$> wp plugin activate wp-better-attachments
+```
+```
++-----------------------+----------+-----------+-----------+
+| name                  | status   | update    | version   |
++-----------------------+----------+-----------+-----------+
+| adaptive-images       | inactive | none      | 0.6.0     |
+| akismet               | inactive | available | 3.1.1     |
+| fantasticsimport      | active   | none      | 0.1-alpha |
+| hello                 | inactive | none      | 1.6       |
+| wp-better-attachments | active   | none      | 1.3.11    |
++-----------------------+----------+-----------+-----------+
+```
+
+**Underscores info:**
 Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
 
 My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here:
