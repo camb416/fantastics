@@ -1,0 +1,109 @@
+body.single-fmag_story{
+
+  // layout
+  text-align:center;
+
+  // masthead
+  div.site-branding{
+    p.site-title{
+      a{
+        display:inline-block;
+        text-indent:-9999999px;
+        width:240px;
+        height:48px;
+        background:url(images/masthead.png);
+        background-repeat: no-repeat;
+        background-size: 240px 48px;
+      }
+    }
+  }
+  img{
+   // width:100px;
+
+  }
+
+  nav#site-navigation{
+    display:inline-block;
+  }
+
+  .hidden{
+    display:none;
+  }
+
+  .bigspreads{
+    display:block;
+    overflow:hidden;
+    margin:0;
+    padding:0;
+    li{
+      max-width:100%;
+      img{
+        width:50%;
+      }
+
+    }
+  }
+  .tinyspreads{
+    display:inline-block;
+    margin:0;
+    padding:0px;
+    max-width:850px;
+    li{
+      width:136px;
+      height:90px;
+      float:left;
+      list-style: none;
+      margin: 15px;
+      border: 4px solid white;
+      &.active{
+        border:4px solid black;
+      }
+      &:hover{
+        border:4px solid grey;
+        &.active{
+          border:4px solid black;
+        }
+      }
+      img{
+        width:64px;
+        height:82px;
+        margin:0;
+        padding:0;
+        float:left;
+      }
+    }
+  }
+  h1.entry-title{
+    text-transform:uppercase;
+    letter-spacing:0.5em;
+    margin: 0 0 0 0;
+  }
+  span.posted-on{
+    a{
+      text-decoration:none;
+      color:#000;
+      text-transform:uppercase;
+      letter-spacing:0.2em;
+      font-size:80%;
+    }
+  }
+
+  // layout
+  div#bottomcols{
+    max-width:100%;
+    div#leftcol{
+      width:850px;
+      float:left;
+      display:inline-block;
+    }
+
+    div#rightcol{
+      width:850px;
+      float:left;
+    }
+  }
+
+
+
+
+}
