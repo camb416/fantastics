@@ -39,6 +39,7 @@ body.single-fmag_story{
       max-width:100%;
       img{
         width:50%;
+        max-width:850px;
       }
 
     }
@@ -49,12 +50,12 @@ body.single-fmag_story{
     padding:0px;
     max-width:850px;
     li{
-      width:136px;
-      height:90px;
+      width:204px;
+      height:132px;
       float:left;
       list-style: none;
-      margin: 15px;
-      border: 4px solid white;
+
+      border: 4px solid $bgcolor;
       &.active{
         border:4px solid black;
       }
@@ -65,8 +66,8 @@ body.single-fmag_story{
         }
       }
       img{
-        width:64px;
-        height:82px;
+        width:98px;
+        height:124px;
         margin:0;
         padding:0;
         float:left;
@@ -90,11 +91,14 @@ body.single-fmag_story{
 
   // layout
   div#bottomcols{
-    max-width:100%;
+    width:100%;
+    max-width:1700px;
+    margin: 0 auto;
     div#leftcol{
       width:850px;
       float:left;
       display:inline-block;
+      text-align:left;
     }
 
     div#rightcol{
