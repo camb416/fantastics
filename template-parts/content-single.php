@@ -25,7 +25,8 @@
 			'post_type' => 'attachment',
 			'posts_per_page' => -1,
 			'post_parent' => $post->ID,
-			'exclude'     => get_post_thumbnail_id()
+			'exclude'     => get_post_thumbnail_id(),
+            'orderby'     => 'menu_order',
 		) );
 
                         ?>
@@ -37,7 +38,7 @@
 		if ( $attachments ) {
                     $numPages = count($attachments);
 			for ( $i = 0; $i < $numPages ; $i++) {
-                $attachment = $attachments[($numPages-1)-$i];
+                $attachment = $attachments[$i];
                 $class = "post-attachment mime-" . sanitize_title( $attachment->post_mime_type );
                 if($i>=2){
                     $class .= " hidden";
@@ -65,11 +66,46 @@
         </div>
             <div id="rightcol">
         <ul class="tinyspreads">
+
+            <?php
+            /*
+            if ( have_posts() ) : while ( have_posts() ) : the_post();
+
+                $args = array(
+                    'post_type' => 'attachment',
+                    'numberposts' => -1,
+                    'post_status' => null,
+                    'post_parent' => $post->ID,
+                    'orderby' => 'menu_order'
+                );
+
+                $original = get_posts( $args );
+                if ( $original ) {
+                    $attachments = array_reverse($original);
+                    foreach ( $attachments as $attachment ) {
+                        echo '<li><p>';
+                        echo wp_get_attachment_image( $attachment->ID, array(746,500) );
+                        echo '</p></li>';
+                    }
+                }
+
+            endwhile; endif;
+
+            */
+            ?>
+
+
+
+
+
             <?php
             if ( $attachments ) {
+
+
+
                 $numPages = count($attachments);
                 for ( $i = 0; $i < $numPages ; $i++) {
-                    $attachment = $attachments[($numPages-1)-$i];
+                    $attachment = $attachments[$i];
                     $class = "post-attachment mime-" . sanitize_title( $attachment->post_mime_type );
                     if($i<2){
                         $class .= " active";
