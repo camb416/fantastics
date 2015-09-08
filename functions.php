@@ -114,16 +114,35 @@ add_action( 'widgets_init', 'fantastics_widgets_init' );
  * Enqueue scripts and styles.
  */
 function fantastics_scripts() {
-	wp_enqueue_style( 'fantastics-style', get_stylesheet_uri() );
+    wp_enqueue_style( 'fantastics-fonts', 'https://fonts.googleapis.com/css?family=News+Cycle:400,700');
+
+    wp_enqueue_style( 'fantastics-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'fantastics-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'fantastics-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
+
+    if ( is_singular()){
+        wp_enqueue_script( 'fantastics-single', get_template_directory_uri() . '/js/single-fmag_story.js', array('jquery'), '20130115', true );
+
+    }
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
-	}
+    }
 }
+
+add_filter( 'pre_get_posts', 'fantastics_get_posts' );
+
+function fantastics_get_posts( $query ) {
+
+    if ( is_home() && $query->is_main_query() )
+        $query->set( 'post_type', array( 'fmag_story' ) );
+
+    return $query;
+}
+
 add_action( 'wp_enqueue_scripts', 'fantastics_scripts' );
 
 /**
