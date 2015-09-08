@@ -834,4 +834,48 @@ body.single-fmag_story {
               top: 0px;
               left: 0px; }
 
+body.home div.even header {
+  float: left;
+  width: 480px; }
+body.home div.odd header {
+  float: right;
+  width: 480px; }
+body.home article {
+  width: 1280px;
+  margin: 0 auto; }
+  body.home article header h2 {
+    display: inline; }
+    body.home article header h2 a {
+      color: #000;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 300%; }
+      body.home article header h2 a:hover {
+        background: #000;
+        color: #fff; }
+  body.home article header p {
+    margin: 20px; }
+    body.home article header p a {
+      color: #000;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 80%;
+      letter-spacing: 0.05em;
+      padding: 2px 7px; }
+      body.home article header p a:hover {
+        background: #000;
+        color: #fff; }
+  body.home article p {
+    clear: both; }
+  body.home article ul.medspread {
+    display: inline;
+    float: left;
+    width: 700px;
+    overflow: hidden; }
+    body.home article ul.medspread li {
+      list-style: none; }
+      body.home article ul.medspread li img {
+        width: 50%; }
+
 /*# sourceMappingURL=style.css.map */

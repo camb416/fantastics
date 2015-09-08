@@ -25,9 +25,20 @@ get_header(); ?>
 				</header>
 			<?php endif; ?>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php /* Start the Loop */
+            $i = 0;
 
+            ?>
+
+			<?php while ( have_posts() ) : the_post(); ?>
+            <?php
+            if($i%2===0){
+                $orderClass = "even";
+            } else {
+                $orderClass = "odd";
+            }
+            ?>
+<div class="fmag_story wrapper <?= $orderClass ?>">
 				<?php
 
 					/*
@@ -35,9 +46,19 @@ get_header(); ?>
 					 * If you want to override this in a child theme, then include a file
 					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 					 */
-					get_template_part( 'template-parts/content', get_post_format() );
-				?>
+                if("fmag_story" === get_post_type()){
 
+                   get_template_part( 'template-parts/content', get_post_type() );
+                   //$myvar = locate_template('content.php');
+                    //echo $myvar;
+                   //include(locate_template('template-parts/content-fmag_story'));
+                } else {
+                    get_template_part( 'template-parts/content', get_post_format() );
+                }
+
+               $i++;
+				?>
+</div>
 			<?php endwhile; ?>
 
 			<?php the_posts_navigation(); ?>
