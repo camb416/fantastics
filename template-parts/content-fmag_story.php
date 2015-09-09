@@ -31,19 +31,46 @@
 			<?php fantastics_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
+
+        <ul class="minispreads">
+            <?php
+
+            $attachments = get_posts( array(
+                'post_type' => 'attachment',
+                'posts_per_page' => -1,
+                'post_parent' => $post->ID,
+                'exclude'     => get_post_thumbnail_id(),
+                'orderby'     => 'menu_order',
+            ) );
+
+            if ( $attachments ) {
+                $numPages = count($attachments);
+                for ( $i = 2; $i < $numPages && $i<8 ; $i++) {
+                    $attachment = $attachments[$i];
+                    $class = "post-attachment mime-" . sanitize_title( $attachment->post_mime_type );
+                    if($i>=2){
+                        $class .= " hidden";
+                    }
+                    $thumbimg = wp_get_attachment_image( $attachment->ID, 'thumbnail-size', true );
+                    if(0 === $i%2) echo '<li class="' . $class . ' data-design-thumbnail">';
+                    echo '<a href="'.esc_url( get_permalink() ).'">'.$thumbimg.'</a>';
+                    if(0 !== $i%2) echo '</li>';
+                }
+
+            }
+
+            ?>
+        </ul>
+
+
+
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php
 
 
-        $attachments = get_posts( array(
-            'post_type' => 'attachment',
-            'posts_per_page' => -1,
-            'post_parent' => $post->ID,
-            'exclude'     => get_post_thumbnail_id(),
-            'orderby'     => 'menu_order',
-        ) );
+
 
         ?>
 
@@ -61,7 +88,7 @@
                     }
                     $thumbimg = wp_get_attachment_image( $attachment->ID, 'thumbnail-size', true );
                     if(0 === $i%2) echo '<li class="' . $class . ' data-design-thumbnail">';
-                    echo $thumbimg;
+                    echo '<a href="'.esc_url( get_permalink() ).'">'.$thumbimg.'</a>';
                     if(0 !== $i%2) echo '</li>';
                 }
 

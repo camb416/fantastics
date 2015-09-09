@@ -2,75 +2,95 @@ body.home{
 
 
   div.even{
-header{
-  float:left;
-  width:480px;
-}
+    header{
+      float:left;
+      width:480px;
+    }
   }
 
   div.odd{
 
-  header{
-    float:right;
-    width:480px;
-}
+    header{
+      float:right;
+      width:480px;
+    }
   }
 
 
-article{
-  width:1280px;
-  margin:0 auto;
- 
-header{
+  article{
+    width:1280px;
+    margin:0 auto;
 
-  h2{
-    display:inline;
-    a{
-      color:#000;
-      text-decoration:none;
-      text-transform:uppercase;
-      letter-spacing:0.1em;
-      font-size:300%;
-      &:hover{
-        background:#000;
-        color:#fff;
+    header{
+
+      h2{
+        display:inline;
+        a{
+          color:#000;
+          text-decoration:none;
+          text-transform:uppercase;
+          letter-spacing:0.1em;
+          font-size:300%;
+          &:hover{
+            background:#000;
+            color:#fff;
+          }
+        }
+      }
+      p {
+
+        margin:20px;
+
+        a{
+          color:#000;
+          text-decoration:none;
+          text-transform:uppercase;
+          font-size:80%;
+          letter-spacing:0.05em;
+          padding:2px 7px;
+          &:hover{
+            background:#000;
+            color:#fff;
+          }
+        }
+      }
+
+      ul.minispreads{
+        display:inline;
+        float:left;
+        width:480px;
+        margin:0;
+        padding:0;
+
+        overflow:hidden;
+        li{
+          width:120px;
+          list-style: none;
+          float:left;
+          margin:10px;
+          img{
+            width:50%;
+          }
+        }
+      }
+
+    }
+    p{
+      clear:both;
+    }
+
+    ul.medspread{
+      display:inline;
+      float:left;
+      width:700px;
+      overflow:hidden;
+      li{
+        list-style: none;
+        img{
+          width:50%;
+        }
       }
     }
   }
-  p {
-
-    margin:20px;
-
-    a{
-      color:#000;
-      text-decoration:none;
-      text-transform:uppercase;
-      font-size:80%;
-      letter-spacing:0.05em;
-      padding:2px 7px;
-      &:hover{
-        background:#000;
-        color:#fff;
-      }
-    }
-  }
-}
-  p{
-    clear:both;
-  }
-
-ul.medspread{
-display:inline;
-  float:left;
-  width:700px;
-  overflow:hidden;
-  li{
-    list-style: none;
-  img{
-    width:50%;
-  }
-  }
-}
-}
 
 }

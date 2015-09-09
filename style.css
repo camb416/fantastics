@@ -866,6 +866,20 @@ body.home article {
       body.home article header p a:hover {
         background: #000;
         color: #fff; }
+  body.home article header ul.minispreads {
+    display: inline;
+    float: left;
+    width: 480px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; }
+    body.home article header ul.minispreads li {
+      width: 120px;
+      list-style: none;
+      float: left;
+      margin: 10px; }
+      body.home article header ul.minispreads li img {
+        width: 50%; }
   body.home article p {
     clear: both; }
   body.home article ul.medspread {
