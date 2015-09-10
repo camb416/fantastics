@@ -754,6 +754,19 @@ div.site-branding {
     background-repeat: no-repeat;
     background-size: 240px 48px; }
 
+a {
+  text-transform: uppercase;
+  font-size: 90%;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  padding: 10px 0; }
+  a:link, a:visited, a:active {
+    color: #000; }
+  a:hover {
+    color: #fff;
+    background: #000; }
+
 body.single-fmag_story {
   text-align: center; }
   body.single-fmag_story nav#site-navigation {
@@ -845,7 +858,14 @@ body.home div.odd header {
   width: 480px; }
 body.home article {
   width: 1280px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  border-bottom: 1px solid #aaa;
+  padding: 20px 0; }
+  body.home article a.morepages {
+    margin-left: 10px;
+    display: inline-block;
+    clear: both;
+    padding: 2px 7px; }
   body.home article header h2 {
     display: inline; }
     body.home article header h2 a {

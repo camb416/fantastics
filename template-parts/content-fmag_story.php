@@ -52,11 +52,13 @@
                         $class .= " hidden";
                     }
                     $thumbimg = wp_get_attachment_image( $attachment->ID, 'thumbnail-size', true );
-                    if(0 === $i%2) echo '<li class="' . $class . ' data-design-thumbnail">';
-                    echo '<a href="'.esc_url( get_permalink() ).'">'.$thumbimg.'</a>';
-                    if(0 !== $i%2) echo '</li>';
+                    if(0 === $i%2) echo '<li class="' . $class . ' data-design-thumbnail"><a href="'.esc_url( get_permalink() ).'">';
+                    echo ''.$thumbimg.'';
+                    if(0 !== $i%2) echo '</a></li>';
                 }
-
+                if($numPages>8){
+                    echo('<br /><a class="morepages" href="">' . ($numPages-8) .' more pages...</a>');
+                }
             }
 
             ?>
@@ -87,10 +89,11 @@
                         $class .= " hidden";
                     }
                     $thumbimg = wp_get_attachment_image( $attachment->ID, 'thumbnail-size', true );
-                    if(0 === $i%2) echo '<li class="' . $class . ' data-design-thumbnail">';
-                    echo '<a href="'.esc_url( get_permalink() ).'">'.$thumbimg.'</a>';
-                    if(0 !== $i%2) echo '</li>';
+                    if(0 === $i%2) echo '<li class="' . $class . ' data-design-thumbnail"><a href="'.esc_url( get_permalink() ).'">';
+                    echo ''.$thumbimg;
+                    if(0 !== $i%2) echo '</a></li>';
                 }
+
 
             }
 

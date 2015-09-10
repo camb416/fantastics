@@ -21,6 +21,16 @@ body.home{
     width:1280px;
     margin:0 auto;
 
+    border-bottom:1px solid #aaa;
+    padding:20px 0;
+
+
+    a.morepages{
+      margin-left:10px;
+      display:inline-block;
+      clear:both;
+      padding:2px 7px;
+    }
     header{
 
       h2{
@@ -37,6 +47,7 @@ body.home{
           }
         }
       }
+
       p {
 
         margin:20px;
