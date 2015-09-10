@@ -23,13 +23,15 @@ function posts_navigation() {
 		<h2 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'fantastics' ); ?></h2>
 		<div class="nav-links">
 
+
+            <?php if ( get_previous_posts_link() ) : ?>
+                <div class="nav-previous"><?php previous_posts_link( '<i class="fa fa fa-long-arrow-left"></i>More Stories That Way' ); ?></div>
+            <?php endif; ?>
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( '<i class="fa fa fa-long-arrow-left"></i> Older posts' ); ?></div>
+			<div class="nav-next"><?php next_posts_link( 'More Stories This Way<i class="fa fa fa-long-arrow-right"></i>' ); ?></div>
 			<?php endif; ?>
 
-			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( 'Newer posts <i class="fa fa fa-long-arrow-right"></i>' ); ?></div>
-			<?php endif; ?>
+
 
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
