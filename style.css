@@ -767,6 +767,9 @@ a {
     color: #fff;
     background: #000; }
 
+div#secondary aside form {
+  text-align: center; }
+
 body.single-fmag_story {
   text-align: center; }
   body.single-fmag_story nav#site-navigation {
@@ -864,6 +867,7 @@ body.home div.odd article {
   background-position-x: -700px; }
 body.home article {
   width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
   border-bottom: 1px solid #aaa;
   padding: 20px 0; }
@@ -915,6 +919,7 @@ body.home article {
     display: inline;
     float: left;
     width: 700px;
+    max-width: 100%;
     overflow: hidden;
     margin: 0 40px;
     padding: 0; }
@@ -923,9 +928,10 @@ body.home article {
       body.home article ul.medspread li img {
         width: 50%; }
 body.home .nav-links .nav-previous, body.home .nav-links .nav-next {
-  font-size: 300%; }
+  font-size: 200%; }
   body.home .nav-links .nav-previous a, body.home .nav-links .nav-next a {
-    padding: 0 30px;
-    display: block; }
+    padding: 0 10px;
+    display: inline-block;
+    margin: 0 10px; }
 
 /*# sourceMappingURL=style.css.map */

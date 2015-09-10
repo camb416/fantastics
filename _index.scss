@@ -31,6 +31,10 @@ body.home{
 
   article{
     width:1280px;
+
+    // mobile
+    max-width:100%;
+
     margin:0 auto;
 
     border-bottom:1px solid #aaa;
@@ -108,6 +112,12 @@ body.home{
       display:inline;
       float:left;
       width:700px;
+
+      // mobile
+      max-width:100%;
+
+
+
       overflow:hidden;
       margin:0 40px;
 
@@ -123,10 +133,12 @@ body.home{
 
   .nav-links{
     .nav-previous, .nav-next{
-      font-size:300%;
+      font-size:200%;
+
       a{
-        padding:0 30px;
-        display:block;
+        padding:0 10px;
+        display:inline-block;
+        margin:0 10px;
       }
     }
   }
