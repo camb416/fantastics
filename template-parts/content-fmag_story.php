@@ -54,16 +54,24 @@
                     $thumbimg = wp_get_attachment_image( $attachment->ID, 'thumbnail-size', true );
                     if(0 === $i%2) echo '<li class="' . $class . ' data-design-thumbnail"><a href="'.esc_url( get_permalink() ).'">';
                     echo ''.$thumbimg.'';
+
+                    echo fmag_img(wp_get_attachment_url($attachment->ID), 100);
+
+
                     if(0 !== $i%2) echo '</a></li>';
                 }
-                if($numPages>8){
-                    echo('<br /><a class="morepages" href="">' . ($numPages-8) .' more pages...</a>');
-                }
+
             }
 
             ?>
         </ul>
-
+        <?php
+        if($numPages>8){
+            echo('<br /><a class="morepages" href="'.esc_url( get_permalink() ).'">' . ($numPages-8) .' more pages...</a>');
+        } else {
+            echo('<br /><a class="morepages" href="'.esc_url( get_permalink() ).'">view story...</a>');
+        }
+        ?>
 
 
 	</header><!-- .entry-header -->
