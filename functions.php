@@ -208,7 +208,7 @@ function fmag_img($img, $w, $h=""){
 
     $prefix = "http://i0.wp.com/fantasticsapp.com";
     // lets check and make sure photon is on and we're not in debug
-    if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'photon' ) && !JETPACK_DEV_DEBUG ) { // check that we are, in fact, using Photon in the first place
+    if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'photon' ) && !defined('JETPACK_DEV_DEBUG') ) { // check that we are, in fact, using Photon in the first place
         return $prefix . $img . "?w=" . $w;
 
     } else {
