@@ -114,6 +114,9 @@ add_action( 'widgets_init', 'fantastics_widgets_init' );
  * Enqueue scripts and styles.
  */
 function fantastics_scripts() {
+
+    wp_enqueue_style('fantastics-icons', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
+
     wp_enqueue_style( 'fantastics-fonts', 'https://fonts.googleapis.com/css?family=News+Cycle:400,700');
 
     wp_enqueue_style( 'fantastics-style', get_stylesheet_uri() );
@@ -143,6 +146,36 @@ function fantastics_get_posts( $query ) {
     return $query;
 }
 
+// Add the Events Meta Boxes
+function add_story_metaboxes() {
+
+    add_meta_box('fmag_legacy_id', 'Legacy Drupal Node ID', 'fmag_legacy_id', 'fmag_story', 'side', 'default');
+
+}
+
+// The Event Location Metabox
+
+function fmag_legacy_id() {
+    global $post;
+
+    // Noncename needed to verify where the data originated
+    echo '<input type="hidden" name="eventmeta_noncename" id="eventmeta_noncename" value="' .
+        wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
+
+    // Get the location data if its already been entered
+    $legacyID = get_post_meta($post->ID, 'legacy_id', true);
+
+    // Echo out the field
+    echo '<input type="text" name="legacy_id" value="' . $legacyID  . '" class="widefat" readonly />';
+
+}
+
+
+add_action( 'add_meta_boxes', 'add_story_metaboxes' );
+
+
+
+
 add_action( 'wp_enqueue_scripts', 'fantastics_scripts' );
 
 /**
@@ -169,3 +202,5 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+

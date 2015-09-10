@@ -5,6 +5,12 @@ body.home{
     header{
       float:left;
       width:480px;
+     // border-left:6px solid #fff;
+     // padding-left:10px;
+    }
+    article{
+      background:url(/wp-content/themes/fantastics/images/left-to-right-01.svg);
+      background-size: length;
     }
   }
 
@@ -13,6 +19,12 @@ body.home{
     header{
       float:right;
       width:480px;
+     // border-left:6px solid #eee;
+     // padding-left:10px;
+    }
+    article{
+      background:url(/wp-content/themes/fantastics/images/right-to-left-01.svg);
+      background-position-x:-700px;
     }
   }
 
@@ -23,6 +35,8 @@ body.home{
 
     border-bottom:1px solid #aaa;
     padding:20px 0;
+
+
 
 
     a.morepages{
@@ -95,11 +109,24 @@ body.home{
       float:left;
       width:700px;
       overflow:hidden;
+      margin:0 40px;
+
+      padding:0;
       li{
         list-style: none;
         img{
           width:50%;
         }
+      }
+    }
+  }
+
+  .nav-links{
+    .nav-previous, .nav-next{
+      font-size:300%;
+      a{
+        padding:0 30px;
+        display:block;
       }
     }
   }

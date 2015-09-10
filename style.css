@@ -853,9 +853,15 @@ body.single-fmag_story {
 body.home div.even header {
   float: left;
   width: 480px; }
+body.home div.even article {
+  background: url(/wp-content/themes/fantastics/images/left-to-right-01.svg);
+  background-size: length; }
 body.home div.odd header {
   float: right;
   width: 480px; }
+body.home div.odd article {
+  background: url(/wp-content/themes/fantastics/images/right-to-left-01.svg);
+  background-position-x: -700px; }
 body.home article {
   width: 1280px;
   margin: 0 auto;
@@ -909,10 +915,17 @@ body.home article {
     display: inline;
     float: left;
     width: 700px;
-    overflow: hidden; }
+    overflow: hidden;
+    margin: 0 40px;
+    padding: 0; }
     body.home article ul.medspread li {
       list-style: none; }
       body.home article ul.medspread li img {
         width: 50%; }
+body.home .nav-links .nav-previous, body.home .nav-links .nav-next {
+  font-size: 300%; }
+  body.home .nav-links .nav-previous a, body.home .nav-links .nav-next a {
+    padding: 0 30px;
+    display: block; }
 
 /*# sourceMappingURL=style.css.map */

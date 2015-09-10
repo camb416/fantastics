@@ -7,13 +7,13 @@
  * @package fantastics
  */
 
-if ( ! function_exists( 'the_posts_navigation' ) ) :
+if ( ! function_exists( 'posts_navigation' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.
  *
  * @todo Remove this function when WordPress 4.3 is released.
  */
-function the_posts_navigation() {
+function posts_navigation() {
 	// Don't print empty markup if there's only one page.
 	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
 		return;
@@ -24,11 +24,11 @@ function the_posts_navigation() {
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( esc_html__( 'Older posts', 'fantastics' ) ); ?></div>
+			<div class="nav-previous"><?php next_posts_link( '<i class="fa fa-arrow-circle-left"></i>Older posts' ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( esc_html__( 'Newer posts', 'fantastics' ) ); ?></div>
+			<div class="nav-next"><?php previous_posts_link( 'Newer posts<i class="fa fa-arrow-circle-right"></i>' ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->
