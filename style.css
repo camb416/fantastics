@@ -743,9 +743,9 @@ body {
   font-family: 'News Cycle', sans-serif;
   background: #f5f5f5; }
 
-body.single-fmag_story {
+div.site-branding {
   text-align: center; }
-  body.single-fmag_story div.site-branding p.site-title a {
+  div.site-branding p.site-title a, div.site-branding h1.site-title a {
     display: inline-block;
     text-indent: -9999999px;
     width: 240px;
@@ -753,6 +753,9 @@ body.single-fmag_story {
     background: url(images/masthead.png);
     background-repeat: no-repeat;
     background-size: 240px 48px; }
+
+body.single-fmag_story {
+  text-align: center; }
   body.single-fmag_story nav#site-navigation {
     display: inline-block; }
   body.single-fmag_story .hidden {
