@@ -55,7 +55,8 @@
                     if(0 === $i%2) echo '<li class="' . $class . ' data-design-thumbnail"><a href="'.esc_url( get_permalink() ).'">';
                     echo ''.$thumbimg.'';
 
-                    echo fmag_img(wp_get_attachment_url($attachment->ID), 100);
+                    // for testing. remove before prod
+                    //echo fmag_img(wp_get_attachment_url($attachment->ID), 100);
 
 
                     if(0 !== $i%2) echo '</a></li>';

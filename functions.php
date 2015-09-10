@@ -204,6 +204,7 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 
+// TODO: actually make this work...
 function fmag_img($img, $w, $h=""){
 
     $prefix = "http://i0.wp.com/fantasticsapp.com";
