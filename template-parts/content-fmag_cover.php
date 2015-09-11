@@ -47,5 +47,7 @@
 
 
 	</header><!-- .entry-header -->
-
+    <footer class="entry-footer">
+        <?php fantastics_entry_footer(); ?>
+    </footer><!-- .entry-footer -->
 </article><!-- #post-## -->
