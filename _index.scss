@@ -1,6 +1,84 @@
 body.home{
 
 
+
+
+
+  header#masthead{
+   /* position:fixed;
+    top:-150px;
+    left:0;
+    width:100%;
+    background:#fff;
+  */
+&.original{
+
+}
+    &.cloned{
+      transition-property: opacity;
+      transition-duration: 2s;
+
+      opacity:0;
+
+      display:none;
+      position:relative;
+      background:#fff;
+      h1.site-title{
+        float:left;
+        display:inline-block;
+        margin-bottom:5px;
+        a{
+          width: 180px;
+          height: 36px;
+          background: url(images/masthead.png);
+          background-repeat: no-repeat;
+          background-size: 180px 36px;
+        }
+      }
+      p.site-description{
+        display:none;
+      }
+      nav#site-navigation{
+        float:left;
+        display:inline-block;
+        width:auto;
+        clear:none;
+        top:35px;
+        margin-left:10px;
+        position:relative;
+        ul{
+
+          overflow:hidden;
+          display:inline-block;
+          li{
+            display:block !important;
+            margin-right:20px;
+
+          }
+        }
+      }
+
+    }
+
+  }
+
+
+  div#bigcover{
+    text-align:center;
+    background:url(/wp-content/themes/fantastics/images/bowtie.svg);
+    width:100%;
+    background-repeat: repeat-x;
+    background-size: length;
+    article{
+      border:0;
+      header{
+        margin:0;
+        padding:0;
+
+      }
+    }
+  }
+
   div.even{
     header{
       float:left;

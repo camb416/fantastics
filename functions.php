@@ -125,6 +125,8 @@ function fantastics_scripts() {
 
 	wp_enqueue_script( 'fantastics-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
+    wp_enqueue_script( 'fantastics-index', get_template_directory_uri() . '/js/fmag-index.js', array('jquery'), '20120206', true);
+
 
     if ( is_singular()){
         wp_enqueue_script( 'fantastics-single', get_template_directory_uri() . '/js/single-fmag_story.js', array('jquery'), '20130115', true );

@@ -12,10 +12,36 @@
  * @package fantastics
  */
 
-get_header(); ?>
+ ?>
+<?php
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+// are we on page one?
+
+if(1 == $paged && is_front_page()): ?>
+<div id="bigcover">
+<?php
+
+$mainQuery = $wp_query;
+
+// Get the last 10 posts in the special_cat category.
+ query_posts( 'post_type=fmag_cover&posts_per_page=1' ); ?>
+
+<?php while ( have_posts() ) : the_post(); ?>
+    <!-- Do special_cat stuff... -->
+   <?php  get_template_part( 'template-parts/content', get_post_type() ); ?>
+<?php endwhile; ?>
+
+<?php
+$wp_query = $mainQuery;
+?>
+</div>
+<?php endif; ?>
+
+<?php get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+
 
 		<?php if ( have_posts() ) : ?>
 
