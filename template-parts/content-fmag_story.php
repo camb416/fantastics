@@ -68,9 +68,9 @@
         </ul>
         <?php
         if($numPages>8){
-            echo('<br /><a class="morepages" href="'.esc_url( get_permalink() ).'">' . ($numPages-8) .' more pages...</a>');
+            echo('<a class="morepages" href="'.esc_url( get_permalink() ).'">' . ($numPages-8) .' more pages...</a>');
         } else {
-            echo('<br /><a class="morepages" href="'.esc_url( get_permalink() ).'">view story...</a>');
+            echo('<a class="morepages" href="'.esc_url( get_permalink() ).'">view story...</a>');
         }
         ?>
 
