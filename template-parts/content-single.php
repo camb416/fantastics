@@ -11,10 +11,10 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php //the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 		<div class="entry-meta">
-			<?php fantastics_posted_on(); ?>
+			<?php //fantastics_posted_on(); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
@@ -55,8 +55,44 @@
             </ul>
 
         <div id="bottomcols">
+            <?php
+                the_title( '<h2 class="entry-title">', '</h2>' );
+                //fantastics_posted_on();
+            ?>
+
             <div id="leftcol">
-                <?php  the_content(); ?>
+                <?php
+                $credits = get_post_meta($id, 'fmag_credits_block', true);
+                the_content('',FALSE,'');
+
+                //wp_get_post_terms()
+
+                ?>
+                <?php
+
+                if( $credits){
+                    echo '<h2>Credits</h2>';
+                    echo $credits;
+                }
+                ?>
+
+                <?php
+
+                $fashionTerms = get_the_term_list( $post->ID, 'fashion', '<ul class="styles"><li>', '</li><li>', '</li></ul>' );
+                if(!is_wp_error($fashionTerms)){
+                    echo '<h2>Fashions By</h2>';
+                    echo $fashionTerms;
+                }
+                $creditTerms = get_the_term_list( $post->ID, 'term', '<ul class="styles"><li>', '</li><li>', '</li></ul>' );
+                if(!is_wp_error($creditTerms)){
+                    echo '<h2>File Under</h2>';
+                    echo $creditTerms;
+
+                }
+
+
+                ?>
+
                 <?php
                 wp_link_pages( array(
                     'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'fantastics' ),

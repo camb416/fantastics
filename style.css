@@ -774,6 +774,16 @@ div#secondary aside form {
 
 body.single-fmag_story {
   text-align: center; }
+  body.single-fmag_story div.site-branding {
+    text-align: center; }
+    body.single-fmag_story div.site-branding p.site-title a, body.single-fmag_story div.site-branding h1.site-title a {
+      display: inline-block;
+      text-indent: -9999999px;
+      width: 240px;
+      height: 48px;
+      background: url(images/masthead_white.png);
+      background-repeat: no-repeat;
+      background-size: 240px 48px; }
   body.single-fmag_story nav#site-navigation {
     display: inline-block; }
   body.single-fmag_story .hidden {
@@ -798,20 +808,52 @@ body.single-fmag_story {
     text-transform: uppercase;
     letter-spacing: 0.2em;
     font-size: 80%; }
+  body.single-fmag_story div.entry-content {
+    margin: 20px; }
   body.single-fmag_story div#bottomcols {
     width: 100%;
     max-width: 1720px;
     margin: 0 auto; }
+    body.single-fmag_story div#bottomcols h2 {
+      margin: 10px 0;
+      text-transform: uppercase;
+      font-weight: normal;
+      text-align: left;
+      font-size: 75%;
+      letter-spacing: 0.2em;
+      display: block;
+      border-bottom: 1px solid silver; }
     body.single-fmag_story div#bottomcols div#leftcol {
       width: 50%;
       max-width: 500px;
+      min-width: 360px;
       float: left;
       display: inline-block;
-      text-align: left;
-      margin-left: 10px; }
+      text-align: left; }
+      body.single-fmag_story div#bottomcols div#leftcol a {
+        font-size: 80%;
+        padding: 5px;
+        color: #666;
+        letter-spacing: 0.1em; }
+        body.single-fmag_story div#bottomcols div#leftcol a:hover {
+          color: #fff; }
+      body.single-fmag_story div#bottomcols div#leftcol p {
+        margin: 0;
+        padding: 0; }
+      body.single-fmag_story div#bottomcols div#leftcol ul {
+        list-style: none;
+        white-space: normal;
+        margin: 0;
+        padding: 0; }
+        body.single-fmag_story div#bottomcols div#leftcol ul li {
+          display: inline-block;
+          margin: 0 15px 0 0;
+          padding: 0; }
     body.single-fmag_story div#bottomcols div#rightcol {
       width: 1070px;
-      float: right; }
+      max-width: 50%;
+      float: right;
+      min-width: 540px; }
       body.single-fmag_story div#bottomcols div#rightcol .tinyspreads {
         display: inline-block;
         margin: 0;

@@ -1,7 +1,22 @@
 body.single-fmag_story{
 
 
+  // masthead
+  div.site-branding{
+    text-align:center;
+    p.site-title, h1.site-title{
 
+      a{
+        display:inline-block;
+        text-indent:-9999999px;
+        width:240px;
+        height:48px;
+        background:url(images/masthead_white.png);
+        background-repeat: no-repeat;
+        background-size: 240px 48px;
+      }
+    }
+  }
 
   // layout
   text-align:center;
@@ -50,23 +65,73 @@ body.single-fmag_story{
     }
   }
 
+  div.entry-content{
+    margin:20px;
+  }
   // layout
   div#bottomcols{
     width:100%;
     max-width:1720px;
     margin: 0 auto;
+
+    h2{
+      margin:10px 0;
+      text-transform:uppercase;
+      font-weight:normal;
+      text-align:left;
+      font-size:75%;
+      letter-spacing:0.2em;
+      display:block;
+      border-bottom:1px solid silver;
+      &.entry-title{
+
+      }
+    }
     div#leftcol{
       width:50%;
       max-width:500px;
+      min-width:360px;
       float:left;
       display:inline-block;
       text-align:left;
-      margin-left:10px;
+
+      a{
+        font-size:80%;
+        padding:5px;
+        color:#666;
+        letter-spacing:0.1em;
+
+        &:hover{
+          color:#fff;
+        }
+
+      }
+
+      p{
+          // assuming empty
+          margin:0;
+          padding:0;
+      }
+      ul{
+        list-style:none;
+        white-space:normal;
+        margin:0;
+        padding:0;
+        li{
+          display:inline-block;
+          margin:0 15px 0 0;
+          padding:0;
+
+        }
+      }
+
     }
 
     div#rightcol{
       width:1070px;
+      max-width:50%;
       float:right;
+      min-width:540px;
 
       .tinyspreads{
         display:inline-block;

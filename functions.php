@@ -296,3 +296,13 @@ if ( !function_exists('o99_add_thumbs_column_2_list') && function_exists('add_th
     add_filter( 'manage_pages_columns', 'o99_add_thumbs_column_2_list' );
     add_action( 'manage_pages_custom_column', 'o99_add_thumbs_2_column', 10, 2 );
 }
+
+function fantastics_filter_post_tag_term_links( $term_links ) {
+    $wrapped_term_links = array();
+    foreach ( $term_links as $term_link ) {
+        $wrapped_term_links[] = $var = preg_replace('/[ ](?=[^>]*(?:<|$))/', '&nbsp', $term_link);
+    }
+    return $wrapped_term_links;
+}
+add_filter( 'term_links-fashion', 'fantastics_filter_post_tag_term_links' );
+add_filter( 'term_links-term', 'fantastics_filter_post_tag_term_links' );

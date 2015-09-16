@@ -1,5 +1,7 @@
 (function($){
 
+if($('body').hasClass('home')){
+
 
 // Create a clone of the menu, right next to original.
 $('.site-header').addClass('original').clone().insertAfter('.site-header').addClass('cloned').css('position','fixed').css('top','0').css('margin-top','0').css('z-index','500').removeClass('original').hide();
@@ -33,4 +35,5 @@ $('.site-header').addClass('original').clone().insertAfter('.site-header').addCl
             $('.original').css('visibility','visible');
         }
     }
+}
 })(jQuery);
