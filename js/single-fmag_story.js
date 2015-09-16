@@ -16,12 +16,14 @@
         }
     }
 
+    // scroll to top
+    /*
     function scrollTop(){
             $("html, body").animate({
                 scrollTop: 0
             }, 600);
     }
-
+    */
     function reset(){
         $('.bigspreads li').eq(curSpread).addClass('hidden');
         $('.tinyspreads li').eq(curSpread).removeClass('active');
@@ -41,7 +43,7 @@
         $('.tinyspreads li').click(function(e){
             var whichClicked_int = $(this).prevAll().length;
             setSpread(whichClicked_int);
-            scrollTop();
+            //scrollTop();
         });
 
     });
