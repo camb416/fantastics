@@ -12,6 +12,7 @@ body.single-fmag_story{
         width:240px;
         height:48px;
         background:url(images/masthead_white.png);
+        opacity:0.8;
         background-repeat: no-repeat;
         background-size: 240px 48px;
       }
@@ -27,8 +28,9 @@ body.single-fmag_story{
 
   }
 
-  nav#site-navigation{
-    display:inline-block;
+  nav#site-navigation, p.site-description{
+
+    display:none;
   }
 
   .hidden{
@@ -40,8 +42,12 @@ body.single-fmag_story{
     overflow:hidden;
     margin:0;
     padding:0;
+    box-shadow:1px 3px 3px #888;
     li{
       max-width:100%;
+      line-height:0;
+      
+
       img{
         width:50%;
         max-width:850px;
@@ -94,7 +100,6 @@ body.single-fmag_story{
     div#leftcol{
       width:50%;
       max-width:500px;
-      min-width:360px;
       float:left;
       display:inline-block;
       text-align:left;
