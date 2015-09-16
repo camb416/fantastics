@@ -24,6 +24,14 @@
             }, 600);
     }
     */
+
+    function nextSpread(){
+        setSpread(curSpread+1);
+    }
+    function prevSpread(){
+        setSpread(curSpread-1);
+    }
+
     function reset(){
         $('.bigspreads li').eq(curSpread).addClass('hidden');
         $('.tinyspreads li').eq(curSpread).removeClass('active');
@@ -45,6 +53,14 @@
             setSpread(whichClicked_int);
             //scrollTop();
         });
+        $('.bigspreads li img').click(function(e){
+            var whichClicked_int = $(this).prevAll().length;
+            if(whichClicked_int === 0){
+                prevSpread();
+            } else {
+                nextSpread();
+            }
+        })
 
     });
 

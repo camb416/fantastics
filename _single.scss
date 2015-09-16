@@ -45,6 +45,10 @@ body.single-fmag_story{
       img{
         width:50%;
         max-width:850px;
+        cursor:e-resize;
+        &:first-of-type{
+          cursor:w-resize;
+        }
       }
 
     }
@@ -95,6 +99,7 @@ body.single-fmag_story{
       display:inline-block;
       text-align:left;
 
+
       a{
         font-size:80%;
         padding:5px;
@@ -128,15 +133,16 @@ body.single-fmag_story{
     }
 
     div#rightcol{
-      width:1070px;
-      max-width:50%;
+
+      width:50%;
       float:right;
-      min-width:540px;
+
 
       .tinyspreads{
         display:inline-block;
         margin:0;
         padding:0px;
+        width:100%;
 
         li{
           width:204px;
@@ -196,4 +202,13 @@ body.single-fmag_story{
     }
   }
 }
+@media (max-width : 900px) {
+  /* Styles */
+div#rightcol, div#leftcol{
+  width:100% !important;
+}
+  div#rightcol{
+    margin-top:20px;
+  }
 
+}
