@@ -27,6 +27,7 @@
 			'post_parent' => $post->ID,
 			'exclude'     => get_post_thumbnail_id(),
             'orderby'     => 'menu_order',
+            'order'       => 'ASC'
 		) );
 
                         ?>
