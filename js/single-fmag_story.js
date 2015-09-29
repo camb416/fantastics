@@ -40,12 +40,6 @@
         $('.bigspreads li').eq(curSpread).removeClass('hidden');
         $('.tinyspreads li').eq(curSpread).addClass('active');
     }
-    function lastPageClick(){
-        // handle click on last page
-    }
-    function firstPageClick(){
-        // handle click on first page
-    }
 
     $(document).ready(function(e){
 

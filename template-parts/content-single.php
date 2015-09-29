@@ -163,12 +163,43 @@
 
             ?>
 
+            <?php
 
-                <?php
-                $prev_post = get_previous_post();
-                $next_post = get_next_post();
+            $prev_post = get_previous_post();
+            $next_post = get_next_post();
 
-                if (!empty( $prev_post )): ?>
+            if (!empty( $next_post )): ?>
+
+                <a class="nextstory" href="<?php echo get_permalink( $next_post->ID ); ?>">
+
+                    <?php
+
+                    $nextattachments = get_posts( array(
+                        'post_type' => 'attachment',
+                        'posts_per_page' => -1,
+                        'post_parent' => $next_post->ID,
+                        'exclude'     => get_post_thumbnail_id(),
+                        'orderby'     => 'menu_order',
+                        'order'       => 'ASC'
+                    ) );
+
+                    if(count($nextattachments)>1){
+                        for ( $i = 0; $i < 2 ; $i++) {
+                            $attachment = $nextattachments[$i];
+                            $class = "post-attachment mime-" . sanitize_title( $attachment->post_mime_type );
+                            $thumbimg = wp_get_attachment_image( $attachment->ID, 'thumbnail-size', true );
+                            if(0 === $i%2) echo '<li class="' . $class . ' data-design-thumbnail">';
+                            echo $thumbimg;
+                            if(0 !== $i%2) echo '</li>';
+                        }
+                    }
+
+                    ?></a>
+
+            <?php endif; ?>
+
+
+                <?php if (!empty( $prev_post )): ?>
 
                 <a class="prevstory" href="<?php echo get_permalink( $prev_post->ID ); ?>"><?php
 
@@ -196,35 +227,7 @@
 
                 <?php endif; ?>
 
-          <?php if (!empty( $next_post )): ?>
 
-            <a class="nextstory" href="<?php echo get_permalink( $next_post->ID ); ?>">
-
-                <?php
-
-                    $nextattachments = get_posts( array(
-                        'post_type' => 'attachment',
-                        'posts_per_page' => -1,
-                        'post_parent' => $next_post->ID,
-                        'exclude'     => get_post_thumbnail_id(),
-                        'orderby'     => 'menu_order',
-                        'order'       => 'ASC'
-                    ) );
-
-                    if(count($nextattachments)>1){
-                        for ( $i = 0; $i < 2 ; $i++) {
-                            $attachment = $nextattachments[$i];
-                            $class = "post-attachment mime-" . sanitize_title( $attachment->post_mime_type );
-                            $thumbimg = wp_get_attachment_image( $attachment->ID, 'thumbnail-size', true );
-                            if(0 === $i%2) echo '<li class="' . $class . ' data-design-thumbnail">';
-                            echo $thumbimg;
-                            if(0 !== $i%2) echo '</li>';
-                        }
-                    }
-
-              ?></a>
-
-          <?php endif; ?>
 
         </ul>
             </div>
