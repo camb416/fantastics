@@ -77,7 +77,7 @@
                 ?>
                 <?php
 
-                if( $credits){
+                if("" !== $credits){
                     echo '<h2>Credits</h2>';
                     echo $credits;
                 }
@@ -86,12 +86,12 @@
                 <?php
 
                 $fashionTerms = get_the_term_list( $post->ID, 'fashion', '<ul class="styles"><li>', '</li><li>', '</li></ul>' );
-                if(!is_wp_error($fashionTerms)){
+                if(!is_wp_error($fashionTerms) && false !== $fashionTerms){
                     echo '<h2>Fashions By</h2>';
                     echo $fashionTerms;
                 }
                 $creditTerms = get_the_term_list( $post->ID, 'term', '<ul class="styles"><li>', '</li><li>', '</li></ul>' );
-                if(!is_wp_error($creditTerms)){
+                if(!is_wp_error($creditTerms) && false !== $creditTerms){
                     echo '<h2>File Under</h2>';
                     echo $creditTerms;
 
