@@ -180,11 +180,9 @@ body.single-fmag_story{
 
 
               top:-72px !important;
-              left:98px !important;
+              left:50% !important;
               &:first-of-type{
-                top:-72px !important;
-                left:-98px !important;
-
+                left:-50% !important;
               }
             }
           }

@@ -886,10 +886,9 @@ body.single-fmag_story {
               width: 196px;
               height: 248px;
               top: -72px !important;
-              left: 98px !important; }
+              left: 50% !important; }
               body.single-fmag_story div#bottomcols div#rightcol .tinyspreads li:hover img:first-of-type {
-                top: -72px !important;
-                left: -98px !important; }
+                left: -50% !important; }
           body.single-fmag_story div#bottomcols div#rightcol .tinyspreads li img {
             -webkit-transition: .3s ease-in-out;
             -moz-transition: .3s ease-in-out;
