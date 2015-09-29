@@ -804,6 +804,12 @@ body.single-fmag_story {
         cursor: e-resize; }
         body.single-fmag_story .bigspreads li img:first-of-type {
           cursor: w-resize; }
+      body.single-fmag_story .bigspreads li.first img:first-of-type {
+        cursor: pointer; }
+      body.single-fmag_story .bigspreads li.last img {
+        cursor: pointer; }
+        body.single-fmag_story .bigspreads li.last img:first-of-type {
+          cursor: e-resize; }
   body.single-fmag_story h1.entry-title {
     text-transform: uppercase;
     letter-spacing: 0.5em;

@@ -54,9 +54,23 @@ body.single-fmag_story{
         cursor:e-resize;
         &:first-of-type{
           cursor:w-resize;
+
         }
       }
+&.first{
+  img:first-of-type{
+    cursor:pointer;
+  }
+}
+      &.last{
+        img{
+          cursor:pointer;
+          &:first-of-type{
+            cursor:e-resize;
+          }
+        }
 
+      }
     }
   }
 

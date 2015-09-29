@@ -43,7 +43,13 @@
                 $class = "post-attachment mime-" . sanitize_title( $attachment->post_mime_type );
                 if($i>=2){
                     $class .= " hidden";
+                } else if($i === 0){
+                    $class .= " first";
                 }
+                if($i === ($numPages-2)){
+                    $class .= " last";
+                }
+
 				$thumbimg = wp_get_attachment_image( $attachment->ID, 'thumbnail-size', true );
 				if(0 === $i%2) echo '<li class="' . $class . ' data-design-thumbnail">';
                 echo $thumbimg;
@@ -143,7 +149,7 @@
                 $numPages = count($attachments);
                 for ( $i = 0; $i < $numPages ; $i++) {
                     $attachment = $attachments[$i];
-                    $class = "post-attachment mime-" . sanitize_title( $attachment->post_mime_type );
+                    $class = "post-attachment mime-" . sanitize_title( $attachment->post_mime_type ) . " this_story ";
                     if($i<2){
                         $class .= " active";
                     }
@@ -164,7 +170,7 @@
 
                 if (!empty( $prev_post )): ?>
 
-                <a href="<?php echo get_permalink( $prev_post->ID ); ?>"><?php
+                <a class="prevstory" href="<?php echo get_permalink( $prev_post->ID ); ?>"><?php
 
                     $prevattachments = get_posts( array(
                         'post_type' => 'attachment',
@@ -192,7 +198,7 @@
 
           <?php if (!empty( $next_post )): ?>
 
-            <a href="<?php echo get_permalink( $next_post->ID ); ?>">
+            <a class="nextstory" href="<?php echo get_permalink( $next_post->ID ); ?>">
 
                 <?php
 
