@@ -825,7 +825,8 @@ body.single-fmag_story {
   body.single-fmag_story div#bottomcols {
     width: 100%;
     max-width: 1720px;
-    margin: 0 auto; }
+    margin: 20px auto 0  auto;
+    overflow: hidden; }
     body.single-fmag_story div#bottomcols h2 {
       margin: 10px 0;
       text-transform: uppercase;
@@ -849,7 +850,7 @@ body.single-fmag_story {
         body.single-fmag_story div#bottomcols div#leftcol a:hover {
           color: #fff; }
       body.single-fmag_story div#bottomcols div#leftcol p {
-        margin: 0;
+        margin: 0 0 0 10px;
         padding: 0; }
       body.single-fmag_story div#bottomcols div#leftcol ul {
         list-style: none;
@@ -860,6 +861,17 @@ body.single-fmag_story {
           display: inline-block;
           margin: 0 15px 0 0;
           padding: 0; }
+      body.single-fmag_story div#bottomcols div#leftcol div {
+        margin-top: 20px; }
+        body.single-fmag_story div#bottomcols div#leftcol div.credits p {
+          float: left;
+          font-weight: bold;
+          font-size: 80%;
+          letter-spacing: 0.1em;
+          margin: 0 10px 20px 10px; }
+          body.single-fmag_story div#bottomcols div#leftcol div.credits p a {
+            font-size: 100%;
+            margin-left: -5px; }
     body.single-fmag_story div#bottomcols div#rightcol {
       width: 50%;
       float: right; }

@@ -78,23 +78,21 @@
                 <?php
 
                 if("" !== $credits){
-                    echo '<h2>Credits</h2>';
-                    echo $credits;
+                    echo '<div class="credits"><h2>Credits</h2>' . $credits . '</div>';
                 }
+
                 ?>
 
                 <?php
 
                 $fashionTerms = get_the_term_list( $post->ID, 'fashion', '<ul class="styles"><li>', '</li><li>', '</li></ul>' );
                 if(!is_wp_error($fashionTerms) && false !== $fashionTerms){
-                    echo '<h2>Fashions By</h2>';
-                    echo $fashionTerms;
+                    echo '<div class="fashions"><h2>Fashions By</h2>' . $fashionTerms . '</div>';
                 }
+
                 $creditTerms = get_the_term_list( $post->ID, 'term', '<ul class="styles"><li>', '</li><li>', '</li></ul>' );
                 if(!is_wp_error($creditTerms) && false !== $creditTerms){
-                    echo '<h2>File Under</h2>';
-                    echo $creditTerms;
-
+                    echo '<div class="tags"><h2>File Under</h2>' . $creditTerms . '</div>';
                 }
 
 
