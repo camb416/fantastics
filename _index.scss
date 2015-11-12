@@ -314,3 +314,17 @@ nav#site-navigation{
   }
 
 }
+footer{
+  text-align:center;
+  a.footerlogo{
+
+      width: 180px;
+      height: 36px;
+      background: url(images/masthead_white.png);
+      background-repeat: no-repeat;
+      background-size: 180px 36px;
+      display:inline-block;
+    text-indent:-1000%;
+    margin-bottom:30px;
+  }
+}

@@ -1091,6 +1091,18 @@ body.home .nav-links .nav-previous, body.home .nav-links .nav-next, body.archive
     display: inline-block;
     margin: 0 10px; }
 
+footer {
+  text-align: center; }
+  footer a.footerlogo {
+    width: 180px;
+    height: 36px;
+    background: url(images/masthead_white.png);
+    background-repeat: no-repeat;
+    background-size: 180px 36px;
+    display: inline-block;
+    text-indent: -1000%;
+    margin-bottom: 30px; }
+
 body.archive h1.page-title, body.search h1.page-title {
   text-transform: uppercase;
   letter-spacing: 0.07em;
@@ -1098,5 +1110,91 @@ body.archive h1.page-title, body.search h1.page-title {
   background: #000; }
 body.archive div.fmag_story, body.search div.fmag_story {
   background: none !important; }
+
+div.intermission-outer {
+  background: url(images/bowtie.svg);
+  background-position-y: -757px;
+  background-repeat: no-repeat; }
+  div.intermission-outer div.intermission {
+    margin: 30px auto;
+    width: 1280px;
+    border-bottom: 1px solid silver;
+    clear: both;
+    height: 550px; }
+
+aside.widget_latest_focuscover {
+  width: 330px;
+  float: left; }
+  aside.widget_latest_focuscover ul {
+    margin: 0;
+    padding: 0; }
+    aside.widget_latest_focuscover ul li {
+      list-style: none;
+      margin: 5px; }
+  aside.widget_latest_focuscover h2.widget-title {
+    margin: 0;
+    padding: 0;
+    background: url(http://fantasticsmag.com/sites/all/themes/fmag2014/images/focus-flash-bold.png);
+    background-color: #fff;
+    background-position: 5px 5px;
+    text-indent: -3000px;
+    background-repeat: no-repeat;
+    font-size: 2em;
+    padding: 5px;
+    overflow: hidden;
+    text-transform: lowercase;
+    letter-spacing: 0em;
+    text-align: left;
+    font-weight: 400;
+    color: #bbb; }
+
+aside.Tumblr {
+  margin-left: 20px;
+  float: left;
+  width: 71%;
+  float: left; }
+  aside.Tumblr ul {
+    max-height: 445px;
+    overflow: scroll;
+    margin: 0;
+    padding: 0; }
+    aside.Tumblr ul li {
+      overflow: hidden;
+      text-align: left;
+      list-style: none;
+      float: left;
+      display: table;
+      margin: 0 5px; }
+      aside.Tumblr ul li img {
+        max-height: 400px; }
+      aside.Tumblr ul li p {
+        font-weight: bold;
+        font-size: 80%;
+        margin-top: 0;
+        display: table-caption;
+        caption-side: bottom; }
+        aside.Tumblr ul li p a.tumblr_link {
+          display: none; }
+  aside.Tumblr h2.widget-title {
+    margin: 0;
+    padding: 0;
+    background: url(http://fantasticsmag.com/sites/all/themes/fmag2014/images/focus-flash-bold.png);
+    background-color: #fff;
+    background-position: 5px -77px;
+    text-indent: -3000px;
+    background-repeat: no-repeat;
+    font-size: 2em;
+    padding: 5px;
+    overflow: hidden;
+    text-transform: lowercase;
+    letter-spacing: 0em;
+    text-align: left;
+    font-weight: 400;
+    color: #bbb; }
+
+aside.widget_search {
+  border-top: 1px solid silver;
+  padding-top: 20px;
+  clear: both; }
 
 /*# sourceMappingURL=style.css.map */

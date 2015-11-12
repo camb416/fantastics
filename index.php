@@ -23,13 +23,81 @@ if(1 == $paged && is_front_page()): ?>
 
 $mainQuery = $wp_query;
 
+
+
+
+
+/*
 // Get the last 10 posts in the special_cat category.
  query_posts( 'post_type=fmag_cover&posts_per_page=1' ); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
     <!-- Do special_cat stuff... -->
    <?php  get_template_part( 'template-parts/content', get_post_type() ); ?>
-<?php endwhile; ?>
+<?php endwhile;
+*/
+?>
+<?php
+    $r = new WP_Query(
+    array( 'posts_per_page' => 1,
+    'no_found_rows' => true,
+    'post_status' => 'publish',
+    'ignore_sticky_posts' => true,
+    'post_type' => 'fmag_cover',
+    'tax_query' => array(
+    array(
+    'taxonomy' => 'term',
+    'field' => 'slug',
+    'terms' => array('focus'),
+        'operator' => 'NOT IN'
+
+    )
+    ) ) );
+
+    if ($r->have_posts()) : ?>
+
+
+
+        <?php while ( $r->have_posts() ) : $r->the_post(); ?>
+
+                <?php
+                // working methods here:
+                // the_permalink()
+                // esc_attr( get_the_title() ? get_the_title() : get_the_ID() );
+                // <?php if ( get_the_title() ) the_title(); else the_ID();
+                // get_the_date();
+
+                // echo get_the_title();
+
+                $args = array(
+                    'post_type' => 'attachment',
+                    'numberposts' => 1,
+                    'post_status' => null,
+                    'post_parent' => get_the_ID()
+                );
+
+                $attachments = get_posts( $args );
+                if ( $attachments ) {
+                    foreach ( $attachments as $attachment ) {
+                        //echo '<li>';
+                        echo wp_get_attachment_image( $attachment->ID, array(850) );
+                        //echo '<p>';
+                        echo apply_filters( 'the_title', $attachment->post_title );
+                        //echo '</p></li>';
+                    }
+                }
+                ?>
+
+        <?php endwhile; ?>
+
+
+
+
+
+
+        <?php endif; ?>
+
+
 
 <?php
 $wp_query = $mainQuery;
@@ -63,15 +131,31 @@ $wp_query = $mainQuery;
             } else {
                 $orderClass = "odd";
             }
+
+
+                if($i === 2 && 1 == $paged && is_front_page()){
+                    echo '<div class="intermission-outer"><div class="intermission">';
+                    if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Intermission')){
+                        // do nothing if not there
+                        //echo "default stuff";
+                    }
+                    echo '</div></div>';
+                }
+
             ?>
 <div class="fmag_story wrapper <?= $orderClass ?>">
-				<?php
 
-					/*
-					 * Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
+
+    <?php
+
+
+
+
+              /*
+           * Include the Post-Format-specific template for the content.
+           * If you want to override this in a child theme, then include a file
+           * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+           */
                 if("fmag_story" === get_post_type()){
 
                    get_template_part( 'template-parts/content', get_post_type() );

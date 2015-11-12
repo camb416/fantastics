@@ -19,6 +19,8 @@
 			<span class="sep"> | </span>
 			<?php // printf( esc_html__( 'Theme: %1$s by %2$s.', 'fantastics' ), 'fantastics', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
 		</div><!-- .site-info -->
+
+            <a class="footerlogo" href="http://localhost/wp/" rel="home">Fantastics</a>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

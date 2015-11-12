@@ -306,3 +306,5 @@ function fantastics_filter_post_tag_term_links( $term_links ) {
 }
 add_filter( 'term_links-fashion', 'fantastics_filter_post_tag_term_links' );
 add_filter( 'term_links-term', 'fantastics_filter_post_tag_term_links' );
+
+require_once('inc/widgets.php'); // widgets
