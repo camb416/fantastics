@@ -80,7 +80,7 @@ $mainQuery = $wp_query;
                 if ( $attachments ) {
                     foreach ( $attachments as $attachment ) {
                         //echo '<li>';
-                        echo wp_get_attachment_image( $attachment->ID, array(850) );
+                        echo wp_get_attachment_image( $attachment->ID, 'full' );
                         //echo '<p>';
                         echo apply_filters( 'the_title', $attachment->post_title );
                         //echo '</p></li>';
