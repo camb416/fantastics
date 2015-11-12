@@ -143,7 +143,7 @@ $wp_query = $mainQuery;
                 }
 
             ?>
-<div class="fmag_story wrapper <?= $orderClass ?>">
+
 
 
     <?php
@@ -156,9 +156,11 @@ $wp_query = $mainQuery;
            * If you want to override this in a child theme, then include a file
            * called content-___.php (where ___ is the Post Format name) and that will be used instead.
            */
-                if("fmag_story" === get_post_type()){
-
+                if("fmag_story" === get_post_type()){ ?>
+            <div class="fmag_story wrapper <?= $orderClass ?>">
+                <?php
                    get_template_part( 'template-parts/content', get_post_type() );
+                echo "</div>";
                    //$myvar = locate_template('content.php');
                     //echo $myvar;
                    //include(locate_template('template-parts/content-fmag_story'));
@@ -168,7 +170,7 @@ $wp_query = $mainQuery;
 
                $i++;
 				?>
-</div>
+
 			<?php endwhile; ?>
 
 			<?php posts_navigation(); ?>

@@ -929,38 +929,58 @@ body.single-fmag_story {
 
   div#rightcol {
     margin-top: 20px; } }
-body.home header#masthead.original h1, body.archive header#masthead.original h1, body.search header#masthead.original h1 {
+body.home header#masthead.original h1,
+body.archive header#masthead.original h1,
+body.search header#masthead.original h1 {
   margin: 0; }
-body.home header#masthead.original p.site-description, body.archive header#masthead.original p.site-description, body.search header#masthead.original p.site-description {
+body.home header#masthead.original p.site-description,
+body.archive header#masthead.original p.site-description,
+body.search header#masthead.original p.site-description {
   margin: 0px; }
-body.home header#masthead.original nav#site-navigation, body.archive header#masthead.original nav#site-navigation, body.search header#masthead.original nav#site-navigation {
+body.home header#masthead.original nav#site-navigation,
+body.archive header#masthead.original nav#site-navigation,
+body.search header#masthead.original nav#site-navigation {
   margin: 10px 0 25px 0; }
-  body.home header#masthead.original nav#site-navigation ul, body.archive header#masthead.original nav#site-navigation ul, body.search header#masthead.original nav#site-navigation ul {
+  body.home header#masthead.original nav#site-navigation ul,
+  body.archive header#masthead.original nav#site-navigation ul,
+  body.search header#masthead.original nav#site-navigation ul {
     text-align: center; }
-    body.home header#masthead.original nav#site-navigation ul li, body.archive header#masthead.original nav#site-navigation ul li, body.search header#masthead.original nav#site-navigation ul li {
+    body.home header#masthead.original nav#site-navigation ul li,
+    body.archive header#masthead.original nav#site-navigation ul li,
+    body.search header#masthead.original nav#site-navigation ul li {
       display: inline-block;
       float: none;
       margin-right: 10px; }
-body.home header#masthead.cloned, body.archive header#masthead.cloned, body.search header#masthead.cloned {
+body.home header#masthead.cloned,
+body.archive header#masthead.cloned,
+body.search header#masthead.cloned {
   transition-property: opacity;
   transition-duration: 2s;
   opacity: 0;
   display: none;
   position: relative;
   background: #fff; }
-  body.home header#masthead.cloned h1.site-title, body.archive header#masthead.cloned h1.site-title, body.search header#masthead.cloned h1.site-title {
+  body.home header#masthead.cloned h1.site-title,
+  body.archive header#masthead.cloned h1.site-title,
+  body.search header#masthead.cloned h1.site-title {
     float: left;
     display: inline-block;
     margin-bottom: 5px; }
-    body.home header#masthead.cloned h1.site-title a, body.archive header#masthead.cloned h1.site-title a, body.search header#masthead.cloned h1.site-title a {
+    body.home header#masthead.cloned h1.site-title a,
+    body.archive header#masthead.cloned h1.site-title a,
+    body.search header#masthead.cloned h1.site-title a {
       width: 180px;
       height: 36px;
       background: url(images/masthead.png);
       background-repeat: no-repeat;
       background-size: 180px 36px; }
-  body.home header#masthead.cloned p.site-description, body.archive header#masthead.cloned p.site-description, body.search header#masthead.cloned p.site-description {
+  body.home header#masthead.cloned p.site-description,
+  body.archive header#masthead.cloned p.site-description,
+  body.search header#masthead.cloned p.site-description {
     display: none; }
-  body.home header#masthead.cloned nav#site-navigation, body.archive header#masthead.cloned nav#site-navigation, body.search header#masthead.cloned nav#site-navigation {
+  body.home header#masthead.cloned nav#site-navigation,
+  body.archive header#masthead.cloned nav#site-navigation,
+  body.search header#masthead.cloned nav#site-navigation {
     float: left;
     display: inline-block;
     width: auto;
@@ -968,40 +988,72 @@ body.home header#masthead.cloned, body.archive header#masthead.cloned, body.sear
     top: 35px;
     margin-left: 10px;
     position: relative; }
-    body.home header#masthead.cloned nav#site-navigation ul, body.archive header#masthead.cloned nav#site-navigation ul, body.search header#masthead.cloned nav#site-navigation ul {
+    body.home header#masthead.cloned nav#site-navigation ul,
+    body.archive header#masthead.cloned nav#site-navigation ul,
+    body.search header#masthead.cloned nav#site-navigation ul {
       overflow: hidden;
       display: inline-block; }
-      body.home header#masthead.cloned nav#site-navigation ul li, body.archive header#masthead.cloned nav#site-navigation ul li, body.search header#masthead.cloned nav#site-navigation ul li {
+      body.home header#masthead.cloned nav#site-navigation ul li,
+      body.archive header#masthead.cloned nav#site-navigation ul li,
+      body.search header#masthead.cloned nav#site-navigation ul li {
         display: block !important;
         margin-right: 20px; }
-body.home div#bigcover, body.archive div#bigcover, body.search div#bigcover {
+body.home div#bigcover,
+body.archive div#bigcover,
+body.search div#bigcover {
   text-align: center;
   background: url(images/bowtie.svg);
   width: 100%;
   background-repeat: repeat-x;
   background-size: length; }
-  body.home div#bigcover article, body.archive div#bigcover article, body.search div#bigcover article {
+  body.home div#bigcover article,
+  body.archive div#bigcover article,
+  body.search div#bigcover article {
     border: 0; }
-    body.home div#bigcover article header, body.archive div#bigcover article header, body.search div#bigcover article header {
+    body.home div#bigcover article header,
+    body.archive div#bigcover article header,
+    body.search div#bigcover article header {
       margin: 0;
       padding: 0; }
 @media screen and (min-width: 1200px) {
-  body.home main div.odd header p, body.home main div.odd header ul.minispreads, body.home main div.odd header > a, body.archive main div.odd header p, body.archive main div.odd header ul.minispreads, body.archive main div.odd header > a, body.search main div.odd header p, body.search main div.odd header ul.minispreads, body.search main div.odd header > a {
+  body.home main div.odd header p, body.home main div.odd header ul.minispreads, body.home main div.odd header > a,
+  body.archive main div.odd header p,
+  body.archive main div.odd header ul.minispreads,
+  body.archive main div.odd header > a,
+  body.search main div.odd header p,
+  body.search main div.odd header ul.minispreads,
+  body.search main div.odd header > a {
     border-left: 4px solid #eee; } }
-body.home main div.fmag_story, body.archive main div.fmag_story, body.search main div.fmag_story {
+body.home main div.fmag_story,
+body.archive main div.fmag_story,
+body.search main div.fmag_story {
   background: url(images/right-to-left-01.svg);
   background-position-x: -700px; }
-  body.home main div.fmag_story.even, body.archive main div.fmag_story.even, body.search main div.fmag_story.even {
+  body.home main div.fmag_story.even,
+  body.archive main div.fmag_story.even,
+  body.search main div.fmag_story.even {
     background: url(images/left-to-right-01.svg);
     background-size: length; }
-    body.home main div.fmag_story.even header p, body.home main div.fmag_story.even ul.minispreads, body.home main div.fmag_story.even > a, body.archive main div.fmag_story.even header p, body.archive main div.fmag_story.even ul.minispreads, body.archive main div.fmag_story.even > a, body.search main div.fmag_story.even header p, body.search main div.fmag_story.even ul.minispreads, body.search main div.fmag_story.even > a {
+    body.home main div.fmag_story.even header p, body.home main div.fmag_story.even ul.minispreads, body.home main div.fmag_story.even > a,
+    body.archive main div.fmag_story.even header p,
+    body.archive main div.fmag_story.even ul.minispreads,
+    body.archive main div.fmag_story.even > a,
+    body.search main div.fmag_story.even header p,
+    body.search main div.fmag_story.even ul.minispreads,
+    body.search main div.fmag_story.even > a {
       border-left: 4px solid #fff; }
     @media screen and (min-width: 1200px) {
-      body.home main div.fmag_story.even article .entry-content, body.archive main div.fmag_story.even article .entry-content, body.search main div.fmag_story.even article .entry-content {
+      body.home main div.fmag_story.even article .entry-content,
+      body.archive main div.fmag_story.even article .entry-content,
+      body.search main div.fmag_story.even article .entry-content {
         float: right; }
-      body.home main div.fmag_story.even article .entry-header, body.archive main div.fmag_story.even article .entry-header, body.search main div.fmag_story.even article .entry-header {
+      body.home main div.fmag_story.even article .entry-header,
+      body.archive main div.fmag_story.even article .entry-header,
+      body.search main div.fmag_story.even article .entry-header {
         float: right; } }
-  body.home main div.fmag_story article, body.archive main div.fmag_story article, body.search main div.fmag_story article {
+  body.home main div.fmag_story article,
+  body.archive main div.fmag_story article,
+  body.search main div.fmag_story article {
     overflow: hidden;
     width: 1280px;
     clear: both;
@@ -1010,65 +1062,99 @@ body.home main div.fmag_story, body.archive main div.fmag_story, body.search mai
     border-bottom: 1px solid #aaa;
     padding: 20px 0; }
     @media screen and (min-width: 1200px) {
-      body.home main div.fmag_story article .entry-content, body.archive main div.fmag_story article .entry-content, body.search main div.fmag_story article .entry-content {
+      body.home main div.fmag_story article .entry-content,
+      body.archive main div.fmag_story article .entry-content,
+      body.search main div.fmag_story article .entry-content {
         width: 780px;
         float: left; } }
-    body.home main div.fmag_story article .entry-header, body.archive main div.fmag_story article .entry-header, body.search main div.fmag_story article .entry-header {
+    body.home main div.fmag_story article .entry-header,
+    body.archive main div.fmag_story article .entry-header,
+    body.search main div.fmag_story article .entry-header {
       width: 425px;
       margin: 0 auto; }
       @media screen and (min-width: 1200px) {
-        body.home main div.fmag_story article .entry-header, body.archive main div.fmag_story article .entry-header, body.search main div.fmag_story article .entry-header {
+        body.home main div.fmag_story article .entry-header,
+        body.archive main div.fmag_story article .entry-header,
+        body.search main div.fmag_story article .entry-header {
           padding-top: 100px;
           float: left; } }
-      body.home main div.fmag_story article .entry-header h2, body.archive main div.fmag_story article .entry-header h2, body.search main div.fmag_story article .entry-header h2 {
+      body.home main div.fmag_story article .entry-header h2,
+      body.archive main div.fmag_story article .entry-header h2,
+      body.search main div.fmag_story article .entry-header h2 {
         display: inline; }
-        body.home main div.fmag_story article .entry-header h2 a, body.archive main div.fmag_story article .entry-header h2 a, body.search main div.fmag_story article .entry-header h2 a {
+        body.home main div.fmag_story article .entry-header h2 a,
+        body.archive main div.fmag_story article .entry-header h2 a,
+        body.search main div.fmag_story article .entry-header h2 a {
           color: #000;
           text-decoration: none;
           text-transform: uppercase;
           letter-spacing: 0.1em;
           font-size: 80%; }
-          body.home main div.fmag_story article .entry-header h2 a:hover, body.archive main div.fmag_story article .entry-header h2 a:hover, body.search main div.fmag_story article .entry-header h2 a:hover {
+          body.home main div.fmag_story article .entry-header h2 a:hover,
+          body.archive main div.fmag_story article .entry-header h2 a:hover,
+          body.search main div.fmag_story article .entry-header h2 a:hover {
             background: #000;
             color: #fff; }
-      body.home main div.fmag_story article .entry-header p, body.archive main div.fmag_story article .entry-header p, body.search main div.fmag_story article .entry-header p {
+      body.home main div.fmag_story article .entry-header p,
+      body.archive main div.fmag_story article .entry-header p,
+      body.search main div.fmag_story article .entry-header p {
         margin: 0;
         padding: 0px 20px 10px 20px; }
-        body.home main div.fmag_story article .entry-header p:first-of-type, body.archive main div.fmag_story article .entry-header p:first-of-type, body.search main div.fmag_story article .entry-header p:first-of-type {
+        body.home main div.fmag_story article .entry-header p:first-of-type,
+        body.archive main div.fmag_story article .entry-header p:first-of-type,
+        body.search main div.fmag_story article .entry-header p:first-of-type {
           margin: 10px 0 0 0; }
-        body.home main div.fmag_story article .entry-header p > a, body.archive main div.fmag_story article .entry-header p > a, body.search main div.fmag_story article .entry-header p > a {
+        body.home main div.fmag_story article .entry-header p > a,
+        body.archive main div.fmag_story article .entry-header p > a,
+        body.search main div.fmag_story article .entry-header p > a {
           margin: 0;
           padding-left: 10px; }
-        body.home main div.fmag_story article .entry-header p a, body.archive main div.fmag_story article .entry-header p a, body.search main div.fmag_story article .entry-header p a {
+        body.home main div.fmag_story article .entry-header p a,
+        body.archive main div.fmag_story article .entry-header p a,
+        body.search main div.fmag_story article .entry-header p a {
           color: #000;
           text-decoration: none;
           text-transform: uppercase;
           font-size: 80%;
           letter-spacing: 0.05em;
           padding: 2px 7px; }
-          body.home main div.fmag_story article .entry-header p a:hover, body.archive main div.fmag_story article .entry-header p a:hover, body.search main div.fmag_story article .entry-header p a:hover {
+          body.home main div.fmag_story article .entry-header p a:hover,
+          body.archive main div.fmag_story article .entry-header p a:hover,
+          body.search main div.fmag_story article .entry-header p a:hover {
             background: #000;
             color: #fff; }
-      body.home main div.fmag_story article .entry-header ul.minispreads, body.archive main div.fmag_story article .entry-header ul.minispreads, body.search main div.fmag_story article .entry-header ul.minispreads {
+      body.home main div.fmag_story article .entry-header ul.minispreads,
+      body.archive main div.fmag_story article .entry-header ul.minispreads,
+      body.search main div.fmag_story article .entry-header ul.minispreads {
         display: inline;
         float: left;
         margin: 0;
         padding: 0;
         overflow: hidden; }
-        body.home main div.fmag_story article .entry-header ul.minispreads li, body.archive main div.fmag_story article .entry-header ul.minispreads li, body.search main div.fmag_story article .entry-header ul.minispreads li {
+        body.home main div.fmag_story article .entry-header ul.minispreads li,
+        body.archive main div.fmag_story article .entry-header ul.minispreads li,
+        body.search main div.fmag_story article .entry-header ul.minispreads li {
           width: 120px;
           list-style: none;
           float: left;
           margin: 10px; }
-          body.home main div.fmag_story article .entry-header ul.minispreads li img, body.archive main div.fmag_story article .entry-header ul.minispreads li img, body.search main div.fmag_story article .entry-header ul.minispreads li img {
+          body.home main div.fmag_story article .entry-header ul.minispreads li img,
+          body.archive main div.fmag_story article .entry-header ul.minispreads li img,
+          body.search main div.fmag_story article .entry-header ul.minispreads li img {
             width: 50%; }
-      body.home main div.fmag_story article .entry-header a.morepages, body.archive main div.fmag_story article .entry-header a.morepages, body.search main div.fmag_story article .entry-header a.morepages {
+      body.home main div.fmag_story article .entry-header a.morepages,
+      body.archive main div.fmag_story article .entry-header a.morepages,
+      body.search main div.fmag_story article .entry-header a.morepages {
         display: inline-block;
         clear: both;
         padding: 2px 10px; }
-    body.home main div.fmag_story article p, body.archive main div.fmag_story article p, body.search main div.fmag_story article p {
+    body.home main div.fmag_story article p,
+    body.archive main div.fmag_story article p,
+    body.search main div.fmag_story article p {
       clear: both; }
-    body.home main div.fmag_story article ul.medspread, body.archive main div.fmag_story article ul.medspread, body.search main div.fmag_story article ul.medspread {
+    body.home main div.fmag_story article ul.medspread,
+    body.archive main div.fmag_story article ul.medspread,
+    body.search main div.fmag_story article ul.medspread {
       max-width: 100%;
       display: block;
       margin: 0 auto;
@@ -1076,17 +1162,31 @@ body.home main div.fmag_story, body.archive main div.fmag_story, body.search mai
       overflow: hidden;
       padding: 0; }
       @media screen and (min-width: 1200px) {
-        body.home main div.fmag_story article ul.medspread, body.archive main div.fmag_story article ul.medspread, body.search main div.fmag_story article ul.medspread {
+        body.home main div.fmag_story article ul.medspread,
+        body.archive main div.fmag_story article ul.medspread,
+        body.search main div.fmag_story article ul.medspread {
           display: inline;
           float: left;
           margin: 0 40px; } }
-      body.home main div.fmag_story article ul.medspread li, body.archive main div.fmag_story article ul.medspread li, body.search main div.fmag_story article ul.medspread li {
+      body.home main div.fmag_story article ul.medspread li,
+      body.archive main div.fmag_story article ul.medspread li,
+      body.search main div.fmag_story article ul.medspread li {
         list-style: none; }
-        body.home main div.fmag_story article ul.medspread li img, body.archive main div.fmag_story article ul.medspread li img, body.search main div.fmag_story article ul.medspread li img {
+        body.home main div.fmag_story article ul.medspread li img,
+        body.archive main div.fmag_story article ul.medspread li img,
+        body.search main div.fmag_story article ul.medspread li img {
           width: 50%; }
-body.home .nav-links .nav-previous, body.home .nav-links .nav-next, body.archive .nav-links .nav-previous, body.archive .nav-links .nav-next, body.search .nav-links .nav-previous, body.search .nav-links .nav-next {
+body.home .nav-links .nav-previous, body.home .nav-links .nav-next,
+body.archive .nav-links .nav-previous,
+body.archive .nav-links .nav-next,
+body.search .nav-links .nav-previous,
+body.search .nav-links .nav-next {
   font-size: 200%; }
-  body.home .nav-links .nav-previous a, body.home .nav-links .nav-next a, body.archive .nav-links .nav-previous a, body.archive .nav-links .nav-next a, body.search .nav-links .nav-previous a, body.search .nav-links .nav-next a {
+  body.home .nav-links .nav-previous a, body.home .nav-links .nav-next a,
+  body.archive .nav-links .nav-previous a,
+  body.archive .nav-links .nav-next a,
+  body.search .nav-links .nav-previous a,
+  body.search .nav-links .nav-next a {
     padding: 0 10px;
     display: inline-block;
     margin: 0 10px; }
