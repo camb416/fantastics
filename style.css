@@ -1111,6 +1111,12 @@ body.archive h1.page-title, body.search h1.page-title {
 body.archive div.fmag_story, body.search div.fmag_story {
   background: none !important; }
 
+aside h2.widget-title {
+  text-align: left;
+  font-size: 90%;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em; }
 aside ul {
   margin: 0;
   padding: 0; }
@@ -1200,15 +1206,64 @@ aside.Tumblr {
     color: #bbb; }
 
 aside.widget_search {
-  border-top: 1px solid silver;
   padding-top: 20px;
   clear: both; }
 
-aside.widget_latest_stories ul li {
-  display: inline-block;
-  float: left; }
-aside.widget_latest_stories ul.stories ul.pages li.page {
-  margin: 0;
-  padding: 0; }
+aside.widget_latest_stories {
+  width: 1210px;
+  max-width: 100%;
+  margin: 0 auto !important; }
+  @media screen and (max-width: 480px) {
+    aside.widget_latest_stories {
+      width: auto; } }
+  aside.widget_latest_stories ul li {
+    display: inline-block;
+    float: left; }
+  aside.widget_latest_stories ul.stories {
+    overflow: hidden; }
+    aside.widget_latest_stories ul.stories li.story {
+      width: 204px;
+      height: 132px;
+      float: left;
+      list-style: none;
+      margin-right: 10px;
+      border: 4px solid #ddd;
+      overflow: hidden;
+      position: relative; }
+      @media screen and (max-width: 480px) {
+        aside.widget_latest_stories ul.stories li.story {
+          width: 50%;
+          margin: 0; } }
+      aside.widget_latest_stories ul.stories li.story.active {
+        border: 4px solid black; }
+      aside.widget_latest_stories ul.stories li.story:hover {
+        cursor: pointer;
+        border: 4px solid grey; }
+        aside.widget_latest_stories ul.stories li.story:hover.active {
+          border: 4px solid black; }
+        aside.widget_latest_stories ul.stories li.story:hover img {
+          width: 196px;
+          height: 248px;
+          top: -72px !important;
+          left: 50% !important; }
+          aside.widget_latest_stories ul.stories li.story:hover img:first-of-type {
+            left: -50% !important; }
+      aside.widget_latest_stories ul.stories li.story img {
+        -webkit-transition: .3s ease-in-out;
+        -moz-transition: .3s ease-in-out;
+        -o-transition: .3s ease-in-out;
+        width: 98px;
+        height: 124px;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        left: 96px; }
+        aside.widget_latest_stories ul.stories li.story img:first-of-type {
+          top: 0px;
+          left: 0px; }
+
+div#secondary {
+  border-top: 1px solid silver; }
 
 /*# sourceMappingURL=style.css.map */

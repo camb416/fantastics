@@ -67,7 +67,7 @@ $mainQuery = $wp_query;
                 // <?php if ( get_the_title() ) the_title(); else the_ID();
                 // get_the_date();
 
-                // echo get_the_title();
+
 
                 $args = array(
                     'post_type' => 'attachment',

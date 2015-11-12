@@ -8,7 +8,7 @@ class FMAG_Widget_Latest_Focus extends WP_Widget {
 
 function __construct() {
 $widget_ops = array('classname' => 'widget_latest_focuscover', 'description' => __( "The most recent focus cover on your site") );
-parent::__construct('recent-posts', __('Latest Focus Cover'), $widget_ops);
+parent::__construct('latest-focus', __('Latest Focus Cover'), $widget_ops);
 $this->alt_option_name = 'widget_latest_focuscover';
 
 add_action( 'save_post', array($this, 'flush_widget_cache') );
@@ -16,8 +16,8 @@ add_action( 'deleted_post', array($this, 'flush_widget_cache') );
 add_action( 'switch_theme', array($this, 'flush_widget_cache') );
 }
 
-function widget($args, $instance) {
-$cache = wp_cache_get('widget_focus_cover', 'widget');
+public function widget($args, $instance) {
+// $cache = wp_cache_get('widget_focus_cover', 'widget');
 
 if ( !is_array($cache) )
 $cache = array();
@@ -89,7 +89,7 @@ if ($r->have_posts()) :
             if ( $attachments ) {
                 foreach ( $attachments as $attachment ) {
                     echo '<li>';
-                    echo wp_get_attachment_image( $attachment->ID, array(320) );
+                    echo wp_get_attachment_image( $attachment->ID, array(500,500) );
                     echo '<p>';
                     echo apply_filters( 'the_title', $attachment->post_title );
                     echo '</p></li>';
@@ -145,6 +145,15 @@ function form( $instance ) {
 }
 }
 
+
+// register Focus_Widget widget
+function register_focus_widget() {
+    register_widget( 'FMAG_Widget_Latest_Focus' );
+
+}
+add_action( 'widgets_init', 'register_focus_widget' );
+
+
 /**
  * FMAG_Widget_Latest_Stories
  *
@@ -153,7 +162,7 @@ class FMAG_Widget_Latest_Stories extends WP_Widget {
 
     function __construct() {
         $widget_ops = array('classname' => 'widget_latest_stories', 'description' => __( "The most recent stories on your site") );
-        parent::__construct('recent-posts', __('Latest Stories'), $widget_ops);
+        parent::__construct('latest-stories', __('Latest Stories'), $widget_ops);
         $this->alt_option_name = 'widget_latest_stories';
 
         add_action( 'save_post', array($this, 'flush_widget_cache') );
@@ -161,8 +170,8 @@ class FMAG_Widget_Latest_Stories extends WP_Widget {
         add_action( 'switch_theme', array($this, 'flush_widget_cache') );
     }
 
-    function widget($args, $instance) {
-        $cache = wp_cache_get('widget_latest_stories', 'widget');
+    public function widget($args, $instance) {
+       // $cache = wp_cache_get('widget_latest_stories', 'widget');
 
         if ( !is_array($cache) )
             $cache = array();
@@ -190,7 +199,7 @@ if ( ! $number )
                 'no_found_rows' => true,
                 'post_status' => 'publish',
                 'ignore_sticky_posts' => true,
-                'post_type' => 'fmag_story'
+                'post_type' => 'fmag_story',
 
             ) ) );
 
@@ -207,7 +216,10 @@ if ( ! $number )
             ?>
             <ul class="stories">
                 <?php while ( $r->have_posts() ) : $r->the_post(); ?>
-                    <li class="story"><ul class="pages">
+                    <a href="<?php echo the_permalink() ?>">
+                    <li class="story">
+
+
                         <?php
                         //echo get_the_title();
                         // working methods here:
@@ -217,6 +229,7 @@ if ( ! $number )
                         // get_the_date();
 
                         // echo get_the_title();
+                        //echo the_permalink();
 
                         $args = array(
                             'post_type' => 'attachment',
@@ -229,15 +242,15 @@ if ( ! $number )
                         $attachments = get_posts( $args );
                         if ( $attachments ) {
                             foreach ( $attachments as $attachment ) {
-                                echo '<li class="page">';
+                                echo '';
                                 echo wp_get_attachment_image( $attachment->ID );
                                 //echo '<p>';
                                 //echo apply_filters( 'the_title', $attachment->post_title );
-                                echo '</li>';
+                                echo '';
                             }
                         }
                         ?>
-                        </ul></li>
+                        </li></a>
                 <?php endwhile; ?>
             </ul>
             <?php echo $after_widget; ?>
@@ -248,7 +261,7 @@ if ( ! $number )
         endif;
 
         $cache[$args['widget_id']] = ob_get_flush();
-        wp_cache_set('widget_focus_cover', $cache, 'widget');
+        wp_cache_set('widget_latest_stories', $cache, 'widget');
     }
 
     function update( $new_instance, $old_instance ) {
@@ -289,16 +302,14 @@ if ( ! $number )
 
 
 
-// register Focus_Widget widget
-function register_focus_widget() {
-    register_widget( 'FMAG_Widget_Latest_Focus' );
-}
-add_action( 'widgets_init', 'register_focus_widget' );
+
 // register Latest_Stories widget
 function register_latest_stories_widget() {
     register_widget( 'FMAG_Widget_Latest_Stories' );
 }
+
 add_action( 'widgets_init', 'register_latest_stories_widget' );
+
 
 
 if (function_exists('register_sidebar')) {
@@ -313,3 +324,81 @@ if (function_exists('register_sidebar')) {
         'after_title' => '</h2>',
     ));
 }
+
+
+
+
+/**
+ * Adds Foo_Widget widget.
+ */
+class Foo_Widget extends WP_Widget {
+
+    /**
+     * Register widget with WordPress.
+     */
+    function __construct() {
+        parent::__construct(
+            'foo_widget', // Base ID
+            __( 'Widget Title', 'text_domain' ), // Name
+            array( 'description' => __( 'A Foo Widget', 'text_domain' ), ) // Args
+        );
+    }
+
+    /**
+     * Front-end display of widget.
+     *
+     * @see WP_Widget::widget()
+     *
+     * @param array $args     Widget arguments.
+     * @param array $instance Saved values from database.
+     */
+    public function widget( $args, $instance ) {
+        echo $args['before_widget'];
+        if ( ! empty( $instance['title'] ) ) {
+            echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ). $args['after_title'];
+        }
+        echo __( 'Hello, World!', 'text_domain' );
+        echo $args['after_widget'];
+    }
+
+    /**
+     * Back-end widget form.
+     *
+     * @see WP_Widget::form()
+     *
+     * @param array $instance Previously saved values from database.
+     */
+    public function form( $instance ) {
+        $title = ! empty( $instance['title'] ) ? $instance['title'] : __( 'New title', 'text_domain' );
+        ?>
+        <p>
+            <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+            <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
+        </p>
+    <?php
+    }
+
+    /**
+     * Sanitize widget form values as they are saved.
+     *
+     * @see WP_Widget::update()
+     *
+     * @param array $new_instance Values just sent to be saved.
+     * @param array $old_instance Previously saved values from database.
+     *
+     * @return array Updated safe values to be saved.
+     */
+    public function update( $new_instance, $old_instance ) {
+        $instance = array();
+        $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+
+        return $instance;
+    }
+
+} // class Foo_Widget
+
+// register Foo_Widget widget
+function register_foo_widget() {
+    register_widget( 'Foo_Widget' );
+}
+add_action( 'widgets_init', 'register_foo_widget' );
