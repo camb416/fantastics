@@ -14,7 +14,6 @@
 
 
 
-
         <?php
 
         $attachments = get_posts( array(

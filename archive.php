@@ -13,7 +13,6 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
-
 			<header class="page-header">
 				<?php
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
@@ -26,12 +25,23 @@ get_header(); ?>
 
 				<?php
 
-					/*
-					 * Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'template-parts/content', get_post_format() );
+                $postType = get_post_type();
+                if("fmag_story" === $postType){
+                    echo '<div class="fmag_story wrapper">';
+
+                    get_template_part( 'template-parts/content', get_post_type() );
+
+                    echo "</div><!-- wrapper -->";
+
+                } else if("fmag_cover" === $postType){
+                    get_template_part( 'template-parts/content', get_post_type() );
+                    //$myvar = locate_template('content.php');
+                    //echo $myvar;
+                    //include(locate_template('template-parts/content-fmag_story'));
+                } else {
+                    echo get_post_format();
+                    get_template_part( 'template-parts/content', get_post_format() );
+                }
 				?>
 
 			<?php endwhile; ?>

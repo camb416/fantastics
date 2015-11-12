@@ -1015,7 +1015,7 @@ body.search div#bigcover {
     body.search div#bigcover article header {
       margin: 0;
       padding: 0; }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   body.home main div.odd header p, body.home main div.odd header ul.minispreads, body.home main div.odd header > a,
   body.archive main div.odd header p,
   body.archive main div.odd header ul.minispreads,
@@ -1042,7 +1042,7 @@ body.search main div.fmag_story {
     body.search main div.fmag_story.even ul.minispreads,
     body.search main div.fmag_story.even > a {
       border-left: 4px solid #fff; }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1230px) {
       body.home main div.fmag_story.even article .entry-content,
       body.archive main div.fmag_story.even article .entry-content,
       body.search main div.fmag_story.even article .entry-content {
@@ -1061,7 +1061,7 @@ body.search main div.fmag_story {
     margin: 0 auto;
     border-bottom: 1px solid #aaa;
     padding: 20px 0; }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1230px) {
       body.home main div.fmag_story article .entry-content,
       body.archive main div.fmag_story article .entry-content,
       body.search main div.fmag_story article .entry-content {
@@ -1072,7 +1072,7 @@ body.search main div.fmag_story {
     body.search main div.fmag_story article .entry-header {
       width: 425px;
       margin: 0 auto; }
-      @media screen and (min-width: 1200px) {
+      @media screen and (min-width: 1230px) {
         body.home main div.fmag_story article .entry-header,
         body.archive main div.fmag_story article .entry-header,
         body.search main div.fmag_story article .entry-header {
@@ -1161,7 +1161,7 @@ body.search main div.fmag_story {
       width: 700px;
       overflow: hidden;
       padding: 0; }
-      @media screen and (min-width: 1200px) {
+      @media screen and (min-width: 1230px) {
         body.home main div.fmag_story article ul.medspread,
         body.archive main div.fmag_story article ul.medspread,
         body.search main div.fmag_story article ul.medspread {
@@ -1365,5 +1365,32 @@ aside.widget_latest_stories {
 
 div#secondary {
   border-top: 1px solid silver; }
+
+body.search div.results {
+  margin-left: 10px;
+  margin-bottom: 20px; }
+  body.search div.results h2 {
+    text-align: left;
+    font-size: 90%;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid silver; }
+  body.search div.results.searchtype-cover {
+    overflow: hidden;
+    margin: 0 auto; }
+    body.search div.results.searchtype-cover article {
+      margin: 10px;
+      width: 350px;
+      float: left;
+      max-width: 45%; }
+    @media screen and (min-width: 1230px) {
+      body.search div.results.searchtype-cover {
+        width: 1120px; } }
+    @media screen and (max-width: 1230px) {
+      body.search div.results.searchtype-cover {
+        width: 760px; } }
+  body.search div.results nav {
+    clear: both; }
 
 /*# sourceMappingURL=style.css.map */

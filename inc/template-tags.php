@@ -25,10 +25,10 @@ function posts_navigation() {
 
 
             <?php if ( get_previous_posts_link() ) : ?>
-                <div class="nav-previous"><?php previous_posts_link( '<i class="fa fa fa-long-arrow-left"></i>More Stories That Way' ); ?></div>
+                <div class="nav-previous"><?php previous_posts_link( '<i class="fa fa fa-long-arrow-left"></i>More That Way' ); ?></div>
             <?php endif; ?>
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-next"><?php next_posts_link( 'More Stories This Way<i class="fa fa fa-long-arrow-right"></i>' ); ?></div>
+			<div class="nav-next"><?php next_posts_link( 'More This Way<i class="fa fa fa-long-arrow-right"></i>' ); ?></div>
 			<?php endif; ?>
 
 

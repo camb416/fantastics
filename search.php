@@ -19,7 +19,42 @@ get_header(); ?>
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php
+
+
+            $last_type="";
+            $typecount = 0;
+            while ( have_posts() ) : the_post();
+
+                if ($last_type != $post->post_type){
+                    $typecount = $typecount + 1;
+                    if ($typecount > 1){
+                        echo '</div><!-- result type -->'; //close type container
+                    }
+                    // save the post type.
+                    $last_type = $post->post_type;
+                    //open type container
+                    switch ($post->post_type) {
+                        case 'post':
+                            echo "<div class=\" results searchtype-post\"><h2>Posts</h2>";
+                            break;
+                        case 'page':
+                            echo "<div class=\"results searchtype-pages\"><h2>Pages</h2>";
+                            break;
+                        case 'fmag_story':
+                            echo "<div class=\"results searchtype-story\"><h2>Stories</h2>";
+                            break;
+                        default:
+                            echo "<div class=\"results searchtype-cover\"><h2>Covers</h2>";
+                            break;
+                        //add as many as you need.
+                    }
+                }
+
+                ?>
+
+
+
 
 				<?php
 				/**
@@ -29,12 +64,16 @@ get_header(); ?>
 				 */
 				//get_template_part( 'template-parts/content', 'search' );
 
-                if("fmag_story" === get_post_type()){
+                $postType = get_post_type();
+                if("fmag_story" === $postType){
                 echo '<div class="fmag_story wrapper">';
 
                 get_template_part( 'template-parts/content', get_post_type() );
 
-               //     echo "</div>";
+                    echo "</div><!-- wrapper -->";
+
+            } else if("fmag_cover" === $postType){
+                    get_template_part( 'template-parts/content', get_post_type() );
                 //$myvar = locate_template('content.php');
                 //echo $myvar;
                 //include(locate_template('template-parts/content-fmag_story'));
@@ -47,7 +86,7 @@ get_header(); ?>
 				?>
 
 			<?php endwhile; ?>
-
+            </div><!-- result type -->
 			<?php posts_navigation(); ?>
 
 		<?php else : ?>

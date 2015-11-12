@@ -1,0 +1,49 @@
+body.search{
+  div.results{
+    h2{
+      text-align:left;
+      font-size:90%;
+      margin-bottom:0;
+      text-transform:uppercase;
+      letter-spacing:0.1em;
+      // margin:0 40px;
+      // margin: 0 40px;
+      border-bottom:1px solid silver;
+    }
+
+    margin-left:10px;
+    margin-bottom:20px;
+  &.searchtype-cover{
+    overflow:hidden;
+    article{
+
+      margin:10px;
+      width:350px;
+      float:left;
+
+
+      max-width:45%;
+
+    }
+    margin:0 auto;
+    @media screen and (min-width: $break-large) {
+      // big
+      width:1120px;
+    }
+    @media screen and (max-width: $break-large) {
+      width:760px;
+
+    }
+    @media screen and (max-width: $break-small) {
+
+    }
+
+  }
+    nav{
+      clear:both;
+    }
+  }
+
+
+
+}
