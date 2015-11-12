@@ -190,7 +190,7 @@ if ( ! $number )
                 'no_found_rows' => true,
                 'post_status' => 'publish',
                 'ignore_sticky_posts' => true,
-                'post_type' => 'fmag_story',
+                'post_type' => 'fmag_story'
 
             ) ) );
 
@@ -205,10 +205,11 @@ if ( ! $number )
             if ( $title ) echo $before_title . $title . $after_title;
 
             ?>
-            <ul>
+            <ul class="stories">
                 <?php while ( $r->have_posts() ) : $r->the_post(); ?>
-                    <li>
+                    <li class="story"><ul class="pages">
                         <?php
+                        //echo get_the_title();
                         // working methods here:
                         // the_permalink()
                         // esc_attr( get_the_title() ? get_the_title() : get_the_ID() );
@@ -221,21 +222,22 @@ if ( ! $number )
                             'post_type' => 'attachment',
                             'numberposts' => 2,
                             'post_status' => null,
-                            'post_parent' => get_the_ID()
+                            'post_parent' => get_the_ID(),
+                            'order' => 'ASC'
                         );
 
                         $attachments = get_posts( $args );
                         if ( $attachments ) {
                             foreach ( $attachments as $attachment ) {
-                                echo '<li>';
+                                echo '<li class="page">';
                                 echo wp_get_attachment_image( $attachment->ID );
-                                echo '<p>';
-                                echo apply_filters( 'the_title', $attachment->post_title );
-                                echo '</p></li>';
+                                //echo '<p>';
+                                //echo apply_filters( 'the_title', $attachment->post_title );
+                                echo '</li>';
                             }
                         }
                         ?>
-                    </li>
+                        </ul></li>
                 <?php endwhile; ?>
             </ul>
             <?php echo $after_widget; ?>

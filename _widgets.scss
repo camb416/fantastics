@@ -1,3 +1,14 @@
+aside{
+  ul{
+    margin:0;
+    padding:0;
+    li{
+      list-style: none;
+      margin:5px;
+    }
+  }
+}
+
 div.intermission-outer{
   background:url(images/bowtie.svg);
   background-position-y: -757px;
@@ -115,4 +126,21 @@ aside.widget_search{
   border-top:1px solid silver;
   padding-top:20px;
   clear:both;
+}
+aside.widget_latest_stories{
+  ul{
+    li{
+      display:inline-block;
+      float:left;
+    }
+  }
+  ul.stories{
+    ul.pages{
+      li.page{
+        margin:0;
+        padding:0;
+      }
+
+    }
+  }
 }

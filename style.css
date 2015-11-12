@@ -1111,6 +1111,13 @@ body.archive h1.page-title, body.search h1.page-title {
 body.archive div.fmag_story, body.search div.fmag_story {
   background: none !important; }
 
+aside ul {
+  margin: 0;
+  padding: 0; }
+  aside ul li {
+    list-style: none;
+    margin: 5px; }
+
 div.intermission-outer {
   background: url(images/bowtie.svg);
   background-position-y: -757px;
@@ -1196,5 +1203,12 @@ aside.widget_search {
   border-top: 1px solid silver;
   padding-top: 20px;
   clear: both; }
+
+aside.widget_latest_stories ul li {
+  display: inline-block;
+  float: left; }
+aside.widget_latest_stories ul.stories ul.pages li.page {
+  margin: 0;
+  padding: 0; }
 
 /*# sourceMappingURL=style.css.map */
