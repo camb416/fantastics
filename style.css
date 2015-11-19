@@ -790,7 +790,7 @@ body.single-fmag_story {
   body.single-fmag_story .hidden {
     display: none; }
   body.single-fmag_story .bigspreads {
-    display: block;
+    display: inline-block;
     overflow: hidden;
     margin: 0;
     padding: 0;
