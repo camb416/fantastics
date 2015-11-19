@@ -1207,7 +1207,13 @@ body.archive h1.page-title, body.search h1.page-title {
   text-transform: uppercase;
   letter-spacing: 0.07em;
   color: #fff;
-  background: #000; }
+  background: #000;
+  max-width: 1280px;
+  padding: 0 0 2px 15px;
+  margin: 0 auto 30px auto; }
+body.archive div.page-content, body.search div.page-content {
+  width: 1280px;
+  margin: 0 auto 30px auto; }
 body.archive div.fmag_story, body.search div.fmag_story {
   background: none !important; }
 
@@ -1366,8 +1372,8 @@ aside.widget_latest_stories {
           left: 0px; }
 
 body.search div.results {
-  margin-left: 10px;
-  margin-bottom: 20px; }
+  max-width: 1280px;
+  margin: 0 auto; }
   body.search div.results h2 {
     text-align: left;
     font-size: 90%;

@@ -11,8 +11,10 @@ body.search{
       border-bottom:1px solid silver;
     }
 
-    margin-left:10px;
-    margin-bottom:20px;
+    max-width:1280px;
+    margin: 0 auto;
+
+
   &.searchtype-cover{
     overflow:hidden;
     article{
@@ -25,6 +27,7 @@ body.search{
       max-width:45%;
 
     }
+
     margin:0 auto;
     @media screen and (min-width: $break-large) {
       // big

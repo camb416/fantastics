@@ -1,9 +1,23 @@
+//
+// archives pages
+//
+
+
+
 body.archive, body.search{
   h1.page-title{
     text-transform:uppercase;
     letter-spacing:0.07em;
     color:#fff;
     background:#000;
+    max-width:1280px;
+    padding: 0 0 2px 15px;
+    margin: 0 auto 30px auto;
+  }
+
+  div.page-content{
+    width:1280px;
+    margin: 0 auto 30px auto;
   }
 
   div.fmag_story{
