@@ -1225,9 +1225,10 @@ aside ul {
     margin: 5px; }
 
 div.intermission-outer {
-  background: url(images/bowtie.svg);
-  background-position-y: -757px;
-  background-repeat: no-repeat; }
+  background-image: url(images/bowtie.svg);
+  background-position-y: 90px;
+  background-repeat-y: no-repeat;
+  background-position-x: center; }
   div.intermission-outer div.intermission {
     margin: 30px auto;
     width: 1280px;
@@ -1248,7 +1249,6 @@ aside.widget_latest_focuscover {
     margin: 0;
     padding: 0;
     background: url(http://fantasticsmag.com/sites/all/themes/fmag2014/images/focus-flash-bold.png);
-    background-color: #fff;
     background-position: 5px 5px;
     text-indent: -3000px;
     background-repeat: no-repeat;
@@ -1292,7 +1292,6 @@ aside.Tumblr {
     margin: 0;
     padding: 0;
     background: url(http://fantasticsmag.com/sites/all/themes/fmag2014/images/focus-flash-bold.png);
-    background-color: #fff;
     background-position: 5px -77px;
     text-indent: -3000px;
     background-repeat: no-repeat;
