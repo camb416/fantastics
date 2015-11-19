@@ -20,7 +20,7 @@
 			<?php // printf( esc_html__( 'Theme: %1$s by %2$s.', 'fantastics' ), 'fantastics', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
 		</div><!-- .site-info -->
 
-            <a class="footerlogo" href="http://localhost/wp/" rel="home">Fantastics</a>
+            <a class="footerlogo" href="<?php echo site_url(); ?>" rel="home">Fantastics</a>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
