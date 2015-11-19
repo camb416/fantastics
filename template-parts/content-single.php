@@ -70,7 +70,7 @@
             <div id="leftcol">
                 <?php
                 $credits = get_post_meta($id, 'fmag_credits_block', true);
-                the_content('',FALSE,'');
+                $tempvar = the_content('',true,'');
 
                 //wp_get_post_terms()
 
