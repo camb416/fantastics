@@ -23,17 +23,17 @@ div.intermission-outer{
   background-position-x: center;
 
 
-div.intermission{
-  margin:30px auto;
+  div.intermission{
+    margin:30px auto;
 
-  width:1280px;
-  border-bottom:1px solid silver;
-  clear:both;
-  height:550px;
+    width:1280px;
+    border-bottom:1px solid silver;
+    clear:both;
+    height:550px;
 
 
 
-}
+  }
 }
 
 aside.widget_latest_focuscover{
@@ -96,7 +96,7 @@ aside.Tumblr{
         //&:hover{
         //  -webkit-filter:none;
         //  filter:none;
-       // }
+        // }
 
       }
       p{
@@ -134,7 +134,7 @@ aside.widget_search{
   clear:both;
 }
 aside.widget_latest_stories{
- // background:white;
+  // background:white;
 
   @media screen and (max-width: $break-small) {
     width:auto;

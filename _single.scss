@@ -24,7 +24,7 @@ body.single-fmag_story{
 
 
   img{
-   // width:100px;
+    // width:100px;
 
   }
 
@@ -57,11 +57,11 @@ body.single-fmag_story{
 
         }
       }
-&.first{
-  img:first-of-type{
-    cursor:pointer;
-  }
-}
+      &.first{
+        img:first-of-type{
+          cursor:pointer;
+        }
+      }
       &.last{
         img{
           cursor:pointer;
@@ -136,8 +136,8 @@ body.single-fmag_story{
 
       p{
 
-          margin:0 0 0 10px;
-          padding:0;
+        margin:0 0 0 10px;
+        padding:0;
       }
       ul{
         list-style:none;
@@ -154,23 +154,23 @@ body.single-fmag_story{
       div{
         margin-top:20px;
 
-      &.credits{
+        &.credits{
 
 
-        p{
-          float:left;
-          font-weight: bold;
-          font-size:80%;
-          letter-spacing:0.1em;
-          margin:0 10px 20px 10px;
-          a{
-            font-size:100%;
+          p{
+            float:left;
+            font-weight: bold;
+            font-size:80%;
+            letter-spacing:0.1em;
+            margin:0 10px 20px 10px;
+            a{
+              font-size:100%;
 
-            margin-left:-5px;
+              margin-left:-5px;
+            }
+
           }
-
         }
-      }
       }
 
     }
@@ -237,10 +237,10 @@ body.single-fmag_story{
             top:0 ;
             left:96px ;
 
-          &:first-of-type{
-            top:0px ;
-            left:0px;
-          }
+            &:first-of-type{
+              top:0px ;
+              left:0px;
+            }
 
           }
         }
@@ -252,9 +252,9 @@ body.single-fmag_story{
 }
 @media (max-width : 900px) {
   /* Styles */
-div#rightcol, div#leftcol{
-  width:100% !important;
-}
+  div#rightcol, div#leftcol{
+    width:100% !important;
+  }
   div#rightcol{
     margin-top:20px;
   }
