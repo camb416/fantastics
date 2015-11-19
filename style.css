@@ -1027,14 +1027,13 @@ body.search div#bigcover {
 body.home main div.fmag_story,
 body.archive main div.fmag_story,
 body.search main div.fmag_story {
-  background: url(images/right-to-left-01.svg);
+  background-image: url(images/right-to-left-01.svg);
   background-position: center;
   background-repeat-x: no-repeat; }
   body.home main div.fmag_story.even,
   body.archive main div.fmag_story.even,
   body.search main div.fmag_story.even {
-    background: url(images/left-to-right-01.svg);
-    background-size: length; }
+    background-image: url(images/left-to-right-01.svg); }
     body.home main div.fmag_story.even header p, body.home main div.fmag_story.even ul.minispreads, body.home main div.fmag_story.even > a,
     body.archive main div.fmag_story.even header p,
     body.archive main div.fmag_story.even ul.minispreads,
