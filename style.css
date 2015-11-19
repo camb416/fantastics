@@ -1230,11 +1230,11 @@ div.intermission-outer {
   background-repeat-y: no-repeat;
   background-position-x: center; }
   div.intermission-outer div.intermission {
-    margin: 30px auto;
+    margin: 0 auto 5px auto;
     width: 1280px;
-    border-bottom: 1px solid silver;
     clear: both;
-    height: 550px; }
+    height: 550px;
+    padding: 30px 0 0 0; }
 
 aside.widget_latest_focuscover {
   width: 330px;
