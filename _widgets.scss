@@ -56,10 +56,18 @@ div.intermission-outer{
 
   div.intermission{
     margin:0 auto 5px auto;
-    width:1280px;
+//    @media screen and (min-width: $break-large) {
+      max-width:100%;
+      width:1280px;
+//    }
+
+
+
     clear:both;
     height:550px;
     padding: 30px 0 0 0;
+
+
   }
 
 }
@@ -74,6 +82,10 @@ div.intermission-outer{
 aside.widget_latest_focuscover{
   width:330px;
   float:left;
+  @media screen and (max-width: $break-large) {
+    margin:0 auto;
+    float:none;
+  }
 
   ul{
     margin:0;
@@ -117,6 +129,10 @@ aside.Tumblr{
   float:left;
   width:71%;
   float:left;
+
+  @media screen and (max-width: $break-large) {
+    display:none;
+  }
 
   ul{
     max-height:445px;

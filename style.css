@@ -1240,6 +1240,7 @@ div.intermission-outer {
   background-position-x: center; }
   div.intermission-outer div.intermission {
     margin: 0 auto 5px auto;
+    max-width: 100%;
     width: 1280px;
     clear: both;
     height: 550px;
@@ -1248,6 +1249,10 @@ div.intermission-outer {
 aside.widget_latest_focuscover {
   width: 330px;
   float: left; }
+  @media screen and (max-width: 1230px) {
+    aside.widget_latest_focuscover {
+      margin: 0 auto;
+      float: none; } }
   aside.widget_latest_focuscover ul {
     margin: 0;
     padding: 0; }
@@ -1275,6 +1280,9 @@ aside.Tumblr {
   float: left;
   width: 71%;
   float: left; }
+  @media screen and (max-width: 1230px) {
+    aside.Tumblr {
+      display: none; } }
   aside.Tumblr ul {
     max-height: 445px;
     overflow: scroll;
