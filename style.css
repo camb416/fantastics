@@ -1028,7 +1028,8 @@ body.home main div.fmag_story,
 body.archive main div.fmag_story,
 body.search main div.fmag_story {
   background: url(images/right-to-left-01.svg);
-  background-position-x: -700px; }
+  background-position: center;
+  background-repeat-x: no-repeat; }
   body.home main div.fmag_story.even,
   body.archive main div.fmag_story.even,
   body.search main div.fmag_story.even {

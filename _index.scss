@@ -127,9 +127,9 @@ main{
 
   div.fmag_story{
 
-
     background:url(images/right-to-left-01.svg);
-    background-position-x:-700px;
+    background-position: center;
+    background-repeat-x: no-repeat;
     &.even{
       background:url(images/left-to-right-01.svg);
       background-size: length;
