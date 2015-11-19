@@ -1002,10 +1002,10 @@ body.home div#bigcover,
 body.archive div#bigcover,
 body.search div#bigcover {
   text-align: center;
-  background: url(images/bowtie.svg);
+  background-image: url(images/bowtie.svg);
   width: 100%;
   background-repeat: repeat-x;
-  background-size: length; }
+  background-position-x: center; }
   body.home div#bigcover article,
   body.archive div#bigcover article,
   body.search div#bigcover article {
