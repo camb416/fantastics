@@ -1,4 +1,21 @@
+// _widgets.scss
+// compiles to styles.css
+//
+// 1. General Widget Stuff
+// 2. Index Intermission
+// 3. Focus
+// 4. Flash
+// 5. Search
+// 6. Latest Stories
+
+
+
+////////////////////////////////////
+// 1. General Widget Stuff
+////////////////////////////////////
+
 aside{
+
   h2.widget-title{
     text-align:left;
     font-size:90%;
@@ -6,15 +23,30 @@ aside{
     text-transform:uppercase;
     letter-spacing:0.1em;
   }
+
   ul{
     margin:0;
     padding:0;
+
     li{
       list-style: none;
       margin:5px;
     }
+
   }
+
 }
+
+div#secondary{
+  border-top:1px solid silver;
+}
+
+////////////////////////////////////
+
+
+////////////////////////////////////
+// 2. Index Intermission (Focus and Flash container)
+////////////////////////////////////
 
 div.intermission-outer{
   background-image:url(images/bowtie.svg);
@@ -22,32 +54,35 @@ div.intermission-outer{
   background-repeat-y: no-repeat;
   background-position-x: center;
 
-
   div.intermission{
     margin:0 auto 5px auto;
     width:1280px;
-    //border-bottom:1px solid silver;
     clear:both;
     height:550px;
     padding: 30px 0 0 0;
-
-
-
   }
+
 }
+
+////////////////////////////////////
+// 3. Latest Focus Cover (Fantastics Focus)
+////////////////////////////////////
 
 aside.widget_latest_focuscover{
   width:330px;
-  // background:#fff;
   float:left;
+
   ul{
     margin:0;
     padding:0;
+
     li{
       list-style: none;
       margin:5px;
     }
+
   }
+
   h2.widget-title {
     margin:0;
     padding:0;
@@ -66,11 +101,18 @@ aside.widget_latest_focuscover{
   }
 
 }
+
+////////////////////////////////////
+
+
+////////////////////////////////////
+// 4. Tumblr (Fantastics Flash)
+////////////////////////////////////
+
 aside.Tumblr{
   margin-left:20px;
   float:left;
   width:71%;
-  //background:#fff;
   float:left;
 
   ul{
@@ -78,10 +120,9 @@ aside.Tumblr{
     overflow:scroll;
     margin:0;
     padding:0;
+
     li{
-
       overflow:hidden;
-
       text-align:left;
       list-style:none;
       float:left;
@@ -90,27 +131,25 @@ aside.Tumblr{
 
       img{
         max-height:400px;
-        //-webkit-filter: grayscale(100%);
-        //filter: grayscale(100%);
-        //filter: gray;
-        //&:hover{
-        //  -webkit-filter:none;
-        //  filter:none;
-        // }
-
       }
+
       p{
         font-weight: bold;
         font-size: 80%;
         margin-top: 0;
         display:table-caption;
         caption-side:bottom;
+
         a.tumblr_link{
           display:none;
         }
+
       }
+
     }
+
   }
+
   h2.widget-title {
     margin:0;
     padding:0;
@@ -127,14 +166,29 @@ aside.Tumblr{
     font-weight: 400;
     color: #bbb;
   }
+
 }
+////////////////////////////////////
+
+
+////////////////////////////////////
+// 5. SEARCH Box (footer)
+////////////////////////////////////
+
 aside.widget_search{
 
   padding-top:20px;
   clear:both;
 }
+
+////////////////////////////////////
+
+
+////////////////////////////////////
+// 6. Latest Stories (footer)
+////////////////////////////////////
+
 aside.widget_latest_stories{
-  // background:white;
 
   @media screen and (max-width: $break-small) {
     width:auto;
@@ -209,6 +263,4 @@ aside.widget_latest_stories{
     }
   }
 }
-div#secondary{
-  border-top:1px solid silver;
-}
+////////////////////////////////////

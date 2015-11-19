@@ -1224,6 +1224,9 @@ aside ul {
     list-style: none;
     margin: 5px; }
 
+div#secondary {
+  border-top: 1px solid silver; }
+
 div.intermission-outer {
   background-image: url(images/bowtie.svg);
   background-position-y: 90px;
@@ -1361,9 +1364,6 @@ aside.widget_latest_stories {
         aside.widget_latest_stories ul.stories li.story img:first-of-type {
           top: 0px;
           left: 0px; }
-
-div#secondary {
-  border-top: 1px solid silver; }
 
 body.search div.results {
   margin-left: 10px;
