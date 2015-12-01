@@ -1,0 +1,103 @@
+#page {
+  width: 100%; }
+  #page #top,
+  #page #mid,
+  #page #bottom {
+    background: #ff0;
+    width: 1270px;
+    margin: 10px auto;
+    overflow: hidden; }
+
+div {
+  display: block;
+  margin: 0;
+  padding: 0; }
+
+.top-main,
+.mid-main,
+.bottom-main {
+  display: block;
+  width: 790px;
+  clear: both;
+  background-color: #C0FFEE;
+  text-align: center; }
+  .top-main > div,
+  .mid-main > div,
+  .bottom-main > div {
+    margin: 5px auto; }
+
+.top-side,
+.mid-side,
+.bottom-side {
+  display: block;
+  width: 470px;
+  background-color: #FFC0EE; }
+  .top-side > div,
+  .mid-side > div,
+  .bottom-side > div {
+    margin: 10px auto; }
+  .top-side .relatedcontent,
+  .mid-side .relatedcontent,
+  .bottom-side .relatedcontent {
+    width: 350px;
+    height: 675px;
+    border: 1px solid #000; }
+
+.intermission-a,
+.intermission-b {
+  display: block;
+  height: 250px;
+  width: 100%;
+  clear: both;
+  background: #aaaaaa; }
+
+.storyroll {
+  text-align: center; }
+  .storyroll article {
+    width: 725px;
+    height: 500px;
+    border: 1px solid #000;
+    margin: 10px auto; }
+
+.adspace {
+  width: 350px;
+  height: 350px;
+  background-color: #006699;
+  display: block; }
+
+.top-main {
+  float: left;
+  margin-right: 10px; }
+  .top-main > div {
+    background: #DDD; }
+  .top-main .bigcover {
+    width: 750px;
+    height: 970px; }
+  .top-main .menu-undercover {
+    height: 64px; }
+
+.top-side {
+  float: left; }
+  .top-side > div {
+    border: 1px solid #000; }
+  .top-side .socialbuttons {
+    height: 64px; }
+  .top-side .latestfocuscover {
+    width: 320px;
+    height: 450px; }
+  .top-side .flashroll {
+    height: 1170px; }
+
+.mid-main {
+  float: right; }
+
+.mid-side {
+  float: right; }
+
+.bottom-main {
+  float: left; }
+
+.bottom-side {
+  float: left; }
+
+/*# sourceMappingURL=eightcol.css.map */
