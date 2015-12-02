@@ -32,9 +32,6 @@
 
     <div class="top-main">
 
-
-
-
             <?php
 
             // TODO: refactor this!
@@ -124,14 +121,39 @@
             When you scroll below this, it will snap to top of browser.
             Contains links to Terms, Contact, etc.</div>
         <div class="storyroll">
-            storyroll (two most recent)
-            <article>article</article>
-            <article>article</article>
 
-        </div>
-    </div>
+            <?php if ( have_posts() ) : ?>
 
-    <?php // top-side
+            <?php if ( is_home() && ! is_front_page() ) : ?>
+                <header>
+                    <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+                </header>
+            <?php endif; ?>
+
+            <?php /* Start the Loop */
+            $i = 0;
+
+            ?>
+
+            <?php while ( have_posts() ) : the_post(); ?>
+            <?php
+            if($i%2===0){
+                $orderClass = "even";
+            } else {
+                $orderClass = "odd";
+            }
+
+
+            if($i === 2 && 1 == $paged && is_front_page()){
+
+
+                // close out the story roll div
+                echo '</div>';
+                // close out top main
+                echo '</div>';
+
+
+           // top-side
 
     if(1 == $paged && is_front_page()){
         echo '    <div class="top-side">';
@@ -160,9 +182,97 @@
         }
 //        echo '<div class="adspace">adspace</div> ';
         echo ' </div>';
+        // close out the whole top
+        echo '</div>';
     }
 
-    ?>
+
+
+
+
+
+
+                // do the intermission
+                echo '<div class="intermission-a">';
+                //echo '<div class="intermission-outer"><div class="intermission">';
+                if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Intermission')){
+                    // do nothing if not there
+                    //echo "default stuff";
+                }
+                echo '</div>'; // close intermission
+                echo '<div id="mid">';
+                echo '<div class="mid-main">';
+                echo '<div class="storyroll">';
+
+            } elseif($i === 4 && 1 == $paged){
+                // close story roll
+                echo '</div>';
+                // close mid main
+                echo '</div>';
+                // TODO: do the mid sidebar
+
+                // close the mid container
+                echo '</div>';
+                // open the bottom container
+                echo '<div id="bottom">';
+                // open the bottom main
+                echo '<div class="bottom-main">';
+                // open the story roll
+                echo '<div class="storyroll">';
+            }
+
+            ?>
+
+
+
+            <?php
+
+
+
+
+            /*
+         * Include the Post-Format-specific template for the content.
+         * If you want to override this in a child theme, then include a file
+         * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+         */
+            if("fmag_story" === get_post_type()){ ?>
+            <div class="fmag_story wrapper <?= $orderClass ?>">
+                <?php
+                get_template_part( 'template-parts/content', get_post_type() );
+                echo "</div>";
+                //$myvar = locate_template('content.php');
+                //echo $myvar;
+                //include(locate_template('template-parts/content-fmag_story'));
+                } else {
+                    get_template_part( 'template-parts/content', get_post_format() );
+                }
+
+                $i++;
+                ?>
+
+                <?php endwhile; ?>
+
+                <?php posts_navigation(); ?>
+
+                <?php else : ?>
+
+                    <?php get_template_part( 'template-parts/content', 'none' ); ?>
+
+                <?php endif; ?>
+
+
+
+
+
+
+            <!--
+            <article>article</article>
+            <article>article</article> -->
+
+        </div>
+    </div>
+
+
 
 
 
@@ -207,86 +317,11 @@
 
 ?>
 
-
-
-
-
-
-
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
 
-		<?php if ( have_posts() ) : ?>
 
-			<?php if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-			<?php endif; ?>
-
-			<?php /* Start the Loop */
-            $i = 0;
-
-            ?>
-
-			<?php while ( have_posts() ) : the_post(); ?>
-            <?php
-            if($i%2===0){
-                $orderClass = "even";
-            } else {
-                $orderClass = "odd";
-            }
-
-
-                if($i === 2 && 1 == $paged && is_front_page()){
-                    echo '<div class="intermission-outer"><div class="intermission">';
-                    if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Intermission')){
-                        // do nothing if not there
-                        //echo "default stuff";
-                    }
-                    echo '</div></div>';
-                }
-
-            ?>
-
-
-
-    <?php
-
-
-
-
-              /*
-           * Include the Post-Format-specific template for the content.
-           * If you want to override this in a child theme, then include a file
-           * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-           */
-                if("fmag_story" === get_post_type()){ ?>
-            <div class="fmag_story wrapper <?= $orderClass ?>">
-                <?php
-                   get_template_part( 'template-parts/content', get_post_type() );
-                echo "</div>";
-                   //$myvar = locate_template('content.php');
-                    //echo $myvar;
-                   //include(locate_template('template-parts/content-fmag_story'));
-                } else {
-                    get_template_part( 'template-parts/content', get_post_format() );
-                }
-
-               $i++;
-				?>
-
-			<?php endwhile; ?>
-
-			<?php posts_navigation(); ?>
-
-		<?php else : ?>
-
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-		<?php endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

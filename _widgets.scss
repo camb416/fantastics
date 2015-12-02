@@ -125,14 +125,14 @@ aside.widget_latest_focuscover{
 ////////////////////////////////////
 
 aside.Tumblr{
-
+  margin:0;
 
   @media screen and (max-width: $break-large) {
     display:none;
   }
 
   ul{
-    height:1425px;
+    height:1626px;
     overflow:scroll;
     margin:0;
     padding:0;

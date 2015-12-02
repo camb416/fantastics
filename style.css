@@ -1018,167 +1018,161 @@ body.search {
         body.search header#masthead.cloned nav#site-navigation ul li {
           display: block !important;
           margin-right: 20px; }
-  @media screen and (min-width: 1230px) {
-    body.home main div.odd header p, body.home main div.odd header ul.minispreads, body.home main div.odd header > a,
-    body.archive main div.odd header p,
-    body.archive main div.odd header ul.minispreads,
-    body.archive main div.odd header > a,
-    body.search main div.odd header p,
-    body.search main div.odd header ul.minispreads,
-    body.search main div.odd header > a {
-      border-left: 4px solid #eee; } }
-  body.home main div.fmag_story,
-  body.archive main div.fmag_story,
-  body.search main div.fmag_story {
-    background-image: url(images/right-to-left-01.bowtie);
-    background-position: center;
-    background-repeat-x: no-repeat; }
-    body.home main div.fmag_story.even,
-    body.archive main div.fmag_story.even,
-    body.search main div.fmag_story.even {
-      background-image: url(images/left-to-right-01.svg); }
-      body.home main div.fmag_story.even header p, body.home main div.fmag_story.even ul.minispreads, body.home main div.fmag_story.even > a,
-      body.archive main div.fmag_story.even header p,
-      body.archive main div.fmag_story.even ul.minispreads,
-      body.archive main div.fmag_story.even > a,
-      body.search main div.fmag_story.even header p,
-      body.search main div.fmag_story.even ul.minispreads,
-      body.search main div.fmag_story.even > a {
-        border-left: 4px solid #fff; }
-      @media screen and (min-width: 1230px) {
-        body.home main div.fmag_story.even article .entry-content,
-        body.archive main div.fmag_story.even article .entry-content,
-        body.search main div.fmag_story.even article .entry-content {
-          float: right; }
-        body.home main div.fmag_story.even article .entry-header,
-        body.archive main div.fmag_story.even article .entry-header,
-        body.search main div.fmag_story.even article .entry-header {
-          float: right; } }
-    body.home main div.fmag_story article,
-    body.archive main div.fmag_story article,
-    body.search main div.fmag_story article {
-      overflow: hidden;
-      width: 1280px;
-      clear: both;
-      max-width: 100%;
-      margin: 0 auto;
-      border-bottom: 1px solid #aaa;
-      padding: 20px 0; }
-      @media screen and (min-width: 1230px) {
-        body.home main div.fmag_story article .entry-content,
-        body.archive main div.fmag_story article .entry-content,
-        body.search main div.fmag_story article .entry-content {
-          width: 780px;
-          float: left; } }
-      body.home main div.fmag_story article .entry-header,
-      body.archive main div.fmag_story article .entry-header,
-      body.search main div.fmag_story article .entry-header {
-        width: 425px;
-        margin: 0 auto; }
-        @media screen and (min-width: 1230px) {
-          body.home main div.fmag_story article .entry-header,
-          body.archive main div.fmag_story article .entry-header,
-          body.search main div.fmag_story article .entry-header {
-            padding-top: 100px;
-            float: left; } }
-        body.home main div.fmag_story article .entry-header h2,
-        body.archive main div.fmag_story article .entry-header h2,
-        body.search main div.fmag_story article .entry-header h2 {
-          display: inline; }
-          body.home main div.fmag_story article .entry-header h2 a,
-          body.archive main div.fmag_story article .entry-header h2 a,
-          body.search main div.fmag_story article .entry-header h2 a {
-            color: #000;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            font-size: 80%; }
-            body.home main div.fmag_story article .entry-header h2 a:hover,
-            body.archive main div.fmag_story article .entry-header h2 a:hover,
-            body.search main div.fmag_story article .entry-header h2 a:hover {
-              background: #000;
-              color: #fff; }
-        body.home main div.fmag_story article .entry-header p,
-        body.archive main div.fmag_story article .entry-header p,
-        body.search main div.fmag_story article .entry-header p {
+  body.home div.fmag_story.even,
+  body.archive div.fmag_story.even,
+  body.search div.fmag_story.even {
+    /*
+            @media screen and (min-width: $break-large) {
+              article{
+                .entry-content{
+                  float:right;
+                }
+                .entry-header{
+                  float:right;
+                }
+              }
+            }
+    */ }
+  body.home div.fmag_story article,
+  body.archive div.fmag_story article,
+  body.search div.fmag_story article {
+    overflow: hidden;
+    width: 1280px;
+    clear: both;
+    max-width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid #aaa;
+    padding: 20px 0; }
+    body.home div.fmag_story article .entry-content,
+    body.archive div.fmag_story article .entry-content,
+    body.search div.fmag_story article .entry-content {
+      /*
+                @media screen and (min-width: $break-large) {
+                  width:780px;
+                  float:left;
+                }
+                */ }
+    body.home div.fmag_story article .entry-header,
+    body.archive div.fmag_story article .entry-header,
+    body.search div.fmag_story article .entry-header {
+      width: 700px;
+      margin: 0 0 0 40px;
+      text-align: left;
+          /*
+          @media screen and (min-width: $break-large) {
+            padding-top:100px;
+            float:left;
+
+          }
+*/ }
+      body.home div.fmag_story article .entry-header h2,
+      body.archive div.fmag_story article .entry-header h2,
+      body.search div.fmag_story article .entry-header h2 {
+        display: inline;
+        width: 430px;
+        display: block;
+        float: left;
+        margin: 0;
+        font-size: 1.4em; }
+        body.home div.fmag_story article .entry-header h2 a,
+        body.archive div.fmag_story article .entry-header h2 a,
+        body.search div.fmag_story article .entry-header h2 a {
+          color: #000;
+          text-decoration: none;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          font-size: 80%; }
+          body.home div.fmag_story article .entry-header h2 a:hover,
+          body.archive div.fmag_story article .entry-header h2 a:hover,
+          body.search div.fmag_story article .entry-header h2 a:hover {
+            background: #000;
+            color: #fff; }
+      body.home div.fmag_story article .entry-header p,
+      body.archive div.fmag_story article .entry-header p,
+      body.search div.fmag_story article .entry-header p {
+        float: left;
+        width: 420px;
+        margin: 0;
+        padding: 0; }
+        body.home div.fmag_story article .entry-header p:first-of-type,
+        body.archive div.fmag_story article .entry-header p:first-of-type,
+        body.search div.fmag_story article .entry-header p:first-of-type {
+          margin: 10px 0 0 0; }
+        body.home div.fmag_story article .entry-header p > a,
+        body.archive div.fmag_story article .entry-header p > a,
+        body.search div.fmag_story article .entry-header p > a {
           margin: 0;
-          padding: 0px 20px 10px 20px; }
-          body.home main div.fmag_story article .entry-header p:first-of-type,
-          body.archive main div.fmag_story article .entry-header p:first-of-type,
-          body.search main div.fmag_story article .entry-header p:first-of-type {
-            margin: 10px 0 0 0; }
-          body.home main div.fmag_story article .entry-header p > a,
-          body.archive main div.fmag_story article .entry-header p > a,
-          body.search main div.fmag_story article .entry-header p > a {
-            margin: 0;
-            padding-left: 10px; }
-          body.home main div.fmag_story article .entry-header p a,
-          body.archive main div.fmag_story article .entry-header p a,
-          body.search main div.fmag_story article .entry-header p a {
-            color: #000;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 80%;
-            letter-spacing: 0.05em;
-            padding: 2px 7px; }
-            body.home main div.fmag_story article .entry-header p a:hover,
-            body.archive main div.fmag_story article .entry-header p a:hover,
-            body.search main div.fmag_story article .entry-header p a:hover {
-              background: #000;
-              color: #fff; }
-        body.home main div.fmag_story article .entry-header ul.minispreads,
-        body.archive main div.fmag_story article .entry-header ul.minispreads,
-        body.search main div.fmag_story article .entry-header ul.minispreads {
+          padding-left: 10px; }
+        body.home div.fmag_story article .entry-header p a,
+        body.archive div.fmag_story article .entry-header p a,
+        body.search div.fmag_story article .entry-header p a {
+          color: #000;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: 80%;
+          letter-spacing: 0.05em;
+          padding: 2px 7px; }
+          body.home div.fmag_story article .entry-header p a:hover,
+          body.archive div.fmag_story article .entry-header p a:hover,
+          body.search div.fmag_story article .entry-header p a:hover {
+            background: #000;
+            color: #fff; }
+      body.home div.fmag_story article .entry-header ul.minispreads,
+      body.archive div.fmag_story article .entry-header ul.minispreads,
+      body.search div.fmag_story article .entry-header ul.minispreads {
+        width: 270px;
+        margin: 0;
+        padding: 0;
+        overflow: hidden; }
+        body.home div.fmag_story article .entry-header ul.minispreads li,
+        body.archive div.fmag_story article .entry-header ul.minispreads li,
+        body.search div.fmag_story article .entry-header ul.minispreads li {
+          width: 80px;
+          list-style: none;
+          float: left;
+          margin: 5px 0 0 10px; }
+          body.home div.fmag_story article .entry-header ul.minispreads li img,
+          body.archive div.fmag_story article .entry-header ul.minispreads li img,
+          body.search div.fmag_story article .entry-header ul.minispreads li img {
+            width: 50%; }
+      body.home div.fmag_story article .entry-header a.morepages,
+      body.archive div.fmag_story article .entry-header a.morepages,
+      body.search div.fmag_story article .entry-header a.morepages {
+        display: block;
+        float: right;
+        padding: 2px 10px; }
+    body.home div.fmag_story article p,
+    body.archive div.fmag_story article p,
+    body.search div.fmag_story article p {
+      clear: both; }
+    body.home div.fmag_story article ul.medspread,
+    body.archive div.fmag_story article ul.medspread,
+    body.search div.fmag_story article ul.medspread {
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+      width: 700px;
+      overflow: hidden;
+      padding: 0; }
+      @media screen and (min-width: 1230px) {
+        body.home div.fmag_story article ul.medspread,
+        body.archive div.fmag_story article ul.medspread,
+        body.search div.fmag_story article ul.medspread {
           display: inline;
           float: left;
-          margin: 0;
-          padding: 0;
-          overflow: hidden; }
-          body.home main div.fmag_story article .entry-header ul.minispreads li,
-          body.archive main div.fmag_story article .entry-header ul.minispreads li,
-          body.search main div.fmag_story article .entry-header ul.minispreads li {
-            width: 120px;
-            list-style: none;
-            float: left;
-            margin: 10px; }
-            body.home main div.fmag_story article .entry-header ul.minispreads li img,
-            body.archive main div.fmag_story article .entry-header ul.minispreads li img,
-            body.search main div.fmag_story article .entry-header ul.minispreads li img {
-              width: 50%; }
-        body.home main div.fmag_story article .entry-header a.morepages,
-        body.archive main div.fmag_story article .entry-header a.morepages,
-        body.search main div.fmag_story article .entry-header a.morepages {
-          display: inline-block;
-          clear: both;
-          padding: 2px 10px; }
-      body.home main div.fmag_story article p,
-      body.archive main div.fmag_story article p,
-      body.search main div.fmag_story article p {
-        clear: both; }
-      body.home main div.fmag_story article ul.medspread,
-      body.archive main div.fmag_story article ul.medspread,
-      body.search main div.fmag_story article ul.medspread {
-        max-width: 100%;
-        display: block;
-        margin: 0 auto;
-        width: 700px;
-        overflow: hidden;
-        padding: 0; }
-        @media screen and (min-width: 1230px) {
-          body.home main div.fmag_story article ul.medspread,
-          body.archive main div.fmag_story article ul.medspread,
-          body.search main div.fmag_story article ul.medspread {
-            display: inline;
-            float: left;
-            margin: 0 40px; } }
-        body.home main div.fmag_story article ul.medspread li,
-        body.archive main div.fmag_story article ul.medspread li,
-        body.search main div.fmag_story article ul.medspread li {
-          list-style: none; }
-          body.home main div.fmag_story article ul.medspread li img,
-          body.archive main div.fmag_story article ul.medspread li img,
-          body.search main div.fmag_story article ul.medspread li img {
-            width: 50%; }
+          margin: 0 40px; } }
+      body.home div.fmag_story article ul.medspread li,
+      body.archive div.fmag_story article ul.medspread li,
+      body.search div.fmag_story article ul.medspread li {
+        list-style: none; }
+        body.home div.fmag_story article ul.medspread li img,
+        body.archive div.fmag_story article ul.medspread li img,
+        body.search div.fmag_story article ul.medspread li img {
+          width: 50%; }
+    body.home div.fmag_story article .entry-footer,
+    body.archive div.fmag_story article .entry-footer,
+    body.search div.fmag_story article .entry-footer {
+      clear: both; }
   body.home .nav-links .nav-previous, body.home .nav-links .nav-next,
   body.archive .nav-links .nav-previous,
   body.archive .nav-links .nav-next,
@@ -1212,7 +1206,7 @@ footer {
   #page #mid,
   #page #bottom {
     width: 1270px;
-    margin: 10px auto;
+    margin: 0 auto;
     overflow: hidden; }
 
 div {
@@ -1227,10 +1221,6 @@ div {
   width: 790px;
   clear: both;
   text-align: center; }
-  .top-main > div,
-  .mid-main > div,
-  .bottom-main > div {
-    margin: 5px auto; }
 
 .top-side,
 .mid-side,
@@ -1254,14 +1244,12 @@ div {
   height: 250px;
   width: 100%;
   clear: both;
-  background: #aaaaaa; }
+  background-color: #fff; }
 
 .storyroll {
-  text-align: center; }
+  text-align: center;
+  margin: 0; }
   .storyroll article {
-    width: 725px;
-    height: 500px;
-    border: 1px solid #000;
     margin: 10px auto; }
 
 .adspace {
@@ -1418,45 +1406,47 @@ aside.widget_latest_focuscover {
     font-weight: 400;
     color: #bbb; }
 
-@media screen and (max-width: 1230px) {
-  aside.Tumblr {
-    display: none; } }
-aside.Tumblr ul {
-  height: 1425px;
-  overflow: scroll;
-  margin: 0;
-  padding: 0; }
-  aside.Tumblr ul li {
-    overflow: hidden;
-    text-align: left;
-    list-style: none;
-    display: table;
+aside.Tumblr {
+  margin: 0; }
+  @media screen and (max-width: 1230px) {
+    aside.Tumblr {
+      display: none; } }
+  aside.Tumblr ul {
+    height: 1626px;
+    overflow: scroll;
+    margin: 0;
+    padding: 0; }
+    aside.Tumblr ul li {
+      overflow: hidden;
+      text-align: left;
+      list-style: none;
+      display: table;
+      margin: 0 auto;
+      width: 400px; }
+      aside.Tumblr ul li p {
+        font-weight: bold;
+        font-size: 80%;
+        margin-top: 0;
+        display: table-caption;
+        caption-side: bottom; }
+        aside.Tumblr ul li p a.tumblr_link {
+          display: none; }
+  aside.Tumblr h2.widget-title {
     margin: 0 auto;
-    width: 400px; }
-    aside.Tumblr ul li p {
-      font-weight: bold;
-      font-size: 80%;
-      margin-top: 0;
-      display: table-caption;
-      caption-side: bottom; }
-      aside.Tumblr ul li p a.tumblr_link {
-        display: none; }
-aside.Tumblr h2.widget-title {
-  margin: 0 auto;
-  padding: 0;
-  width: 323px;
-  background: url(http://fantasticsmag.com/sites/all/themes/fmag2014/images/focus-flash-bold.png);
-  background-position: 5px -77px;
-  text-indent: -3000px;
-  background-repeat: no-repeat;
-  font-size: 2em;
-  padding: 5px;
-  overflow: hidden;
-  text-transform: lowercase;
-  letter-spacing: 0em;
-  text-align: left;
-  font-weight: 400;
-  color: #bbb; }
+    padding: 0;
+    width: 323px;
+    background: url(http://fantasticsmag.com/sites/all/themes/fmag2014/images/focus-flash-bold.png);
+    background-position: 5px -77px;
+    text-indent: -3000px;
+    background-repeat: no-repeat;
+    font-size: 2em;
+    padding: 5px;
+    overflow: hidden;
+    text-transform: lowercase;
+    letter-spacing: 0em;
+    text-align: left;
+    font-weight: 400;
+    color: #bbb; }
 
 aside.widget_search {
   padding-top: 20px;
