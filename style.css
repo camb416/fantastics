@@ -1125,6 +1125,7 @@ body.search {
         margin: 0;
         padding: 0;
         position: absolute;
+        right: 0;
         overflow: hidden; }
         body.home div.fmag_story article .entry-header ul.minispreads li,
         body.archive div.fmag_story article .entry-header ul.minispreads li,
