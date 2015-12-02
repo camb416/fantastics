@@ -1142,9 +1142,11 @@ body.search {
       body.archive div.fmag_story article .entry-header a.morepages,
       body.search div.fmag_story article .entry-header a.morepages {
         display: block;
-        float: right;
+        position: absolute;
         padding: 2px 5px;
-        margin-top: 2px; }
+        margin-top: 2px;
+        right: 0;
+        top: 60px; }
     body.home div.fmag_story article p,
     body.archive div.fmag_story article p,
     body.search div.fmag_story article p {

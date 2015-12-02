@@ -265,11 +265,13 @@ width:270px;
           }
 
           a.morepages{
-display:block;
+            display:block;
             //display:inline-block;
-            float:right;
+            position:absolute;
             padding: 2px 5px;
             margin-top: 2px;
+            right:0;
+            top: 60px;
           }
 
 
