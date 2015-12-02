@@ -83,7 +83,7 @@ body.search{
 
   }
 
-
+/*
   div#bigcover{
     text-align: center;
     background-image: url(images/bowtie.svg);
@@ -99,6 +99,7 @@ body.search{
       }
     }
   }
+  */
 
   main{
 
@@ -127,7 +128,7 @@ body.search{
 
     div.fmag_story{
 
-      background-image:url(images/right-to-left-01.svg);
+      background-image:url(images/right-to-left-01.bowtie);
       background-position: center;
       background-repeat-x: no-repeat;
       &.even{
@@ -327,3 +328,243 @@ footer{
     margin-bottom:30px;
   }
 }
+
+
+
+
+// Eightcol.scss
+// roll this work into the larger stylesheet when
+// this prototype is complete
+
+////////////////////////////////////////////////////////
+// variables
+////////////////////////////////////////////////////////
+
+$columnwidth: 150px;
+$columngutter: 10px;
+$numcols: 8;
+$intermissionheight: 250px;
+
+
+////////////////////////////////////////////////////////
+// page
+////////////////////////////////////////////////////////
+
+#page{
+  width:100%;
+  // background-image: url(images/bowtie.svg);
+  // background-repeat: repeat-x;
+  // background-position-x: center;
+  #top,
+  #mid,
+  #bottom{
+  //  background:#ff0;
+    width:$numcols*$columnwidth+$columngutter*($numcols - 1);
+    margin:$columngutter auto;
+    overflow:hidden;
+  }
+}
+
+
+div{
+  display:block;
+  margin:0;
+  padding:0;
+}
+
+////////////////////////////////////////////////////////
+// areas by type
+////////////////////////////////////////////////////////
+
+// all the main columns
+.top-main,
+.mid-main,
+.bottom-main{
+  display:block;
+  width: $columnwidth * 5 + $columngutter * 4;
+  clear:both;
+  // background-color:#C0FFEE;
+  text-align:center;
+  >div{
+    margin:5px auto;
+  }
+}
+
+// all the sidebars
+.top-side,
+.mid-side,
+.bottom-side,
+{
+  display:block;
+  width: $columnwidth * 3 + $columngutter * 2;
+ // background-color:#FFC0EE;
+ //  background-color:rgba(255,255,255,128);
+
+  //background-position: -500px 0;
+  //background-repeat-x: no-repeat;
+  //background-image:url(images/left-to-right-01.svg);
+
+  >div{
+    margin:$columngutter auto;
+  }
+  .relatedcontent{
+    width:350px;
+    height:675px;
+    border:1px solid #000;
+  }
+}
+
+// all the intermissions
+.intermission-a,
+.intermission-b{
+  display:block;
+  height:$intermissionheight;
+  width:100%;
+  clear:both;
+  background:#aaaaaa;
+}
+
+// story rolls
+.storyroll{
+  text-align:center;
+  article{
+    width:725px;
+    height:500px;
+    border:1px solid #000;
+    margin:$columngutter auto;
+  }
+}
+
+// ad space
+.adspace{
+  width:350px;
+  height:350px;
+  background-color:#006699;
+  display:block;
+}
+
+
+////////////////////////////////////////////////////////
+// all areas, from top to bottom
+////////////////////////////////////////////////////////
+
+
+.top-main{
+  float:left;
+  margin-right:$columngutter;
+  > div{
+    background:#DDD;
+  }
+  .bigcover{
+    width:750px;
+    height:970px;
+  }
+  .menu-undercover{
+    height:64px;
+  }
+}
+
+.top-side {
+  float: left;
+  > div {
+    border: 1px solid #000;
+  }
+
+  .socialbuttons {
+    border:none;
+    height: 105px;
+    width: 310px;
+    margin: 0 auto;
+    p {
+      text-align: left;
+      font-size: 0.8em;
+      text-transform: uppercase;
+      padding: 0;
+      margin: 0;
+      color: #bbb;
+
+    }
+  }
+  a.sb-f {
+    height: 58px;
+    width: 58px;
+    display: block;
+    float: left;
+    position: relative;
+    margin: 2px;
+    color: #BBB;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 7px;
+
+  }
+  div.sb-f {
+    height: 58px;
+    width: 58px;
+    margin: 0 0 3px 0;
+
+  }
+  div.sb-f:hover {
+    background-position: 0 -58px !important;
+
+  }
+
+  .sb-f-twi {
+    background: url(images/socialbuttons/twitter.png) no-repeat scroll 0 0px transparent !important;
+
+  }
+  .sb-f-fac {
+    background: url(images/socialbuttons/facebook.png) no-repeat scroll 0 0px transparent !important;
+
+  }
+  .sb-f-pin {
+    background: url(images/socialbuttons/pinterest.png) no-repeat scroll 0 0px transparent !important;
+  }
+  .sb-f-tum {
+    background: url(images/socialbuttons/tumblr.png) no-repeat scroll 0 0px transparent !important;
+  }
+  .sb-f-ins {
+    background: url(images/socialbuttons/instagram.png) no-repeat scroll 0 0px transparent !important;
+  }
+
+  .followbutton a {
+    color: #999999;
+    font-size: 11px;
+    font-weight: bold;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    top: 5px;
+  }
+
+
+
+
+
+
+  aside.widget_latest_focuscover{
+    // mostly handled in _widgets.scss
+  }
+
+
+}
+.intermission-a{
+}
+.mid-main{
+  float:right;
+}
+.mid-side{
+  float:right;
+}
+.intermission-b{
+}
+.bottom-main{
+  float:left;
+}
+.bottom-side{
+  float:left;
+}
+
+
+////////////////////////////////////////////////////////

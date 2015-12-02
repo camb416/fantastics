@@ -81,7 +81,7 @@ div.intermission-outer{
 
 aside.widget_latest_focuscover{
   width:330px;
-  float:left;
+  margin:0 auto;
   @media screen and (max-width: $break-large) {
     margin:0 auto;
     float:none;
@@ -125,31 +125,30 @@ aside.widget_latest_focuscover{
 ////////////////////////////////////
 
 aside.Tumblr{
-  margin-left:20px;
-  float:left;
-  width:71%;
-  float:left;
+
 
   @media screen and (max-width: $break-large) {
     display:none;
   }
 
   ul{
-    max-height:445px;
+    height:1425px;
     overflow:scroll;
     margin:0;
     padding:0;
 
     li{
+
       overflow:hidden;
       text-align:left;
       list-style:none;
-      float:left;
-      display:table;
-      margin: 0 5px;
+      // float:left;
+       display:table;
+      margin: 0 auto;
+      width:400px;
 
       img{
-        max-height:400px;
+       // max-height:400px;
       }
 
       p{
@@ -170,8 +169,9 @@ aside.Tumblr{
   }
 
   h2.widget-title {
-    margin:0;
+    margin:0 auto;
     padding:0;
+    width:323px;
 
     //TODO: place this file locally in project
     background: url(http://fantasticsmag.com/sites/all/themes/fmag2014/images/focus-flash-bold.png);

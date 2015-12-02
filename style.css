@@ -929,267 +929,270 @@ body.single-fmag_story {
 
   div#rightcol {
     margin-top: 20px; } }
-body.home header#masthead.original h1,
-body.archive header#masthead.original h1,
-body.search header#masthead.original h1 {
-  margin: 0; }
-body.home header#masthead.original p.site-description,
-body.archive header#masthead.original p.site-description,
-body.search header#masthead.original p.site-description {
-  margin: 0px; }
-body.home header#masthead.original nav#site-navigation,
-body.archive header#masthead.original nav#site-navigation,
-body.search header#masthead.original nav#site-navigation {
-  margin: 10px 0 25px 0; }
-  body.home header#masthead.original nav#site-navigation ul,
-  body.archive header#masthead.original nav#site-navigation ul,
-  body.search header#masthead.original nav#site-navigation ul {
-    text-align: center; }
-    body.home header#masthead.original nav#site-navigation ul li,
-    body.archive header#masthead.original nav#site-navigation ul li,
-    body.search header#masthead.original nav#site-navigation ul li {
-      display: inline-block;
-      float: none;
-      margin-right: 10px; }
-body.home header#masthead.cloned,
-body.archive header#masthead.cloned,
-body.search header#masthead.cloned {
-  transition-property: opacity;
-  transition-duration: 2s;
-  opacity: 0;
-  display: none;
-  position: relative;
-  background: #fff; }
-  body.home header#masthead.cloned h1.site-title,
-  body.archive header#masthead.cloned h1.site-title,
-  body.search header#masthead.cloned h1.site-title {
-    float: left;
-    display: inline-block;
-    margin-bottom: 5px; }
-    body.home header#masthead.cloned h1.site-title a,
-    body.archive header#masthead.cloned h1.site-title a,
-    body.search header#masthead.cloned h1.site-title a {
-      width: 180px;
-      height: 36px;
-      background: url(images/masthead.png);
-      background-repeat: no-repeat;
-      background-size: 180px 36px; }
-  body.home header#masthead.cloned p.site-description,
-  body.archive header#masthead.cloned p.site-description,
-  body.search header#masthead.cloned p.site-description {
-    display: none; }
-  body.home header#masthead.cloned nav#site-navigation,
-  body.archive header#masthead.cloned nav#site-navigation,
-  body.search header#masthead.cloned nav#site-navigation {
-    float: left;
-    display: inline-block;
-    width: auto;
-    clear: none;
-    top: 40px;
-    margin-left: 25px;
-    position: relative; }
-    body.home header#masthead.cloned nav#site-navigation ul,
-    body.archive header#masthead.cloned nav#site-navigation ul,
-    body.search header#masthead.cloned nav#site-navigation ul {
-      overflow: hidden;
-      display: inline-block; }
-      body.home header#masthead.cloned nav#site-navigation ul li,
-      body.archive header#masthead.cloned nav#site-navigation ul li,
-      body.search header#masthead.cloned nav#site-navigation ul li {
-        display: block !important;
-        margin-right: 20px; }
-body.home div#bigcover,
-body.archive div#bigcover,
-body.search div#bigcover {
-  text-align: center;
-  background-image: url(images/bowtie.svg);
-  width: 100%;
-  background-repeat: repeat-x;
-  background-position-x: center; }
-  body.home div#bigcover article,
-  body.archive div#bigcover article,
-  body.search div#bigcover article {
-    border: 0; }
-    body.home div#bigcover article header,
-    body.archive div#bigcover article header,
-    body.search div#bigcover article header {
-      margin: 0;
-      padding: 0; }
-@media screen and (min-width: 1230px) {
-  body.home main div.odd header p, body.home main div.odd header ul.minispreads, body.home main div.odd header > a,
-  body.archive main div.odd header p,
-  body.archive main div.odd header ul.minispreads,
-  body.archive main div.odd header > a,
-  body.search main div.odd header p,
-  body.search main div.odd header ul.minispreads,
-  body.search main div.odd header > a {
-    border-left: 4px solid #eee; } }
-body.home main div.fmag_story,
-body.archive main div.fmag_story,
-body.search main div.fmag_story {
-  background-image: url(images/right-to-left-01.svg);
-  background-position: center;
-  background-repeat-x: no-repeat; }
-  body.home main div.fmag_story.even,
-  body.archive main div.fmag_story.even,
-  body.search main div.fmag_story.even {
-    background-image: url(images/left-to-right-01.svg); }
-    body.home main div.fmag_story.even header p, body.home main div.fmag_story.even ul.minispreads, body.home main div.fmag_story.even > a,
-    body.archive main div.fmag_story.even header p,
-    body.archive main div.fmag_story.even ul.minispreads,
-    body.archive main div.fmag_story.even > a,
-    body.search main div.fmag_story.even header p,
-    body.search main div.fmag_story.even ul.minispreads,
-    body.search main div.fmag_story.even > a {
-      border-left: 4px solid #fff; }
-    @media screen and (min-width: 1230px) {
-      body.home main div.fmag_story.even article .entry-content,
-      body.archive main div.fmag_story.even article .entry-content,
-      body.search main div.fmag_story.even article .entry-content {
-        float: right; }
-      body.home main div.fmag_story.even article .entry-header,
-      body.archive main div.fmag_story.even article .entry-header,
-      body.search main div.fmag_story.even article .entry-header {
-        float: right; } }
-  body.home main div.fmag_story article,
-  body.archive main div.fmag_story article,
-  body.search main div.fmag_story article {
-    overflow: hidden;
-    width: 1280px;
-    clear: both;
-    max-width: 100%;
-    margin: 0 auto;
-    border-bottom: 1px solid #aaa;
-    padding: 20px 0; }
-    @media screen and (min-width: 1230px) {
-      body.home main div.fmag_story article .entry-content,
-      body.archive main div.fmag_story article .entry-content,
-      body.search main div.fmag_story article .entry-content {
-        width: 780px;
-        float: left; } }
-    body.home main div.fmag_story article .entry-header,
-    body.archive main div.fmag_story article .entry-header,
-    body.search main div.fmag_story article .entry-header {
-      width: 425px;
-      margin: 0 auto; }
-      @media screen and (min-width: 1230px) {
-        body.home main div.fmag_story article .entry-header,
-        body.archive main div.fmag_story article .entry-header,
-        body.search main div.fmag_story article .entry-header {
-          padding-top: 100px;
-          float: left; } }
-      body.home main div.fmag_story article .entry-header h2,
-      body.archive main div.fmag_story article .entry-header h2,
-      body.search main div.fmag_story article .entry-header h2 {
-        display: inline; }
-        body.home main div.fmag_story article .entry-header h2 a,
-        body.archive main div.fmag_story article .entry-header h2 a,
-        body.search main div.fmag_story article .entry-header h2 a {
-          color: #000;
-          text-decoration: none;
-          text-transform: uppercase;
-          letter-spacing: 0.1em;
-          font-size: 80%; }
-          body.home main div.fmag_story article .entry-header h2 a:hover,
-          body.archive main div.fmag_story article .entry-header h2 a:hover,
-          body.search main div.fmag_story article .entry-header h2 a:hover {
-            background: #000;
-            color: #fff; }
-      body.home main div.fmag_story article .entry-header p,
-      body.archive main div.fmag_story article .entry-header p,
-      body.search main div.fmag_story article .entry-header p {
-        margin: 0;
-        padding: 0px 20px 10px 20px; }
-        body.home main div.fmag_story article .entry-header p:first-of-type,
-        body.archive main div.fmag_story article .entry-header p:first-of-type,
-        body.search main div.fmag_story article .entry-header p:first-of-type {
-          margin: 10px 0 0 0; }
-        body.home main div.fmag_story article .entry-header p > a,
-        body.archive main div.fmag_story article .entry-header p > a,
-        body.search main div.fmag_story article .entry-header p > a {
-          margin: 0;
-          padding-left: 10px; }
-        body.home main div.fmag_story article .entry-header p a,
-        body.archive main div.fmag_story article .entry-header p a,
-        body.search main div.fmag_story article .entry-header p a {
-          color: #000;
-          text-decoration: none;
-          text-transform: uppercase;
-          font-size: 80%;
-          letter-spacing: 0.05em;
-          padding: 2px 7px; }
-          body.home main div.fmag_story article .entry-header p a:hover,
-          body.archive main div.fmag_story article .entry-header p a:hover,
-          body.search main div.fmag_story article .entry-header p a:hover {
-            background: #000;
-            color: #fff; }
-      body.home main div.fmag_story article .entry-header ul.minispreads,
-      body.archive main div.fmag_story article .entry-header ul.minispreads,
-      body.search main div.fmag_story article .entry-header ul.minispreads {
-        display: inline;
-        float: left;
-        margin: 0;
-        padding: 0;
-        overflow: hidden; }
-        body.home main div.fmag_story article .entry-header ul.minispreads li,
-        body.archive main div.fmag_story article .entry-header ul.minispreads li,
-        body.search main div.fmag_story article .entry-header ul.minispreads li {
-          width: 120px;
-          list-style: none;
-          float: left;
-          margin: 10px; }
-          body.home main div.fmag_story article .entry-header ul.minispreads li img,
-          body.archive main div.fmag_story article .entry-header ul.minispreads li img,
-          body.search main div.fmag_story article .entry-header ul.minispreads li img {
-            width: 50%; }
-      body.home main div.fmag_story article .entry-header a.morepages,
-      body.archive main div.fmag_story article .entry-header a.morepages,
-      body.search main div.fmag_story article .entry-header a.morepages {
+body.home,
+body.archive,
+body.search {
+  /*
+    div#bigcover{
+      text-align: center;
+      background-image: url(images/bowtie.svg);
+      width: 100%;
+      background-repeat: repeat-x;
+      background-position-x: center;
+      article{
+        border:0;
+        header{
+          margin:0;
+          padding:0;
+  
+        }
+      }
+    }
+    */ }
+  body.home header#masthead.original h1,
+  body.archive header#masthead.original h1,
+  body.search header#masthead.original h1 {
+    margin: 0; }
+  body.home header#masthead.original p.site-description,
+  body.archive header#masthead.original p.site-description,
+  body.search header#masthead.original p.site-description {
+    margin: 0px; }
+  body.home header#masthead.original nav#site-navigation,
+  body.archive header#masthead.original nav#site-navigation,
+  body.search header#masthead.original nav#site-navigation {
+    margin: 10px 0 25px 0; }
+    body.home header#masthead.original nav#site-navigation ul,
+    body.archive header#masthead.original nav#site-navigation ul,
+    body.search header#masthead.original nav#site-navigation ul {
+      text-align: center; }
+      body.home header#masthead.original nav#site-navigation ul li,
+      body.archive header#masthead.original nav#site-navigation ul li,
+      body.search header#masthead.original nav#site-navigation ul li {
         display: inline-block;
-        clear: both;
-        padding: 2px 10px; }
-    body.home main div.fmag_story article p,
-    body.archive main div.fmag_story article p,
-    body.search main div.fmag_story article p {
-      clear: both; }
-    body.home main div.fmag_story article ul.medspread,
-    body.archive main div.fmag_story article ul.medspread,
-    body.search main div.fmag_story article ul.medspread {
-      max-width: 100%;
-      display: block;
-      margin: 0 auto;
-      width: 700px;
-      overflow: hidden;
-      padding: 0; }
+        float: none;
+        margin-right: 10px; }
+  body.home header#masthead.cloned,
+  body.archive header#masthead.cloned,
+  body.search header#masthead.cloned {
+    transition-property: opacity;
+    transition-duration: 2s;
+    opacity: 0;
+    display: none;
+    position: relative;
+    background: #fff; }
+    body.home header#masthead.cloned h1.site-title,
+    body.archive header#masthead.cloned h1.site-title,
+    body.search header#masthead.cloned h1.site-title {
+      float: left;
+      display: inline-block;
+      margin-bottom: 5px; }
+      body.home header#masthead.cloned h1.site-title a,
+      body.archive header#masthead.cloned h1.site-title a,
+      body.search header#masthead.cloned h1.site-title a {
+        width: 180px;
+        height: 36px;
+        background: url(images/masthead.png);
+        background-repeat: no-repeat;
+        background-size: 180px 36px; }
+    body.home header#masthead.cloned p.site-description,
+    body.archive header#masthead.cloned p.site-description,
+    body.search header#masthead.cloned p.site-description {
+      display: none; }
+    body.home header#masthead.cloned nav#site-navigation,
+    body.archive header#masthead.cloned nav#site-navigation,
+    body.search header#masthead.cloned nav#site-navigation {
+      float: left;
+      display: inline-block;
+      width: auto;
+      clear: none;
+      top: 40px;
+      margin-left: 25px;
+      position: relative; }
+      body.home header#masthead.cloned nav#site-navigation ul,
+      body.archive header#masthead.cloned nav#site-navigation ul,
+      body.search header#masthead.cloned nav#site-navigation ul {
+        overflow: hidden;
+        display: inline-block; }
+        body.home header#masthead.cloned nav#site-navigation ul li,
+        body.archive header#masthead.cloned nav#site-navigation ul li,
+        body.search header#masthead.cloned nav#site-navigation ul li {
+          display: block !important;
+          margin-right: 20px; }
+  @media screen and (min-width: 1230px) {
+    body.home main div.odd header p, body.home main div.odd header ul.minispreads, body.home main div.odd header > a,
+    body.archive main div.odd header p,
+    body.archive main div.odd header ul.minispreads,
+    body.archive main div.odd header > a,
+    body.search main div.odd header p,
+    body.search main div.odd header ul.minispreads,
+    body.search main div.odd header > a {
+      border-left: 4px solid #eee; } }
+  body.home main div.fmag_story,
+  body.archive main div.fmag_story,
+  body.search main div.fmag_story {
+    background-image: url(images/right-to-left-01.bowtie);
+    background-position: center;
+    background-repeat-x: no-repeat; }
+    body.home main div.fmag_story.even,
+    body.archive main div.fmag_story.even,
+    body.search main div.fmag_story.even {
+      background-image: url(images/left-to-right-01.svg); }
+      body.home main div.fmag_story.even header p, body.home main div.fmag_story.even ul.minispreads, body.home main div.fmag_story.even > a,
+      body.archive main div.fmag_story.even header p,
+      body.archive main div.fmag_story.even ul.minispreads,
+      body.archive main div.fmag_story.even > a,
+      body.search main div.fmag_story.even header p,
+      body.search main div.fmag_story.even ul.minispreads,
+      body.search main div.fmag_story.even > a {
+        border-left: 4px solid #fff; }
       @media screen and (min-width: 1230px) {
-        body.home main div.fmag_story article ul.medspread,
-        body.archive main div.fmag_story article ul.medspread,
-        body.search main div.fmag_story article ul.medspread {
+        body.home main div.fmag_story.even article .entry-content,
+        body.archive main div.fmag_story.even article .entry-content,
+        body.search main div.fmag_story.even article .entry-content {
+          float: right; }
+        body.home main div.fmag_story.even article .entry-header,
+        body.archive main div.fmag_story.even article .entry-header,
+        body.search main div.fmag_story.even article .entry-header {
+          float: right; } }
+    body.home main div.fmag_story article,
+    body.archive main div.fmag_story article,
+    body.search main div.fmag_story article {
+      overflow: hidden;
+      width: 1280px;
+      clear: both;
+      max-width: 100%;
+      margin: 0 auto;
+      border-bottom: 1px solid #aaa;
+      padding: 20px 0; }
+      @media screen and (min-width: 1230px) {
+        body.home main div.fmag_story article .entry-content,
+        body.archive main div.fmag_story article .entry-content,
+        body.search main div.fmag_story article .entry-content {
+          width: 780px;
+          float: left; } }
+      body.home main div.fmag_story article .entry-header,
+      body.archive main div.fmag_story article .entry-header,
+      body.search main div.fmag_story article .entry-header {
+        width: 425px;
+        margin: 0 auto; }
+        @media screen and (min-width: 1230px) {
+          body.home main div.fmag_story article .entry-header,
+          body.archive main div.fmag_story article .entry-header,
+          body.search main div.fmag_story article .entry-header {
+            padding-top: 100px;
+            float: left; } }
+        body.home main div.fmag_story article .entry-header h2,
+        body.archive main div.fmag_story article .entry-header h2,
+        body.search main div.fmag_story article .entry-header h2 {
+          display: inline; }
+          body.home main div.fmag_story article .entry-header h2 a,
+          body.archive main div.fmag_story article .entry-header h2 a,
+          body.search main div.fmag_story article .entry-header h2 a {
+            color: #000;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 80%; }
+            body.home main div.fmag_story article .entry-header h2 a:hover,
+            body.archive main div.fmag_story article .entry-header h2 a:hover,
+            body.search main div.fmag_story article .entry-header h2 a:hover {
+              background: #000;
+              color: #fff; }
+        body.home main div.fmag_story article .entry-header p,
+        body.archive main div.fmag_story article .entry-header p,
+        body.search main div.fmag_story article .entry-header p {
+          margin: 0;
+          padding: 0px 20px 10px 20px; }
+          body.home main div.fmag_story article .entry-header p:first-of-type,
+          body.archive main div.fmag_story article .entry-header p:first-of-type,
+          body.search main div.fmag_story article .entry-header p:first-of-type {
+            margin: 10px 0 0 0; }
+          body.home main div.fmag_story article .entry-header p > a,
+          body.archive main div.fmag_story article .entry-header p > a,
+          body.search main div.fmag_story article .entry-header p > a {
+            margin: 0;
+            padding-left: 10px; }
+          body.home main div.fmag_story article .entry-header p a,
+          body.archive main div.fmag_story article .entry-header p a,
+          body.search main div.fmag_story article .entry-header p a {
+            color: #000;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 80%;
+            letter-spacing: 0.05em;
+            padding: 2px 7px; }
+            body.home main div.fmag_story article .entry-header p a:hover,
+            body.archive main div.fmag_story article .entry-header p a:hover,
+            body.search main div.fmag_story article .entry-header p a:hover {
+              background: #000;
+              color: #fff; }
+        body.home main div.fmag_story article .entry-header ul.minispreads,
+        body.archive main div.fmag_story article .entry-header ul.minispreads,
+        body.search main div.fmag_story article .entry-header ul.minispreads {
           display: inline;
           float: left;
-          margin: 0 40px; } }
-      body.home main div.fmag_story article ul.medspread li,
-      body.archive main div.fmag_story article ul.medspread li,
-      body.search main div.fmag_story article ul.medspread li {
-        list-style: none; }
-        body.home main div.fmag_story article ul.medspread li img,
-        body.archive main div.fmag_story article ul.medspread li img,
-        body.search main div.fmag_story article ul.medspread li img {
-          width: 50%; }
-body.home .nav-links .nav-previous, body.home .nav-links .nav-next,
-body.archive .nav-links .nav-previous,
-body.archive .nav-links .nav-next,
-body.search .nav-links .nav-previous,
-body.search .nav-links .nav-next {
-  font-size: 200%; }
-  body.home .nav-links .nav-previous a, body.home .nav-links .nav-next a,
-  body.archive .nav-links .nav-previous a,
-  body.archive .nav-links .nav-next a,
-  body.search .nav-links .nav-previous a,
-  body.search .nav-links .nav-next a {
-    padding: 0 10px;
-    display: inline-block;
-    margin: 0 10px; }
+          margin: 0;
+          padding: 0;
+          overflow: hidden; }
+          body.home main div.fmag_story article .entry-header ul.minispreads li,
+          body.archive main div.fmag_story article .entry-header ul.minispreads li,
+          body.search main div.fmag_story article .entry-header ul.minispreads li {
+            width: 120px;
+            list-style: none;
+            float: left;
+            margin: 10px; }
+            body.home main div.fmag_story article .entry-header ul.minispreads li img,
+            body.archive main div.fmag_story article .entry-header ul.minispreads li img,
+            body.search main div.fmag_story article .entry-header ul.minispreads li img {
+              width: 50%; }
+        body.home main div.fmag_story article .entry-header a.morepages,
+        body.archive main div.fmag_story article .entry-header a.morepages,
+        body.search main div.fmag_story article .entry-header a.morepages {
+          display: inline-block;
+          clear: both;
+          padding: 2px 10px; }
+      body.home main div.fmag_story article p,
+      body.archive main div.fmag_story article p,
+      body.search main div.fmag_story article p {
+        clear: both; }
+      body.home main div.fmag_story article ul.medspread,
+      body.archive main div.fmag_story article ul.medspread,
+      body.search main div.fmag_story article ul.medspread {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        width: 700px;
+        overflow: hidden;
+        padding: 0; }
+        @media screen and (min-width: 1230px) {
+          body.home main div.fmag_story article ul.medspread,
+          body.archive main div.fmag_story article ul.medspread,
+          body.search main div.fmag_story article ul.medspread {
+            display: inline;
+            float: left;
+            margin: 0 40px; } }
+        body.home main div.fmag_story article ul.medspread li,
+        body.archive main div.fmag_story article ul.medspread li,
+        body.search main div.fmag_story article ul.medspread li {
+          list-style: none; }
+          body.home main div.fmag_story article ul.medspread li img,
+          body.archive main div.fmag_story article ul.medspread li img,
+          body.search main div.fmag_story article ul.medspread li img {
+            width: 50%; }
+  body.home .nav-links .nav-previous, body.home .nav-links .nav-next,
+  body.archive .nav-links .nav-previous,
+  body.archive .nav-links .nav-next,
+  body.search .nav-links .nav-previous,
+  body.search .nav-links .nav-next {
+    font-size: 200%; }
+    body.home .nav-links .nav-previous a, body.home .nav-links .nav-next a,
+    body.archive .nav-links .nav-previous a,
+    body.archive .nav-links .nav-next a,
+    body.search .nav-links .nav-previous a,
+    body.search .nav-links .nav-next a {
+      padding: 0 10px;
+      display: inline-block;
+      margin: 0 10px; }
 
 footer {
   text-align: center; }
@@ -1202,6 +1205,146 @@ footer {
     display: inline-block;
     text-indent: -1000%;
     margin-bottom: 30px; }
+
+#page {
+  width: 100%; }
+  #page #top,
+  #page #mid,
+  #page #bottom {
+    width: 1270px;
+    margin: 10px auto;
+    overflow: hidden; }
+
+div {
+  display: block;
+  margin: 0;
+  padding: 0; }
+
+.top-main,
+.mid-main,
+.bottom-main {
+  display: block;
+  width: 790px;
+  clear: both;
+  text-align: center; }
+  .top-main > div,
+  .mid-main > div,
+  .bottom-main > div {
+    margin: 5px auto; }
+
+.top-side,
+.mid-side,
+.bottom-side {
+  display: block;
+  width: 470px; }
+  .top-side > div,
+  .mid-side > div,
+  .bottom-side > div {
+    margin: 10px auto; }
+  .top-side .relatedcontent,
+  .mid-side .relatedcontent,
+  .bottom-side .relatedcontent {
+    width: 350px;
+    height: 675px;
+    border: 1px solid #000; }
+
+.intermission-a,
+.intermission-b {
+  display: block;
+  height: 250px;
+  width: 100%;
+  clear: both;
+  background: #aaaaaa; }
+
+.storyroll {
+  text-align: center; }
+  .storyroll article {
+    width: 725px;
+    height: 500px;
+    border: 1px solid #000;
+    margin: 10px auto; }
+
+.adspace {
+  width: 350px;
+  height: 350px;
+  background-color: #006699;
+  display: block; }
+
+.top-main {
+  float: left;
+  margin-right: 10px; }
+  .top-main > div {
+    background: #DDD; }
+  .top-main .bigcover {
+    width: 750px;
+    height: 970px; }
+  .top-main .menu-undercover {
+    height: 64px; }
+
+.top-side {
+  float: left; }
+  .top-side > div {
+    border: 1px solid #000; }
+  .top-side .socialbuttons {
+    border: none;
+    height: 105px;
+    width: 310px;
+    margin: 0 auto; }
+    .top-side .socialbuttons p {
+      text-align: left;
+      font-size: 0.8em;
+      text-transform: uppercase;
+      padding: 0;
+      margin: 0;
+      color: #bbb; }
+  .top-side a.sb-f {
+    height: 58px;
+    width: 58px;
+    display: block;
+    float: left;
+    position: relative;
+    margin: 2px;
+    color: #BBB;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 7px; }
+  .top-side div.sb-f {
+    height: 58px;
+    width: 58px;
+    margin: 0 0 3px 0; }
+  .top-side div.sb-f:hover {
+    background-position: 0 -58px !important; }
+  .top-side .sb-f-twi {
+    background: url(images/socialbuttons/twitter.png) no-repeat scroll 0 0px transparent !important; }
+  .top-side .sb-f-fac {
+    background: url(images/socialbuttons/facebook.png) no-repeat scroll 0 0px transparent !important; }
+  .top-side .sb-f-pin {
+    background: url(images/socialbuttons/pinterest.png) no-repeat scroll 0 0px transparent !important; }
+  .top-side .sb-f-tum {
+    background: url(images/socialbuttons/tumblr.png) no-repeat scroll 0 0px transparent !important; }
+  .top-side .sb-f-ins {
+    background: url(images/socialbuttons/instagram.png) no-repeat scroll 0 0px transparent !important; }
+  .top-side .followbutton a {
+    color: #999999;
+    font-size: 11px;
+    font-weight: bold;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    top: 5px; }
+
+.mid-main {
+  float: right; }
+
+.mid-side {
+  float: right; }
+
+.bottom-main {
+  float: left; }
+
+.bottom-side {
+  float: left; }
 
 body.archive h1.page-title, body.search h1.page-title {
   text-transform: uppercase;
@@ -1248,7 +1391,7 @@ div.intermission-outer {
 
 aside.widget_latest_focuscover {
   width: 330px;
-  float: left; }
+  margin: 0 auto; }
   @media screen and (max-width: 1230px) {
     aside.widget_latest_focuscover {
       margin: 0 auto;
@@ -1275,51 +1418,45 @@ aside.widget_latest_focuscover {
     font-weight: 400;
     color: #bbb; }
 
-aside.Tumblr {
-  margin-left: 20px;
-  float: left;
-  width: 71%;
-  float: left; }
-  @media screen and (max-width: 1230px) {
-    aside.Tumblr {
-      display: none; } }
-  aside.Tumblr ul {
-    max-height: 445px;
-    overflow: scroll;
-    margin: 0;
-    padding: 0; }
-    aside.Tumblr ul li {
-      overflow: hidden;
-      text-align: left;
-      list-style: none;
-      float: left;
-      display: table;
-      margin: 0 5px; }
-      aside.Tumblr ul li img {
-        max-height: 400px; }
-      aside.Tumblr ul li p {
-        font-weight: bold;
-        font-size: 80%;
-        margin-top: 0;
-        display: table-caption;
-        caption-side: bottom; }
-        aside.Tumblr ul li p a.tumblr_link {
-          display: none; }
-  aside.Tumblr h2.widget-title {
-    margin: 0;
-    padding: 0;
-    background: url(http://fantasticsmag.com/sites/all/themes/fmag2014/images/focus-flash-bold.png);
-    background-position: 5px -77px;
-    text-indent: -3000px;
-    background-repeat: no-repeat;
-    font-size: 2em;
-    padding: 5px;
+@media screen and (max-width: 1230px) {
+  aside.Tumblr {
+    display: none; } }
+aside.Tumblr ul {
+  height: 1425px;
+  overflow: scroll;
+  margin: 0;
+  padding: 0; }
+  aside.Tumblr ul li {
     overflow: hidden;
-    text-transform: lowercase;
-    letter-spacing: 0em;
     text-align: left;
-    font-weight: 400;
-    color: #bbb; }
+    list-style: none;
+    display: table;
+    margin: 0 auto;
+    width: 400px; }
+    aside.Tumblr ul li p {
+      font-weight: bold;
+      font-size: 80%;
+      margin-top: 0;
+      display: table-caption;
+      caption-side: bottom; }
+      aside.Tumblr ul li p a.tumblr_link {
+        display: none; }
+aside.Tumblr h2.widget-title {
+  margin: 0 auto;
+  padding: 0;
+  width: 323px;
+  background: url(http://fantasticsmag.com/sites/all/themes/fmag2014/images/focus-flash-bold.png);
+  background-position: 5px -77px;
+  text-indent: -3000px;
+  background-repeat: no-repeat;
+  font-size: 2em;
+  padding: 5px;
+  overflow: hidden;
+  text-transform: lowercase;
+  letter-spacing: 0em;
+  text-align: left;
+  font-weight: 400;
+  color: #bbb; }
 
 aside.widget_search {
   padding-top: 20px;
