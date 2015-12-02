@@ -1193,6 +1193,18 @@ body.search {
       padding: 0 10px;
       display: inline-block;
       margin: 0 10px; }
+    body.home .nav-links .nav-previous .nav-previous, body.home .nav-links .nav-next .nav-previous,
+    body.archive .nav-links .nav-previous .nav-previous,
+    body.archive .nav-links .nav-next .nav-previous,
+    body.search .nav-links .nav-previous .nav-previous,
+    body.search .nav-links .nav-next .nav-previous {
+      text-align: left; }
+    body.home .nav-links .nav-previous .nav-next, body.home .nav-links .nav-next .nav-next,
+    body.archive .nav-links .nav-previous .nav-next,
+    body.archive .nav-links .nav-next .nav-next,
+    body.search .nav-links .nav-previous .nav-next,
+    body.search .nav-links .nav-next .nav-next {
+      text-align: right; }
 
 footer {
   text-align: center; }
@@ -1208,9 +1220,7 @@ footer {
 
 #page {
   width: 100%; }
-  #page #top,
-  #page #mid,
-  #page #bottom {
+  #page #lefty, #page #righty {
     width: 1270px;
     margin: 0 auto;
     overflow: hidden; }
@@ -1220,26 +1230,18 @@ div {
   margin: 0;
   padding: 0; }
 
-.top-main,
-.mid-main,
-.bottom-main {
+#lefty .primary, #righty .primary {
   display: block;
   width: 790px;
   clear: both;
   text-align: center; }
 
-.top-side,
-.mid-side,
-.bottom-side {
+#lefty .secondary, #righty .secondary {
   display: block;
   width: 470px; }
-  .top-side > div,
-  .mid-side > div,
-  .bottom-side > div {
+  #lefty .secondary > div, #righty .secondary > div {
     margin: 10px auto; }
-  .top-side .relatedcontent,
-  .mid-side .relatedcontent,
-  .bottom-side .relatedcontent {
+  #lefty .secondary .relatedcontent, #righty .secondary .relatedcontent {
     width: 350px;
     height: 675px;
     border: 1px solid #000; }
@@ -1264,34 +1266,34 @@ div {
   background-color: #006699;
   display: block; }
 
-.top-main {
+#lefty .primary {
   float: left;
   margin-right: 10px; }
-  .top-main > div {
+  #lefty .primary > div {
     background: #DDD; }
-  .top-main .bigcover {
+  #lefty .primary .bigcover {
     width: 750px;
     height: 970px; }
-  .top-main .menu-undercover {
+  #lefty .primary .menu-undercover {
     height: 64px; }
 
-.top-side {
+#lefty .secondary {
   float: left; }
-  .top-side > div {
+  #lefty .secondary > div {
     border: 1px solid #000; }
-  .top-side .socialbuttons {
+  #lefty .secondary .socialbuttons {
     border: none;
     height: 105px;
     width: 310px;
     margin: 0 auto; }
-    .top-side .socialbuttons p {
+    #lefty .secondary .socialbuttons p {
       text-align: left;
       font-size: 0.8em;
       text-transform: uppercase;
       padding: 0;
       margin: 0;
       color: #bbb; }
-  .top-side a.sb-f {
+  #lefty .secondary a.sb-f {
     height: 58px;
     width: 58px;
     display: block;
@@ -1303,23 +1305,23 @@ div {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-size: 7px; }
-  .top-side div.sb-f {
+  #lefty .secondary div.sb-f {
     height: 58px;
     width: 58px;
     margin: 0 0 3px 0; }
-  .top-side div.sb-f:hover {
+  #lefty .secondary div.sb-f:hover {
     background-position: 0 -58px !important; }
-  .top-side .sb-f-twi {
+  #lefty .secondary .sb-f-twi {
     background: url(images/socialbuttons/twitter.png) no-repeat scroll 0 0px transparent !important; }
-  .top-side .sb-f-fac {
+  #lefty .secondary .sb-f-fac {
     background: url(images/socialbuttons/facebook.png) no-repeat scroll 0 0px transparent !important; }
-  .top-side .sb-f-pin {
+  #lefty .secondary .sb-f-pin {
     background: url(images/socialbuttons/pinterest.png) no-repeat scroll 0 0px transparent !important; }
-  .top-side .sb-f-tum {
+  #lefty .secondary .sb-f-tum {
     background: url(images/socialbuttons/tumblr.png) no-repeat scroll 0 0px transparent !important; }
-  .top-side .sb-f-ins {
+  #lefty .secondary .sb-f-ins {
     background: url(images/socialbuttons/instagram.png) no-repeat scroll 0 0px transparent !important; }
-  .top-side .followbutton a {
+  #lefty .secondary .followbutton a {
     color: #999999;
     font-size: 11px;
     font-weight: bold;
@@ -1328,10 +1330,10 @@ div {
     text-transform: uppercase;
     top: 5px; }
 
-.mid-main {
+#righty .primary {
   float: right; }
 
-.mid-side {
+#righty .secondary {
   float: right; }
 
 .bottom-main {

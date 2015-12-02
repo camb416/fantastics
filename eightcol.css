@@ -13,32 +13,22 @@ div {
   margin: 0;
   padding: 0; }
 
-.top-main,
-.mid-main,
-.bottom-main {
+#lefty .primary, #righty .primary {
   display: block;
   width: 790px;
   clear: both;
   background-color: #C0FFEE;
   text-align: center; }
-  .top-main > div,
-  .mid-main > div,
-  .bottom-main > div {
+  #lefty .primary > div, #righty .primary > div {
     margin: 5px auto; }
 
-.top-side,
-.mid-side,
-.bottom-side {
+#lefty .secondary, #righty .secondary {
   display: block;
   width: 470px;
   background-color: #FFC0EE; }
-  .top-side > div,
-  .mid-side > div,
-  .bottom-side > div {
+  #lefty .secondary > div, #righty .secondary > div {
     margin: 10px auto; }
-  .top-side .relatedcontent,
-  .mid-side .relatedcontent,
-  .bottom-side .relatedcontent {
+  #lefty .secondary .relatedcontent, #righty .secondary .relatedcontent {
     width: 350px;
     height: 675px;
     border: 1px solid #000; }
@@ -65,33 +55,33 @@ div {
   background-color: #006699;
   display: block; }
 
-.top-main {
+#lefty .primary {
   float: left;
   margin-right: 10px; }
-  .top-main > div {
+  #lefty .primary > div {
     background: #DDD; }
-  .top-main .bigcover {
+  #lefty .primary .bigcover {
     width: 750px;
     height: 970px; }
-  .top-main .menu-undercover {
+  #lefty .primary .menu-undercover {
     height: 64px; }
 
-.top-side {
+#lefty .secondary {
   float: left; }
-  .top-side > div {
+  #lefty .secondary > div {
     border: 1px solid #000; }
-  .top-side .socialbuttons {
+  #lefty .secondary .socialbuttons {
     height: 64px; }
-  .top-side .latestfocuscover {
+  #lefty .secondary .latestfocuscover {
     width: 320px;
     height: 450px; }
-  .top-side .flashroll {
+  #lefty .secondary .flashroll {
     height: 1170px; }
 
-.mid-main {
+#righty .primary {
   float: right; }
 
-.mid-side {
+#righty .secondary {
   float: right; }
 
 .bottom-main {

@@ -40,9 +40,9 @@ div{
 ////////////////////////////////////////////////////////
 
 // all the main columns
-.top-main,
-.mid-main,
-.bottom-main{
+#lefty, #righty
+{
+.primary{
   display:block;
   width: $columnwidth * 5 + $columngutter * 4;
   clear:both;
@@ -52,25 +52,25 @@ div{
     margin:5px auto;
   }
 }
-
+}
 // all the sidebars
-.top-side,
-.mid-side,
-.bottom-side,
-{
-  display:block;
-  width: $columnwidth * 3 + $columngutter * 2;
-  background-color:#FFC0EE;
+#lefty, #righty{
+  .secondary{
+    display:block;
+    width: $columnwidth * 3 + $columngutter * 2;
+    background-color:#FFC0EE;
 
-  >div{
-    margin:$columngutter auto;
-  }
-  .relatedcontent{
-    width:350px;
-    height:675px;
-    border:1px solid #000;
+    >div{
+      margin:$columngutter auto;
+    }
+    .relatedcontent{
+      width:350px;
+      height:675px;
+      border:1px solid #000;
+    }
   }
 }
+
 
 // all the intermissions
 .intermission-a,
@@ -107,7 +107,7 @@ div{
 ////////////////////////////////////////////////////////
 
 
-.top-main{
+#lefty .primary{
   float:left;
   margin-right:$columngutter;
   > div{
@@ -121,7 +121,7 @@ div{
     height:64px;
   }
 }
-.top-side{
+#lefty .secondary{
   float:left;
   >div{
     border:1px solid #000;
@@ -139,10 +139,10 @@ div{
 }
 .intermission-a{
 }
-.mid-main{
+#righty .primary{
   float:right;
 }
-.mid-side{
+#righty .secondary{
   float:right;
 }
 .intermission-b{

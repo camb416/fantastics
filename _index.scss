@@ -339,6 +339,12 @@ width:270px;
         display:inline-block;
         margin:0 10px;
       }
+      .nav-previous{
+        text-align:left;
+      }
+      .nav-next{
+        text-align:right;
+      }
     }
   }
 
@@ -384,9 +390,7 @@ $intermissionheight: 250px;
   // background-image: url(images/bowtie.svg);
   // background-repeat: repeat-x;
   // background-position-x: center;
-  #top,
-  #mid,
-  #bottom{
+  #lefty, #righty{
   //  background:#ff0;
     width:$numcols*$columnwidth+$columngutter*($numcols - 1);
     //margin:$columngutter auto;
@@ -407,40 +411,42 @@ div{
 ////////////////////////////////////////////////////////
 
 // all the main columns
-.top-main,
-.mid-main,
-.bottom-main{
-  display:block;
+#lefty, #righty{
+.primary{
+display:block;
   width: $columnwidth * 5 + $columngutter * 4;
   clear:both;
   // background-color:#C0FFEE;
   text-align:center;
 
 }
+}
 
 // all the sidebars
-.top-side,
-.mid-side,
-.bottom-side,
-{
+#lefty, #righty{
+  .secondary{
+
   display:block;
-  width: $columnwidth * 3 + $columngutter * 2;
- // background-color:#FFC0EE;
- //  background-color:rgba(255,255,255,128);
+    width: $columnwidth * 3 + $columngutter * 2;
+    // background-color:#FFC0EE;
+    //  background-color:rgba(255,255,255,128);
 
-  //background-position: -500px 0;
-  //background-repeat-x: no-repeat;
-  //background-image:url(images/left-to-right-01.svg);
+    //background-position: -500px 0;
+    //background-repeat-x: no-repeat;
+    //background-image:url(images/left-to-right-01.svg);
 
-  >div{
-    margin:$columngutter auto;
-  }
-  .relatedcontent{
-    width:350px;
-    height:675px;
-    border:1px solid #000;
+    >div{
+      margin:$columngutter auto;
+    }
+    .relatedcontent{
+      width:350px;
+      height:675px;
+      border:1px solid #000;
+    }
+
   }
 }
+
 
 // all the intermissions
 .intermission-a,
@@ -483,7 +489,7 @@ div{
 ////////////////////////////////////////////////////////
 
 
-.top-main{
+#lefty .primary{
   float:left;
   margin-right:$columngutter;
   > div{
@@ -498,7 +504,7 @@ div{
   }
 }
 
-.top-side {
+#lefty .secondary {
   float: left;
   > div {
     border: 1px solid #000;
@@ -585,12 +591,13 @@ div{
 }
 .intermission-a{
 }
-.mid-main{
+#righty .primary{
   float:right;
 }
-.mid-side{
+#righty .secondary{
   float:right;
 }
+
 .intermission-b{
 }
 .bottom-main{

@@ -26,11 +26,11 @@
 ///////////////////////////////////////////////////
 ?>
 
-<div id="top">
+<div id="lefty">
 
     <?php // top-main ?>
 
-    <div class="top-main">
+    <div class="primary">
 
             <?php
 
@@ -156,7 +156,7 @@
            // top-side
 
     if(1 == $paged && is_front_page()){
-        echo '    <div class="top-side">';
+        echo '    <div class="secondary">';
         echo '        <div class="socialbuttons">
 
 
@@ -200,8 +200,10 @@
                     //echo "default stuff";
                 }
                 echo '</div>'; // close intermission
-                echo '<div id="mid">';
-                echo '<div class="mid-main">';
+
+
+                echo '<div id="righty">';
+                echo '<div class="primary">';
                 echo '<div class="storyroll">';
 
             } elseif($i === 4 && 1 == $paged){
@@ -213,10 +215,50 @@
 
                 // close the mid container
                 echo '</div>';
+
+
+                // do the intermission
+                echo '<div class="intermission-a">';
+                //echo '<div class="intermission-outer"><div class="intermission">';
+                if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Intermission')){
+                    // do nothing if not there
+                    //echo "default stuff";
+                }
+                echo '</div>'; // close intermission
+
+
                 // open the bottom container
-                echo '<div id="bottom">';
+                echo '<div id="lefty">';
                 // open the bottom main
-                echo '<div class="bottom-main">';
+                echo '<div class="primary">';
+                // open the story roll
+                echo '<div class="storyroll">';
+
+            } elseif($i === 6 && 1 == $paged){
+                // close story roll
+                echo '</div>';
+                // close mid main
+                echo '</div>';
+                // TODO: do the bottom sidebar
+
+                // close the mid container
+                echo '</div>';
+
+
+                // do the intermission
+                echo '<div class="intermission-a">';
+                //echo '<div class="intermission-outer"><div class="intermission">';
+                if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Intermission')){
+                    // do nothing if not there
+                    //echo "default stuff";
+                }
+                echo '</div>'; // close intermission
+
+
+                // open the bottom container
+                echo '<div id="righty">';
+                // open the bottom main
+                echo '<div class="primary">';
                 // open the story roll
                 echo '<div class="storyroll">';
             }
