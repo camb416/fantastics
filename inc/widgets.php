@@ -6,143 +6,154 @@
 */
 class FMAG_Widget_Latest_Focus extends WP_Widget {
 
-function __construct() {
-$widget_ops = array('classname' => 'widget_latest_focuscover', 'description' => __( "The most recent focus cover on your site") );
-parent::__construct('latest-focus', __('Latest Focus Cover'), $widget_ops);
-$this->alt_option_name = 'widget_latest_focuscover';
+    function __construct() {
+        $widget_ops = array('classname' => 'widget_latest_focuscover',
+            'description' => __( "The most recent focus cover on your site") );
 
-add_action( 'save_post', array($this, 'flush_widget_cache') );
-add_action( 'deleted_post', array($this, 'flush_widget_cache') );
-add_action( 'switch_theme', array($this, 'flush_widget_cache') );
-}
+        /**
+         * Register widget with wordpress
+         */
+        parent::__construct(
+            'latest-focus', // Base ID
+            __('Latest Focus Cover'),  // Name
+            $widget_ops); // Args
 
-public function widget($args, $instance) {
-// $cache = wp_cache_get('widget_focus_cover', 'widget');
+        $this->alt_option_name = 'widget_latest_focuscover';
 
-if ( !is_array($cache) )
-$cache = array();
+        add_action( 'save_post', array($this, 'flush_widget_cache') );
+        add_action( 'deleted_post', array($this, 'flush_widget_cache') );
+        add_action( 'switch_theme', array($this, 'flush_widget_cache') );
+    }
 
-if ( ! isset( $args['widget_id'] ) )
-$args['widget_id'] = $this->id;
+    public function widget($args, $instance) {
+    // $cache = wp_cache_get('widget_focus_cover', 'widget');
 
-if ( isset( $cache[ $args['widget_id'] ] ) ) {
-echo $cache[ $args['widget_id'] ];
-return;
-}
+    if ( !is_array($cache) )
+        $cache = array();
 
-ob_start();
-extract($args);
+    if ( ! isset( $args['widget_id'] ) )
+        $args['widget_id'] = $this->id;
 
-$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Latest Focus' );
-$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
-$number = ( ! empty( $instance['number'] ) ) ? absint( $instance['number'] ) : 1;
-//if ( ! $number )
-$number = 1;
- //$show_date = isset( $instance['show_date'] ) ? $instance['show_date'] : false;
- $show_date = false;
-$r = new WP_Query( apply_filters( 'widget_posts_args',
-    array( 'posts_per_page' => $number,
-        'no_found_rows' => true,
-        'post_status' => 'publish',
-        'ignore_sticky_posts' => true,
-        'post_type' => 'fmag_cover',
-        'tax_query' => array(
-            array(
-            'taxonomy' => 'term',
-            'field' => 'slug',
-            'terms' => array('focus')
+    if ( isset( $cache[ $args['widget_id'] ] ) ) {
+        echo $cache[ $args['widget_id'] ];
+        return;
+    }
+
+    ob_start();
+    extract($args);
+
+    $title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Latest Focus' );
+    $title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
+    $number = ( ! empty( $instance['number'] ) ) ? absint( $instance['number'] ) : 1;
+    //if ( ! $number )
+    $number = 1;
+     //$show_date = isset( $instance['show_date'] ) ? $instance['show_date'] : false;
+     $show_date = false;
+    $r = new WP_Query( apply_filters( 'widget_posts_args',
+        array( 'posts_per_page' => $number,
+            'no_found_rows' => true,
+            'post_status' => 'publish',
+            'ignore_sticky_posts' => true,
+            'post_type' => 'fmag_cover',
+            'tax_query' => array(
+                array(
+                'taxonomy' => 'term',
+                'field' => 'slug',
+                'terms' => array('focus')
+                )
             )
-        )
-    ) ) );
+        ) ) );
 
-   // var_dump($r);
+       // var_dump($r);
 
-if ($r->have_posts()) :
-?>
-<?php echo $before_widget; ?>
-
-<?php
-    //  display title
-     if ( $title ) echo $before_title . $title . $after_title;
-
+    if ($r->have_posts()) :
     ?>
-<ul>
-    <?php while ( $r->have_posts() ) : $r->the_post(); ?>
-        <li>
-            <?php
-            // working methods here:
-            // the_permalink()
-            // esc_attr( get_the_title() ? get_the_title() : get_the_ID() );
-            // <?php if ( get_the_title() ) the_title(); else the_ID();
-            // get_the_date();
+    <?php echo $before_widget; ?>
 
-            // echo get_the_title();
+    <?php
+        //  display title
+         if ( $title ) echo $before_title . $title . $after_title;
 
-            $args = array(
-                'post_type' => 'attachment',
-                'numberposts' => 1,
-                'post_status' => null,
-                'post_parent' => get_the_ID()
-            );
+        ?>
+    <ul>
+        <?php while ( $r->have_posts() ) : $r->the_post(); ?>
+            <li>
+                <?php
+                // working methods here:
+                // the_permalink()
+                // esc_attr( get_the_title() ? get_the_title() : get_the_ID() );
+                // <?php if ( get_the_title() ) the_title(); else the_ID();
+                // get_the_date();
 
-            $attachments = get_posts( $args );
-            if ( $attachments ) {
-                foreach ( $attachments as $attachment ) {
-                    echo '<li>';
-                    echo wp_get_attachment_image( $attachment->ID, array(500,500) );
-                    echo '<p>';
-                    echo apply_filters( 'the_title', $attachment->post_title );
-                    echo '</p></li>';
+                // echo get_the_title();
+
+                $args = array(
+                    'post_type' => 'attachment',
+                    'numberposts' => 1,
+                    'post_status' => null,
+                    'post_parent' => get_the_ID()
+                );
+
+                $attachments = get_posts( $args );
+                if ( $attachments ) {
+                    foreach ( $attachments as $attachment ) {
+                        echo '<li>';
+                        echo wp_get_attachment_image( $attachment->ID, array(500,500) );
+                        echo '<p>';
+                        echo apply_filters( 'the_title', $attachment->post_title );
+                        echo '</p></li>';
+                    }
                 }
-            }
-            ?>
-        </li>
-    <?php endwhile; ?>
-</ul>
-<?php echo $after_widget; ?>
-<?php
-// Reset the global $the_post as this query will have stomped on it
-wp_reset_postdata();
+                ?>
+            </li>
+        <?php endwhile; ?>
+    </ul>
+    <?php echo $after_widget; ?>
+    <?php
+    // Reset the global $the_post as this query will have stomped on it
+    wp_reset_postdata();
 
-endif;
+    endif;
 
-$cache[$args['widget_id']] = ob_get_flush();
-wp_cache_set('widget_focus_cover', $cache, 'widget');
-}
+    $cache[$args['widget_id']] = ob_get_flush();
+    wp_cache_set('widget_focus_cover', $cache, 'widget');
 
-function update( $new_instance, $old_instance ) {
-    $instance = $old_instance;
-    $instance['title'] = strip_tags($new_instance['title']);
-    $instance['number'] = (int) $new_instance['number'];
-    $instance['show_date'] = (bool) $new_instance['show_date'];
-    $this->flush_widget_cache();
+    }
 
-    $alloptions = wp_cache_get( 'alloptions', 'options' );
-    if ( isset($alloptions['widget_latest_focuscover']) )
-        delete_option('widget_latest_focuscover');
+    function update( $new_instance, $old_instance ) {
 
-    return $instance;
-}
+        $instance = $old_instance;
+        $instance['title'] = strip_tags($new_instance['title']);
+        $instance['number'] = (int) $new_instance['number'];
+        $instance['show_date'] = (bool) $new_instance['show_date'];
+        $this->flush_widget_cache();
 
-function flush_widget_cache() {
-    wp_cache_delete('widget_focus_cover', 'widget');
-}
+        $alloptions = wp_cache_get( 'alloptions', 'options' );
+        if ( isset($alloptions['widget_latest_focuscover']) )
+            delete_option('widget_latest_focuscover');
 
-function form( $instance ) {
-    $title     = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
-    $number    = isset( $instance['number'] ) ? absint( $instance['number'] ) : 5;
-    $show_date = isset( $instance['show_date'] ) ? (bool) $instance['show_date'] : false;
-    ?>
-    <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
-        <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
+        return $instance;
+    }
 
-    <p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:' ); ?></label>
-        <input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" size="3" /></p>
+    function flush_widget_cache() {
+        wp_cache_delete('widget_focus_cover', 'widget');
+    }
 
-    <p><input class="checkbox" type="checkbox" <?php checked( $show_date ); ?> id="<?php echo $this->get_field_id( 'show_date' ); ?>" name="<?php echo $this->get_field_name( 'show_date' ); ?>" />
-        <label for="<?php echo $this->get_field_id( 'show_date' ); ?>"><?php _e( 'Display post date?' ); ?></label></p>
-<?php
-}
+    function form( $instance ) {
+        $title     = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
+        $number    = isset( $instance['number'] ) ? absint( $instance['number'] ) : 5;
+        $show_date = isset( $instance['show_date'] ) ? (bool) $instance['show_date'] : false;
+        ?>
+        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+            <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
+
+        <p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:' ); ?></label>
+            <input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" size="3" /></p>
+
+        <p><input class="checkbox" type="checkbox" <?php checked( $show_date ); ?> id="<?php echo $this->get_field_id( 'show_date' ); ?>" name="<?php echo $this->get_field_name( 'show_date' ); ?>" />
+            <label for="<?php echo $this->get_field_id( 'show_date' ); ?>"><?php _e( 'Display post date?' ); ?></label></p>
+    <?php
+    }
 }
 
 
