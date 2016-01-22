@@ -450,17 +450,25 @@ display:block;
 
 // all the intermissions
 .intermission-a,
-.intermission-b{
+.intermission-b,
+.intermission-c{
   display:block;
   height:$intermissionheight;
   width:100%;
   clear:both;
 
   background-color: #fff;
-  // background-image: url(images/bowtie.svg);
-  // background-repeat: repeat-x;
-  // background-position-x: center;
-  // background-position-y: -700px;
+
+  h2{
+    color:#aaa;
+    padding:10px;
+  }
+  ins{
+    // messing with this might mess up the google ad
+    // rendering...
+    background:#fff;
+    // text-align:center;
+  }
 }
 
 // story rolls
@@ -590,6 +598,7 @@ display:block;
 
 }
 .intermission-a{
+
 }
 #righty .primary{
   float:right;

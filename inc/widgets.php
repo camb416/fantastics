@@ -26,97 +26,97 @@ class FMAG_Widget_Latest_Focus extends WP_Widget {
     }
 
     public function widget($args, $instance) {
-    // $cache = wp_cache_get('widget_focus_cover', 'widget');
+        $cache = wp_cache_get('widget_focus_cover', 'widget');
 
-    if ( !is_array($cache) )
-        $cache = array();
+        if ( !is_array($cache) )
+            $cache = array();
 
-    if ( ! isset( $args['widget_id'] ) )
-        $args['widget_id'] = $this->id;
+        if ( ! isset( $args['widget_id'] ) )
+            $args['widget_id'] = $this->id;
 
-    if ( isset( $cache[ $args['widget_id'] ] ) ) {
-        echo $cache[ $args['widget_id'] ];
-        return;
-    }
+        if ( isset( $cache[ $args['widget_id'] ] ) ) {
+            echo $cache[ $args['widget_id'] ];
+            return;
+        }
 
-    ob_start();
-    extract($args);
+        ob_start();
+        extract($args);
 
-    $title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Latest Focus' );
-    $title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
-    $number = ( ! empty( $instance['number'] ) ) ? absint( $instance['number'] ) : 1;
-    //if ( ! $number )
-    $number = 1;
-     //$show_date = isset( $instance['show_date'] ) ? $instance['show_date'] : false;
-     $show_date = false;
-    $r = new WP_Query( apply_filters( 'widget_posts_args',
-        array( 'posts_per_page' => $number,
-            'no_found_rows' => true,
-            'post_status' => 'publish',
-            'ignore_sticky_posts' => true,
-            'post_type' => 'fmag_cover',
-            'tax_query' => array(
-                array(
-                'taxonomy' => 'term',
-                'field' => 'slug',
-                'terms' => array('focus')
+        $title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Latest Focus' );
+        $title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
+        $number = ( ! empty( $instance['number'] ) ) ? absint( $instance['number'] ) : 1;
+        //if ( ! $number )
+        $number = 1;
+         //$show_date = isset( $instance['show_date'] ) ? $instance['show_date'] : false;
+         $show_date = false;
+        $r = new WP_Query( apply_filters( 'widget_posts_args',
+            array( 'posts_per_page' => $number,
+                'no_found_rows' => true,
+                'post_status' => 'publish',
+                'ignore_sticky_posts' => true,
+                'post_type' => 'fmag_cover',
+                'tax_query' => array(
+                    array(
+                    'taxonomy' => 'term',
+                    'field' => 'slug',
+                    'terms' => array('focus')
+                    )
                 )
-            )
-        ) ) );
+            ) ) );
 
-       // var_dump($r);
+           // var_dump($r);
 
-    if ($r->have_posts()) :
-    ?>
-    <?php echo $before_widget; ?>
-
-    <?php
-        //  display title
-         if ( $title ) echo $before_title . $title . $after_title;
-
+        if ($r->have_posts()) :
         ?>
-    <ul>
-        <?php while ( $r->have_posts() ) : $r->the_post(); ?>
-            <li>
-                <?php
-                // working methods here:
-                // the_permalink()
-                // esc_attr( get_the_title() ? get_the_title() : get_the_ID() );
-                // <?php if ( get_the_title() ) the_title(); else the_ID();
-                // get_the_date();
+        <?php echo $before_widget; ?>
 
-                // echo get_the_title();
+        <?php
+            //  display title
+             if ( $title ) echo $before_title . $title . $after_title;
 
-                $args = array(
-                    'post_type' => 'attachment',
-                    'numberposts' => 1,
-                    'post_status' => null,
-                    'post_parent' => get_the_ID()
-                );
+            ?>
+        <ul>
+            <?php while ( $r->have_posts() ) : $r->the_post(); ?>
+                <li>
+                    <?php
+                    // working methods here:
+                    // the_permalink()
+                    // esc_attr( get_the_title() ? get_the_title() : get_the_ID() );
+                    // <?php if ( get_the_title() ) the_title(); else the_ID();
+                    // get_the_date();
 
-                $attachments = get_posts( $args );
-                if ( $attachments ) {
-                    foreach ( $attachments as $attachment ) {
-                        echo '<li>';
-                        echo wp_get_attachment_image( $attachment->ID, array(500,500) );
-                        echo '<p>';
-                        echo apply_filters( 'the_title', $attachment->post_title );
-                        echo '</p></li>';
+                    // echo get_the_title();
+
+                    $args = array(
+                        'post_type' => 'attachment',
+                        'numberposts' => 1,
+                        'post_status' => null,
+                        'post_parent' => get_the_ID()
+                    );
+
+                    $attachments = get_posts( $args );
+                    if ( $attachments ) {
+                        foreach ( $attachments as $attachment ) {
+                            echo '<li>';
+                            echo wp_get_attachment_image( $attachment->ID, array(500,500) );
+                            echo '<p>';
+                            echo apply_filters( 'the_title', $attachment->post_title );
+                            echo '</p></li>';
+                        }
                     }
-                }
-                ?>
-            </li>
-        <?php endwhile; ?>
-    </ul>
-    <?php echo $after_widget; ?>
-    <?php
-    // Reset the global $the_post as this query will have stomped on it
-    wp_reset_postdata();
+                    ?>
+                </li>
+            <?php endwhile; ?>
+        </ul>
+        <?php echo $after_widget; ?>
+        <?php
+        // Reset the global $the_post as this query will have stomped on it
+        wp_reset_postdata();
 
-    endif;
+        endif;
 
-    $cache[$args['widget_id']] = ob_get_flush();
-    wp_cache_set('widget_focus_cover', $cache, 'widget');
+        $cache[$args['widget_id']] = ob_get_flush();
+        wp_cache_set('widget_focus_cover', $cache, 'widget');
 
     }
 
@@ -182,7 +182,7 @@ class FMAG_Widget_Latest_Stories extends WP_Widget {
     }
 
     public function widget($args, $instance) {
-       // $cache = wp_cache_get('widget_latest_stories', 'widget');
+       $cache = wp_cache_get('widget_latest_stories', 'widget');
 
         if ( !is_array($cache) )
             $cache = array();
@@ -326,8 +326,28 @@ add_action( 'widgets_init', 'register_latest_stories_widget' );
 if (function_exists('register_sidebar')) {
 
     register_sidebar(array(
-        'name'=> 'Index Intermission',
-        'id' => 'index_intermission',
+        'name'=> 'Index Intermission A',
+        'id' => 'index_intermission_a',
+
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ));
+
+    register_sidebar(array(
+        'name'=> 'Index Intermission b',
+        'id' => 'index_intermission_b',
+
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ));
+
+    register_sidebar(array(
+        'name'=> 'Index Intermission C',
+        'id' => 'index_intermission_c',
 
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',

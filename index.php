@@ -63,7 +63,7 @@
                                 )
                             ) ) );
 
-                    if ($r->have_posts()) : ?>
+                    if ($r->have_posts()) { ?>
 
 
 
@@ -104,7 +104,9 @@
 
 
 
-                    <?php endif; ?>
+                    <?php } else {
+                        echo "else";
+                    } ?>
 
 
 
@@ -192,12 +194,12 @@
 
 
 
-                // do the intermission
+                // do the first intermission
                 echo '<div class="intermission-a">';
                 //echo '<div class="intermission-outer"><div class="intermission">';
-                if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Intermission')){
+                if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Intermission A')){
                     // do nothing if not there
-                    //echo "default stuff";
+                    echo "default stuff";
                 }
                 echo '</div>'; // close intermission
 
@@ -217,10 +219,10 @@
                 echo '</div>';
 
 
-                // do the intermission
-                echo '<div class="intermission-a">';
+                // do the second intermission
+                echo '<div class="intermission-b">';
                 //echo '<div class="intermission-outer"><div class="intermission">';
-                if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Intermission')){
+                if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Intermission B')){
                     // do nothing if not there
                     //echo "default stuff";
                 }
@@ -245,10 +247,10 @@
                 echo '</div>';
 
 
-                // do the intermission
-                echo '<div class="intermission-a">';
+                // do the third intermission
+                echo '<div class="intermission-c">';
                 //echo '<div class="intermission-outer"><div class="intermission">';
-                if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Intermission')){
+                if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Intermission C')){
                     // do nothing if not there
                     //echo "default stuff";
                 }

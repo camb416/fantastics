@@ -1247,12 +1247,22 @@ div {
     border: 1px solid #000; }
 
 .intermission-a,
-.intermission-b {
+.intermission-b,
+.intermission-c {
   display: block;
   height: 250px;
   width: 100%;
   clear: both;
   background-color: #fff; }
+  .intermission-a h2,
+  .intermission-b h2,
+  .intermission-c h2 {
+    color: #aaa;
+    padding: 10px; }
+  .intermission-a ins,
+  .intermission-b ins,
+  .intermission-c ins {
+    background: #fff; }
 
 .storyroll {
   text-align: center;
