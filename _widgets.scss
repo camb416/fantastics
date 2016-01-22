@@ -125,7 +125,8 @@ aside.widget_latest_focuscover{
 ////////////////////////////////////
 
 aside.Tumblr{
-  margin:0;
+  width:330px;
+  margin:0 auto;
 
   @media screen and (max-width: $break-large) {
     display:none;
@@ -145,10 +146,11 @@ aside.Tumblr{
       // float:left;
        display:table;
       margin: 0 auto;
-      width:400px;
+      width:330px;
 
       img{
        // max-height:400px;
+        max-width:100%;
       }
 
       p{

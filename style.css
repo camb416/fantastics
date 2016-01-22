@@ -1425,7 +1425,8 @@ aside.widget_latest_focuscover {
     color: #bbb; }
 
 aside.Tumblr {
-  margin: 0; }
+  width: 330px;
+  margin: 0 auto; }
   @media screen and (max-width: 1230px) {
     aside.Tumblr {
       display: none; } }
@@ -1440,7 +1441,9 @@ aside.Tumblr {
       list-style: none;
       display: table;
       margin: 0 auto;
-      width: 400px; }
+      width: 330px; }
+      aside.Tumblr ul li img {
+        max-width: 100%; }
       aside.Tumblr ul li p {
         font-weight: bold;
         font-size: 80%;

@@ -11,14 +11,9 @@
  *
  * @package fantastics
  */
-
  ?>
 
-
 <?php get_header(); ?>
-
-
-
 
 <?php
 ///////////////////////////////////////////////////
@@ -117,11 +112,24 @@
             <?php endif; ?>
 
 
+            <header id="masthead" class="site-header original" role="banner">
+                <div class="site-branding">
+                    <?php if ( is_front_page() && is_home() ) : ?>
+                        <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                    <?php else : ?>
+                        <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+                    <?php endif; ?>
+                    <p class="site-description"><?php bloginfo( 'description' ); ?></p>
+                </div><!-- .site-branding -->
 
-        <div class="menu-undercover">menu-undercover
-            <br />
-            When you scroll below this, it will snap to top of browser.
-            Contains links to Terms, Contact, etc.</div>
+                <nav id="site-navigation" class="main-navigation" role="navigation">
+                    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'fantastics' ); ?></button>
+                    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+                </nav><!-- #site-navigation -->
+            </header><!-- #masthead -->
+
+
+
         <div class="storyroll">
 
             <?php if ( have_posts() ) : ?>
