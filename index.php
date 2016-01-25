@@ -178,7 +178,7 @@
 
 <a class="sb-f" href="http://pinterest.com/fantasticsmag/"><div class="sb-f sb-f-pin"></div>pinterest</a>
 
-<a class="sb-f" href="http://fantasticsmag.tumblr.com/"><div class="sb-f sb-f-tum"></div>tumblr</a>
+<a class="sb-f" href="http://fantasticsmag.tumblr.com/"><div class="sb-ff sb-f-tum"></div>tumblr</a>
 
 <a class="sb-f" href="http://instagram.com/fantastics/"><div class="sb-f sb-f-ins"></div>instagram</a>
 
@@ -207,7 +207,7 @@
                 //echo '<div class="intermission-outer"><div class="intermission">';
                 if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Intermission A')){
                     // do nothing if not there
-                    echo "default stuff";
+                    // echo "default stuff";
                 }
                 echo '</div>'; // close intermission
 
@@ -222,6 +222,17 @@
                 // close mid main
                 echo '</div>';
                 // TODO: do the mid sidebar
+
+                // MID SIDEBAR
+                    echo '<div class="index-side">';
+                if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Mid-Side')){
+                    // do nothing if not there
+                    echo "default stuff";
+                } else {
+                    // display nothing if there is indeed a widget.
+                    //echo "do something";
+                }
+                    echo '</div>';
 
                 // close the mid container
                 echo '</div>';
@@ -250,6 +261,18 @@
                 // close mid main
                 echo '</div>';
                 // TODO: do the bottom sidebar
+
+                echo '<div class="index-side">';
+                if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Bottom-Side')){
+                    // do nothing if not there
+                    echo "default stuff";
+                } else {
+                    // display nothing if there is indeed a widget.
+                    //echo "do something";
+                }
+                echo '</div>';
+
+
 
                 // close the mid container
                 echo '</div>';
