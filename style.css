@@ -1533,13 +1533,14 @@ aside.widget_latest_stories {
   overflow: hidden;
   border: 1px solid #aaa;
   height: 1004px;
-  padding: 10px 20px;
+  padding: 0;
   position: relative; }
   .index-side img {
     max-width: none;
     position: absolute;
     left: -50%; }
   .index-side p {
+    text-align: center;
     position: absolute;
     bottom: 40px;
     background: rgba(0, 0, 0, 0.5);
@@ -1549,6 +1550,9 @@ aside.widget_latest_stories {
     left: 0;
     text-transform: uppercase;
     letter-spacing: 1em; }
+  .index-side h2 {
+    margin: 2px 5px;
+    color: #777; }
 
 body.search div.results {
   max-width: 1280px;
