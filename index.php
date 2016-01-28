@@ -178,7 +178,7 @@
 
 <a class="sb-f" href="http://pinterest.com/fantasticsmag/"><div class="sb-f sb-f-pin"></div>pinterest</a>
 
-<a class="sb-f" href="http://fantasticsmag.tumblr.com/"><div class="sb-ff sb-f-tum"></div>tumblr</a>
+<a class="sb-f" href="http://fantasticsmag.tumblr.com/"><div class="sb-f sb-f-tum"></div>tumblr</a>
 
 <a class="sb-f" href="http://instagram.com/fantastics/"><div class="sb-f sb-f-ins"></div>instagram</a>
 
@@ -263,7 +263,7 @@
                 // TODO: do the bottom sidebar
 
                 echo '<div class="index-side">';
-                if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Bottom-Side')){
+                if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Mid2-Side')){
                     // do nothing if not there
                     // echo "default stuff";
                 } else {

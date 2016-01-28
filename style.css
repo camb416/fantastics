@@ -1041,7 +1041,6 @@ body.search {
     clear: both;
     max-width: 100%;
     margin: 0 auto;
-    border-bottom: 1px solid #aaa;
     padding: 20px 0; }
     body.home div.fmag_story article .entry-content,
     body.archive div.fmag_story article .entry-content,
@@ -1532,14 +1531,14 @@ aside.widget_latest_stories {
   margin: 45px 0;
   width: 470px;
   overflow: hidden;
-  border: 1px solid #aaa;
   height: 1004px;
   padding: 0;
   position: relative; }
   .index-side img {
     max-width: none;
     position: absolute;
-    left: -50%; }
+    left: -50%;
+    height: 100%; }
   .index-side p {
     text-align: center;
     position: absolute;
@@ -1548,9 +1547,15 @@ aside.widget_latest_stories {
     color: #FFF;
     padding: 20px;
     width: 100%;
-    left: 0;
-    text-transform: uppercase;
-    letter-spacing: 1em; }
+    left: 0; }
+    .index-side p a {
+      color: #FFF;
+      text-transform: uppercase;
+      letter-spacing: 1em;
+      margin-right: -1em; }
+      .index-side p a:hover {
+        color: #F86;
+        background: none; }
   .index-side h2 {
     margin: 2px 5px;
     color: #777; }

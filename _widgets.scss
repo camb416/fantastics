@@ -299,7 +299,7 @@ aside.widget_latest_stories{
   margin:45px 0;
   width:470px;
   overflow:hidden;
-  border:1px solid #aaa;
+  // border:1px solid #aaa;
   height:1004px;
   padding: 0;
   position:relative;
@@ -308,6 +308,15 @@ aside.widget_latest_stories{
     max-width:none;
     position:absolute;
     left:-50%;
+    height:100%;
+
+    // black and white
+    // filter: grayscale(100%);
+    // -webkit-filter: grayscale(100%);
+
+    // blurry
+    // -webkit-filter: blur(11px);
+    // filter: blur(11px);
   }
   p{
     text-align:center;
@@ -318,8 +327,18 @@ aside.widget_latest_stories{
     padding:20px;
     width:100%;
     left:0;
-    text-transform:uppercase;
-    letter-spacing:1em;
+
+
+    a{
+      color:#FFF;
+      text-transform:uppercase;
+      letter-spacing:1em;
+      margin-right: -1em;
+      &:hover{
+        color:#F86;
+        background:none;
+      }
+    }
   }
   h2{
     margin:2px 5px;

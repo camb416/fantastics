@@ -49,14 +49,30 @@ $('.site-header').addClass('original').clone().insertAfter('#page').addClass('cl
     function sidebarStretch(){
         console.log('sidebar stretching');
 
-        var articleArray = $('.index-side').eq(0).closest('.twocol').find('article');
 
-        var firstHeight = articleArray.eq(0).height();
-        var secondHeight = articleArray.eq(1).find().height();
+        var sideArray = $('.index-side');
 
-        $('.index-side').eq(0).css('height',firstHeight + secondHeight + 35);
+        for(var i = 0; i <= sideArray.length; i++){
 
-        console.log("article 0: " + articleArray.eq(0).height());
+            var articleArray = sideArray.eq(i).closest('.twocol').find('article');
+
+            var firstHeight = articleArray.eq(0).height();
+            var secondHeight = articleArray.eq(1).height();
+
+            $('.index-side').eq(i).css('height',firstHeight + secondHeight + 35);
+
+            // for testing
+            // console.log("first: " + firstHeight);
+            // console.log("second: " + secondHeight);
+
+            // articleArray.eq(0).css('background','#f00');
+            // articleArray.eq(1).css('background','#f00');
+
+        }
+
+
+
+
 
     }
 
