@@ -1,14 +1,5 @@
 (function($){
 
-if($('body').hasClass('home')){
-
-
-// Create a clone of the menu, right next to original.
-$('.site-header').addClass('original').clone().insertAfter('#page').addClass('cloned').css('position','fixed').css('top','0').css('margin-top','0').css('z-index','500').removeClass('original').hide();
-
-    scrollIntervalID = setInterval(stickIt, 10);
-
-
 
     function stickIt() {
 
@@ -37,6 +28,19 @@ $('.site-header').addClass('original').clone().insertAfter('#page').addClass('cl
             $('.original').css('visibility','visible');
         }
     }
+
+
+if($('body').hasClass('home')){
+
+
+// Create a clone of the menu, right next to original.
+$('.site-header').addClass('original').clone().insertAfter('#page').addClass('cloned').css('position','fixed').css('top','0').css('margin-top','0').css('z-index','500').removeClass('original').hide();
+
+    scrollIntervalID = setInterval(stickIt, 10);
+
+
+
+
 
     $('document').ready(function(){
         console.log('document ready');
@@ -97,7 +101,7 @@ $('.site-header').addClass('original').clone().insertAfter('#page').addClass('cl
     if(orgElementTop<($(window).scrollTop()+$(window).height()) && ((orgElementTop+orgElementHeight) > $(window).scrollTop())){
 
         var pct = (-50 - ((orgElementTop - $(window).scrollTop())/$(window).height() * 30)) + "%";
-    
+
         // as a percentage
         //console.log("pct: " + pct);
 
