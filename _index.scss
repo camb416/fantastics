@@ -287,6 +287,7 @@ width:270px;
 
           margin:0 auto;
           width:700px;
+          height: 458px;
 
           @media screen and (min-width: $break-large) {
 
@@ -390,7 +391,7 @@ $intermissionheight: 250px;
   // background-image: url(images/bowtie.svg);
   // background-repeat: repeat-x;
   // background-position-x: center;
-  #lefty, #righty{
+  .lefty, .righty{
   //  background:#ff0;
     width:$numcols*$columnwidth+$columngutter*($numcols - 1);
     //margin:$columngutter auto;
@@ -411,7 +412,7 @@ div{
 ////////////////////////////////////////////////////////
 
 // all the main columns
-#lefty, #righty{
+.lefty, .righty{
 .primary{
 display:block;
   width: $columnwidth * 5 + $columngutter * 4;
@@ -423,7 +424,7 @@ display:block;
 }
 
 // all the sidebars
-#lefty, #righty{
+.lefty, .righty{
   .secondary{
 
   display:block;
@@ -497,7 +498,7 @@ display:block;
 ////////////////////////////////////////////////////////
 
 
-#lefty .primary{
+.lefty .primary{
   float:left;
   margin-right:$columngutter;
   > div{
@@ -512,7 +513,7 @@ display:block;
   }
 }
 
-#lefty .secondary {
+.lefty .secondary {
   float: left;
   > div {
     border: 1px solid #000;
@@ -600,10 +601,10 @@ display:block;
 .intermission-a{
 
 }
-#righty .primary{
+.righty .primary{
   float:right;
 }
-#righty .secondary{
+.righty .secondary{
   float:right;
 }
 

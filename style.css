@@ -1158,6 +1158,7 @@ body.search {
       display: block;
       margin: 0 auto;
       width: 700px;
+      height: 458px;
       overflow: hidden;
       padding: 0; }
       @media screen and (min-width: 1230px) {
@@ -1220,7 +1221,7 @@ footer {
 
 #page {
   width: 100%; }
-  #page #lefty, #page #righty {
+  #page .lefty, #page .righty {
     width: 1270px;
     margin: 0 auto;
     overflow: hidden; }
@@ -1230,18 +1231,18 @@ div {
   margin: 0;
   padding: 0; }
 
-#lefty .primary, #righty .primary {
+.lefty .primary, .righty .primary {
   display: block;
   width: 790px;
   clear: both;
   text-align: center; }
 
-#lefty .secondary, #righty .secondary {
+.lefty .secondary, .righty .secondary {
   display: block;
   width: 470px; }
-  #lefty .secondary > div, #righty .secondary > div {
+  .lefty .secondary > div, .righty .secondary > div {
     margin: 10px auto; }
-  #lefty .secondary .relatedcontent, #righty .secondary .relatedcontent {
+  .lefty .secondary .relatedcontent, .righty .secondary .relatedcontent {
     width: 350px;
     height: 675px;
     border: 1px solid #000; }
@@ -1276,34 +1277,34 @@ div {
   background-color: #006699;
   display: block; }
 
-#lefty .primary {
+.lefty .primary {
   float: left;
   margin-right: 10px; }
-  #lefty .primary > div {
+  .lefty .primary > div {
     background: #DDD; }
-  #lefty .primary .bigcover {
+  .lefty .primary .bigcover {
     width: 750px;
     height: 970px; }
-  #lefty .primary .menu-undercover {
+  .lefty .primary .menu-undercover {
     height: 64px; }
 
-#lefty .secondary {
+.lefty .secondary {
   float: left; }
-  #lefty .secondary > div {
+  .lefty .secondary > div {
     border: 1px solid #000; }
-  #lefty .secondary .socialbuttons {
+  .lefty .secondary .socialbuttons {
     border: none;
     height: 105px;
     width: 310px;
     margin: 0 auto; }
-    #lefty .secondary .socialbuttons p {
+    .lefty .secondary .socialbuttons p {
       text-align: left;
       font-size: 0.8em;
       text-transform: uppercase;
       padding: 0;
       margin: 0;
       color: #bbb; }
-  #lefty .secondary a.sb-f {
+  .lefty .secondary a.sb-f {
     height: 58px;
     width: 58px;
     display: block;
@@ -1315,23 +1316,23 @@ div {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-size: 7px; }
-  #lefty .secondary div.sb-f {
+  .lefty .secondary div.sb-f {
     height: 58px;
     width: 58px;
     margin: 0 0 3px 0; }
-  #lefty .secondary div.sb-f:hover {
+  .lefty .secondary div.sb-f:hover {
     background-position: 0 -58px !important; }
-  #lefty .secondary .sb-f-twi {
+  .lefty .secondary .sb-f-twi {
     background: url(images/socialbuttons/twitter.png) no-repeat scroll 0 0px transparent !important; }
-  #lefty .secondary .sb-f-fac {
+  .lefty .secondary .sb-f-fac {
     background: url(images/socialbuttons/facebook.png) no-repeat scroll 0 0px transparent !important; }
-  #lefty .secondary .sb-f-pin {
+  .lefty .secondary .sb-f-pin {
     background: url(images/socialbuttons/pinterest.png) no-repeat scroll 0 0px transparent !important; }
-  #lefty .secondary .sb-f-tum {
+  .lefty .secondary .sb-f-tum {
     background: url(images/socialbuttons/tumblr.png) no-repeat scroll 0 0px transparent !important; }
-  #lefty .secondary .sb-f-ins {
+  .lefty .secondary .sb-f-ins {
     background: url(images/socialbuttons/instagram.png) no-repeat scroll 0 0px transparent !important; }
-  #lefty .secondary .followbutton a {
+  .lefty .secondary .followbutton a {
     color: #999999;
     font-size: 11px;
     font-weight: bold;
@@ -1340,10 +1341,10 @@ div {
     text-transform: uppercase;
     top: 5px; }
 
-#righty .primary {
+.righty .primary {
   float: right; }
 
-#righty .secondary {
+.righty .secondary {
   float: right; }
 
 .bottom-main {

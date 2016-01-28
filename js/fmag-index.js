@@ -37,5 +37,28 @@ $('.site-header').addClass('original').clone().insertAfter('#page').addClass('cl
             $('.original').css('visibility','visible');
         }
     }
+
+    $('document').ready(function(){
+        console.log('document ready');
+        sidebarStretch();
+
+    });
+
+
+    // lets automatically make the sidebar thingies snap to the height of two stories
+    function sidebarStretch(){
+        console.log('sidebar stretching');
+
+        var articleArray = $('.index-side').eq(0).closest('.twocol').find('article');
+
+        var firstHeight = articleArray.eq(0).height();
+        var secondHeight = articleArray.eq(1).find().height();
+
+        $('.index-side').eq(0).css('height',firstHeight + secondHeight + 35);
+
+        console.log("article 0: " + articleArray.eq(0).height());
+
+    }
+
 }
 })(jQuery);
