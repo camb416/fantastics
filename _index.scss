@@ -378,7 +378,7 @@ footer{
 $columnwidth: 150px;
 $columngutter: 10px;
 $numcols: 8;
-$intermissionheight: 250px;
+// $intermissionheight: 250px;
 
 
 ////////////////////////////////////////////////////////
@@ -453,10 +453,11 @@ display:block;
 .intermission-b,
 .intermission-c{
   display:block;
-  height:$intermissionheight;
+  // height:$intermissionheight;
+  padding: 0 0 20px 0;
   width:100%;
   clear:both;
-
+  text-align:center;
   background-color: #fff;
 
   h2{

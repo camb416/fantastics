@@ -1250,9 +1250,10 @@ div {
 .intermission-b,
 .intermission-c {
   display: block;
-  height: 250px;
+  padding: 0 0 20px 0;
   width: 100%;
   clear: both;
+  text-align: center;
   background-color: #fff; }
   .intermission-a h2,
   .intermission-b h2,
