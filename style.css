@@ -1481,7 +1481,7 @@ aside.Tumblr {
       display: table;
       margin: 0 auto; }
       aside.Tumblr ul li img {
-        max-width: 100%; }
+        width: 100%; }
       aside.Tumblr ul li p {
         font-weight: bold;
         font-size: 80%;
