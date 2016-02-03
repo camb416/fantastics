@@ -493,6 +493,7 @@ display:block;
 .intermission-a,
 .intermission-b,
 .intermission-c{
+  overflow:hidden; // sizing hack
   display:block;
   // height:$intermissionheight;
   padding: 0 0 20px 0;

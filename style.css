@@ -1286,6 +1286,7 @@ div {
 .intermission-a,
 .intermission-b,
 .intermission-c {
+  overflow: hidden;
   display: block;
   padding: 0 0 20px 0;
   width: 100%;
