@@ -133,10 +133,12 @@ aside.Tumblr{
   }
 
   ul{
-    height:1626px;
+    height:2100px;
     overflow:scroll;
     margin:0;
-    padding:0;
+    padding:0 0 10px 0;
+    // border-bottom: 3px solid #000;
+
 
     li{
 

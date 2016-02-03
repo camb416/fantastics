@@ -111,8 +111,12 @@ $('.site-header').addClass('original').clone().insertAfter('#page').addClass('cl
 
     }
 
+
+    /*
+    Ken Burns effect on sidebar
+     */
     $(window).scroll(function(){
-        kenBurnsBaby();
+       // kenBurnsBaby();
     });
 
 
