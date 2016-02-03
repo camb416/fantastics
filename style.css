@@ -1466,7 +1466,8 @@ aside.widget_latest_focuscover {
 aside.Tumblr {
   width: 330px;
   margin: 0 auto;
-  background: #EFEFEF; }
+  background-image: url(images/tumblrBg.png);
+  background-size: 330px; }
   @media screen and (max-width: 1230px) {
     aside.Tumblr {
       display: none; } }
@@ -1474,7 +1475,7 @@ aside.Tumblr {
     height: 2185px;
     overflow: scroll;
     margin: 0;
-    padding: 0 0 10px 10px; }
+    padding: 0 30px; }
     aside.Tumblr ul li {
       overflow: hidden;
       text-align: left;
