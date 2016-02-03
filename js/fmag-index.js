@@ -46,7 +46,17 @@ $('.site-header').addClass('original').clone().insertAfter('#page').addClass('cl
         console.log('document ready');
         sidebarStretch();
 
+        tumblrStretch();
+
     });
+
+function tumblrStretch(){
+
+    var coverHeight = 862;
+
+    $('.Tumblr ul').css('height', $('.storyroll').eq(0).height()+coverHeight);
+
+}
 
 
     // lets automatically make the sidebar thingies snap to the height of two stories

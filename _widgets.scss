@@ -128,15 +128,17 @@ aside.Tumblr{
   width:330px;
   margin:0 auto;
 
+  background:#EFEFEF;
+
   @media screen and (max-width: $break-large) {
     display:none;
   }
 
   ul{
-    height:2100px;
+    height:2185px;
     overflow:scroll;
     margin:0;
-    padding:0 0 10px 0;
+    padding:0 0 10px 10px;
     // border-bottom: 3px solid #000;
 
 
@@ -148,7 +150,7 @@ aside.Tumblr{
       // float:left;
        display:table;
       margin: 0 auto;
-      width:330px;
+
 
       img{
        // max-height:400px;
@@ -158,7 +160,7 @@ aside.Tumblr{
       p{
         font-weight: bold;
         font-size: 80%;
-        margin-top: 0;
+        margin: 0 10px 10px 0;
         display:table-caption;
         caption-side:bottom;
 

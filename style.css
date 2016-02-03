@@ -1464,28 +1464,28 @@ aside.widget_latest_focuscover {
 
 aside.Tumblr {
   width: 330px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  background: #EFEFEF; }
   @media screen and (max-width: 1230px) {
     aside.Tumblr {
       display: none; } }
   aside.Tumblr ul {
-    height: 2100px;
+    height: 2185px;
     overflow: scroll;
     margin: 0;
-    padding: 0 0 10px 0; }
+    padding: 0 0 10px 10px; }
     aside.Tumblr ul li {
       overflow: hidden;
       text-align: left;
       list-style: none;
       display: table;
-      margin: 0 auto;
-      width: 330px; }
+      margin: 0 auto; }
       aside.Tumblr ul li img {
         max-width: 100%; }
       aside.Tumblr ul li p {
         font-weight: bold;
         font-size: 80%;
-        margin-top: 0;
+        margin: 0 10px 10px 0;
         display: table-caption;
         caption-side: bottom; }
         aside.Tumblr ul li p a.tumblr_link {
