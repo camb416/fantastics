@@ -949,28 +949,65 @@ body.search {
       }
     }
     */ }
-  body.home header#masthead.original h1,
-  body.archive header#masthead.original h1,
-  body.search header#masthead.original h1 {
-    margin: 0; }
-  body.home header#masthead.original p.site-description,
-  body.archive header#masthead.original p.site-description,
-  body.search header#masthead.original p.site-description {
-    margin: 0px; }
-  body.home header#masthead.original nav#site-navigation,
-  body.archive header#masthead.original nav#site-navigation,
-  body.search header#masthead.original nav#site-navigation {
-    margin: 10px 0 25px 0; }
-    body.home header#masthead.original nav#site-navigation ul,
-    body.archive header#masthead.original nav#site-navigation ul,
-    body.search header#masthead.original nav#site-navigation ul {
-      text-align: center; }
-      body.home header#masthead.original nav#site-navigation ul li,
-      body.archive header#masthead.original nav#site-navigation ul li,
-      body.search header#masthead.original nav#site-navigation ul li {
+  body.home header#masthead.original,
+  body.archive header#masthead.original,
+  body.search header#masthead.original {
+    height: 45px;
+    width: 750px;
+    margin-top: 10px;
+    border-bottom: 5px solid #000; }
+    body.home header#masthead.original div.site-branding,
+    body.archive header#masthead.original div.site-branding,
+    body.search header#masthead.original div.site-branding {
+      overflow: hidden;
+      float: left; }
+      body.home header#masthead.original div.site-branding h1,
+      body.archive header#masthead.original div.site-branding h1,
+      body.search header#masthead.original div.site-branding h1 {
+        margin: 0;
         display: inline-block;
-        float: none;
-        margin-right: 10px; }
+        float: left; }
+        body.home header#masthead.original div.site-branding h1 a,
+        body.archive header#masthead.original div.site-branding h1 a,
+        body.search header#masthead.original div.site-branding h1 a {
+          display: inline-block;
+          text-indent: -9999999px;
+          width: 180px;
+          height: 36px;
+          background: url(images/masthead.png);
+          background-repeat: no-repeat;
+          background-size: 180px 36px;
+          background-position: -5px 0; }
+      body.home header#masthead.original div.site-branding p.site-description,
+      body.archive header#masthead.original div.site-branding p.site-description,
+      body.search header#masthead.original div.site-branding p.site-description {
+        margin: 0px;
+        display: none; }
+    body.home header#masthead.original nav#site-navigation,
+    body.archive header#masthead.original nav#site-navigation,
+    body.search header#masthead.original nav#site-navigation {
+      margin: 12px 0px 25px 0;
+      display: inline-block;
+      float: right;
+      overflow: hidden;
+      width: auto;
+      clear: none; }
+      body.home header#masthead.original nav#site-navigation div.menu-menu-1-container,
+      body.archive header#masthead.original nav#site-navigation div.menu-menu-1-container,
+      body.search header#masthead.original nav#site-navigation div.menu-menu-1-container {
+        display: inline-block;
+        float: left; }
+      body.home header#masthead.original nav#site-navigation ul,
+      body.archive header#masthead.original nav#site-navigation ul,
+      body.search header#masthead.original nav#site-navigation ul {
+        text-align: center;
+        display: inline; }
+        body.home header#masthead.original nav#site-navigation ul li,
+        body.archive header#masthead.original nav#site-navigation ul li,
+        body.search header#masthead.original nav#site-navigation ul li {
+          display: inline-block;
+          float: none;
+          margin-right: 5px; }
   body.home header#masthead.cloned,
   body.archive header#masthead.cloned,
   body.search header#masthead.cloned {
