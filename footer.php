@@ -14,11 +14,16 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
+
+
+
 		<div class="site-info">
 			<!--<a href="<?php //echo esc_url( __( 'https://wordpress.org/', 'fantastics' ) ); ?>"><?php //printf( esc_html__( 'Proudly powered by %s', 'fantastics' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
 			<?php // printf( esc_html__( 'Theme: %1$s by %2$s.', 'fantastics' ), 'fantastics', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
 		</div><!-- .site-info -->
+
+			<?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
 
             <a class="footerlogo" href="<?php echo site_url(); ?>" rel="home">Fantastics</a>
 	</footer><!-- #colophon -->

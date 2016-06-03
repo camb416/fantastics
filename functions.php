@@ -309,3 +309,9 @@ add_filter( 'term_links-term', 'fantastics_filter_post_tag_term_links' );
 
 require_once('inc/widgets.php'); // widgets
 require_once('inc/search.php'); // search
+
+// add footer menu location
+function register_my_menu() {
+    register_nav_menu('footer-menu',__( 'Footer Menu' ));
+}
+add_action( 'init', 'register_my_menu' );

@@ -766,8 +766,8 @@ a {
   a:link, a:visited, a:active {
     color: #000; }
   a:hover {
-    color: #fff;
-    background: #000; }
+    text-decoration: line-through;
+    color: #FFF; }
 
 div#secondary aside form {
   text-align: center; }
@@ -844,7 +844,6 @@ body.single-fmag_story {
       text-align: left; }
       body.single-fmag_story div#bottomcols div#leftcol a {
         font-size: 80%;
-        padding: 5px;
         color: #666;
         letter-spacing: 0.1em; }
         body.single-fmag_story div#bottomcols div#leftcol a:hover {
@@ -863,15 +862,17 @@ body.single-fmag_story {
           padding: 0; }
       body.single-fmag_story div#bottomcols div#leftcol div {
         margin-top: 20px; }
-        body.single-fmag_story div#bottomcols div#leftcol div.credits p {
-          float: left;
-          font-weight: bold;
-          font-size: 80%;
-          letter-spacing: 0.1em;
-          margin: 0 10px 20px 10px; }
-          body.single-fmag_story div#bottomcols div#leftcol div.credits p a {
-            font-size: 100%;
-            margin-left: -5px; }
+        body.single-fmag_story div#bottomcols div#leftcol div.credits .credits-inner {
+          column-count: 2; }
+          body.single-fmag_story div#bottomcols div#leftcol div.credits .credits-inner p {
+            font-weight: bold;
+            font-size: 80%;
+            letter-spacing: 0.1em;
+            margin: 0 10px 20px 10px;
+            break-inside: avoid; }
+            body.single-fmag_story div#bottomcols div#leftcol div.credits .credits-inner p a {
+              font-size: 100%;
+              margin-left: -5px; }
     body.single-fmag_story div#bottomcols div#rightcol {
       width: 50%;
       float: right; }
@@ -1626,5 +1627,16 @@ body.search div.results {
         width: 760px; } }
   body.search div.results nav {
     clear: both; }
+
+#menu-footer-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  #menu-footer-menu li {
+    display: inline-block;
+    margin: 15px; }
+    #menu-footer-menu li a {
+      color: #888;
+      letter-spacing: 0.1em; }
 
 /*# sourceMappingURL=style.css.map */
