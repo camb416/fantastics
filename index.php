@@ -21,7 +21,7 @@
 ///////////////////////////////////////////////////
 ?>
 
-<div id="lefty">
+<div class="lefty twocol">
 
     <?php // top-main ?>
 
@@ -207,12 +207,12 @@
                 //echo '<div class="intermission-outer"><div class="intermission">';
                 if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Intermission A')){
                     // do nothing if not there
-                    echo "default stuff";
+                    // echo "default stuff";
                 }
                 echo '</div>'; // close intermission
 
 
-                echo '<div id="righty">';
+                echo '<div class="righty twocol">';
                 echo '<div class="primary">';
                 echo '<div class="storyroll">';
 
@@ -222,6 +222,17 @@
                 // close mid main
                 echo '</div>';
                 // TODO: do the mid sidebar
+
+                // MID SIDEBAR
+                    echo '<div class="index-side">';
+                if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Mid-Side')){
+                    // do nothing if not there
+                    echo "default stuff";
+                } else {
+                    // display nothing if there is indeed a widget.
+                    //echo "do something";
+                }
+                    echo '</div>';
 
                 // close the mid container
                 echo '</div>';
@@ -238,7 +249,7 @@
 
 
                 // open the bottom container
-                echo '<div id="lefty">';
+                echo '<div class="lefty twocol">';
                 // open the bottom main
                 echo '<div class="primary">';
                 // open the story roll
@@ -250,6 +261,18 @@
                 // close mid main
                 echo '</div>';
                 // TODO: do the bottom sidebar
+
+                echo '<div class="index-side">';
+                if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Mid2-Side')){
+                    // do nothing if not there
+                    // echo "default stuff";
+                } else {
+                    // display nothing if there is indeed a widget.
+                    //echo "do something";
+                }
+                echo '</div>';
+
+
 
                 // close the mid container
                 echo '</div>';
@@ -266,7 +289,7 @@
 
 
                 // open the bottom container
-                echo '<div id="righty">';
+                echo '<div class="righty twocol">';
                 // open the bottom main
                 echo '<div class="primary">';
                 // open the story roll
@@ -302,7 +325,12 @@
                 $i++;
                 ?>
 
+
+
+
                 <?php endwhile; ?>
+
+                <div class="athing"></div>
 
                 <?php posts_navigation(); ?>
 
@@ -321,10 +349,23 @@
             <article>article</article>
             <article>article</article> -->
 
-        </div>
-    </div>
+        </div><?php // close story roll ?>
 
 
+
+
+    </div><?php // close primary ?>
+<?php
+ echo '<div class="index-side">';
+if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Bottom-Side')){
+                    // do nothing if not there
+                    // echo "default stuff";
+                } else {
+                    // display nothing if there is indeed a widget.
+                    //echo "do something";
+                }
+                 echo '</div>';
+                ?>
 
 
 

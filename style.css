@@ -949,28 +949,65 @@ body.search {
       }
     }
     */ }
-  body.home header#masthead.original h1,
-  body.archive header#masthead.original h1,
-  body.search header#masthead.original h1 {
-    margin: 0; }
-  body.home header#masthead.original p.site-description,
-  body.archive header#masthead.original p.site-description,
-  body.search header#masthead.original p.site-description {
-    margin: 0px; }
-  body.home header#masthead.original nav#site-navigation,
-  body.archive header#masthead.original nav#site-navigation,
-  body.search header#masthead.original nav#site-navigation {
-    margin: 10px 0 25px 0; }
-    body.home header#masthead.original nav#site-navigation ul,
-    body.archive header#masthead.original nav#site-navigation ul,
-    body.search header#masthead.original nav#site-navigation ul {
-      text-align: center; }
-      body.home header#masthead.original nav#site-navigation ul li,
-      body.archive header#masthead.original nav#site-navigation ul li,
-      body.search header#masthead.original nav#site-navigation ul li {
+  body.home header#masthead.original,
+  body.archive header#masthead.original,
+  body.search header#masthead.original {
+    height: 45px;
+    width: 750px;
+    margin-top: 10px;
+    border-bottom: 5px solid #000; }
+    body.home header#masthead.original div.site-branding,
+    body.archive header#masthead.original div.site-branding,
+    body.search header#masthead.original div.site-branding {
+      overflow: hidden;
+      float: left; }
+      body.home header#masthead.original div.site-branding h1,
+      body.archive header#masthead.original div.site-branding h1,
+      body.search header#masthead.original div.site-branding h1 {
+        margin: 0;
         display: inline-block;
-        float: none;
-        margin-right: 10px; }
+        float: left; }
+        body.home header#masthead.original div.site-branding h1 a,
+        body.archive header#masthead.original div.site-branding h1 a,
+        body.search header#masthead.original div.site-branding h1 a {
+          display: inline-block;
+          text-indent: -9999999px;
+          width: 180px;
+          height: 36px;
+          background: url(images/masthead.png);
+          background-repeat: no-repeat;
+          background-size: 180px 36px;
+          background-position: -5px 0; }
+      body.home header#masthead.original div.site-branding p.site-description,
+      body.archive header#masthead.original div.site-branding p.site-description,
+      body.search header#masthead.original div.site-branding p.site-description {
+        margin: 0px;
+        display: none; }
+    body.home header#masthead.original nav#site-navigation,
+    body.archive header#masthead.original nav#site-navigation,
+    body.search header#masthead.original nav#site-navigation {
+      margin: 12px 0px 25px 0;
+      display: inline-block;
+      float: right;
+      overflow: hidden;
+      width: auto;
+      clear: none; }
+      body.home header#masthead.original nav#site-navigation div.menu-menu-1-container,
+      body.archive header#masthead.original nav#site-navigation div.menu-menu-1-container,
+      body.search header#masthead.original nav#site-navigation div.menu-menu-1-container {
+        display: inline-block;
+        float: left; }
+      body.home header#masthead.original nav#site-navigation ul,
+      body.archive header#masthead.original nav#site-navigation ul,
+      body.search header#masthead.original nav#site-navigation ul {
+        text-align: center;
+        display: inline; }
+        body.home header#masthead.original nav#site-navigation ul li,
+        body.archive header#masthead.original nav#site-navigation ul li,
+        body.search header#masthead.original nav#site-navigation ul li {
+          display: inline-block;
+          float: none;
+          margin-right: 5px; }
   body.home header#masthead.cloned,
   body.archive header#masthead.cloned,
   body.search header#masthead.cloned {
@@ -1041,7 +1078,6 @@ body.search {
     clear: both;
     max-width: 100%;
     margin: 0 auto;
-    border-bottom: 1px solid #aaa;
     padding: 20px 0; }
     body.home div.fmag_story article .entry-content,
     body.archive div.fmag_story article .entry-content,
@@ -1158,6 +1194,7 @@ body.search {
       display: block;
       margin: 0 auto;
       width: 700px;
+      height: 458px;
       overflow: hidden;
       padding: 0; }
       @media screen and (min-width: 1230px) {
@@ -1220,7 +1257,7 @@ footer {
 
 #page {
   width: 100%; }
-  #page #lefty, #page #righty {
+  #page .lefty, #page .righty {
     width: 1270px;
     margin: 0 auto;
     overflow: hidden; }
@@ -1230,18 +1267,18 @@ div {
   margin: 0;
   padding: 0; }
 
-#lefty .primary, #righty .primary {
+.lefty .primary, .righty .primary {
   display: block;
   width: 790px;
   clear: both;
   text-align: center; }
 
-#lefty .secondary, #righty .secondary {
+.lefty .secondary, .righty .secondary {
   display: block;
   width: 470px; }
-  #lefty .secondary > div, #righty .secondary > div {
+  .lefty .secondary > div, .righty .secondary > div {
     margin: 10px auto; }
-  #lefty .secondary .relatedcontent, #righty .secondary .relatedcontent {
+  .lefty .secondary .relatedcontent, .righty .secondary .relatedcontent {
     width: 350px;
     height: 675px;
     border: 1px solid #000; }
@@ -1249,10 +1286,12 @@ div {
 .intermission-a,
 .intermission-b,
 .intermission-c {
+  overflow: hidden;
   display: block;
-  height: 250px;
+  padding: 0 0 20px 0;
   width: 100%;
   clear: both;
+  text-align: center;
   background-color: #fff; }
   .intermission-a h2,
   .intermission-b h2,
@@ -1276,34 +1315,34 @@ div {
   background-color: #006699;
   display: block; }
 
-#lefty .primary {
+.lefty .primary {
   float: left;
   margin-right: 10px; }
-  #lefty .primary > div {
+  .lefty .primary > div {
     background: #DDD; }
-  #lefty .primary .bigcover {
+  .lefty .primary .bigcover {
     width: 750px;
     height: 970px; }
-  #lefty .primary .menu-undercover {
+  .lefty .primary .menu-undercover {
     height: 64px; }
 
-#lefty .secondary {
+.lefty .secondary {
   float: left; }
-  #lefty .secondary > div {
+  .lefty .secondary > div {
     border: 1px solid #000; }
-  #lefty .secondary .socialbuttons {
+  .lefty .secondary .socialbuttons {
     border: none;
     height: 105px;
     width: 310px;
     margin: 0 auto; }
-    #lefty .secondary .socialbuttons p {
+    .lefty .secondary .socialbuttons p {
       text-align: left;
       font-size: 0.8em;
       text-transform: uppercase;
       padding: 0;
       margin: 0;
       color: #bbb; }
-  #lefty .secondary a.sb-f {
+  .lefty .secondary a.sb-f {
     height: 58px;
     width: 58px;
     display: block;
@@ -1315,23 +1354,23 @@ div {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-size: 7px; }
-  #lefty .secondary div.sb-f {
+  .lefty .secondary div.sb-f {
     height: 58px;
     width: 58px;
     margin: 0 0 3px 0; }
-  #lefty .secondary div.sb-f:hover {
+  .lefty .secondary div.sb-f:hover {
     background-position: 0 -58px !important; }
-  #lefty .secondary .sb-f-twi {
+  .lefty .secondary .sb-f-twi {
     background: url(images/socialbuttons/twitter.png) no-repeat scroll 0 0px transparent !important; }
-  #lefty .secondary .sb-f-fac {
+  .lefty .secondary .sb-f-fac {
     background: url(images/socialbuttons/facebook.png) no-repeat scroll 0 0px transparent !important; }
-  #lefty .secondary .sb-f-pin {
+  .lefty .secondary .sb-f-pin {
     background: url(images/socialbuttons/pinterest.png) no-repeat scroll 0 0px transparent !important; }
-  #lefty .secondary .sb-f-tum {
+  .lefty .secondary .sb-f-tum {
     background: url(images/socialbuttons/tumblr.png) no-repeat scroll 0 0px transparent !important; }
-  #lefty .secondary .sb-f-ins {
+  .lefty .secondary .sb-f-ins {
     background: url(images/socialbuttons/instagram.png) no-repeat scroll 0 0px transparent !important; }
-  #lefty .secondary .followbutton a {
+  .lefty .secondary .followbutton a {
     color: #999999;
     font-size: 11px;
     font-weight: bold;
@@ -1340,10 +1379,10 @@ div {
     text-transform: uppercase;
     top: 5px; }
 
-#righty .primary {
+.righty .primary {
   float: right; }
 
-#righty .secondary {
+.righty .secondary {
   float: right; }
 
 .bottom-main {
@@ -1426,28 +1465,29 @@ aside.widget_latest_focuscover {
 
 aside.Tumblr {
   width: 330px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  background-image: url(images/tumblrBg.png);
+  background-size: 330px; }
   @media screen and (max-width: 1230px) {
     aside.Tumblr {
       display: none; } }
   aside.Tumblr ul {
-    height: 1626px;
+    height: 2185px;
     overflow: scroll;
     margin: 0;
-    padding: 0; }
+    padding: 0 30px; }
     aside.Tumblr ul li {
       overflow: hidden;
       text-align: left;
       list-style: none;
       display: table;
-      margin: 0 auto;
-      width: 330px; }
+      margin: 0 auto; }
       aside.Tumblr ul li img {
-        max-width: 100%; }
+        width: 100%; }
       aside.Tumblr ul li p {
         font-weight: bold;
         font-size: 80%;
-        margin-top: 0;
+        margin: 0 10px 10px 0;
         display: table-caption;
         caption-side: bottom; }
         aside.Tumblr ul li p a.tumblr_link {
@@ -1526,6 +1566,39 @@ aside.widget_latest_stories {
         aside.widget_latest_stories ul.stories li.story img:first-of-type {
           top: 0px;
           left: 0px; }
+
+.index-side {
+  margin: 45px 0;
+  width: 470px;
+  overflow: hidden;
+  height: 1004px;
+  padding: 0;
+  position: relative; }
+  .index-side img {
+    max-width: none;
+    position: absolute;
+    left: -50%;
+    height: 100%; }
+  .index-side p {
+    text-align: center;
+    position: absolute;
+    bottom: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #FFF;
+    padding: 20px;
+    width: 100%;
+    left: 0; }
+    .index-side p a {
+      color: #FFF;
+      text-transform: uppercase;
+      letter-spacing: 1em;
+      margin-right: -1em; }
+      .index-side p a:hover {
+        color: #F86;
+        background: none; }
+  .index-side h2 {
+    margin: 2px 5px;
+    color: #777; }
 
 body.search div.results {
   max-width: 1280px;

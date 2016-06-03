@@ -128,15 +128,20 @@ aside.Tumblr{
   width:330px;
   margin:0 auto;
 
+  // background:#EFEFEF;
+  background-image:url(images/tumblrBg.png);
+  background-size:330px ;
   @media screen and (max-width: $break-large) {
     display:none;
   }
 
   ul{
-    height:1626px;
+    height:2185px;
     overflow:scroll;
     margin:0;
-    padding:0;
+    padding: 0 30px;
+    // border-bottom: 3px solid #000;
+
 
     li{
 
@@ -146,17 +151,17 @@ aside.Tumblr{
       // float:left;
        display:table;
       margin: 0 auto;
-      width:330px;
+
 
       img{
        // max-height:400px;
-        max-width:100%;
+        width:100%;
       }
 
       p{
         font-weight: bold;
         font-size: 80%;
-        margin-top: 0;
+        margin: 0 10px 10px 0;
         display:table-caption;
         caption-side:bottom;
 
@@ -288,4 +293,64 @@ aside.widget_latest_stories{
     }
   }
 }
+////////////////////////////////////
+
+
+////////////////////////////////////
+// 7. Index Sides (Tall towers)
+////////////////////////////////////
+
+.index-side{
+  margin:45px 0;
+  width:470px;
+  overflow:hidden;
+  // border:1px solid #aaa;
+  height:1004px;
+  padding: 0;
+  position:relative;
+
+  img{
+    max-width:none;
+    position:absolute;
+    left:-50%;
+    height:100%;
+
+    // black and white
+    // filter: grayscale(100%);
+    // -webkit-filter: grayscale(100%);
+
+    // blurry
+    // -webkit-filter: blur(11px);
+    // filter: blur(11px);
+  }
+  p{
+    text-align:center;
+    position:absolute;
+    bottom:40px;
+    background:rgba(0,0,0,0.5);
+    color:#FFF;
+    padding:20px;
+    width:100%;
+    left:0;
+
+
+    a{
+      color:#FFF;
+      text-transform:uppercase;
+      letter-spacing:1em;
+      margin-right: -1em;
+      &:hover{
+        color:#F86;
+        background:none;
+      }
+    }
+  }
+  h2{
+    margin:2px 5px;
+    color:#777;
+
+  }
+}
+
+
 ////////////////////////////////////

@@ -8,23 +8,64 @@ body.search{
 
     &.original{
 
-      h1{
-        margin:0;
-      }
+      // background:#888;
+      height:45px;
+      width:750px;
+      margin-top:10px;
+      border-bottom:5px solid #000;
 
-      p.site-description{
-        margin:0px;
-      }
+
+div.site-branding{
+  overflow:hidden;
+  float:left;
+  h1{
+    margin:0;
+    display:inline-block;
+    float:left;
+    a{
+
+      display: inline-block;
+      text-indent: -9999999px;
+      width: 180px;
+      height: 36px;
+      background: url(images/masthead.png);
+      background-repeat: no-repeat;
+      background-size: 180px 36px;
+      background-position:-5px 0;
+    }
+
+  }
+
+  p.site-description{
+    margin:0px;
+    display:none;
+  }
+}
+
 
       nav#site-navigation{
-        margin: 10px 0 25px 0;
+        margin: 12px 0px 25px 0;
+        display:inline-block;
+        float:right;
+        overflow:hidden;
+        width:auto;
+        clear:none;
+
+        div.menu-menu-1-container{
+          display:inline-block;
+          float:left;
+        }
 
         ul{
           text-align:center;
+          display:inline;
           li{
             display:inline-block;
             float:none;
-            margin-right:10px;
+            margin-right:5px;
+            a{
+              // color:#000;
+            }
           }
         }
       }
@@ -161,7 +202,6 @@ body.search{
 
         margin:0 auto;
 
-        border-bottom:1px solid #aaa;
         padding:20px 0;
 
 
@@ -287,6 +327,7 @@ width:270px;
 
           margin:0 auto;
           width:700px;
+          height: 458px;
 
           @media screen and (min-width: $break-large) {
 
@@ -378,7 +419,7 @@ footer{
 $columnwidth: 150px;
 $columngutter: 10px;
 $numcols: 8;
-$intermissionheight: 250px;
+// $intermissionheight: 250px;
 
 
 ////////////////////////////////////////////////////////
@@ -390,7 +431,7 @@ $intermissionheight: 250px;
   // background-image: url(images/bowtie.svg);
   // background-repeat: repeat-x;
   // background-position-x: center;
-  #lefty, #righty{
+  .lefty, .righty{
   //  background:#ff0;
     width:$numcols*$columnwidth+$columngutter*($numcols - 1);
     //margin:$columngutter auto;
@@ -411,7 +452,7 @@ div{
 ////////////////////////////////////////////////////////
 
 // all the main columns
-#lefty, #righty{
+.lefty, .righty{
 .primary{
 display:block;
   width: $columnwidth * 5 + $columngutter * 4;
@@ -423,7 +464,7 @@ display:block;
 }
 
 // all the sidebars
-#lefty, #righty{
+.lefty, .righty{
   .secondary{
 
   display:block;
@@ -452,11 +493,13 @@ display:block;
 .intermission-a,
 .intermission-b,
 .intermission-c{
+  overflow:hidden; // sizing hack
   display:block;
-  height:$intermissionheight;
+  // height:$intermissionheight;
+  padding: 0 0 20px 0;
   width:100%;
   clear:both;
-
+  text-align:center;
   background-color: #fff;
 
   h2{
@@ -497,7 +540,7 @@ display:block;
 ////////////////////////////////////////////////////////
 
 
-#lefty .primary{
+.lefty .primary{
   float:left;
   margin-right:$columngutter;
   > div{
@@ -512,7 +555,7 @@ display:block;
   }
 }
 
-#lefty .secondary {
+.lefty .secondary {
   float: left;
   > div {
     border: 1px solid #000;
@@ -600,10 +643,10 @@ display:block;
 .intermission-a{
 
 }
-#righty .primary{
+.righty .primary{
   float:right;
 }
-#righty .secondary{
+.righty .secondary{
   float:right;
 }
 

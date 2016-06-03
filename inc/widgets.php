@@ -376,6 +376,16 @@ if (function_exists('register_sidebar')) {
     ));
 
     register_sidebar(array(
+        'name'=> 'Index Mid2-Side',
+        'id' => 'index_mid2_side',
+
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ));
+
+    register_sidebar(array(
         'name'=> 'Index Bottom-Side',
         'id' => 'index_bottom_side',
 
