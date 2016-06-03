@@ -865,14 +865,19 @@ body.single-fmag_story {
         body.single-fmag_story div#bottomcols div#leftcol div.credits .credits-inner {
           column-count: 2; }
           body.single-fmag_story div#bottomcols div#leftcol div.credits .credits-inner p {
+            -moz-column-break-inside: avoid;
+            -webkit-column-break-inside: avoid;
+            column-break-inside: avoid;
             font-weight: bold;
             font-size: 80%;
             letter-spacing: 0.1em;
-            margin: 0 10px 20px 10px;
-            break-inside: avoid; }
+            margin: 0;
+            padding: 0 10px 20px 10px; }
             body.single-fmag_story div#bottomcols div#leftcol div.credits .credits-inner p a {
               font-size: 100%;
               margin-left: -5px; }
+        body.single-fmag_story div#bottomcols div#leftcol div.tags ul {
+          margin-left: 10px; }
     body.single-fmag_story div#bottomcols div#rightcol {
       width: 50%;
       float: right; }
