@@ -167,6 +167,7 @@ function add_story_metaboxes() {
 // Add the Events Meta Boxes
 function add_cover_metaboxes() {
 
+    add_meta_box('fmag_storyref_id', ' Story Post ID', 'fmag_storyref_id', 'fmag_cover', 'side', 'default');
     add_meta_box('fmag_legacy_id', 'Legacy Drupal Node ID', 'fmag_legacy_id', 'fmag_cover', 'side', 'default');
     add_meta_box('fmag_legacy_storyref_id', 'Legacy Drupal Story ID', 'fmag_legacy_storyref_id', 'fmag_cover', 'side', 'default');
 
@@ -201,7 +202,20 @@ function fmag_legacy_storyref_id() {
 
     // Echo out the field
     echo '<input type="text" name="legacy_storyref_id" value="' . $legacyID  . '" class="widefat" readonly />';
+}
 
+function fmag_storyref_id() {
+    global $post;
+
+    // Noncename needed to verify where the data originated
+    echo '<input type="hidden" name="eventmeta_noncename" id="eventmeta_noncename" value="' .
+        wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
+
+    // Get the location data if its already been entered
+    $storyID = get_post_meta($post->ID, 'storyref_id', true);
+
+    // Echo out the field
+    echo '<input type="text" name="storyref_id" value="' . $storyID  . '" class="widefat" />';
 }
 
 

@@ -583,7 +583,7 @@ $myterm = '';
 
 
 
-                    <a href="<?php echo the_permalink() ?>">
+                    <!-- a href="<?php echo the_permalink() ?>" -->
                         <li class="cover">
 
 
@@ -617,7 +617,7 @@ $myterm = '';
                                 }
                             }
                             ?>
-                        </li></a>
+                        </li><!--/a -->
                 <?php endwhile; ?>
             </ul>
             <?php echo $after_widget; ?>

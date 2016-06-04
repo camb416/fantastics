@@ -1061,6 +1061,15 @@ body.search {
         body.search header#masthead.cloned nav#site-navigation ul li {
           display: block !important;
           margin-right: 20px; }
+  @media screen and (max-width: 480px) {
+    body.home div.fmag_story::after,
+    body.archive div.fmag_story::after,
+    body.search div.fmag_story::after {
+      content: '';
+      position: absolute;
+      width: 50%;
+      left: 25%;
+      border-bottom: 1px solid #aaa; } }
   body.home div.fmag_story.even,
   body.archive div.fmag_story.even,
   body.search div.fmag_story.even {
@@ -1108,6 +1117,16 @@ body.search {
 
           }
 */ }
+      @media screen and (max-width: 480px) {
+        body.home div.fmag_story article .entry-header,
+        body.archive div.fmag_story article .entry-header,
+        body.search div.fmag_story article .entry-header {
+          width: auto;
+          margin: 0 0 40px 0;
+          padding: 0 0 0 15px;
+          height: auto;
+          position: relative;
+          width: 100%; } }
       body.home div.fmag_story article .entry-header h2,
       body.archive div.fmag_story article .entry-header h2,
       body.search div.fmag_story article .entry-header h2 {
@@ -1128,15 +1147,28 @@ body.search {
           body.home div.fmag_story article .entry-header h2 a:hover,
           body.archive div.fmag_story article .entry-header h2 a:hover,
           body.search div.fmag_story article .entry-header h2 a:hover {
-            background: #000;
-            color: #fff; }
+            color: #fff;
+            text-decoration: line-through; }
       body.home div.fmag_story article .entry-header p,
       body.archive div.fmag_story article .entry-header p,
       body.search div.fmag_story article .entry-header p {
         float: left;
         width: 420px;
         margin: 0;
-        padding: 0; }
+        padding: 0;
+        /*
+        a{
+          color:#000;
+          text-decoration:none;
+          text-transform:uppercase;
+          font-size:80%;
+          letter-spacing:0.05em;
+          padding:2px 7px;
+          &:hover{
+            background:#000;
+            color:#fff;
+          }
+        }*/ }
         body.home div.fmag_story article .entry-header p:first-of-type,
         body.archive div.fmag_story article .entry-header p:first-of-type,
         body.search div.fmag_story article .entry-header p:first-of-type {
@@ -1146,20 +1178,6 @@ body.search {
         body.search div.fmag_story article .entry-header p > a {
           margin: 0;
           padding-left: 10px; }
-        body.home div.fmag_story article .entry-header p a,
-        body.archive div.fmag_story article .entry-header p a,
-        body.search div.fmag_story article .entry-header p a {
-          color: #000;
-          text-decoration: none;
-          text-transform: uppercase;
-          font-size: 80%;
-          letter-spacing: 0.05em;
-          padding: 2px 7px; }
-          body.home div.fmag_story article .entry-header p a:hover,
-          body.archive div.fmag_story article .entry-header p a:hover,
-          body.search div.fmag_story article .entry-header p a:hover {
-            background: #000;
-            color: #fff; }
       body.home div.fmag_story article .entry-header ul.minispreads,
       body.archive div.fmag_story article .entry-header ul.minispreads,
       body.search div.fmag_story article .entry-header ul.minispreads {
@@ -1169,6 +1187,11 @@ body.search {
         position: absolute;
         right: 0;
         overflow: hidden; }
+        @media screen and (max-width: 480px) {
+          body.home div.fmag_story article .entry-header ul.minispreads,
+          body.archive div.fmag_story article .entry-header ul.minispreads,
+          body.search div.fmag_story article .entry-header ul.minispreads {
+            display: none; } }
         body.home div.fmag_story article .entry-header ul.minispreads li,
         body.archive div.fmag_story article .entry-header ul.minispreads li,
         body.search div.fmag_story article .entry-header ul.minispreads li {
@@ -1189,6 +1212,11 @@ body.search {
         margin-top: 2px;
         right: 0;
         top: 60px; }
+        @media screen and (max-width: 480px) {
+          body.home div.fmag_story article .entry-header a.morepages,
+          body.archive div.fmag_story article .entry-header a.morepages,
+          body.search div.fmag_story article .entry-header a.morepages {
+            display: none; } }
     body.home div.fmag_story article p,
     body.archive div.fmag_story article p,
     body.search div.fmag_story article p {
@@ -1210,6 +1238,12 @@ body.search {
           display: inline;
           float: left;
           margin: 0 40px; } }
+      @media screen and (max-width: 480px) {
+        body.home div.fmag_story article ul.medspread,
+        body.archive div.fmag_story article ul.medspread,
+        body.search div.fmag_story article ul.medspread {
+          height: auto;
+          margin: 0; } }
       body.home div.fmag_story article ul.medspread li,
       body.archive div.fmag_story article ul.medspread li,
       body.search div.fmag_story article ul.medspread li {
@@ -1428,11 +1462,15 @@ body.archive div.page-content, body.search div.page-content {
   width: 1280px;
   margin: 0 auto 30px auto; }
 body.archive div.archive-sidebar, body.search div.archive-sidebar {
-  background: #fff;
   width: 300px;
   height: 5280px;
   float: left;
-  margin-left: 150px; }
+  margin-left: 150px;
+  z-index: -1;
+  position: absolute; }
+  @media screen and (max-width: 480px) {
+    body.archive div.archive-sidebar, body.search div.archive-sidebar {
+      display: none; } }
   body.archive div.archive-sidebar .widget_latest_covers, body.search div.archive-sidebar .widget_latest_covers {
     margin: 0;
     padding: 0; }
@@ -1441,29 +1479,22 @@ body.archive div.archive-sidebar, body.search div.archive-sidebar {
     body.archive div.archive-sidebar .widget_latest_covers ul.covers, body.search div.archive-sidebar .widget_latest_covers ul.covers {
       margin: 10px; }
       body.archive div.archive-sidebar .widget_latest_covers ul.covers li, body.search div.archive-sidebar .widget_latest_covers ul.covers li {
-        width: 100%;
+        width: 400px;
         float: left;
         margin: 0;
         padding: 0;
-        height: 380px;
+        height: 448px;
         overflow: hidden; }
         body.archive div.archive-sidebar .widget_latest_covers ul.covers li img, body.search div.archive-sidebar .widget_latest_covers ul.covers li img {
-          width: 340px;
-          height: 440px;
+          width: 400px;
+          height: 518px;
           max-width: none;
           position: relative;
-          top: -60px;
+          top: -70px;
           left: 0;
           -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
-          opacity: 0.8; }
-          body.archive div.archive-sidebar .widget_latest_covers ul.covers li img:hover, body.search div.archive-sidebar .widget_latest_covers ul.covers li img:hover {
-            -webkit-filter: grayscale(0%);
-            filter: grayscale(0%);
-            opacity: 1.0; }
-body.archive div.archive-stories, body.search div.archive-stories {
-  width: 750px;
-  float: left; }
+          opacity: 0.3; }
 body.archive div.archive-wrap, body.search div.archive-wrap {
   clear: both;
   position: relative;

@@ -169,6 +169,19 @@ div.site-branding{
 
     div.fmag_story{
 
+      @media screen and (max-width: $break-small) {
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 50%;
+          left:25%;
+
+          border-bottom: 1px solid #aaa;
+
+        }
+      }
+
     //  background-image:url(images/right-to-left-01.bowtie);
     //  background-position: center;
     //  background-repeat-x: no-repeat;
@@ -222,8 +235,22 @@ div.site-branding{
 
           width:700px;
           margin:0 0 0 40px;
-position:relative;
+          position:relative;
           text-align:left;
+
+          @media screen and (max-width: $break-small) {
+           width:auto;
+            margin: 0 0 40px 0;
+            padding: 0 0 0 15px;
+            // background:rgba(255,255,255,0.5);
+            height:auto;
+            position:relative;
+            width:100%;
+
+
+
+          }
+
           /*
           @media screen and (min-width: $break-large) {
             padding-top:100px;
@@ -248,8 +275,9 @@ position:relative;
               letter-spacing:0.1em;
               font-size:80%;
               &:hover{
-                background:#000;
+                //background:#000;
                 color:#fff;
+                text-decoration:line-through;
               }
             }
           }
@@ -268,6 +296,7 @@ position:relative;
               margin:0;
               padding-left:10px;
             }
+            /*
             a{
               color:#000;
               text-decoration:none;
@@ -279,20 +308,21 @@ position:relative;
                 background:#000;
                 color:#fff;
               }
-            }
+            }*/
           }
 
           ul.minispreads{
-         //   display:inline;
-         //   float:left;
-width:270px;
+            width:270px;
             margin:0;
             padding:0;
             position:absolute;
             right:0;
-
-
             overflow:hidden;
+
+            @media screen and (max-width: $break-small) {
+             display:none;
+            }
+
             li{
               width:80px;
               list-style: none;
@@ -305,8 +335,10 @@ width:270px;
           }
 
           a.morepages{
+            @media screen and (max-width: $break-small) {
+              display:none;
+            }
             display:block;
-            //display:inline-block;
             position:absolute;
             padding: 2px 5px;
             margin-top: 2px;
@@ -335,8 +367,10 @@ width:270px;
             float:left;
             margin:0 40px;
 
-
-
+          }
+          @media screen and (max-width: $break-small) {
+            height: auto;
+            margin:0;
           }
 
           overflow:hidden;
