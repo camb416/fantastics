@@ -1397,19 +1397,81 @@ div {
 .bottom-side {
   float: left; }
 
-body.archive h1.page-title, body.search h1.page-title {
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  color: #fff;
-  background: #000;
-  max-width: 1280px;
-  padding: 0 0 2px 15px;
-  margin: 0 auto 30px auto; }
+body.archive a.frontlink, body.search a.frontlink {
+  float: left;
+  display: inline;
+  padding: 50px 20px 0 10px; }
+body.archive header.page-header, body.search header.page-header {
+  float: left;
+  width: 1200px; }
+  body.archive header.page-header h1.page-title, body.search header.page-header h1.page-title {
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 1.5rem;
+    color: #fff;
+    background: #000;
+    max-width: 1280px;
+    padding: 0 0 15px 15px;
+    margin: 30px auto 0px auto; }
+    body.archive header.page-header h1.page-title:before, body.search header.page-header h1.page-title:before {
+      background-image: url("images/masthead_white.png");
+      background-size: auto 100%;
+      display: inline-block;
+      width: 10.5rem;
+      height: 2rem;
+      background-repeat: no-repeat;
+      background-position-y: 0.2rem;
+      opacity: 0.9;
+      content: "";
+      margin-top: 0.4rem; }
 body.archive div.page-content, body.search div.page-content {
   width: 1280px;
   margin: 0 auto 30px auto; }
+body.archive div.archive-sidebar, body.search div.archive-sidebar {
+  background: #fff;
+  width: 300px;
+  height: 5280px;
+  float: left;
+  margin-left: 150px; }
+  body.archive div.archive-sidebar .widget_latest_covers, body.search div.archive-sidebar .widget_latest_covers {
+    margin: 0;
+    padding: 0; }
+    body.archive div.archive-sidebar .widget_latest_covers h2, body.search div.archive-sidebar .widget_latest_covers h2 {
+      display: none; }
+    body.archive div.archive-sidebar .widget_latest_covers ul.covers, body.search div.archive-sidebar .widget_latest_covers ul.covers {
+      margin: 10px; }
+      body.archive div.archive-sidebar .widget_latest_covers ul.covers li, body.search div.archive-sidebar .widget_latest_covers ul.covers li {
+        width: 100%;
+        float: left;
+        margin: 0;
+        padding: 0;
+        height: 380px;
+        overflow: hidden; }
+        body.archive div.archive-sidebar .widget_latest_covers ul.covers li img, body.search div.archive-sidebar .widget_latest_covers ul.covers li img {
+          width: 340px;
+          height: 440px;
+          max-width: none;
+          position: relative;
+          top: -60px;
+          left: 0;
+          -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+          opacity: 0.8; }
+          body.archive div.archive-sidebar .widget_latest_covers ul.covers li img:hover, body.search div.archive-sidebar .widget_latest_covers ul.covers li img:hover {
+            -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+            opacity: 1.0; }
+body.archive div.archive-stories, body.search div.archive-stories {
+  width: 750px;
+  float: left; }
+body.archive div.archive-wrap, body.search div.archive-wrap {
+  clear: both;
+  position: relative;
+  overflow: hidden; }
 body.archive div.fmag_story, body.search div.fmag_story {
   background: none !important; }
+  body.archive div.fmag_story article, body.search div.fmag_story article {
+    width: 750px; }
 
 aside h2.widget-title {
   text-align: left;

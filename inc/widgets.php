@@ -473,3 +473,202 @@ function register_foo_widget() {
     register_widget( 'Foo_Widget' );
 }
 add_action( 'widgets_init', 'register_foo_widget' );
+
+
+
+
+/////////////////////////////
+// LATEST COVERS
+/**
+ * FMAG_Widget_Latest_Covers
+ *
+ */
+class FMAG_Widget_Latest_Covers extends WP_Widget {
+
+    function __construct() {
+        $widget_ops = array('classname' => 'widget_latest_covers', 'description' => __( "The most recent covers on your site") );
+        parent::__construct('latest-covers', __('Latest Covers'), $widget_ops);
+        $this->alt_option_name = 'widget_latest_covers';
+
+        add_action( 'save_post', array($this, 'flush_widget_cache') );
+        add_action( 'deleted_post', array($this, 'flush_widget_cache') );
+        add_action( 'switch_theme', array($this, 'flush_widget_cache') );
+    }
+
+    public function widget($args, $instance) {
+        $cache = wp_cache_get('widget_latest_covers', 'widget');
+
+        if ( !is_array($cache) )
+            $cache = array();
+
+        if ( ! isset( $args['widget_id'] ) )
+            $args['widget_id'] = $this->id;
+
+        if ( isset( $cache[ $args['widget_id'] ] ) ) {
+            echo $cache[ $args['widget_id'] ];
+            return;
+        }
+        ob_start();
+        extract($args);
+
+$myterm = '';
+        $postargs = array( 'posts_per_page' => $number,
+            'no_found_rows' => true,
+            'post_status' => 'publish',
+            'ignore_sticky_posts' => true,
+            'post_type' => 'fmag_cover',
+
+
+        );
+
+        if ( isset ( get_queried_object()->taxonomy )
+            && isset( get_queried_object()->name )
+        )
+        {
+            $myterm = get_queried_object()->name;
+
+            if($myterm == 'women' || $myterm == 'men'){
+                // keep it
+                $postargs = array( 'posts_per_page' => $number,
+                    'no_found_rows' => true,
+                    'post_status' => 'publish',
+                    'ignore_sticky_posts' => true,
+                    'post_type' => 'fmag_cover',
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'term',
+                            'field'    => 'slug',
+                            'terms'    => $myterm,
+                        ),
+                    ),
+
+                );
+            }
+            /*
+            return print $args['before_widget']
+                . '<b style="padding:10px;border:3px solid red">'
+                . get_queried_object()->name
+                . '</b>'
+                . $args['after_widget'];
+            */
+        }
+
+
+        $title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Latest Covers' );
+
+        $title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
+        $number = ( ! empty( $instance['number'] ) ) ? absint( $instance['number'] ) : 10;
+        if ( ! $number )
+            $number = 10;
+        //$show_date = isset( $instance['show_date'] ) ? $instance['show_date'] : false;
+        $show_date = false;
+        $r = new WP_Query( apply_filters( 'widget_posts_args',
+            $postargs ) );
+
+        // var_dump($r);
+
+        if ($r->have_posts()) :
+            ?>
+            <?php echo $before_widget; ?>
+
+            <?php
+            //  display title
+            if ( $title ) echo $before_title . $title . $after_title;
+
+            ?>
+            <ul class="covers">
+                <?php while ( $r->have_posts() ) : $r->the_post(); ?>
+
+
+
+
+
+                    <a href="<?php echo the_permalink() ?>">
+                        <li class="cover">
+
+
+                            <?php
+                            //echo get_the_title();
+                            // working methods here:
+                            // the_permalink()
+                            // esc_attr( get_the_title() ? get_the_title() : get_the_ID() );
+                            // <?php if ( get_the_title() ) the_title(); else the_ID();
+                            // get_the_date();
+
+                            // echo get_the_title();
+                            //echo the_permalink();
+
+                            $args = array(
+                                'post_type' => 'attachment',
+                                'numberposts' => 1,
+                                'post_status' => null,
+                                'post_parent' => get_the_ID(),
+                                'order' => 'ASC'
+                            );
+
+                            $attachments = get_posts( $args );
+                            if ( $attachments ) {
+                                foreach ( $attachments as $attachment ) {
+                                    echo '';
+                                    echo wp_get_attachment_image( $attachment->ID, 'full' );
+                                    //echo '<p>';
+                                    //echo apply_filters( 'the_title', $attachment->post_title );
+                                    echo '';
+                                }
+                            }
+                            ?>
+                        </li></a>
+                <?php endwhile; ?>
+            </ul>
+            <?php echo $after_widget; ?>
+            <?php
+// Reset the global $the_post as this query will have stomped on it
+            wp_reset_postdata();
+
+        endif;
+
+        $cache[$args['widget_id']] = ob_get_flush();
+        wp_cache_set('widget_latest_covers', $cache, 'widget');
+    }
+
+    function update( $new_instance, $old_instance ) {
+        $instance = $old_instance;
+        $instance['title'] = strip_tags($new_instance['title']);
+        $instance['number'] = (int) $new_instance['number'];
+        $instance['show_date'] = (bool) $new_instance['show_date'];
+        $this->flush_widget_cache();
+
+        $alloptions = wp_cache_get( 'alloptions', 'options' );
+        if ( isset($alloptions['widget_latest_covers']) )
+            delete_option('widget_latest_covers');
+
+        return $instance;
+    }
+
+    function flush_widget_cache() {
+        wp_cache_delete('widget_latest_covers', 'widget');
+    }
+
+    function form( $instance ) {
+        $title     = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
+        $number    = isset( $instance['number'] ) ? absint( $instance['number'] ) : 5;
+        $show_date = isset( $instance['show_date'] ) ? (bool) $instance['show_date'] : false;
+        ?>
+        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+            <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
+
+        <p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:' ); ?></label>
+            <input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" size="3" /></p>
+
+        <p><input class="checkbox" type="checkbox" <?php checked( $show_date ); ?> id="<?php echo $this->get_field_id( 'show_date' ); ?>" name="<?php echo $this->get_field_name( 'show_date' ); ?>" />
+            <label for="<?php echo $this->get_field_id( 'show_date' ); ?>"><?php _e( 'Display post date?' ); ?></label></p>
+        <?php
+    }
+}
+// register Latest_Stories widget
+function register_latest_covers_widget() {
+    register_widget( 'FMAG_Widget_Latest_Covers' );
+}
+
+add_action( 'widgets_init', 'register_latest_covers_widget' );
+//////////////////

@@ -12,6 +12,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+			<a href="/" class="frontlink">&lt; Frontpage</a>
 		<?php if ( have_posts() ) : ?>
 			<header class="page-header">
 				<?php
@@ -20,6 +21,13 @@ get_header(); ?>
 				?>
 			</header><!-- .page-header -->
 
+			<div class="archive-wrap">
+				<div class="archive-sidebar">
+					<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Archive Sidebar')) : ?>
+						<!-- empty sidebar -->
+					<?php endif; ?>
+				</div>
+				<div class="archive-stories">
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
@@ -45,7 +53,8 @@ get_header(); ?>
 				?>
 
 			<?php endwhile; ?>
-
+			</div>
+			</div>
 			<?php posts_navigation(); ?>
 
 		<?php else : ?>

@@ -107,6 +107,16 @@ function fantastics_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+    register_sidebar( array(
+        'name'          => esc_html__( 'Archive Sidebar', 'fantastics' ),
+        'id'            => 'sidebar-2',
+        'description'   => '',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
+
 }
 add_action( 'widgets_init', 'fantastics_widgets_init' );
 
@@ -315,3 +325,26 @@ function register_my_menu() {
     register_nav_menu('footer-menu',__( 'Footer Menu' ));
 }
 add_action( 'init', 'register_my_menu' );
+
+// remove "tagged with:" in the archive title
+// Simply remove anything that looks like an archive title prefix ("Archive:", "Foo:", "Bar:").
+add_filter('get_the_archive_title', function ($title) {
+    $output = preg_replace('/[^\:]+: /', '', $title);
+    return $output;
+});
+
+// only show stories in term archive
+add_filter( 'pre_get_posts', 'slug_cpt_category_archives' );
+function slug_cpt_category_archives( $query )
+{
+
+     if ( $query->is_tax() && $query->is_main_query()  )  {
+         $query->set( 'post_type',
+             array(
+                 'fmag_story'
+             )
+         );
+     }
+
+    return $query;
+}
