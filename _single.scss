@@ -1,3 +1,50 @@
+body.page, body.single-fmag_story{
+
+
+.frontlink{
+  text-align:left;
+  padding: 0.5rem;
+  margin:0 0 0 0;
+  color: #aaa;
+  border-bottom:1px solid #fff;
+  width:100%;
+  display:block;
+  &:hover{
+    color: #fff;
+  }
+
+  &:after{
+
+    background-image: url("images/masthead_white.png");
+    background-size: auto 100%;
+    display: inline-block;
+    width: 10.5rem;
+    height: 2rem;
+    background-repeat: no-repeat;
+    background-position-y: 0.2rem;
+    opacity: 0.9;
+    content: "";
+    margin-top: 0.4rem;
+    position: relative;
+    top: 0.3rem;
+
+  }
+}
+
+}
+body.page{
+  margin: 30px;
+
+
+  div#primary > main article{
+
+
+    max-width:900px;
+    margin: 20px auto 0;
+
+  }
+}
+
 body.single-fmag_story{
 
 
