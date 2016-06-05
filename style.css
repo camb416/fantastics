@@ -1227,7 +1227,7 @@ body.search {
         body.search div.fmag_story article .entry-header ul.minispreads li {
           width: 80px;
           list-style: none;
-          float: right;
+          float: left;
           margin: 5px 0 0 10px; }
           body.home div.fmag_story article .entry-header ul.minispreads li img,
           body.archive div.fmag_story article .entry-header ul.minispreads li img,
