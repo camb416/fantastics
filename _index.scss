@@ -2,39 +2,38 @@ body.home,
 body.archive,
 body.search{
 
-
-
   header#masthead{
 
     &.original{
 
       // background:#888;
       height:45px;
-      width:750px;
+      @media screen and (min-width: $break-large) {
+        width: 750px;
+      }
       margin-top:10px;
       border-bottom:5px solid #000;
 
+      div.site-branding{
+        overflow:hidden;
+        float:left;
+        h1{
+          margin:0;
+          display:inline-block;
+          float:left;
+          a{
 
-div.site-branding{
-  overflow:hidden;
-  float:left;
-  h1{
-    margin:0;
-    display:inline-block;
-    float:left;
-    a{
+            display: inline-block;
+            text-indent: -9999999px;
+            width: 180px;
+            height: 36px;
+            background: url(images/masthead.png);
+            background-repeat: no-repeat;
+            background-size: 180px 36px;
+            background-position:-5px 0;
+          }
 
-      display: inline-block;
-      text-indent: -9999999px;
-      width: 180px;
-      height: 36px;
-      background: url(images/masthead.png);
-      background-repeat: no-repeat;
-      background-size: 180px 36px;
-      background-position:-5px 0;
-    }
-
-  }
+        }
 
   p.site-description{
     margin:0px;
@@ -80,11 +79,11 @@ div.site-branding{
 
       display:none;
       position:relative;
-      background:#fff;
+      background:rgba(255,255,255,0.9);
       h1.site-title{
         float:left;
         display:inline-block;
-        margin-bottom:5px;
+        margin:5px;
         a{
           width: 180px;
           height: 36px;
@@ -102,8 +101,8 @@ div.site-branding{
         display:inline-block;
         width:auto;
         clear:none;
-        top:40px;
-        margin-left:25px;
+        top:25px;
+        margin:0 0 0 10px;
         position:relative;
         ul{
 
@@ -112,6 +111,9 @@ div.site-branding{
           li{
             display:block !important;
             margin-right:20px;
+            a:hover{
+              color:#000;
+            }
 
           }
         }
@@ -468,6 +470,7 @@ $numcols: 8;
   .lefty, .righty{
   //  background:#ff0;
     width:$numcols*$columnwidth+$columngutter*($numcols - 1);
+    max-width:100%;
     //margin:$columngutter auto;
     margin: 0 auto;
     overflow:hidden;
@@ -501,8 +504,8 @@ display:block;
 .lefty, .righty{
   .secondary{
 
-  display:block;
-    width: $columnwidth * 3 + $columngutter * 2;
+    display:block;
+    width: $columnwidth * 2 + $columngutter * 2;
     // background-color:#FFC0EE;
     //  background-color:rgba(255,255,255,128);
 
@@ -573,16 +576,24 @@ display:block;
 // all areas, from top to bottom
 ////////////////////////////////////////////////////////
 
+body.home > #page > div.top{
+
+  width:1120px;
+
+}
 
 .lefty .primary{
   float:left;
   margin-right:$columngutter;
+  max-width:100%;
   > div{
     background:#DDD;
   }
   .bigcover{
     width:750px;
-    height:970px;
+    // height:970px;
+    max-width:100%;
+
   }
   .menu-undercover{
     height:64px;

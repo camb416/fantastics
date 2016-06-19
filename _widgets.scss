@@ -81,7 +81,7 @@ div.intermission-outer{
 
 aside.widget_latest_focuscover{
   width:330px;
-  margin:0 auto;
+  margin:2rem auto 5rem auto;
   @media screen and (max-width: $break-large) {
     margin:0 auto;
     float:none;
@@ -115,6 +115,24 @@ aside.widget_latest_focuscover{
     color: #bbb;
   }
 
+}
+// ads underneath Focus Cover
+.secondary{
+
+  .widget_text{
+    text-align:center;
+    border: 1px dashed #eee;
+    padding:10px;
+    @media screen and (max-width: $break-large) {
+      display:none;
+    }
+
+    h2 {
+      margin: 2px 5px;
+      text-align:center;
+      color: #FFF;
+    }
+  }
 }
 
 ////////////////////////////////////
@@ -183,7 +201,7 @@ aside.Tumblr{
     //TODO: place this file locally in project
     background: url(http://fantasticsmag.com/sites/all/themes/fmag2014/images/focus-flash-bold.png);
     //
-
+    background-size: 314px auto;
     background-position: 5px -77px;
     text-indent: -3000px;
     background-repeat: no-repeat;

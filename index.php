@@ -21,7 +21,7 @@
 ///////////////////////////////////////////////////
 ?>
 
-<div class="lefty twocol">
+<div class="lefty twocol top">
 
     <?php // top-main ?>
 
@@ -167,23 +167,27 @@
 
     if(1 == $paged && is_front_page()){
         echo '    <div class="secondary">';
-        echo '        <div class="socialbuttons">
 
+        // hiding social buttons
+        //
+        //        echo '        <div class="socialbuttons">
+        //
+        //
+        //    <p>Follow FANTASTICS on:</p>
+        //
+        //<a class="sb-f sb-f" href="https://twitter.com/fantasticsmag"><div class="sb-f sb-f-twi"></div>twitter</a>
+        //
+        //<a class="sb-f " href="http://www.facebook.com/pages/Fantastics/100542323355212"><div class="sb-f sb-f-fac"></div>facebook</a>
+        //
+        //<a class="sb-f" href="http://pinterest.com/fantasticsmag/"><div class="sb-f sb-f-pin"></div>pinterest</a>
+        //
+        //<a class="sb-f" href="http://fantasticsmag.tumblr.com/"><div class="sb-f sb-f-tum"></div>tumblr</a>
+        //
+        //<a class="sb-f" href="http://instagram.com/fantastics/"><div class="sb-f sb-f-ins"></div>instagram</a>
+        //
+        //
+        //        </div>';
 
-    <p>Follow FANTASTICS on:</p>
-
-<a class="sb-f sb-f" href="https://twitter.com/fantasticsmag"><div class="sb-f sb-f-twi"></div>twitter</a>
-
-<a class="sb-f " href="http://www.facebook.com/pages/Fantastics/100542323355212"><div class="sb-f sb-f-fac"></div>facebook</a>
-
-<a class="sb-f" href="http://pinterest.com/fantasticsmag/"><div class="sb-f sb-f-pin"></div>pinterest</a>
-
-<a class="sb-f" href="http://fantasticsmag.tumblr.com/"><div class="sb-f sb-f-tum"></div>tumblr</a>
-
-<a class="sb-f" href="http://instagram.com/fantastics/"><div class="sb-f sb-f-ins"></div>instagram</a>
-
-
-        </div>';
 
 
         if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Top-Side')){

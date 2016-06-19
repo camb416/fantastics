@@ -989,9 +989,13 @@ body.search {
   body.archive header#masthead.original,
   body.search header#masthead.original {
     height: 45px;
-    width: 750px;
     margin-top: 10px;
     border-bottom: 5px solid #000; }
+    @media screen and (min-width: 1230px) {
+      body.home header#masthead.original,
+      body.archive header#masthead.original,
+      body.search header#masthead.original {
+        width: 750px; } }
     body.home header#masthead.original div.site-branding,
     body.archive header#masthead.original div.site-branding,
     body.search header#masthead.original div.site-branding {
@@ -1052,13 +1056,13 @@ body.search {
     opacity: 0;
     display: none;
     position: relative;
-    background: #fff; }
+    background: rgba(255, 255, 255, 0.9); }
     body.home header#masthead.cloned h1.site-title,
     body.archive header#masthead.cloned h1.site-title,
     body.search header#masthead.cloned h1.site-title {
       float: left;
       display: inline-block;
-      margin-bottom: 5px; }
+      margin: 5px; }
       body.home header#masthead.cloned h1.site-title a,
       body.archive header#masthead.cloned h1.site-title a,
       body.search header#masthead.cloned h1.site-title a {
@@ -1078,8 +1082,8 @@ body.search {
       display: inline-block;
       width: auto;
       clear: none;
-      top: 40px;
-      margin-left: 25px;
+      top: 25px;
+      margin: 0 0 0 10px;
       position: relative; }
       body.home header#masthead.cloned nav#site-navigation ul,
       body.archive header#masthead.cloned nav#site-navigation ul,
@@ -1091,6 +1095,10 @@ body.search {
         body.search header#masthead.cloned nav#site-navigation ul li {
           display: block !important;
           margin-right: 20px; }
+          body.home header#masthead.cloned nav#site-navigation ul li a:hover,
+          body.archive header#masthead.cloned nav#site-navigation ul li a:hover,
+          body.search header#masthead.cloned nav#site-navigation ul li a:hover {
+            color: #000; }
   @media screen and (max-width: 480px) {
     body.home div.fmag_story::after,
     body.archive div.fmag_story::after,
@@ -1329,6 +1337,7 @@ footer {
   width: 100%; }
   #page .lefty, #page .righty {
     width: 1270px;
+    max-width: 100%;
     margin: 0 auto;
     overflow: hidden; }
 
@@ -1345,7 +1354,7 @@ div {
 
 .lefty .secondary, .righty .secondary {
   display: block;
-  width: 470px; }
+  width: 320px; }
   .lefty .secondary > div, .righty .secondary > div {
     margin: 10px auto; }
   .lefty .secondary .relatedcontent, .righty .secondary .relatedcontent {
@@ -1385,14 +1394,18 @@ div {
   background-color: #006699;
   display: block; }
 
+body.home > #page > div.top {
+  width: 1120px; }
+
 .lefty .primary {
   float: left;
-  margin-right: 10px; }
+  margin-right: 10px;
+  max-width: 100%; }
   .lefty .primary > div {
     background: #DDD; }
   .lefty .primary .bigcover {
     width: 750px;
-    height: 970px; }
+    max-width: 100%; }
   .lefty .primary .menu-undercover {
     height: 64px; }
 
@@ -1565,7 +1578,7 @@ div.intermission-outer {
 
 aside.widget_latest_focuscover {
   width: 330px;
-  margin: 0 auto; }
+  margin: 2rem auto 5rem auto; }
   @media screen and (max-width: 1230px) {
     aside.widget_latest_focuscover {
       margin: 0 auto;
@@ -1591,6 +1604,18 @@ aside.widget_latest_focuscover {
     text-align: left;
     font-weight: 400;
     color: #bbb; }
+
+.secondary .widget_text {
+  text-align: center;
+  border: 1px dashed #eee;
+  padding: 10px; }
+  @media screen and (max-width: 1230px) {
+    .secondary .widget_text {
+      display: none; } }
+  .secondary .widget_text h2 {
+    margin: 2px 5px;
+    text-align: center;
+    color: #FFF; }
 
 aside.Tumblr {
   width: 330px;
@@ -1626,6 +1651,7 @@ aside.Tumblr {
     padding: 0;
     width: 323px;
     background: url(http://fantasticsmag.com/sites/all/themes/fmag2014/images/focus-flash-bold.png);
+    background-size: 314px auto;
     background-position: 5px -77px;
     text-indent: -3000px;
     background-repeat: no-repeat;
@@ -1730,6 +1756,7 @@ aside.widget_latest_stories {
     color: #777; }
 
 body.search div.results {
+  clear: both;
   max-width: 1280px;
   margin: 0 auto; }
   body.search div.results h2 {
@@ -1739,6 +1766,10 @@ body.search div.results {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     border-bottom: 1px solid silver; }
+  body.search div.results.searchtype-story h2 {
+    max-width: 900px;
+    padding-top: 1rem;
+    margin: 0 auto; }
   body.search div.results.searchtype-cover {
     overflow: hidden;
     margin: 0 auto; }
