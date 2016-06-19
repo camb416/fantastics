@@ -492,7 +492,9 @@ div{
 .lefty, .righty{
 .primary{
 display:block;
+
   width: $columnwidth * 5 + $columngutter * 4;
+  max-width:100%;
   clear:both;
   // background-color:#C0FFEE;
   text-align:center;
@@ -505,7 +507,10 @@ display:block;
   .secondary{
 
     display:block;
-    width: $columnwidth * 2 + $columngutter * 2;
+    @media screen and (min-width: $break-large) {
+
+      width: $columnwidth * 2 + $columngutter * 2;
+    }
     // background-color:#FFC0EE;
     //  background-color:rgba(255,255,255,128);
 
@@ -601,7 +606,14 @@ body.home > #page > div.top{
 }
 
 .lefty .secondary {
-  float: left;
+
+  @media screen and (min-width: $break-large) {
+    float: left;
+
+  }
+
+
+
   > div {
     border: 1px solid #000;
   }

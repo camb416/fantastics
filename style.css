@@ -1349,12 +1349,15 @@ div {
 .lefty .primary, .righty .primary {
   display: block;
   width: 790px;
+  max-width: 100%;
   clear: both;
   text-align: center; }
 
 .lefty .secondary, .righty .secondary {
-  display: block;
-  width: 320px; }
+  display: block; }
+  @media screen and (min-width: 1230px) {
+    .lefty .secondary, .righty .secondary {
+      width: 320px; } }
   .lefty .secondary > div, .righty .secondary > div {
     margin: 10px auto; }
   .lefty .secondary .relatedcontent, .righty .secondary .relatedcontent {
@@ -1409,58 +1412,59 @@ body.home > #page > div.top {
   .lefty .primary .menu-undercover {
     height: 64px; }
 
-.lefty .secondary {
-  float: left; }
-  .lefty .secondary > div {
-    border: 1px solid #000; }
-  .lefty .secondary .socialbuttons {
-    border: none;
-    height: 105px;
-    width: 310px;
-    margin: 0 auto; }
-    .lefty .secondary .socialbuttons p {
-      text-align: left;
-      font-size: 0.8em;
-      text-transform: uppercase;
-      padding: 0;
-      margin: 0;
-      color: #bbb; }
-  .lefty .secondary a.sb-f {
-    height: 58px;
-    width: 58px;
-    display: block;
-    float: left;
-    position: relative;
-    margin: 2px;
-    color: #BBB;
-    text-decoration: none;
+@media screen and (min-width: 1230px) {
+  .lefty .secondary {
+    float: left; } }
+.lefty .secondary > div {
+  border: 1px solid #000; }
+.lefty .secondary .socialbuttons {
+  border: none;
+  height: 105px;
+  width: 310px;
+  margin: 0 auto; }
+  .lefty .secondary .socialbuttons p {
+    text-align: left;
+    font-size: 0.8em;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 7px; }
-  .lefty .secondary div.sb-f {
-    height: 58px;
-    width: 58px;
-    margin: 0 0 3px 0; }
-  .lefty .secondary div.sb-f:hover {
-    background-position: 0 -58px !important; }
-  .lefty .secondary .sb-f-twi {
-    background: url(images/socialbuttons/twitter.png) no-repeat scroll 0 0px transparent !important; }
-  .lefty .secondary .sb-f-fac {
-    background: url(images/socialbuttons/facebook.png) no-repeat scroll 0 0px transparent !important; }
-  .lefty .secondary .sb-f-pin {
-    background: url(images/socialbuttons/pinterest.png) no-repeat scroll 0 0px transparent !important; }
-  .lefty .secondary .sb-f-tum {
-    background: url(images/socialbuttons/tumblr.png) no-repeat scroll 0 0px transparent !important; }
-  .lefty .secondary .sb-f-ins {
-    background: url(images/socialbuttons/instagram.png) no-repeat scroll 0 0px transparent !important; }
-  .lefty .secondary .followbutton a {
-    color: #999999;
-    font-size: 11px;
-    font-weight: bold;
-    position: relative;
-    text-decoration: none;
-    text-transform: uppercase;
-    top: 5px; }
+    padding: 0;
+    margin: 0;
+    color: #bbb; }
+.lefty .secondary a.sb-f {
+  height: 58px;
+  width: 58px;
+  display: block;
+  float: left;
+  position: relative;
+  margin: 2px;
+  color: #BBB;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 7px; }
+.lefty .secondary div.sb-f {
+  height: 58px;
+  width: 58px;
+  margin: 0 0 3px 0; }
+.lefty .secondary div.sb-f:hover {
+  background-position: 0 -58px !important; }
+.lefty .secondary .sb-f-twi {
+  background: url(images/socialbuttons/twitter.png) no-repeat scroll 0 0px transparent !important; }
+.lefty .secondary .sb-f-fac {
+  background: url(images/socialbuttons/facebook.png) no-repeat scroll 0 0px transparent !important; }
+.lefty .secondary .sb-f-pin {
+  background: url(images/socialbuttons/pinterest.png) no-repeat scroll 0 0px transparent !important; }
+.lefty .secondary .sb-f-tum {
+  background: url(images/socialbuttons/tumblr.png) no-repeat scroll 0 0px transparent !important; }
+.lefty .secondary .sb-f-ins {
+  background: url(images/socialbuttons/instagram.png) no-repeat scroll 0 0px transparent !important; }
+.lefty .secondary .followbutton a {
+  color: #999999;
+  font-size: 11px;
+  font-weight: bold;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  top: 5px; }
 
 .righty .primary {
   float: right; }
