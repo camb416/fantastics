@@ -362,3 +362,14 @@ function slug_cpt_category_archives( $query )
 
     return $query;
 }
+
+
+// Posts to Posts stuff
+function my_connection_types() {
+    p2p_register_connection_type( array(
+        'name' => 'cover_to_story',
+        'from' => 'fmag_cover',
+        'to' => 'fmag_story'
+    ) );
+}
+add_action( 'p2p_init', 'my_connection_types' );

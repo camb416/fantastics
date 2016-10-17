@@ -911,52 +911,53 @@ body.single-fmag_story {
     body.single-fmag_story div#bottomcols div#rightcol {
       width: 50%;
       float: right; }
-      body.single-fmag_story div#bottomcols div#rightcol .tinyspreads {
-        display: inline-block;
-        margin: 0;
-        padding: 0px;
-        width: 100%; }
-        body.single-fmag_story div#bottomcols div#rightcol .tinyspreads li {
-          width: 204px;
-          height: 132px;
-          float: left;
-          list-style: none;
-          margin-right: 10px;
-          border: 4px solid #ddd;
-          overflow: hidden;
-          position: relative; }
-          @media screen and (max-width: 480px) {
-            body.single-fmag_story div#bottomcols div#rightcol .tinyspreads li {
-              width: 50%;
-              margin: 0; } }
-          body.single-fmag_story div#bottomcols div#rightcol .tinyspreads li.active {
-            border: 4px solid black; }
-          body.single-fmag_story div#bottomcols div#rightcol .tinyspreads li:hover {
-            cursor: pointer;
-            border: 4px solid grey; }
-            body.single-fmag_story div#bottomcols div#rightcol .tinyspreads li:hover.active {
-              border: 4px solid black; }
-            body.single-fmag_story div#bottomcols div#rightcol .tinyspreads li:hover img {
-              width: 196px;
-              height: 248px;
-              top: -72px !important;
-              left: 50% !important; }
-              body.single-fmag_story div#bottomcols div#rightcol .tinyspreads li:hover img:first-of-type {
-                left: -50% !important; }
-          body.single-fmag_story div#bottomcols div#rightcol .tinyspreads li img {
-            -webkit-transition: .3s ease-in-out;
-            -moz-transition: .3s ease-in-out;
-            -o-transition: .3s ease-in-out;
-            width: 98px;
-            height: 124px;
-            margin: 0;
-            padding: 0;
-            position: absolute;
-            top: 0;
-            left: 96px; }
-            body.single-fmag_story div#bottomcols div#rightcol .tinyspreads li img:first-of-type {
-              top: 0px;
-              left: 0px; }
+
+.tinyspreads {
+  display: inline-block;
+  margin: 0;
+  padding: 0px;
+  width: 100%; }
+  .tinyspreads li {
+    width: 204px;
+    height: 132px;
+    float: left;
+    list-style: none;
+    margin-right: 10px;
+    border: 4px solid #ddd;
+    overflow: hidden;
+    position: relative; }
+    @media screen and (max-width: 480px) {
+      .tinyspreads li {
+        width: 50%;
+        margin: 0; } }
+    .tinyspreads li.active {
+      border: 4px solid black; }
+    .tinyspreads li:hover {
+      cursor: pointer;
+      border: 4px solid grey; }
+      .tinyspreads li:hover.active {
+        border: 4px solid black; }
+      .tinyspreads li:hover img {
+        width: 196px;
+        height: 248px;
+        top: -72px !important;
+        left: 50% !important; }
+        .tinyspreads li:hover img:first-of-type {
+          left: -50% !important; }
+    .tinyspreads li img {
+      -webkit-transition: .3s ease-in-out;
+      -moz-transition: .3s ease-in-out;
+      -o-transition: .3s ease-in-out;
+      width: 98px;
+      height: 124px;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 0;
+      left: 96px; }
+      .tinyspreads li img:first-of-type {
+        top: 0px;
+        left: 0px; }
 
 @media (max-width: 900px) {
   /* Styles */
