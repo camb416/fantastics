@@ -138,8 +138,11 @@ function fantastics_scripts() {
     wp_enqueue_script( 'fantastics-index', get_template_directory_uri() . '/js/fmag-index.js', array('jquery'), '20120206', true);
 
 
-    if ( is_singular()){
+    if ( is_singular('fmag_story')){
         wp_enqueue_script( 'fantastics-single', get_template_directory_uri() . '/js/single-fmag_story.js', array('jquery'), '20130115', true );
+    }
+    if(is_singular('fmag_cover')){
+    wp_enqueue_script( 'fantastics-single-cover', get_template_directory_uri() . '/js/single-fmag_cover.js', array('jquery'), '20130115', true );
 
     }
 
@@ -362,3 +365,14 @@ function slug_cpt_category_archives( $query )
 
     return $query;
 }
+
+
+// Posts to Posts stuff
+function my_connection_types() {
+    p2p_register_connection_type( array(
+        'name' => 'cover_to_story',
+        'from' => 'fmag_cover',
+        'to' => 'fmag_story'
+    ) );
+}
+add_action( 'p2p_init', 'my_connection_types' );

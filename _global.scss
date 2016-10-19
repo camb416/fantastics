@@ -62,3 +62,74 @@ div#secondary{
     }
   }
 }
+
+// headers
+.header{
+  width:100%;
+  border-bottom:1px solid #888;
+  text-align:left;
+  margin: 10px 0;
+  text-transform:uppercase;
+  font-weight:normal;
+}
+
+.fmag-linkstyle-caps-lg{
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  font-size:1.00em;
+}
+
+a.fmag-linkstyle-caps-lg:hover{
+  text-decoration:underline;
+}
+
+.fmag-linkstyle-caps{
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  font-size:0.875em;
+
+}
+a.buttonstyle{
+
+}
+
+// buttons
+@mixin sidebarbtn(){
+  display: block;
+  /* width: 275px;*/
+
+  width:310px;
+  border:1px solid #BBB;
+  border-radius:5px;
+
+
+  /*background: url("../images/sidebarBtnSprite.png");*/
+  margin: 0 auto;
+  padding: 5px 0 7px 0;
+  text-align:center;
+  clear:both;
+
+  color:#999999;
+  font-size:11px;
+  letter-spacing:0.1em;
+  position:relative;
+  text-decoration:none;
+  text-transform:uppercase;
+  line-height:normal;
+
+  &:hover{
+    background-color:#888;
+    color:#fff;
+  }
+}
+a.btn{
+  @include sidebarbtn();
+}
+.relatedstory{
+  > a{
+    @include sidebarbtn();
+  }
+
+}

@@ -8,11 +8,30 @@
  */
 
 ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 
+        <?php
+        // Find connected pages
+        $connected = new WP_Query( array(
+        'connected_type' => 'cover_to_story',
+        'connected_items' => get_queried_object(),
+        'nopaging' => true,
+        ) );
 
+
+        if ( $connected->have_posts() ) :
+        ?>
+
+        <?php while ( $connected->have_posts() ) : $connected->the_post();
+
+        $storyLink = get_the_permalink();
+
+        endwhile;
+        endif;
+        wp_reset_postdata();
+
+        ?>
 
         <?php
 
@@ -31,7 +50,7 @@
                 $class = "post-attachment mime-" . sanitize_title( $attachment->post_mime_type );
 
                 $img = wp_get_attachment_image( $attachment->ID, 'thumbnail-size', true );
-          echo '<a href="'.esc_url( get_permalink() ).'">';
+          echo '<a class="coverlink" href="'.esc_url( $storyLink ).'">';
                 echo ''.$img.'';
 
                 // for testing. remove before prod
@@ -46,6 +65,12 @@
 
 
 	</header><!-- .entry-header -->
+
+
+
+
+
+
     <footer class="entry-footer">
         <?php fantastics_entry_footer(); ?>
     </footer><!-- .entry-footer -->

@@ -84,7 +84,7 @@
                             if ( $attachments ) {
                                 foreach ( $attachments as $attachment ) {
                                     //echo '<li>';
-                                    echo wp_get_attachment_image( $attachment->ID, 'full' );
+                                    echo '<a class="coverlink" href="'.get_the_permalink().'">'.wp_get_attachment_image( $attachment->ID, 'full' ).'</a>';
                                     //echo '<p>';
                                     echo apply_filters( 'the_title', $attachment->post_title );
                                     //echo '</p></li>';
