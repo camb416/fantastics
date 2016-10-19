@@ -330,6 +330,38 @@ body.search{
               list-style: none;
               float:left;
               margin:5px 0 0 10px;
+
+
+
+              ///////
+
+
+                  img {
+
+                    -webkit-transition: all .2s ease-in-out;
+                    transition: all .2s ease-in-out;
+                    -webkit-transform: translateY(0);
+                    transform: translateY(0);
+
+                  }
+                  &:hover{
+                    img{
+                      -webkit-transform: translateY(-4px);
+                      transform: translateY(-4px);
+                      outline-offset: -1px;
+                      color: inherit;
+
+                    }
+                  }
+
+
+
+
+              /////
+
+
+
+
               img{
                 width:50%;
               }
@@ -363,6 +395,8 @@ body.search{
           width:700px;
           height: 458px;
 
+
+
           @media screen and (min-width: $break-large) {
 
             display:inline;
@@ -381,6 +415,30 @@ body.search{
           padding:0;
           li{
             list-style: none;
+
+            //// the little jump
+        
+            img {
+
+              -webkit-transition: all .2s ease-in-out;
+              transition: all .2s ease-in-out;
+              -webkit-transform: translateY(0);
+              transform: translateY(0);
+
+            }
+            &:hover{
+              img{
+                -webkit-transform: translateY(-4px);
+                transform: translateY(-4px);
+                outline-offset: -1px;
+                color: inherit;
+
+              }
+            }
+
+            ////
+
+
             img{
               width:50%;
             }

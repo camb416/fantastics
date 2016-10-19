@@ -1362,6 +1362,20 @@ body.search {
           body.home div.fmag_story article .entry-header ul.minispreads li img,
           body.archive div.fmag_story article .entry-header ul.minispreads li img,
           body.search div.fmag_story article .entry-header ul.minispreads li img {
+            -webkit-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+            -webkit-transform: translateY(0);
+            transform: translateY(0); }
+          body.home div.fmag_story article .entry-header ul.minispreads li:hover img,
+          body.archive div.fmag_story article .entry-header ul.minispreads li:hover img,
+          body.search div.fmag_story article .entry-header ul.minispreads li:hover img {
+            -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+            outline-offset: -1px;
+            color: inherit; }
+          body.home div.fmag_story article .entry-header ul.minispreads li img,
+          body.archive div.fmag_story article .entry-header ul.minispreads li img,
+          body.search div.fmag_story article .entry-header ul.minispreads li img {
             width: 50%; }
       body.home div.fmag_story article .entry-header a.morepages,
       body.archive div.fmag_story article .entry-header a.morepages,
@@ -1408,6 +1422,20 @@ body.search {
       body.archive div.fmag_story article ul.medspread li,
       body.search div.fmag_story article ul.medspread li {
         list-style: none; }
+        body.home div.fmag_story article ul.medspread li img,
+        body.archive div.fmag_story article ul.medspread li img,
+        body.search div.fmag_story article ul.medspread li img {
+          -webkit-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+          -webkit-transform: translateY(0);
+          transform: translateY(0); }
+        body.home div.fmag_story article ul.medspread li:hover img,
+        body.archive div.fmag_story article ul.medspread li:hover img,
+        body.search div.fmag_story article ul.medspread li:hover img {
+          -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+          outline-offset: -1px;
+          color: inherit; }
         body.home div.fmag_story article ul.medspread li img,
         body.archive div.fmag_story article ul.medspread li img,
         body.search div.fmag_story article ul.medspread li img {
