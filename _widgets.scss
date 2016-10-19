@@ -94,6 +94,29 @@ aside.widget_latest_focuscover{
     li{
       list-style: none;
       margin:5px;
+
+      //// the little jump
+
+      img {
+
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+
+      }
+      &:hover{
+        img{
+          -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+          outline-offset: -1px;
+          color: inherit;
+
+        }
+      }
+
+      ////
+
     }
 
   }

@@ -1403,7 +1403,7 @@ body.search {
       margin: 0 auto;
       width: 700px;
       height: 458px;
-      overflow: hidden;
+      overflow: visible;
       padding: 0; }
       @media screen and (min-width: 1230px) {
         body.home div.fmag_story article ul.medspread,
@@ -1743,6 +1743,16 @@ aside.widget_latest_focuscover {
     aside.widget_latest_focuscover ul li {
       list-style: none;
       margin: 5px; }
+      aside.widget_latest_focuscover ul li img {
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+        -webkit-transform: translateY(0);
+        transform: translateY(0); }
+      aside.widget_latest_focuscover ul li:hover img {
+        -webkit-transform: translateY(-4px);
+        transform: translateY(-4px);
+        outline-offset: -1px;
+        color: inherit; }
   aside.widget_latest_focuscover h2.widget-title {
     margin: 0;
     padding: 0;

@@ -97,11 +97,9 @@ class FMAG_Widget_Latest_Focus extends WP_Widget {
                     $attachments = get_posts( $args );
                     if ( $attachments ) {
                         foreach ( $attachments as $attachment ) {
-                            echo '<li>';
+                            echo '<li><a href="'.get_the_permalink().'">';
                             echo wp_get_attachment_image( $attachment->ID, array(500,500) );
-                            echo '<p>';
-                            echo apply_filters( 'the_title', $attachment->post_title );
-                            echo '</p></li>';
+                            echo '</a></li>';
                         }
                     }
                     ?>
