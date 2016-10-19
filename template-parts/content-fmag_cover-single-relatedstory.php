@@ -46,9 +46,9 @@
                                         $class .= " active";
                                     }
                                     $thumbimg = wp_get_attachment_image( $attachment->ID, 'thumbnail-size', true );
-                                    if(0 === $i%2) echo '<li class="' . $class . ' data-design-thumbnail">';
+                                    if(0 === $i%2) echo '<li class="' . $class . ' data-design-thumbnail">'.'<a href="'.get_the_permalink().'">';
                                     echo $thumbimg;
-                                    if(0 !== $i%2) echo '</li>';
+                                    if(0 !== $i%2) echo '</li></a>';
                                 }
 
                             }
