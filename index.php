@@ -31,6 +31,8 @@
 
             // TODO: refactor this!
 
+
+
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             // are we on page one?
 
@@ -72,7 +74,7 @@
                             // get_the_date();
 
 
-
+/*
                             $args = array(
                                 'post_type' => 'attachment',
                                 'numberposts' => 1,
@@ -90,6 +92,11 @@
                                     //echo '</p></li>';
                                 }
                             }
+                            */
+                            get_template_part( 'template-parts/content', 'fmag_cover-single' );
+
+
+
                             ?>
 
                         <?php endwhile; ?>
@@ -109,7 +116,11 @@
                     $wp_query = $mainQuery;
                     ?>
                 </div>
-            <?php endif; ?>
+
+
+
+
+            <?php endif;  ?>
 
 
             <header id="masthead" class="site-header original" role="banner">

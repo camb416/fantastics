@@ -81,7 +81,7 @@ div.intermission-outer{
 
 aside.widget_latest_focuscover{
   width:330px;
-  margin:2rem auto 5rem auto;
+  margin:2rem auto 2rem auto;
   @media screen and (max-width: $break-large) {
     margin:0 auto;
     float:none;
@@ -93,7 +93,7 @@ aside.widget_latest_focuscover{
 
     li{
       list-style: none;
-      margin:5px;
+      margin:0;
 
       //// the little jump
 
@@ -103,6 +103,7 @@ aside.widget_latest_focuscover{
         transition: all .2s ease-in-out;
         -webkit-transform: translateY(0);
         transform: translateY(0);
+        max-width:330px;
 
       }
       &:hover{

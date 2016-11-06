@@ -12,10 +12,17 @@
 	<header class="entry-header">
 
         <?php
+        $bigcover = get_queried_object();
+        $coverid = $post->ID;
+
+        if($bigcover === null){
+            $bigcover = get_post(get_the_ID());
+        }
+
         // Find connected pages
         $connected = new WP_Query( array(
         'connected_type' => 'cover_to_story',
-        'connected_items' => get_queried_object(),
+        'connected_items' => $bigcover,
         'nopaging' => true,
         ) );
 
@@ -26,10 +33,10 @@
         <?php while ( $connected->have_posts() ) : $connected->the_post();
 
         $storyLink = get_the_permalink();
-
         endwhile;
         endif;
-        wp_reset_postdata();
+
+        if(is_single()) wp_reset_postdata();
 
         ?>
 
@@ -38,7 +45,7 @@
         $attachments = get_posts( array(
             'post_type' => 'attachment',
             'posts_per_page' => -1,
-            'post_parent' => $post->ID,
+            'post_parent' => $coverid,
             'exclude'     => get_post_thumbnail_id(),
             'orderby'     => 'menu_order',
         ) );
