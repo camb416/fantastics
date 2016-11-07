@@ -16,6 +16,12 @@
 <?php get_header(); ?>
 
 <?php
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+if(1 == $paged && is_front_page()): ?>
+    <div id="index-stage"></div>
+
+<?php endif; ?>
+<?php
 ///////////////////////////////////////////////////
 // Do the top bit
 ///////////////////////////////////////////////////
@@ -37,6 +43,10 @@
             // are we on page one?
 
             if(1 == $paged && is_front_page()): ?>
+
+
+
+
                 <div class="bigcover">
                     <?php
 

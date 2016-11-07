@@ -145,6 +145,12 @@ aside.widget_latest_focuscover{
 
   .widget_text{
     text-align:center;
+
+    &:nth-child(2) {
+      text-align:left;
+      
+    }
+
     border: 1px dashed #eee;
     padding:10px;
     @media screen and (max-width: $break-large) {

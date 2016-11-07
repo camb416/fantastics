@@ -525,12 +525,13 @@ $numcols: 8;
   // background-image: url(images/bowtie.svg);
   // background-repeat: repeat-x;
   // background-position-x: center;
+
   .lefty, .righty{
   //  background:#ff0;
     width:$numcols*$columnwidth+$columngutter*($numcols - 1);
     max-width:100%;
     //margin:$columngutter auto;
-    margin: 0 auto;
+    margin: 30px auto 0 auto;
     overflow:hidden;
   }
 }
@@ -777,3 +778,19 @@ body.home > #page > div.top{
 
 
 ////////////////////////////////////////////////////////
+
+#index-stage{
+  width:100%;
+  position:absolute;
+  height:830px;
+  z-index:-99;
+  left:0;
+  top:50px;
+
+  background: #dddddd;
+  background: -moz-linear-gradient(top, #DDDDDD 0%, #666666 50%, #DDDDDD 100%);
+  background: -webkit-linear-gradient(top, #DDDDDD 0%,#666666 50%,#DDDDDD 100%);
+  background: linear-gradient(to bottom, #DDDDDD 0%,#666666 50%,#DDDDDD 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#666666',GradientType=0 );
+
+}
