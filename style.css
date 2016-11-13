@@ -1625,18 +1625,22 @@ body.home > #page > div.top {
 
 }
 */
-.menu-front-sidebar-top-container {
+.menu-front-sidebar-top-container,
+.menu-sidebar-front-top-container {
   border: none !important;
   text-align: right;
   margin-bottom: 851px !important; }
-  .menu-front-sidebar-top-container .menu {
+  .menu-front-sidebar-top-container .menu,
+  .menu-sidebar-front-top-container .menu {
     margin: 0;
     padding: 0;
     border-bottom: 50px black solid; }
-  .menu-front-sidebar-top-container li {
+  .menu-front-sidebar-top-container li,
+  .menu-sidebar-front-top-container li {
     list-style: none;
     line-height: 2.0rem; }
-  .menu-front-sidebar-top-container a {
+  .menu-front-sidebar-top-container a,
+  .menu-sidebar-front-top-container a {
     font-family: 'CGEF',Helvetica, Arial,sans-serif;
     text-transform: none;
     font-size: 3rem;
