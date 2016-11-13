@@ -16,13 +16,7 @@
 
 aside{
 
-  h2.widget-title{
-    text-align:left;
-    font-size:90%;
-    margin-bottom:0;
-    text-transform:uppercase;
-    letter-spacing:0.1em;
-  }
+
 
   ul{
     margin:0;
@@ -122,22 +116,6 @@ aside.widget_latest_focuscover{
 
   }
 
-  h2.widget-title {
-    margin:0;
-    padding:0;
-    background: url(http://fantasticsmag.com/sites/all/themes/fmag2014/images/focus-flash-bold.png);
-    background-position: 5px 5px;
-    text-indent: -3000px;
-    background-repeat: no-repeat;
-    font-size: 2em;
-    padding: 5px;
-    overflow: hidden;
-    text-transform: lowercase;
-    letter-spacing: 0em;
-    text-align: left;
-    font-weight: 400;
-    color: #bbb;
-  }
 
 }
 // ads underneath Focus Cover
@@ -148,7 +126,7 @@ aside.widget_latest_focuscover{
 
     &:nth-child(2) {
       text-align:left;
-      
+
     }
 
     border: 1px dashed #eee;
@@ -157,11 +135,7 @@ aside.widget_latest_focuscover{
       display:none;
     }
 
-    h2 {
-      margin: 2px 5px;
-      text-align:center;
-      color: #FFF;
-    }
+
   }
 }
 
@@ -274,7 +248,7 @@ aside.widget_latest_stories{
   width:1096px;
   max-width:100%;
 
-  margin:0 auto !important;
+  margin: 60px auto 0 auto !important;
   ul{
     li{
       display:inline-block;
@@ -349,7 +323,7 @@ aside.widget_latest_stories{
 ////////////////////////////////////
 
 .index-side{
-  margin:45px 0;
+  margin:0;
   width:470px;
   overflow:hidden;
   // border:1px solid #aaa;
@@ -393,11 +367,7 @@ aside.widget_latest_stories{
       }
     }
   }
-  h2{
-    margin:2px 5px;
-    color:#777;
 
-  }
 }
 
 

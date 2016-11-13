@@ -43,9 +43,15 @@ function fantastics_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary Menu', 'fantastics' ),
-	) );
+    register_nav_menus( array(
+        'primary' => esc_html__( 'Primary Menu', 'fantastics' ),
+    ) );
+    // This theme uses wp_nav_menu() in one location.
+    register_nav_menus( array(
+        'sidebarfronttop' => esc_html__( 'Sidebar Front Top', 'fantastics' ),
+    ) );
+
+
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments

@@ -9,7 +9,6 @@ body.search{
       // background:#888;
       height:45px;
       @media screen and (min-width: $break-large) {
-        width: 750px;
       }
       margin-top:10px;
       border-bottom:5px solid #000;
@@ -215,7 +214,7 @@ body.search{
         // mobile
         max-width:100%;
 
-        margin:0 auto;
+
 
         padding:20px 0;
 
@@ -235,8 +234,9 @@ body.search{
 
         .entry-header{
 
-          width:700px;
-          margin:0 0 0 40px;
+          overflow:hidden;
+
+          margin:0 0 0 0px;
           position:relative;
           text-align:left;
 
@@ -271,15 +271,14 @@ body.search{
             font-size:1.4em;
             a{
 
-              color:#000;
+
               text-decoration:none;
               text-transform:uppercase;
               letter-spacing:0.1em;
               font-size:80%;
               &:hover{
-                //background:#000;
-                color:#fff;
-                text-decoration:line-through;
+
+
               }
             }
           }
@@ -295,8 +294,7 @@ body.search{
 
 
             >a{
-              margin:0;
-              padding-left:10px;
+
             }
             /*
             a{
@@ -388,20 +386,16 @@ body.search{
 
         ul.medspread{
 
-          max-width:100%;
-          display:block;
 
-          margin:0 auto;
-          width:700px;
-          height: 458px;
 
+          margin: 0;
 
 
           @media screen and (min-width: $break-large) {
 
             display:inline;
             float:left;
-            margin:0 40px;
+
 
           }
           @media screen and (max-width: $break-small) {
@@ -490,7 +484,7 @@ footer{
 
     width: 180px;
     height: 36px;
-    background: url(images/masthead_white.png);
+    background: url(images/masthead.png);
     background-repeat: no-repeat;
     background-size: 180px 36px;
     display:inline-block;
@@ -598,20 +592,20 @@ display:block;
   overflow:hidden; // sizing hack
   display:block;
   // height:$intermissionheight;
-  padding: 0 0 20px 0;
+  padding: 25px 0 0 0;
   width:100%;
   clear:both;
   text-align:center;
-  background-color: #fff;
+  background:#DDD;
+
 
   h2{
-    color:#aaa;
-    padding:10px;
+    display:none;
   }
   ins{
     // messing with this might mess up the google ad
     // rendering...
-    background:#fff;
+    background:#DDD;
     // text-align:center;
   }
 }
@@ -620,6 +614,7 @@ display:block;
 .storyroll{
   text-align:center;
   margin:0;
+padding:5px;
   article{
     // width:725px;
     // height:500px;
@@ -651,12 +646,9 @@ body.home > #page > div.top{
   float:left;
   margin-right:$columngutter;
   max-width:100%;
-  > div{
-    background:#DDD;
-  }
+
   .bigcover{
-    width:750px;
-    // height:970px;
+
     max-width:100%;
 
   }
@@ -778,8 +770,9 @@ body.home > #page > div.top{
 
 
 ////////////////////////////////////////////////////////
-
+/*
 #index-stage{
+
   width:100%;
   position:absolute;
   height:830px;
@@ -793,4 +786,89 @@ body.home > #page > div.top{
   background: linear-gradient(to bottom, #DDDDDD 0%,#666666 50%,#DDDDDD 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#666666',GradientType=0 );
 
+}
+*/
+
+// new menu
+.menu-front-sidebar-top-container{
+  border:none !important;
+  text-align:right;
+  margin-bottom:851px !important;
+.menu{
+  margin:0;
+  padding:0;
+  border-bottom:50px black solid;
+}
+  li{
+    list-style:none;
+    line-height:2.0rem;
+  }
+  a{
+    @include cgef();
+    text-transform:none;
+    font-size:3rem;
+    letter-spacing:-.1rem;
+  }
+}
+
+
+
+h2.cgef{
+  text-align:right;
+  color:black;
+  font-size:2rem;
+  border-bottom:30px solid black;
+  padding:0px;
+  line-height:2rem;
+
+}
+h2.widget-title{
+  text-align:right;
+  color:black;
+  font-size:2rem;
+  border-bottom:30px solid black;
+  @include cgef();
+  line-height:2rem;
+}
+.textwidget{
+  p{
+    text-align:left;
+    margin:20px;
+
+  }
+}
+.lefty{
+  .medspread{
+    border-left:30px solid #000;
+  }
+}
+
+.righty{
+  .medspread{
+    border-right:30px solid #000;
+
+  }
+  ul.minispreads, a.morepages{
+    margin-right:40px !important;
+  }
+}
+nav{
+  display:block;
+  overflow:hidden;
+    @include cgef();
+    background:#000 !important;
+    a{
+      color:#fff !important;
+    }
+  width:100%;
+  position:absolute;
+  left:0;
+
+
+}
+
+.home{
+  .widget_latest_stories{
+    margin-top:40px;
+  }
 }

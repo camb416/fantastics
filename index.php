@@ -17,10 +17,14 @@
 
 <?php
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-if(1 == $paged && is_front_page()): ?>
+
+// gradient background
+// TODO: deprecate this
+if(false && 1 == $paged && is_front_page()): ?>
     <div id="index-stage"></div>
 
 <?php endif; ?>
+
 <?php
 ///////////////////////////////////////////////////
 // Do the top bit
@@ -133,22 +137,7 @@ if(1 == $paged && is_front_page()): ?>
             <?php endif;  ?>
 
 
-            <header id="masthead" class="site-header original" role="banner">
-                <div class="site-branding">
-                    <?php if ( is_front_page() && is_home() ) : ?>
-                        <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-                    <?php else : ?>
-                        <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-                    <?php endif; ?>
-                    <p class="site-description"><?php bloginfo( 'description' ); ?></p>
-                </div><!-- .site-branding -->
-
-                <nav id="site-navigation" class="main-navigation" role="navigation">
-                    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'fantastics' ); ?></button>
-                    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-                </nav><!-- #site-navigation -->
-            </header><!-- #masthead -->
-
+<h2 class="cgef">Latest</h2>
 
 
         <div class="storyroll">
@@ -209,7 +198,7 @@ if(1 == $paged && is_front_page()): ?>
         //
         //        </div>';
 
-
+           wp_nav_menu( array( 'theme_location' => 'sidebarfronttop' ) );
 
         if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Top-Side')){
             // do nothing if not there
@@ -237,8 +226,9 @@ if(1 == $paged && is_front_page()): ?>
                 echo '</div>'; // close intermission
 
 
-                echo '<div class="righty twocol">';
+                echo '<div class="lefty twocol">';
                 echo '<div class="primary">';
+                echo ' <h2 class="cgef">Latest</h2>';
                 echo '<div class="storyroll">';
 
             } elseif($i === 4 && 1 == $paged){
@@ -274,9 +264,10 @@ if(1 == $paged && is_front_page()): ?>
 
 
                 // open the bottom container
-                echo '<div class="lefty twocol">';
+                echo '<div class="righty 2 twocol">';
                 // open the bottom main
                 echo '<div class="primary">';
+                echo ' <h2 class="cgef">Latest</h2>';
                 // open the story roll
                 echo '<div class="storyroll">';
 
@@ -314,7 +305,7 @@ if(1 == $paged && is_front_page()): ?>
 
 
                 // open the bottom container
-                echo '<div class="righty twocol">';
+                echo '<div class="lefty twocol">';
                 // open the bottom main
                 echo '<div class="primary">';
                 // open the story roll
