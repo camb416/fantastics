@@ -130,13 +130,44 @@ if(false && 1 == $paged && is_front_page()): ?>
                     $wp_query = $mainQuery;
                     ?>
                 </div>
+</div>
+	            <?php
+
+	            echo '    <div class="secondary">';
+
+	            // hiding social buttons
+	            //
+	            //        echo '        <div class="socialbuttons">
+	            //
+	            //
+	            //    <p>Follow FANTASTICS on:</p>
+	            //
+	            //<a class="sb-f sb-f" href="https://twitter.com/fantasticsmag"><div class="sb-f sb-f-twi"></div>twitter</a>
+	            //
+	            //<a class="sb-f " href="http://www.facebook.com/pages/Fantastics/100542323355212"><div class="sb-f sb-f-fac"></div>facebook</a>
+	            //
+	            //<a class="sb-f" href="http://pinterest.com/fantasticsmag/"><div class="sb-f sb-f-pin"></div>pinterest</a>
+	            //
+	            //<a class="sb-f" href="http://fantasticsmag.tumblr.com/"><div class="sb-f sb-f-tum"></div>tumblr</a>
+	            //
+	            //<a class="sb-f" href="http://instagram.com/fantastics/"><div class="sb-f sb-f-ins"></div>instagram</a>
+	            //
+	            //
+	            //        </div>';
+
+	            wp_nav_menu( array( 'theme_location' => 'sidebarfronttop' ) );
 
 
+//        echo '<div class="adspace">adspace</div> ';
+	            echo ' </div>';
+
+	            ?>
 
 
             <?php endif;  ?>
-
-
+</div>
+<div class="righty twocol">
+	<div class="primary">
 <h2 class="cgef">Latest</h2>
 
 
@@ -175,40 +206,27 @@ if(false && 1 == $paged && is_front_page()): ?>
 
            // top-side
 
+
+	            // MID SIDEBAR
+	            echo '<div class="index-side">';
+
+	            if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Top-Side')){
+		            // do nothing if not there
+		            echo "default stuff";
+	            } else {
+		            // display nothing if there is indeed a widget.
+		            //echo "do something";
+	            }
+	            echo '</div>';
+
+
     if(1 == $paged && is_front_page()){
-        echo '    <div class="secondary">';
 
-        // hiding social buttons
-        //
-        //        echo '        <div class="socialbuttons">
-        //
-        //
-        //    <p>Follow FANTASTICS on:</p>
-        //
-        //<a class="sb-f sb-f" href="https://twitter.com/fantasticsmag"><div class="sb-f sb-f-twi"></div>twitter</a>
-        //
-        //<a class="sb-f " href="http://www.facebook.com/pages/Fantastics/100542323355212"><div class="sb-f sb-f-fac"></div>facebook</a>
-        //
-        //<a class="sb-f" href="http://pinterest.com/fantasticsmag/"><div class="sb-f sb-f-pin"></div>pinterest</a>
-        //
-        //<a class="sb-f" href="http://fantasticsmag.tumblr.com/"><div class="sb-f sb-f-tum"></div>tumblr</a>
-        //
-        //<a class="sb-f" href="http://instagram.com/fantastics/"><div class="sb-f sb-f-ins"></div>instagram</a>
-        //
-        //
-        //        </div>';
-
-           wp_nav_menu( array( 'theme_location' => 'sidebarfronttop' ) );
-
-        if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Top-Side')){
-            // do nothing if not there
-            // echo "default stuff";
-        }
-//        echo '<div class="adspace">adspace</div> ';
-        echo ' </div>';
         // close out the whole top
         echo '</div>';
     }
+
+
 
 
 
@@ -308,6 +326,7 @@ if(false && 1 == $paged && is_front_page()): ?>
                 echo '<div class="lefty twocol">';
                 // open the bottom main
                 echo '<div class="primary">';
+	            echo ' <h2 class="cgef">Latest</h2>';
                 // open the story roll
                 echo '<div class="storyroll">';
             }

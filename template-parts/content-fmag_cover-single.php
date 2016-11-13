@@ -56,7 +56,8 @@
                 $attachment = $attachments[0];
                 $class = "post-attachment mime-" . sanitize_title( $attachment->post_mime_type );
 
-                $img = wp_get_attachment_image( $attachment->ID, 'thumbnail-size', true );
+                $img = wp_get_attachment_image( $attachment->ID, array(850,1100), true );
+
           echo '<a class="coverlink" href="'.esc_url( $storyLink ).'">';
                 echo ''.$img.'';
 

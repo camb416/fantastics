@@ -74,16 +74,17 @@ div.intermission-outer{
 ////////////////////////////////////
 
 aside.widget_latest_focuscover{
-  width:330px;
-  margin:2rem auto 2rem auto;
+ // width:330px;
   @media screen and (max-width: $break-large) {
     margin:0 auto;
     float:none;
   }
 
   ul{
-    margin:0;
-    padding:0;
+    margin: 0;
+    background: #DDD;
+    padding: 65px;
+    margin: 10px;
 
     li{
       list-style: none;
@@ -97,7 +98,7 @@ aside.widget_latest_focuscover{
         transition: all .2s ease-in-out;
         -webkit-transform: translateY(0);
         transform: translateY(0);
-        max-width:330px;
+
 
       }
       &:hover{
@@ -323,14 +324,14 @@ aside.widget_latest_stories{
 ////////////////////////////////////
 
 .index-side{
-  margin:0;
-  width:470px;
-  overflow:hidden;
-  // border:1px solid #aaa;
-  height:1004px;
-  padding: 0;
-  position:relative;
+  margin: 0;
+  width: 470px;
+  overflow: hidden;
 
+  padding: 0;
+  position: relative;
+
+  /*
   img{
     max-width:none;
     position:absolute;
@@ -367,8 +368,14 @@ aside.widget_latest_stories{
       }
     }
   }
-
+*/
 }
 
 
 ////////////////////////////////////
+
+.textwidget{
+  margin: 30px;
+  background: #ddd;
+  padding: 30px;
+}

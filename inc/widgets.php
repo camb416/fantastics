@@ -75,9 +75,9 @@ class FMAG_Widget_Latest_Focus extends WP_Widget {
              if ( $title ) echo $before_title . $title . $after_title;
 
             ?>
-        <ul>
+        <ul class="focuswidget">
             <?php while ( $r->have_posts() ) : $r->the_post(); ?>
-                <li>
+
                     <?php
                     // working methods here:
                     // the_permalink()
@@ -98,12 +98,12 @@ class FMAG_Widget_Latest_Focus extends WP_Widget {
                     if ( $attachments ) {
                         foreach ( $attachments as $attachment ) {
                             echo '<li><a href="'.get_the_permalink().'">';
-                            echo wp_get_attachment_image( $attachment->ID, array(500,500) );
+                            echo wp_get_attachment_image( $attachment->ID, array(470,610) );
                             echo '</a></li>';
                         }
                     }
                     ?>
-                </li>
+
             <?php endwhile; ?>
         </ul>
         <?php echo $after_widget; ?>
