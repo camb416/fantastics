@@ -77,7 +77,7 @@
                 <?php
 
                 if("" !== $credits){
-                    echo '<div class="credits"><h2>Credits</h2><div class="credits-inner">' . $credits . '</div></div>';
+                    echo '<div class="credits"><h2>Credits</h2><div class="credits-inner">' . wpautop($credits) . '</div></div>';
                 }
 
                 ?>
