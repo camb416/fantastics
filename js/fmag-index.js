@@ -73,7 +73,7 @@ function tumblrStretch(){
             var firstHeight = articleArray.eq(0).height();
             var secondHeight = articleArray.eq(1).height();
 
-            $('.index-side').eq(i).css('height',firstHeight + secondHeight + 35);
+           // $('.index-side').eq(i).css('height',firstHeight + secondHeight + 35);
 
             // for testing
             // console.log("first: " + firstHeight);

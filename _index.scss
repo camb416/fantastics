@@ -152,8 +152,8 @@ body.search{
 
 
         header{
-  border-right:15px solid #ddd;
-  padding-right:15px;
+  border-right:5px solid #ddd;
+  padding-right:10px;
   text-align:right;
 }
   .entry-content{
@@ -166,7 +166,7 @@ body.search{
 
 
         header{
-          border-left:15px solid #ddd;
+          border-left:5px solid #ddd;
           padding-left:15px;
           text-align:left;
 
@@ -243,7 +243,7 @@ body.search{
 
           overflow:hidden;
 
-          margin:0 0 0 0px;
+          margin:10px 0 0 0px;
           position:relative;
 
 
@@ -604,7 +604,7 @@ display:block;
   width:100%;
   clear:both;
   text-align:center;
-  background:#DDD;
+  background:#EEE;
 
 
   h2{
@@ -613,7 +613,7 @@ display:block;
   ins{
     // messing with this might mess up the google ad
     // rendering...
-    background:#DDD;
+    background:#EEE;
     // text-align:center;
   }
 }
@@ -833,24 +833,27 @@ h2.cgef{
 
 }
 h2.widget-title{
-  margin:0;
-  text-align:right;
-  color:black;
-  font-size:2rem;
-  border-bottom:30px solid black;
+  margin: 0;
+  text-align: right;
+  color: black;
+  font-size: 1rem;
+  border-bottom: 5px solid black;
+
+  line-height: 2rem;
+  letter-spacing: 0.1rem;
   @include cgef();
-  line-height:2rem;
+
 }
 
 .lefty{
   .medspread{
-    border-left:30px solid #ddd;
+    border-left:5px solid #ddd;
   }
 }
 
 .righty{
   .medspread{
-    border-right:30px solid #ddd;
+    border-right:5px solid #ddd;
 
   }
   ul.minispreads, a.morepages{
@@ -861,13 +864,30 @@ nav{
   display:block;
   overflow:hidden;
     @include cgef();
-    background:#000 !important;
+  font-size:0.7rem;
+
+   //border-bottom:5px solid #000;
+
     a{
-      color:#fff !important;
+     // color:#fff !important;
+
     }
-  width:100%;
-  position:absolute;
-  left:0;
+  .nav-previous{
+    a{
+      border-right:5px solid #000;
+      
+    }
+
+    text-align: left;
+  }
+  .nav-next{
+   a{
+     border-left:5px solid #000;
+   }
+  }
+ // width:100%;
+ // position:absolute;
+ // left:0;
 
 
 }
@@ -882,5 +902,5 @@ nav{
   // margin-left:100px;
 }
 .medspread{
-  height:485px;
+  height:501px;
 }

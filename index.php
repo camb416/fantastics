@@ -168,7 +168,7 @@ if(false && 1 == $paged && is_front_page()): ?>
 </div>
 <div class="lefty twocol">
 	<div class="primary">
-<h2 class="cgef">Latest</h2>
+    <!-- h2 class="cgef">Latest</h2 -->
 
 
         <div class="storyroll">
@@ -246,7 +246,7 @@ if(false && 1 == $paged && is_front_page()): ?>
 
                 echo '<div class="righty twocol">';
                 echo '<div class="primary">';
-                echo ' <h2 class="cgef">Latest</h2>';
+                // echo ' <h2 class="cgef">Latest</h2>';
                 echo '<div class="storyroll">';
 
             } elseif($i === 4 && 1 == $paged){
@@ -285,7 +285,7 @@ if(false && 1 == $paged && is_front_page()): ?>
                 echo '<div class="lefty 2 twocol">';
                 // open the bottom main
                 echo '<div class="primary">';
-                echo ' <h2 class="cgef">Latest</h2>';
+                //echo ' <h2 class="cgef">Latest</h2>';
                 // open the story roll
                 echo '<div class="storyroll">';
 
@@ -326,7 +326,7 @@ if(false && 1 == $paged && is_front_page()): ?>
                 echo '<div class="lefty twocol">';
                 // open the bottom main
                 echo '<div class="primary">';
-	            echo ' <h2 class="cgef">Latest</h2>';
+	            //echo ' <h2 class="cgef">Latest</h2>';
                 // open the story roll
                 echo '<div class="storyroll">';
             }
