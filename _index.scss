@@ -156,6 +156,9 @@ body.search{
   padding-right:15px;
   text-align:right;
 }
+  .entry-content{
+    margin:0;
+  }
       }
       }
      .righty{
@@ -220,10 +223,7 @@ body.search{
         clear:both;
         // mobile
         max-width:100%;
-
-
-
-        padding:20px 0;
+        padding:10px 0;
 
 
 
@@ -529,11 +529,12 @@ $numcols: 8;
 
   .lefty, .righty{
   //  background:#ff0;
-    width:$numcols*$columnwidth+$columngutter*($numcols - 1);
+    width:1130px;
     max-width:100%;
     //margin:$columngutter auto;
     margin: 30px auto 0 auto;
     overflow:hidden;
+
   }
 }
 
@@ -828,9 +829,11 @@ h2.cgef{
   border-bottom:30px solid black;
   padding:0px;
   line-height:2rem;
+  margin:0;
 
 }
 h2.widget-title{
+  margin:0;
   text-align:right;
   color:black;
   font-size:2rem;
@@ -838,22 +841,16 @@ h2.widget-title{
   @include cgef();
   line-height:2rem;
 }
-.textwidget{
-  p{
-    text-align:left;
-    margin:20px;
 
-  }
-}
 .lefty{
   .medspread{
-    border-left:30px solid #000;
+    border-left:30px solid #ddd;
   }
 }
 
 .righty{
   .medspread{
-    border-right:30px solid #000;
+    border-right:30px solid #ddd;
 
   }
   ul.minispreads, a.morepages{
@@ -882,5 +879,8 @@ nav{
 }
 .home .top .primary{
   width:790px;
-  margin-left:100px;
+  // margin-left:100px;
+}
+.medspread{
+  height:485px;
 }

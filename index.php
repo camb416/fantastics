@@ -166,7 +166,7 @@ if(false && 1 == $paged && is_front_page()): ?>
 
             <?php endif;  ?>
 </div>
-<div class="righty twocol">
+<div class="lefty twocol">
 	<div class="primary">
 <h2 class="cgef">Latest</h2>
 
@@ -212,7 +212,7 @@ if(false && 1 == $paged && is_front_page()): ?>
 
 	            if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Top-Side')){
 		            // do nothing if not there
-		            echo "default stuff";
+		            // echo "<!-- default stuff -->";
 	            } else {
 		            // display nothing if there is indeed a widget.
 		            //echo "do something";
@@ -244,7 +244,7 @@ if(false && 1 == $paged && is_front_page()): ?>
                 echo '</div>'; // close intermission
 
 
-                echo '<div class="lefty twocol">';
+                echo '<div class="righty twocol">';
                 echo '<div class="primary">';
                 echo ' <h2 class="cgef">Latest</h2>';
                 echo '<div class="storyroll">';
@@ -260,7 +260,7 @@ if(false && 1 == $paged && is_front_page()): ?>
                     echo '<div class="index-side">';
                 if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Mid-Side')){
                     // do nothing if not there
-                    echo "default stuff";
+                    // echo "<!-- default stuff -->";
                 } else {
                     // display nothing if there is indeed a widget.
                     //echo "do something";
@@ -282,7 +282,7 @@ if(false && 1 == $paged && is_front_page()): ?>
 
 
                 // open the bottom container
-                echo '<div class="righty 2 twocol">';
+                echo '<div class="lefty 2 twocol">';
                 // open the bottom main
                 echo '<div class="primary">';
                 echo ' <h2 class="cgef">Latest</h2>';

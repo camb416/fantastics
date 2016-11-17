@@ -1,5 +1,6 @@
 <?php
 
+
 /**
 * FMAG_Widget_Latest_Focus
 *
@@ -510,11 +511,16 @@ class FMAG_Widget_Latest_Covers extends WP_Widget {
         extract($args);
 
 $myterm = '';
+        $number = ( ! empty( $instance['number'] ) ) ? absint( $instance['number'] ) : 10;
+        if ( ! $number )
+            $number = 10;
+
         $postargs = array( 'posts_per_page' => $number,
             'no_found_rows' => true,
             'post_status' => 'publish',
             'ignore_sticky_posts' => true,
             'post_type' => 'fmag_cover',
+            'offset' => 1
 
 
         );
@@ -607,11 +613,11 @@ $myterm = '';
                             $attachments = get_posts( $args );
                             if ( $attachments ) {
                                 foreach ( $attachments as $attachment ) {
-                                    echo '';
+                                    echo '<a href="'.get_the_permalink().'">';
                                     echo wp_get_attachment_image( $attachment->ID, 'full' );
                                     //echo '<p>';
                                     //echo apply_filters( 'the_title', $attachment->post_title );
-                                    echo '';
+                                    echo '</a>';
                                 }
                             }
                             ?>

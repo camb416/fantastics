@@ -19,12 +19,15 @@ aside{
 
 
   ul{
-    margin:0;
+    margin:15px 0 0 0;
     padding:0;
 
     li{
       list-style: none;
-      margin:5px;
+      overflow: hidden;
+      padding: 15px;
+      max-width: 50%;
+      float: left;
     }
 
   }
@@ -325,7 +328,7 @@ aside.widget_latest_stories{
 
 .index-side{
   margin: 0;
-  width: 470px;
+  width: 330px;
   overflow: hidden;
 
   padding: 0;
@@ -375,7 +378,33 @@ aside.widget_latest_stories{
 ////////////////////////////////////
 
 .textwidget{
-  margin: 30px;
+  margin: 15px;
   background: #ddd;
-  padding: 30px;
+  padding: 15px;
+}
+.widget_latest_covers{
+margin-bottom:44px;
+  overflow:hidden;
+li{
+  overflow:hidden;
+  img {
+
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+
+  }
+  &:hover{
+    img{
+      -webkit-transform: translateY(-4px);
+      transform: translateY(-4px);
+      outline-offset: -1px;
+      color: inherit;
+
+    }
+  }
+
+}
+
 }
