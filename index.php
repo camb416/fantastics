@@ -168,7 +168,7 @@ if(false && 1 == $paged && is_front_page()): ?>
 </div>
 <div class="lefty twocol">
 	<div class="primary">
-    <!-- h2 class="cgef">Latest</h2 -->
+    <h2 class="cgef">Latest</h2>
 
 
         <div class="storyroll">

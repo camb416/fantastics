@@ -11,7 +11,8 @@ body.search{
       @media screen and (min-width: $break-large) {
       }
       margin-top:10px;
-      border-bottom:5px solid #000;
+      //border-bottom:5px solid #000;
+
 
       div.site-branding{
         overflow:hidden;
@@ -152,9 +153,9 @@ body.search{
 
 
         header{
-  border-right:5px solid #ddd;
-  padding-right:10px;
-  text-align:right;
+   border-left:5px solid #000;
+  padding-left:10px;
+  text-align:left;
 }
   .entry-content{
     margin:0;
@@ -166,10 +167,9 @@ body.search{
 
 
         header{
-          border-left:5px solid #ddd;
-          padding-left:15px;
-          text-align:left;
-
+         border-right:5px solid #000;
+          padding-right:15px;
+          text-align:right;
         }
 
       }
@@ -179,6 +179,8 @@ body.search{
 
 
     div.fmag_story{
+      font-size:0.8rem;
+
 
       @media screen and (max-width: $break-small) {
 
@@ -223,7 +225,7 @@ body.search{
         clear:both;
         // mobile
         max-width:100%;
-        padding:10px 0;
+        padding:0 0 0 0;
 
 
 
@@ -243,7 +245,7 @@ body.search{
 
           overflow:hidden;
 
-          margin:10px 0 0 0px;
+          margin:0;
           position:relative;
 
 
@@ -416,26 +418,28 @@ body.search{
           padding:0;
           li{
             list-style: none;
-
+            border:0 solid #FFF;
             //// the little jump
-        
+            transition: all .2s ease-in-out;
             img {
 
-              -webkit-transition: all .2s ease-in-out;
-              transition: all .2s ease-in-out;
-              -webkit-transform: translateY(0);
-              transform: translateY(0);
+              //-webkit-transition: all .2s ease-in-out;
+
+              //-webkit-transform: translateY(0);
+              //transform: translateY(0);
 
             }
             &:hover{
+              border:25px solid #000;
               img{
-                -webkit-transform: translateY(-4px);
-                transform: translateY(-4px);
-                outline-offset: -1px;
-                color: inherit;
+                //-webkit-transform: translateY(-4px);
+                //transform: translateY(-4px);
+                //outline-offset: -1px;
+                //color: inherit;
 
               }
             }
+
 
             ////
 
@@ -561,6 +565,12 @@ display:block;
   text-align:center;
 
 }
+  .index-side{
+    // border-left:solid 25px #DDD;
+    .widget{
+      opacity:0;
+    }
+  }
 }
 
 // all the sidebars
@@ -604,7 +614,7 @@ display:block;
   width:100%;
   clear:both;
   text-align:center;
-  background:#EEE;
+  // background:#000;
 
 
   h2{
@@ -613,7 +623,7 @@ display:block;
   ins{
     // messing with this might mess up the google ad
     // rendering...
-    background:#EEE;
+    background:#FFF;
     // text-align:center;
   }
 }
@@ -622,12 +632,12 @@ display:block;
 .storyroll{
   text-align:center;
   margin:0;
-padding:5px;
+
   article{
     // width:725px;
     // height:500px;
     // border:1px solid #000;
-    margin:$columngutter auto;
+    // margin:$columngutter auto;
   }
 }
 
@@ -802,11 +812,11 @@ body.home > #page > div.top{
 .menu-sidebar-front-top-container{
   border:none !important;
   text-align:right;
-  margin-bottom:851px !important;
+
 .menu{
   margin:0;
   padding:0;
-  border-bottom:50px black solid;
+  @include bigblackbottom();
 }
   li{
     list-style:none;
@@ -824,20 +834,28 @@ body.home > #page > div.top{
 
 h2.cgef{
   text-align:right;
-  color:black;
+  color:#000;
   font-size:2rem;
-  border-bottom:30px solid black;
-  padding:0px;
+//  background:#000;
+  @include bigblackbottom();
+
   line-height:2rem;
   margin:0;
 
 }
 h2.widget-title{
-  margin: 0;
-  text-align: right;
-  color: black;
-  font-size: 1rem;
-  border-bottom: 5px solid black;
+  text-align: center;
+  color: #AAA;
+  //background:#000;
+  font-size: 1.0rem;
+  padding:2px;
+  display:inline-block;
+
+  margin:0 auto;
+
+//   @include bigblackbottom();
+ border-bottom:25px solid #DDD;
+
 
   line-height: 2rem;
   letter-spacing: 0.1rem;
@@ -846,18 +864,25 @@ h2.widget-title{
 }
 
 .lefty{
-  .medspread{
-    border-left:5px solid #ddd;
+  .fmag_story{
+  // padding-right:25px;
+    .medspread{
+      // border-left:5px solid #000;
+    }
   }
+
 }
 
 .righty{
-  .medspread{
-    border-right:5px solid #ddd;
+  .fmag_story{
+   // padding-left:25px;
 
+    .medspread{
+      // border-left:5px solid #000;
+    }
   }
   ul.minispreads, a.morepages{
-    margin-right:40px !important;
+  //  margin-left:40px !important;
   }
 }
 nav{
@@ -875,7 +900,7 @@ nav{
   .nav-previous{
     a{
       border-right:5px solid #000;
-      
+
     }
 
     text-align: left;
@@ -900,7 +925,4 @@ nav{
 .home .top .primary{
   width:790px;
   // margin-left:100px;
-}
-.medspread{
-  height:501px;
 }

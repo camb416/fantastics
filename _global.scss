@@ -10,6 +10,10 @@ $break-large: 1230px;
   font-family:'CGEF',Helvetica, Arial,sans-serif;
 }
 
+@mixin bigblackbottom(){
+  border-bottom:100px solid #000;
+}
+
 
 @font-face {
   font-family: 'CGEF';
@@ -70,8 +74,8 @@ a{
     //color:#fff;
     //background:#000;
 
-    text-decoration:line-through;
-    color:#F00;
+    text-decoration:underline;
+    color:#68F;
   }
 }
 
