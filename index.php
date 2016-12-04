@@ -18,14 +18,9 @@
 <?php
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
-// gradient background
-// TODO: deprecate this
-if(false && 1 == $paged && is_front_page()): ?>
-    <div id="index-stage"></div>
 
-<?php endif; ?>
 
-<?php
+
 ///////////////////////////////////////////////////
 // Do the top bit
 ///////////////////////////////////////////////////
@@ -235,7 +230,7 @@ if(false && 1 == $paged && is_front_page()): ?>
 
 
                 // do the first intermission
-                echo '<div class="intermission-a">';
+                echo '<div class="intermission intermission-a">';
                 //echo '<div class="intermission-outer"><div class="intermission">';
                 if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Intermission A')){
                     // do nothing if not there
@@ -272,7 +267,7 @@ if(false && 1 == $paged && is_front_page()): ?>
 
 
                 // do the second intermission
-                echo '<div class="intermission-b">';
+                echo '<div class="intermission intermission-b">';
                 //echo '<div class="intermission-outer"><div class="intermission">';
                 if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Intermission B')){
                     // do nothing if not there
@@ -313,7 +308,7 @@ if(false && 1 == $paged && is_front_page()): ?>
 
 
                 // do the third intermission
-                echo '<div class="intermission-c">';
+                echo '<div class="intermission intermission-c">';
                 //echo '<div class="intermission-outer"><div class="intermission">';
                 if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Intermission C')){
                     // do nothing if not there
@@ -365,10 +360,13 @@ if(false && 1 == $paged && is_front_page()): ?>
 
                 <?php endwhile; ?>
 
-                <div class="athing"></div>
 
-                <?php posts_navigation(); ?>
 
+                <?php
+                // if you want posts nav in left col place here:
+                // posts_navigation();
+
+                ?>
                 <?php else : ?>
 
                     <?php get_template_part( 'template-parts/content', 'none' ); ?>
@@ -389,7 +387,12 @@ if(false && 1 == $paged && is_front_page()): ?>
 
 
 
+
     </div><?php // close primary ?>
+
+
+
+
 <?php
  echo '<div class="index-side">';
 if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Bottom-Side')){
@@ -409,6 +412,8 @@ if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Bottom-Side')
 
 
  </div>
+
+
     <?php
 ///////////////////////////////////////////////////
 // Intermission A
@@ -445,14 +450,14 @@ if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Bottom-Side')
 
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+    <?php
+    if(1 != $paged){
+        echo '</div>';
+    }
+    ?>
+<hr />
+    <?php posts_navigation(1 == $paged); ?>
+    <hr />
 
-
-
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
+    <?php get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -167,9 +167,9 @@ body.search{
 
 
         header{
-         border-right:5px solid #000;
-          padding-right:15px;
-          text-align:right;
+         border-left:5px solid #000;
+          padding-left:15px;
+          text-align:left;
         }
 
       }
@@ -469,12 +469,20 @@ body.search{
   nav#site-navigation{
 
   }
-
+hr{
+  margin:1.5rem auto;
+  width:50%;
+}
   .nav-links{
+    margin: 2rem 0;
+overflow:hidden;
     .nav-previous, .nav-next{
-      font-size:200%;
+      font-size:2rem;
+
 
       a{
+        background:#000;
+      color:#fff;
         padding:0 10px;
         display:inline-block;
         margin:0 10px;
@@ -841,7 +849,25 @@ h2.cgef{
   margin:0.5rem 0 0 0;
 
 }
-h2.widget-title{
+
+
+// big black treatment
+
+.index-side h2.widget-title{
+  font-size: 3rem;
+  line-height:2rem;
+  text-align:right;
+  color:#000;
+  @include bigblackbottom();
+  @include cgef();
+  margin:0;
+  padding:0.5rem 0 0 0;
+
+}
+
+// subtle small treatment
+
+.intermission h2.widget-title{
   text-align: center;
   color: #AAA;
   //background:#000;
@@ -851,8 +877,8 @@ h2.widget-title{
 
   margin:0 auto;
 
-//   @include bigblackbottom();
- border-bottom:25px solid #DDD;
+  //   @include bigblackbottom();
+  border-bottom:25px solid #DDD;
 
 
   line-height: 2rem;
@@ -897,7 +923,6 @@ nav{
     }
   .nav-previous{
     a{
-      border-right:5px solid #000;
 
     }
 
@@ -905,7 +930,6 @@ nav{
   }
   .nav-next{
    a{
-     border-left:5px solid #000;
    }
   }
  // width:100%;

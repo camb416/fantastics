@@ -69,7 +69,12 @@ class FMAG_Widget_Latest_Focus extends WP_Widget {
 
         if ($r->have_posts()) :
         ?>
-        <?php echo $before_widget; ?>
+        <?php
+
+            $before_widget =  $args['before_widget'];
+            $before_title =  $args['before_title'];
+            $after_title =  $args['after_title'];
+            echo $before_widget; ?>
 
         <?php
             //  display title
@@ -107,7 +112,10 @@ class FMAG_Widget_Latest_Focus extends WP_Widget {
 
             <?php endwhile; ?>
         </ul>
-        <?php echo $after_widget; ?>
+        <?php
+            $after_widget = $args['after_widget'];
+
+            echo $after_widget; ?>
         <?php
         // Reset the global $the_post as this query will have stomped on it
         wp_reset_postdata();
@@ -197,7 +205,8 @@ class FMAG_Widget_Latest_Stories extends WP_Widget {
         ob_start();
         extract($args);
 
-        $title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Latest Stories' );
+        //$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Latest Stories' );
+        $title = $instance['title'];
         $title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
         $number = ( ! empty( $instance['number'] ) ) ? absint( $instance['number'] ) : 10;
 if ( ! $number )
@@ -217,7 +226,13 @@ if ( ! $number )
 
         if ($r->have_posts()) :
             ?>
-            <?php echo $before_widget; ?>
+            <?php
+
+            $before_widget =  $args['before_widget'];
+            $before_title =  $args['before_title'];
+            $after_title =  $args['after_title'];
+            $after_widget = $args['after_widget'];
+            echo $before_widget; ?>
 
             <?php
             //  display title
@@ -393,6 +408,17 @@ if (function_exists('register_sidebar')) {
         'before_title' => '<h2 class="widget-title">',
         'after_title' => '</h2>',
     ));
+
+    register_sidebar(array(
+        'name'=> 'Global Footer',
+        'id' => 'global_footer',
+
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ));
+
 }
 
 
@@ -573,10 +599,15 @@ $myterm = '';
 
         if ($r->have_posts()) :
             ?>
-            <?php echo $before_widget; ?>
+            <?php
+            $before_widget =  $args['before_widget'];
+            $before_title =  $args['before_title'];
+            $after_title =  $args['after_title'];
+            echo $before_widget; ?>
 
             <?php
             //  display title
+            echo $args['before_widget'];
             if ( $title ) echo $before_title . $title . $after_title;
 
             ?>
