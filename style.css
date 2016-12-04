@@ -1453,9 +1453,9 @@ body.search {
       body.search .nav-links .nav-next a {
         background: #000;
         color: #fff;
-        padding: 0 10px;
+        padding: 0 20px 0 10px;
         display: inline-block;
-        margin: 0 10px; }
+        margin: 0; }
       body.home .nav-links .nav-previous .nav-previous, body.home .nav-links .nav-next .nav-previous,
       body.archive .nav-links .nav-previous .nav-previous,
       body.archive .nav-links .nav-next .nav-previous,
@@ -1494,6 +1494,8 @@ div {
   margin: 0;
   padding: 0; }
 
+.lefty.firstroll .primary, .righty.firstroll .primary {
+  width: 100%; }
 .lefty .primary, .righty .primary {
   display: block;
   width: 790px;
@@ -1558,8 +1560,6 @@ body.home > #page > div.top {
 @media screen and (min-width: 1230px) {
   .lefty .secondary {
     float: left; } }
-.lefty .secondary > div {
-  border: 1px solid #000; }
 .lefty .secondary .socialbuttons {
   border: none;
   height: 105px;
@@ -1790,13 +1790,14 @@ aside ul.covers {
     overflow: hidden;
     padding: 0;
     max-width: 100%;
-    margin: 25px auto;
+    margin: 54px auto 0 auto;
     overflow: hidden;
     border: 50px solid #DDD;
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
     opacity: 0.7; }
     aside ul.covers li:hover {
+      margin-top: 28px;
       border: 0px solid #DDD;
       outline-offset: -1px;
       color: inherit;
@@ -1842,16 +1843,6 @@ aside.widget_latest_focuscover ul {
   text-align: center; }
   .index-side .widget_text .textwidget {
     text-align: left; }
-
-.secondary .widget_text {
-  text-align: center;
-  border: 1px dashed #eee;
-  padding: 10px; }
-  .secondary .widget_text:nth-child(2) {
-    text-align: left; }
-  @media screen and (max-width: 1230px) {
-    .secondary .widget_text {
-      display: none; } }
 
 aside.Tumblr {
   width: 330px;
@@ -2010,6 +2001,8 @@ aside.widget_latest_stories {
   overflow: hidden;
   text-align: center;
   padding: 0; }
+  .widget_latest_covers h2 {
+    display: none; }
   .widget_latest_covers li {
     overflow: hidden; }
 

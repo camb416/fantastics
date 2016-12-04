@@ -153,7 +153,21 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 	            wp_nav_menu( array( 'theme_location' => 'sidebarfronttop' ) );
 
 
-//        echo '<div class="adspace">adspace</div> ';
+
+ echo '<div class="index-side">';
+if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Cover Side')){
+    // do nothing if not there
+    // echo "default stuff";
+} else {
+    // display nothing if there is indeed a widget.
+    //echo "do something";
+}
+                 echo '</div>';
+
+
+
+
+    //        echo '<div class="adspace">adspace</div> ';
 	            echo ' </div>';
 
 	            ?>
@@ -161,7 +175,7 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
             <?php endif;  ?>
 </div>
-<div class="lefty twocol">
+<div class="lefty twocol firstroll">
 	<div class="primary">
     <h2 class="cgef">Latest</h2>
 

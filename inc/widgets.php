@@ -258,12 +258,21 @@ if ( ! $number )
 
                         $args = array(
                             'post_type' => 'attachment',
-                            'order' => 'ASC',
                             'numberposts' => 2,
                             'post_status' => null,
-                            'post_parent' => get_the_ID()
-
+                            'post_parent' => get_the_ID(),
+                            'order' => 'ASC'
                         );
+
+                        $args = array(
+                            'post_type' => 'attachment',
+                            'posts_per_page' => -1,
+                            'post_parent' => get_the_ID(),
+                            'exclude'     => get_post_thumbnail_id(),
+                            'orderby'     => 'menu_order',
+                            'order'       => 'ASC'
+                        );
+
 
                         $attachments = get_posts( $args );
                         if ( $attachments ) {
@@ -339,6 +348,16 @@ add_action( 'widgets_init', 'register_latest_stories_widget' );
 
 
 if (function_exists('register_sidebar')) {
+
+    register_sidebar(array(
+        'name'=> 'Cover Side',
+        'id' => 'cover_side',
+
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ));
 
     register_sidebar(array(
         'name'=> 'Index Intermission A',

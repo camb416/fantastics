@@ -38,7 +38,7 @@ ul{
       overflow: hidden;
       padding: 0;
       max-width: 100%;
-      margin:25px auto;
+      margin: 54px auto 0 auto;
       // height: 230px;
       // width:230px;
       overflow:hidden;
@@ -52,7 +52,7 @@ ul{
 
 
       &:hover{
-
+        margin-top:28px;
           border:0px solid #DDD;
           outline-offset: -1px;
           color: inherit;
@@ -179,26 +179,6 @@ aside.widget_latest_focuscover{
 
 
 
-// ads underneath Focus Cover
-.secondary{
-
-  .widget_text{
-    text-align:center;
-
-    &:nth-child(2) {
-      text-align:left;
-
-    }
-
-    border: 1px dashed #eee;
-    padding:10px;
-    @media screen and (max-width: $break-large) {
-      display:none;
-    }
-
-
-  }
-}
 
 ////////////////////////////////////
 
@@ -476,6 +456,9 @@ width:100%;
 
 }
 .widget_latest_covers{
+  h2{
+    display:none;
+  }
   margin:0;
   overflow:hidden;
   text-align:center;
