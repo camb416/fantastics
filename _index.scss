@@ -835,12 +835,10 @@ body.home > #page > div.top{
 h2.cgef{
   text-align:right;
   color:#000;
-  font-size:2rem;
-//  background:#000;
+  font-size:3rem;
   @include bigblackbottom();
-
   line-height:2rem;
-  margin:0;
+  margin:0.5rem 0 0 0;
 
 }
 h2.widget-title{
