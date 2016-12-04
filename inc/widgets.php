@@ -258,10 +258,11 @@ if ( ! $number )
 
                         $args = array(
                             'post_type' => 'attachment',
+                            'order' => 'ASC',
                             'numberposts' => 2,
                             'post_status' => null,
-                            'post_parent' => get_the_ID(),
-                            'order' => 'ASC'
+                            'post_parent' => get_the_ID()
+
                         );
 
                         $attachments = get_posts( $args );
