@@ -122,9 +122,25 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
 
                     <?php
-                    $wp_query = $mainQuery;
+
                     ?>
                 </div>
+
+
+
+
+        <!--
+        <a class="footerlogo" href="<?php echo site_url(); ?>" rel="home">Fantastics</a>
+        <?php
+        $wp_query = $mainQuery;
+        // under front cover menu
+        wp_nav_menu( array( 'theme_location' => 'undercover' ) );
+
+
+        ?>
+        -->
+
+
 </div>
 	            <?php
 

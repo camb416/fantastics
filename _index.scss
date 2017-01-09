@@ -500,17 +500,17 @@ overflow:hidden;
 }
 footer{
   text-align:center;
-  a.footerlogo{
 
-    width: 180px;
-    height: 36px;
-    background: url(images/masthead.png);
-    background-repeat: no-repeat;
-    background-size: 180px 36px;
-    display:inline-block;
-    text-indent:-1000%;
-    margin-bottom:30px;
-  }
+}
+a.footerlogo{
+  width: 180px;
+  height: 36px;
+  background: url(images/masthead.png);
+  background-repeat: no-repeat;
+  background-size: 180px 36px;
+  display:inline-block;
+  text-indent:-1000%;
+  margin-bottom:30px;
 }
 
 
@@ -546,6 +546,9 @@ $numcols: 8;
     max-width:100%;
     //margin:$columngutter auto;
     margin: 30px auto 0 auto;
+    &.firstroll{
+      margin-top:0;
+    }
     overflow:hidden;
 
   }
@@ -570,6 +573,11 @@ div{
       width:100%;
     }
 
+  }
+  &.top{
+    .primary{
+      background:#DDD;
+    }
   }
 
 .primary{
@@ -853,7 +861,7 @@ h2.cgef{
   color:#000;
   font-size:3rem;
   @include bigblackbottom();
-  line-height:2rem;
+  line-height:3rem;
   margin:0.5rem 0 0 0;
 
 }
@@ -863,7 +871,7 @@ h2.cgef{
 
 .index-side h2.widget-title{
   font-size: 3rem;
-  line-height:2rem;
+  line-height:3rem;
   text-align:right;
   color:#000;
   @include bigblackbottom();

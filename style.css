@@ -1471,15 +1471,16 @@ body.search {
 
 footer {
   text-align: center; }
-  footer a.footerlogo {
-    width: 180px;
-    height: 36px;
-    background: url(images/masthead.png);
-    background-repeat: no-repeat;
-    background-size: 180px 36px;
-    display: inline-block;
-    text-indent: -1000%;
-    margin-bottom: 30px; }
+
+a.footerlogo {
+  width: 180px;
+  height: 36px;
+  background: url(images/masthead.png);
+  background-repeat: no-repeat;
+  background-size: 180px 36px;
+  display: inline-block;
+  text-indent: -1000%;
+  margin-bottom: 30px; }
 
 #page {
   width: 100%; }
@@ -1488,6 +1489,8 @@ footer {
     max-width: 100%;
     margin: 30px auto 0 auto;
     overflow: hidden; }
+    #page .lefty.firstroll, #page .righty.firstroll {
+      margin-top: 0; }
 
 div {
   display: block;
@@ -1496,6 +1499,8 @@ div {
 
 .lefty.firstroll .primary, .righty.firstroll .primary {
   width: 100%; }
+.lefty.top .primary, .righty.top .primary {
+  background: #DDD; }
 .lefty .primary, .righty .primary {
   display: block;
   width: 790px;
@@ -1664,12 +1669,12 @@ h2.cgef {
   color: #000;
   font-size: 3rem;
   border-bottom: 100px solid #000;
-  line-height: 2rem;
+  line-height: 3rem;
   margin: 0.5rem 0 0 0; }
 
 .index-side h2.widget-title {
   font-size: 3rem;
-  line-height: 2rem;
+  line-height: 3rem;
   text-align: right;
   color: #000;
   border-bottom: 100px solid #000;
@@ -1790,7 +1795,7 @@ aside ul.covers {
     overflow: hidden;
     padding: 0;
     max-width: 100%;
-    margin: 54px auto 0 auto;
+    margin: 14px auto 0 auto;
     overflow: hidden;
     border: 50px solid #DDD;
     -webkit-transition: all .2s ease-in-out;
@@ -1958,10 +1963,9 @@ aside.widget_latest_stories {
   .index-side .also {
     position: relative;
     display: block;
-    height: 950px;
     width: 100%;
     overflow: hidden;
-    margin: 25px auto;
+    margin: 25px auto 5px auto;
     border: 50px solid #DDD;
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -1971,40 +1975,50 @@ aside.widget_latest_stories {
       border: 0px solid #DDD; }
     .index-side .also img {
       -webkit-transition: all .2s ease-in-out;
-      transition: all .2s ease-in-out;
-      max-width: none;
-      position: absolute;
-      margin-top: -50px; }
-    .index-side .also p {
-      text-align: center;
-      position: absolute;
-      bottom: 0px;
-      font-family: 'CGEF',Helvetica, Arial,sans-serif;
-      font-size: 1rem;
-      background: #DDD;
-      margin: 0;
-      padding: 0;
-      width: 100%; }
-      .index-side .also p a {
-        color: #888; }
-        .index-side .also p a:hover {
-          color: #000;
-          background: none; }
+      transition: all .2s ease-in-out; }
+  .index-side p.caption {
+    text-align: center;
+    bottom: 0px;
+    color: #AAA;
+    font-size: 0.7rem;
+    margin: 0;
+    padding: 0;
+    width: 100%; }
+    .index-side p.caption a {
+      color: #888; }
+      .index-side p.caption a:hover {
+        color: #000;
+        background: none; }
 
 .textwidget p {
-  margin: 15px;
   letter-spacing: 0.02rem;
-  padding: 15px; }
+  padding: 0 10px 0 10px;
+  font-size: 0.8rem; }
 
 .widget_latest_covers {
   margin: 0;
   overflow: hidden;
   text-align: center;
   padding: 0; }
-  .widget_latest_covers h2 {
-    display: none; }
   .widget_latest_covers li {
     overflow: hidden; }
+
+.primary .footerlogo {
+  float: left;
+  width: 120px;
+  height: 24px;
+  background-size: 120px 24px;
+  margin-bottom: 0px; }
+
+.menu-under-front-cover-menu-container {
+  float: right; }
+  .menu-under-front-cover-menu-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .menu-under-front-cover-menu-container ul li {
+      display: inline;
+      padding: 0px 10px; }
 
 body.search div.results {
   clear: both;

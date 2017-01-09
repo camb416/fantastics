@@ -45,11 +45,10 @@ function fantastics_setup() {
 	// This theme uses wp_nav_menu() in one location.
     register_nav_menus( array(
         'primary' => esc_html__( 'Primary Menu', 'fantastics' ),
-    ) );
-    // This theme uses wp_nav_menu() in one location.
-    register_nav_menus( array(
         'sidebarfronttop' => esc_html__( 'Sidebar Front Top', 'fantastics' ),
+        'undercover' => esc_html__('Under Front Cover', 'fantastics')
     ) );
+
 
 
 
