@@ -324,7 +324,7 @@ body.single-fmag_story{
     height:132px;
     float:left;
     list-style: none;
-    margin-right:10px;
+    margin:2px;
     border: 4px solid $bgcolor;
     overflow:hidden;
     position:relative;
@@ -335,11 +335,11 @@ body.single-fmag_story{
     }
 
     &.active{
-      border:4px solid black;
+      border:4px solid #68F;
     }
     &:hover{
       cursor:pointer;
-      border:4px solid #DDD;
+      border:4px solid #000;
       &.active{
         border:4px solid black;
       }
