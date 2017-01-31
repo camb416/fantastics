@@ -510,7 +510,8 @@ a.footerlogo{
   background-size: 180px 36px;
   display:inline-block;
   text-indent:-1000%;
-  margin-bottom:30px;
+margin:2rem;
+//  width:100%;
 }
 
 
@@ -576,7 +577,7 @@ div{
   }
   &.top{
     .primary{
-      background:#DDD;
+      // background:#DDD;
     }
   }
 
@@ -840,15 +841,17 @@ body.home > #page > div.top{
     text-transform:none;
     font-size:3rem;
     letter-spacing:-.1rem;
+    padding-right:1px;
     &:hover{
       text-decoration:none;
       padding-right:10px;
       &:after{
-        content: '\f0a5';
+        content: ' \f0a5';
         font-family: FontAwesome;
         font-weight: normal;
         font-style: normal;
-        margin:0px 0px 0px 10px;
+        font-size:2.5rem;
+        margin:0px 0px 0px 0px;
         text-decoration:none;
       }
     }
