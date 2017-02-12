@@ -276,13 +276,16 @@ if ( ! $number )
 
                         $attachments = get_posts( $args );
                         if ( $attachments ) {
-                            foreach ( $attachments as $attachment ) {
-                                echo '';
-                                echo wp_get_attachment_image( $attachment->ID );
-                                //echo '<p>';
-                                //echo apply_filters( 'the_title', $attachment->post_title );
-                                echo '';
+                            if(count($attachments)>1){
+                                for ( $i = 0; $i < 2;  $i++ ) {
+                                    echo '';
+                                    echo wp_get_attachment_image( $attachments[$i]->ID );
+                                    //echo '<p>';
+                                    //echo apply_filters( 'the_title', $attachment->post_title );
+                                    echo '';
+                                }
                             }
+
                         }
                         ?>
                         </li></a>
