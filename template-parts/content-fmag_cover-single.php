@@ -14,6 +14,8 @@
         <?php
         $bigcover = get_queried_object();
         $coverid = $post->ID;
+        $storyLink = "/";
+
 
         if($bigcover === null){
             $bigcover = get_post(get_the_ID());
@@ -33,11 +35,12 @@
         <?php while ( $connected->have_posts() ) : $connected->the_post();
 
         $storyLink = get_the_permalink();
+
         endwhile;
         endif;
 
         if(is_single()) wp_reset_postdata();
-
+        if(is_archive()) $storyLink = "/";
         ?>
 
         <?php

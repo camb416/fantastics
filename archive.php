@@ -12,9 +12,117 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<a href="/" class="frontlink">&lt; Frontpage</a>
+			<!-- a href="/" class="frontlink">&lt; Frontpage</a -->
 		<?php if ( have_posts() ) : ?>
 			<header class="page-header">
+
+                <div class="coverslug">
+                    <?php
+
+                    $mainQuery = $wp_query;
+
+                    ?>
+                    <?php
+                    $r = new WP_Query(
+                        array( 'posts_per_page' => 1,
+                            'no_found_rows' => true,
+                            'post_status' => 'publish',
+                            'ignore_sticky_posts' => true,
+                            'post_type' => 'fmag_cover',
+                            'tax_query' => array(
+                                array(
+                                    'taxonomy' => 'term',
+                                    'field' => 'slug',
+                                    'terms' => array($term),
+                                    'operator' => 'IN'
+
+                                )
+                            ) ) );
+
+                    if ($r->have_posts()) { ?>
+
+
+
+                        <?php while ( $r->have_posts() ) : $r->the_post(); ?>
+
+                            <?php
+                            // working methods here:
+                            // the_permalink()
+                            // esc_attr( get_the_title() ? get_the_title() : get_the_ID() );
+                            // <?php if ( get_the_title() ) the_title(); else the_ID();
+                            // get_the_date();
+
+
+                            /*
+                                                        $args = array(
+                                                            'post_type' => 'attachment',
+                                                            'numberposts' => 1,
+                                                            'post_status' => null,
+                                                            'post_parent' => get_the_ID()
+                                                        );
+
+                                                        $attachments = get_posts( $args );
+                                                        if ( $attachments ) {
+                                                            foreach ( $attachments as $attachment ) {
+                                                                //echo '<li>';
+                                                                echo '<a class="coverlink" href="'.get_the_permalink().'">'.wp_get_attachment_image( $attachment->ID, 'full' ).'</a>';
+                                                                //echo '<p>';
+                                                                echo apply_filters( 'the_title', $attachment->post_title );
+                                                                //echo '</p></li>';
+                                                            }
+                                                        }
+                                                        */
+                            get_template_part( 'template-parts/content', 'fmag_cover-single' );
+
+
+
+                            ?>
+
+                        <?php endwhile; ?>
+
+
+
+
+
+
+                    <?php } else {
+
+
+                    $r2 = new WP_Query(
+                        array( 'posts_per_page' => 1,
+                            'no_found_rows' => true,
+                            'post_status' => 'publish',
+                            'ignore_sticky_posts' => true,
+                            'post_type' => 'fmag_cover',
+                             ) );
+
+                    if ($r2->have_posts()) {
+
+
+                        while ($r2->have_posts()) {
+                            $r2->the_post();
+
+                            get_template_part('template-parts/content', 'fmag_cover-single');
+
+
+                        }
+                    }
+
+
+
+
+                    } ?>
+
+
+
+                    <?php
+
+                    ?>
+                </div>
+
+
+
+<div class="category-identifier">Category</div>
 				<?php
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
@@ -29,7 +137,7 @@ get_header(); ?>
 				</div>
 				<div class="archive-stories">
 			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php $count; while ( have_posts() ) : the_post(); $count++; $zebra = ($count % 3) ? ' third' : ' notthird'; ?>
 
 				<?php
 
@@ -53,9 +161,10 @@ get_header(); ?>
 				?>
 
 			<?php endwhile; ?>
+            <?php posts_navigation(); ?>
 			</div>
 			</div>
-			<?php posts_navigation(); ?>
+
 
 		<?php else : ?>
 

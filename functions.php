@@ -155,7 +155,7 @@ function fantastics_scripts() {
 		wp_enqueue_script( 'comment-reply' );
     }
     if(is_archive() || is_search()){
-        wp_enqueue_script('fantastics-archive',get_template_directory_uri() . '/js/archive.js', array('jquery'), '20161017', true);
+        wp_enqueue_script('fantastics-archive',get_template_directory_uri() . '/js/archive.js', array('jquery'), '20170212', true);
     }
 }
 
@@ -384,3 +384,12 @@ function my_connection_types() {
     ) );
 }
 add_action( 'p2p_init', 'my_connection_types' );
+
+
+// override posts per page on archive tag pages
+function fmag_tag_posts_per_page( $query ) {
+    if( $query->is_archive() && $query->is_main_query()) {
+        $query->set( 'posts_per_page', 12 );
+    }
+}
+add_action( 'pre_get_posts', 'fmag_tag_posts_per_page' );
