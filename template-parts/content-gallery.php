@@ -125,7 +125,7 @@
                 } else if(is_archive()){
                     $cat_identifier = "Archive";
                 } else if(is_paged()){
-                    $cat_identifier = ""; // display nothing if you get there via "more stories"
+                    $cat_identifier = "Listing"; // display nothing if you get there via "more stories"
                 }
                 ?>
 
@@ -137,11 +137,12 @@
                     $title = get_search_query();
                 }  else if(is_archive()){
                     $title = get_the_archive_title();
+                    $description = get_the_archive_description();
                 } else if(is_paged()){
                     $title = "Features";
                 }
 
-                $description = get_the_archive_description();
+
 
 
 
