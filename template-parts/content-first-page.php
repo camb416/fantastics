@@ -338,12 +338,12 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
 
             // open the bottom container
-            echo '<div class="lefty twocol">';
+            echo '<div class="onecol">';
             // open the bottom main
             echo '<div class="primary">';
             //echo ' <h2 class="cgef">Latest</h2>';
             // open the story roll
-            echo '<div class="storyroll">';
+            echo '<div class="storyroll six-up">';
         }
 
         ?>
@@ -414,7 +414,7 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
 
         <?php
-        echo '<div class="index-side">';
+        echo '<!-- div class="index-side">';
         if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Index Bottom-Side')){
             // do nothing if not there
             // echo "default stuff";
@@ -422,7 +422,7 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             // display nothing if there is indeed a widget.
             //echo "do something";
         }
-        echo '</div>';
+        echo '</div -->';
         ?>
 
 

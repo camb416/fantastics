@@ -236,6 +236,7 @@ body.search{
                     float:left;
                   }
                   */
+        margin-top:0;
 
       }
 
@@ -593,9 +594,14 @@ div{
 
   }
   .index-side{
-    // border-left:solid 25px #DDD;
+
     .widget{
       opacity:0;
+
+
+
+
+
     }
   }
 }
@@ -872,16 +878,17 @@ h2.cgef{
 
 
 // big black treatment
-
+/*
 .index-side h2.widget-title{
+
   font-size: 3rem;
   line-height:3rem;
   text-align:right;
   color:#000;
   // @include bigblackbottom();
-  color: #FFF;
-  background:#000;
-
+  // color: #FFF;
+  // background:#000;
+text-align:center;
   height:100px;
 
   @include cgef();
@@ -889,7 +896,7 @@ h2.cgef{
   padding:0.5rem 0.5rem 0 0;
 
 }
-
+*/
 // subtle small treatment
 
 .intermission h2.widget-title{
@@ -986,4 +993,23 @@ nav{
 .home .top .primary{
   width:790px;
   // margin-left:100px;
+}
+
+.six-up{
+
+  div.fmag_story{
+    width: 355px;
+    margin: 10px;
+    overflow: hidden;
+    float: left;
+    .entry-header{
+      text-align:left;
+    }
+  }
+
+  width: 1130px;
+  max-width: 100%;
+  margin: 30px auto 0 auto;
+  overflow: hidden;
+
 }

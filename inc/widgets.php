@@ -635,7 +635,8 @@ $myterm = '';
             $before_widget =  $args['before_widget'];
             $before_title =  $args['before_title'];
             $after_title =  $args['after_title'];
-            echo $before_widget; ?>
+            // echo $before_widget;
+            ?>
 
             <?php
             //  display title
@@ -739,3 +740,5 @@ function register_latest_covers_widget() {
 
 add_action( 'widgets_init', 'register_latest_covers_widget' );
 //////////////////
+
+

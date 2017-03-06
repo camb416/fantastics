@@ -64,10 +64,19 @@ $('.site-header').addClass('original').clone().insertAfter('#page').addClass('cl
 
 
     $('document').ready(function(){
-        console.log('document ready');
+
         sidebarStretch();
 
         tumblrStretch();
+
+        // this matches the heights of the grid of stories...
+
+        var stories = $('.six-up .fmag_story');
+        var tallest = 0;
+        for(var i=0;i<stories.length;i++){
+            if($(stories[i]).height() > tallest) tallest = $(stories[i]).height();
+        }
+        $('.six-up .fmag_story').height(tallest);
 
     });
 
