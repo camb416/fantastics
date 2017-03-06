@@ -2,6 +2,7 @@
 $(document).ready(function(e){
 
     // this matches the heights of the grid of stories...
+    // TODO: make sure this is actually doing something considering the default set at 360 in _archive.scss line 87
 
     var stories = $('.fmag_story');
     var tallest = 0;
