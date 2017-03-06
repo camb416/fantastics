@@ -25,13 +25,13 @@ function posts_navigation($is_index = false) {
 
 
             <?php if ( get_previous_posts_link() ) : ?>
-                <div class="nav-previous"><?php previous_posts_link( '<i class="fa fa fa-hand-o-left"></i>&nbsp;More That Way' ); ?></div>
+                <div class="nav-previous"><?php previous_posts_link( 'More That Way' ); ?></div>
             <?php endif; ?>
 			<?php if ( get_next_posts_link() ) :
 				?>
 				<?php
 				$is_index  ? $textToUse = 'More Features' : $textToUse = 'More This Way'; ?>
-				<div class="nav-next"><?php next_posts_link( $textToUse.'&nbsp;<i class="fa fa fa-hand-o-right"></i>' ); ?></div>
+				<div class="nav-next"><?php next_posts_link( $textToUse ); ?></div>
 			<?php endif; ?>
 
 

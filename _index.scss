@@ -483,11 +483,15 @@ body.search{
 
 
       a{
-        background:#000;
-        color:#fff;
-        padding:0 20px 0 10px;
-        display:inline-block;
-        margin:0;
+
+
+
+
+        //background:#000;
+        //color:#fff;
+        //padding:0 20px 0 10px;
+        //display:inline-block;
+        //margin:0;
       }
       .nav-previous{
         text-align:left;
@@ -941,48 +945,110 @@ text-align:center;
     //  margin-left:40px !important;
   }
 }
+//nav{
+//
+//  //max-width: 1130px;
+//  //margin: 2rem auto;
+//  //background:#000;
+//  //display:block;
+//  //overflow:hidden;
+//  //@include cgef();
+//  //font-size:0.7rem;
+//
+//
+//  .nav-links{
+//    padding:0;
+//    overflow:hidden;
+//    display:block;
+//  }
+//  //border-bottom:5px solid #000;
+//
+//  a{
+//    // color:#fff !important;
+//    &:hover{
+//      text-decoration:none;
+//      color:#68F !important;
+//    }
+//
+//  }
+//  .nav-previous{
+//    a{
+//
+//    }
+//
+//    text-align: left;
+//  }
+//  .nav-next{
+//    a{
+//    }
+//  }
+//  // width:100%;
+//  // position:absolute;
+//  // left:0;
+//
+//
+//}
+
 nav{
-
-  max-width: 1130px;
-  margin: 2rem auto;
-  background:#000;
-  display:block;
-  overflow:hidden;
-  @include cgef();
-  font-size:0.7rem;
-
-
+  @include bigblackbottom();
+  max-width:1130px;
+  margin:0 auto;
   .nav-links{
-    padding:0;
-    overflow:hidden;
-    display:block;
-  }
-  //border-bottom:5px solid #000;
+min-height:65px;
+    .nav-next{
 
-  a{
-    // color:#fff !important;
-    &:hover{
-      text-decoration:none;
-      color:#68F !important;
+      a:hover{
+
+          color: #68F;
+          padding-right: 10px;
+
+          &:after {
+            content: ' \f0a4';
+            font-family: FontAwesome;
+            font-weight: normal;
+            font-style: normal;
+            font-size: 2.5rem;
+            margin: 0px 0px 0px 0px;
+            text-decoration: none;
+            color: #68F;
+          }
+      }
+    }
+    .nav-previous{
+
+      a:hover{
+
+        color: #68F;
+        padding-left: 10px;
+
+        &:before {
+          content: ' \f0a5\ ';
+          font-family: FontAwesome;
+          font-weight: normal;
+          font-style: normal;
+          font-size: 2.5rem;
+          margin: 0px 0px 0px 0px;
+          text-decoration: none;
+          color: #68F;
+        }
+      }
     }
 
-  }
-  .nav-previous{
     a{
+      width:100%;
+      height:100%;
+      @include cgef();
+      text-transform:none;
+      font-size:2.5rem;
+      letter-spacing:-.1rem;
+      padding-right:1px;
+      &:hover{
+        text-decoration:none;
+        // padding-right:10px;
 
+      }
     }
-
-    text-align: left;
   }
-  .nav-next{
-    a{
-    }
-  }
-  // width:100%;
-  // position:absolute;
-  // left:0;
-
-
 }
 
 .home{

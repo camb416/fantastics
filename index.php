@@ -19,13 +19,16 @@
 
 if ( is_paged() ):
     get_template_part('template-parts/content','gallery');
+?>
+    <hr />
+    <?php get_sidebar();
 else:
     get_template_part( 'template-parts/content', 'first-page' );
+?><hr />
+<?php 
 endif;
 
 
  ?>
-    <hr />
 
-    <?php get_sidebar(); ?>
 <?php get_footer(); ?>
