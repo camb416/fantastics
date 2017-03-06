@@ -25,7 +25,7 @@ if ( is_paged() ):
 else:
     get_template_part( 'template-parts/content', 'first-page' );
 ?><hr />
-<?php 
+<?php
 endif;
 
 

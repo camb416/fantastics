@@ -595,3 +595,29 @@ padding-top:20px;
 
 
 }
+.instagram{
+  max-width:1130px;
+  margin:0 auto;
+
+  #sbi_load{
+    padding-top:0 !important;
+  }
+
+  ul{
+    background:#000;
+    overflow:hidden;
+    padding:10px;
+  }
+  li{
+    letter-spacing:0.1rem;
+    color:#fff;
+    list-style:none;
+    display:inline;
+    margin:0 20px 0 0;
+    a{
+      color:#fff;
+      text-transform:uppercase;
+    }
+  }
+
+}
