@@ -602,19 +602,35 @@ padding-top:20px;
   #sbi_load{
     padding-top:0 !important;
   }
-
-  ul{
+  section{
     background:#000;
     overflow:hidden;
     padding:10px;
+    min-height:100px;
+  }
+  h5{
+    color: #fff;
+    font-size:3rem;
+    padding:0;
+    margin:0;
+    font-weight:normal;
+  }
+  ul{
+
   }
   li{
+
     letter-spacing:0.1rem;
     color:#fff;
     list-style:none;
     display:inline;
     margin:0 20px 0 0;
+
     a{
+      top:-0.25rem;
+      position:relative;
+      display:inline-block;
+      font-size: 1.0rem;
       color:#fff;
       text-transform:uppercase;
       i{
