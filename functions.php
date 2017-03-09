@@ -393,3 +393,10 @@ function fmag_tag_posts_per_page( $query ) {
     }
 }
 add_action( 'pre_get_posts', 'fmag_tag_posts_per_page' );
+
+// allow newline in widget title
+function fmag_widget_title( $title ) {
+    $title = str_replace( '\n', '<br/>', $title );
+    return $title;
+}
+add_filter( 'widget_title', 'fmag_widget_title' );
