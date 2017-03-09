@@ -134,7 +134,7 @@ function fantastics_scripts() {
 
     wp_enqueue_style( 'fantastics-fonts', 'https://fonts.googleapis.com/css?family=News+Cycle:400,700');
 
-    wp_enqueue_style( 'fantastics-style', get_stylesheet_uri() );
+    wp_enqueue_style( 'fantastics-style', get_stylesheet_uri(), array(), '20170308' );
 
 	wp_enqueue_script( 'fantastics-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
