@@ -597,17 +597,7 @@ div{
     text-align:center;
 
   }
-  .index-side{
 
-    .widget{
-      opacity:0;
-
-
-
-
-
-    }
-  }
 }
 
 // all the sidebars
@@ -994,7 +984,7 @@ nav{
   max-width:1130px;
   margin:0 auto;
   .nav-links{
-min-height:65px;
+    min-height:65px;
     .nav-next{
 
       a:hover{
