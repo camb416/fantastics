@@ -19,10 +19,16 @@ footer#colophon{
 
 
   li{
+    vertical-align:top;
     display:inline-block;
-    margin:15px 15px 0 15px;
-    position:relative;
-    top:10px;
+    margin:10px 15px 0 15px;
+
+    > ul{
+      li{
+        display:block;
+        margin:0;
+      }
+    }
     a{
       color:#888;
       letter-spacing:0.1em;

@@ -70,7 +70,8 @@ $('.site-header').addClass('original').clone().insertAfter('#page').addClass('cl
 
         tumblrStretch();
 
-        $("#menu-footer-menu .menu-item a[href='/']").remove();
+        if($('body').hasClass("home") && !$('body').hasClass("paged"))
+            $("#menu-footer-menu .menu-item a[href='/']").closest("li").remove();
 
         // this matches the heights of the grid of stories...
 
