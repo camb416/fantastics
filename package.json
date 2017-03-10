@@ -1,0 +1,28 @@
+{
+  "name": "fantastics",
+  "version": "1.0.0",
+  "description": "Fantastics Wordpress Theme ===",
+  "main": "index.js",
+  "dependencies": {
+    "gulp-sass": "^3.1.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.6",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camb416/fantastics.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/camb416/fantastics/issues"
+  },
+  "homepage": "https://github.com/camb416/fantastics#readme"
+}

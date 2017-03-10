@@ -1,5 +1,6 @@
 <?php
 
+
 /**
 * FMAG_Widget_Latest_Focus
 *
@@ -68,16 +69,21 @@ class FMAG_Widget_Latest_Focus extends WP_Widget {
 
         if ($r->have_posts()) :
         ?>
-        <?php echo $before_widget; ?>
+        <?php
+
+            $before_widget =  $args['before_widget'];
+            $before_title =  $args['before_title'];
+            $after_title =  $args['after_title'];
+            echo $before_widget; ?>
 
         <?php
             //  display title
              if ( $title ) echo $before_title . $title . $after_title;
 
             ?>
-        <ul>
+        <ul class="focuswidget">
             <?php while ( $r->have_posts() ) : $r->the_post(); ?>
-                <li>
+
                     <?php
                     // working methods here:
                     // the_permalink()
@@ -98,15 +104,18 @@ class FMAG_Widget_Latest_Focus extends WP_Widget {
                     if ( $attachments ) {
                         foreach ( $attachments as $attachment ) {
                             echo '<li><a href="'.get_the_permalink().'">';
-                            echo wp_get_attachment_image( $attachment->ID, array(500,500) );
+                            echo wp_get_attachment_image( $attachment->ID, array(470,610) );
                             echo '</a></li>';
                         }
                     }
                     ?>
-                </li>
+
             <?php endwhile; ?>
         </ul>
-        <?php echo $after_widget; ?>
+        <?php
+            $after_widget = $args['after_widget'];
+
+            echo $after_widget; ?>
         <?php
         // Reset the global $the_post as this query will have stomped on it
         wp_reset_postdata();
@@ -196,7 +205,8 @@ class FMAG_Widget_Latest_Stories extends WP_Widget {
         ob_start();
         extract($args);
 
-        $title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Latest Stories' );
+        //$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Latest Stories' );
+        $title = $instance['title'];
         $title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
         $number = ( ! empty( $instance['number'] ) ) ? absint( $instance['number'] ) : 10;
 if ( ! $number )
@@ -216,7 +226,13 @@ if ( ! $number )
 
         if ($r->have_posts()) :
             ?>
-            <?php echo $before_widget; ?>
+            <?php
+
+            $before_widget =  $args['before_widget'];
+            $before_title =  $args['before_title'];
+            $after_title =  $args['after_title'];
+            $after_widget = $args['after_widget'];
+            echo $before_widget; ?>
 
             <?php
             //  display title
@@ -248,15 +264,28 @@ if ( ! $number )
                             'order' => 'ASC'
                         );
 
+                        $args = array(
+                            'post_type' => 'attachment',
+                            'posts_per_page' => -1,
+                            'post_parent' => get_the_ID(),
+                            'exclude'     => get_post_thumbnail_id(),
+                            'orderby'     => 'menu_order',
+                            'order'       => 'ASC'
+                        );
+
+
                         $attachments = get_posts( $args );
                         if ( $attachments ) {
-                            foreach ( $attachments as $attachment ) {
-                                echo '';
-                                echo wp_get_attachment_image( $attachment->ID );
-                                //echo '<p>';
-                                //echo apply_filters( 'the_title', $attachment->post_title );
-                                echo '';
+                            if(count($attachments)>1){
+                                for ( $i = 0; $i < 2;  $i++ ) {
+                                    echo '';
+                                    echo wp_get_attachment_image( $attachments[$i]->ID );
+                                    //echo '<p>';
+                                    //echo apply_filters( 'the_title', $attachment->post_title );
+                                    echo '';
+                                }
                             }
+
                         }
                         ?>
                         </li></a>
@@ -322,6 +351,16 @@ add_action( 'widgets_init', 'register_latest_stories_widget' );
 
 
 if (function_exists('register_sidebar')) {
+
+    register_sidebar(array(
+        'name'=> 'Cover Side',
+        'id' => 'cover_side',
+
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ));
 
     register_sidebar(array(
         'name'=> 'Index Intermission A',
@@ -392,6 +431,26 @@ if (function_exists('register_sidebar')) {
         'before_title' => '<h2 class="widget-title">',
         'after_title' => '</h2>',
     ));
+
+    register_sidebar(array(
+        'name'=> 'Global Footer',
+        'id' => 'global_footer',
+
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ));
+    register_sidebar(array(
+        'name'=> 'Holding Pattern',
+        'id' => 'holding_pattern',
+
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ));
+
 }
 
 
@@ -510,11 +569,16 @@ class FMAG_Widget_Latest_Covers extends WP_Widget {
         extract($args);
 
 $myterm = '';
+        $number = ( ! empty( $instance['number'] ) ) ? absint( $instance['number'] ) : 10;
+        if ( ! $number )
+            $number = 10;
+
         $postargs = array( 'posts_per_page' => $number,
             'no_found_rows' => true,
             'post_status' => 'publish',
             'ignore_sticky_posts' => true,
             'post_type' => 'fmag_cover',
+            'offset' => 1
 
 
         );
@@ -567,10 +631,16 @@ $myterm = '';
 
         if ($r->have_posts()) :
             ?>
-            <?php echo $before_widget; ?>
+            <?php
+            $before_widget =  $args['before_widget'];
+            $before_title =  $args['before_title'];
+            $after_title =  $args['after_title'];
+            // echo $before_widget;
+            ?>
 
             <?php
             //  display title
+            echo $args['before_widget'];
             if ( $title ) echo $before_title . $title . $after_title;
 
             ?>
@@ -607,11 +677,11 @@ $myterm = '';
                             $attachments = get_posts( $args );
                             if ( $attachments ) {
                                 foreach ( $attachments as $attachment ) {
-                                    echo '';
+                                    echo '<a href="'.get_the_permalink().'">';
                                     echo wp_get_attachment_image( $attachment->ID, 'full' );
                                     //echo '<p>';
                                     //echo apply_filters( 'the_title', $attachment->post_title );
-                                    echo '';
+                                    echo '</a>';
                                 }
                             }
                             ?>
@@ -670,3 +740,5 @@ function register_latest_covers_widget() {
 
 add_action( 'widgets_init', 'register_latest_covers_widget' );
 //////////////////
+
+

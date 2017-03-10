@@ -43,9 +43,14 @@ function fantastics_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary Menu', 'fantastics' ),
-	) );
+    register_nav_menus( array(
+        'primary' => esc_html__( 'Primary Menu', 'fantastics' ),
+        'sidebarfronttop' => esc_html__( 'Sidebar Front Top', 'fantastics' ),
+        'undercover' => esc_html__('Under Front Cover', 'fantastics')
+    ) );
+
+
+
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -129,28 +134,28 @@ function fantastics_scripts() {
 
     wp_enqueue_style( 'fantastics-fonts', 'https://fonts.googleapis.com/css?family=News+Cycle:400,700');
 
-    wp_enqueue_style( 'fantastics-style', get_stylesheet_uri() );
+    wp_enqueue_style( 'fantastics-style', get_stylesheet_uri(), array(), '20170308' );
 
 	wp_enqueue_script( 'fantastics-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'fantastics-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
-    wp_enqueue_script( 'fantastics-index', get_template_directory_uri() . '/js/fmag-index.js', array('jquery'), '20120206', true);
+    wp_enqueue_script( 'fantastics-index', get_template_directory_uri() . '/js/fmag-index.js', array('jquery'), '20170308', true);
 
 
     if ( is_singular('fmag_story')){
-        wp_enqueue_script( 'fantastics-single', get_template_directory_uri() . '/js/single-fmag_story.js', array('jquery'), '20130115', true );
+        wp_enqueue_script( 'fantastics-single', get_template_directory_uri() . '/js/single-fmag_story.js', array('jquery'), '20170308', true );
     }
     if(is_singular('fmag_cover')){
-    wp_enqueue_script( 'fantastics-single-cover', get_template_directory_uri() . '/js/single-fmag_cover.js', array('jquery'), '20130115', true );
+    wp_enqueue_script( 'fantastics-single-cover', get_template_directory_uri() . '/js/single-fmag_cover.js', array('jquery'), '20170308', true );
 
     }
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
     }
-    if(is_archive() || is_search()){
-        wp_enqueue_script('fantastics-archive',get_template_directory_uri() . '/js/archive.js', array('jquery'), '20161017', true);
+    if(is_archive() || is_search() || is_paged()){
+        wp_enqueue_script('fantastics-archive',get_template_directory_uri() . '/js/archive.js', array('jquery'), '20170308', true);
     }
 }
 
@@ -379,3 +384,19 @@ function my_connection_types() {
     ) );
 }
 add_action( 'p2p_init', 'my_connection_types' );
+
+
+// override posts per page on archive tag pages
+function fmag_tag_posts_per_page( $query ) {
+    if( $query->is_archive() && $query->is_main_query()) {
+        $query->set( 'posts_per_page', 12 );
+    }
+}
+add_action( 'pre_get_posts', 'fmag_tag_posts_per_page' );
+
+// allow newline in widget title
+function fmag_widget_title( $title ) {
+    $title = str_replace( '\n', '<br/>', $title );
+    return $title;
+}
+add_filter( 'widget_title', 'fmag_widget_title' );

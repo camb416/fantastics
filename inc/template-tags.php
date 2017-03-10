@@ -13,7 +13,7 @@ if ( ! function_exists( 'posts_navigation' ) ) :
  *
  * @todo Remove this function when WordPress 4.3 is released.
  */
-function posts_navigation() {
+function posts_navigation($is_index = false) {
 	// Don't print empty markup if there's only one page.
 	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
 		return;
@@ -25,10 +25,13 @@ function posts_navigation() {
 
 
             <?php if ( get_previous_posts_link() ) : ?>
-                <div class="nav-previous"><?php previous_posts_link( '<i class="fa fa fa-long-arrow-left"></i>More That Way' ); ?></div>
+                <div class="nav-previous"><?php previous_posts_link( 'More That Way' ); ?></div>
             <?php endif; ?>
-			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-next"><?php next_posts_link( 'More This Way<i class="fa fa fa-long-arrow-right"></i>' ); ?></div>
+			<?php if ( get_next_posts_link() ) :
+				?>
+				<?php
+				$is_index  ? $textToUse = 'More Features' : $textToUse = 'More This Way'; ?>
+				<div class="nav-next"><?php next_posts_link( $textToUse ); ?></div>
 			<?php endif; ?>
 
 

@@ -16,29 +16,73 @@
 
 aside{
 
-  h2.widget-title{
-    text-align:left;
-    font-size:90%;
-    margin-bottom:0;
-    text-transform:uppercase;
-    letter-spacing:0.1em;
-  }
 
-  ul{
+ul{
+  margin:0;
+  padding:0;
+  li{
     margin:0;
     padding:0;
 
+  }
+}
+
+
+  /*
+  ul.covers{
+    margin:0;
+    padding:0;
+
+    text-align:center;
+
     li{
       list-style: none;
-      margin:5px;
+      overflow: hidden;
+
+      max-width: 100%;
+      margin: 0 auto 0 auto;
+      // height: 230px;
+      // width:230px;
+      overflow:hidden;
+      // border: 50px solid #DDD;
+
+
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+
+        opacity:0.7;
+
+
+      &:hover{
+        margin-top:0;
+          border:0px solid #DDD;
+          outline-offset: -1px;
+          color: inherit;
+          opacity:1.0;
+
+
+      }
+
+
+
+
+      img{
+        // margin-top:-50px;
+
+        &:hover{
+
+        }
+      }
+
     }
 
   }
+  */
 
 }
 
 div#secondary{
-  border-top:1px solid silver;
+ // border-top:1px solid silver;
 }
 
 ////////////////////////////////////
@@ -80,16 +124,17 @@ div.intermission-outer{
 ////////////////////////////////////
 
 aside.widget_latest_focuscover{
-  width:330px;
-  margin:2rem auto 2rem auto;
+ // width:330px;
   @media screen and (max-width: $break-large) {
     margin:0 auto;
     float:none;
   }
 
   ul{
-    margin:0;
-    padding:0;
+    margin: 0;
+    background: #DDD;
+    padding: 65px;
+    margin: 10px;
 
     li{
       list-style: none;
@@ -103,7 +148,7 @@ aside.widget_latest_focuscover{
         transition: all .2s ease-in-out;
         -webkit-transform: translateY(0);
         transform: translateY(0);
-        max-width:330px;
+
 
       }
       &:hover{
@@ -122,48 +167,21 @@ aside.widget_latest_focuscover{
 
   }
 
-  h2.widget-title {
-    margin:0;
-    padding:0;
-    background: url(http://fantasticsmag.com/sites/all/themes/fmag2014/images/focus-flash-bold.png);
-    background-position: 5px 5px;
-    text-indent: -3000px;
-    background-repeat: no-repeat;
-    font-size: 2em;
-    padding: 5px;
-    overflow: hidden;
-    text-transform: lowercase;
-    letter-spacing: 0em;
-    text-align: left;
-    font-weight: 400;
-    color: #bbb;
-  }
 
 }
-// ads underneath Focus Cover
-.secondary{
 
-  .widget_text{
-    text-align:center;
-
-    &:nth-child(2) {
+.index-side{
+  .widget_text {
+    text-align: center;
+    .textwidget{
       text-align:left;
-      
-    }
-
-    border: 1px dashed #eee;
-    padding:10px;
-    @media screen and (max-width: $break-large) {
-      display:none;
-    }
-
-    h2 {
-      margin: 2px 5px;
-      text-align:center;
-      color: #FFF;
     }
   }
 }
+
+
+
+
 
 ////////////////////////////////////
 
@@ -274,7 +292,7 @@ aside.widget_latest_stories{
   width:1096px;
   max-width:100%;
 
-  margin:0 auto !important;
+  margin: 60px auto 0 auto !important;
   ul{
     li{
       display:inline-block;
@@ -303,19 +321,19 @@ aside.widget_latest_stories{
       }
       &:hover{
         cursor:pointer;
-        border:4px solid grey;
+        border:4px solid #000;
         &.active{
           border:4px solid black;
         }
         img{
-          width:196px;
-          height:248px;
+          width:118px;
+          height:153px;
 
 
-          top:-72px !important;
+          top:-10% !important;
           left:50% !important;
           &:first-of-type{
-            left:-50% !important;
+            left:-10% !important;
           }
         }
       }
@@ -349,56 +367,292 @@ aside.widget_latest_stories{
 ////////////////////////////////////
 
 .index-side{
-  margin:45px 0;
-  width:470px;
-  overflow:hidden;
-  // border:1px solid #aaa;
-  height:1004px;
+  margin: 0;
+  width: 330px;
+  overflow: hidden;
   padding: 0;
-  position:relative;
+  position: relative;
+
+  @media screen and (max-width: $break-large) {
+    margin:0 auto;
+    float:none;
+  }
+
+
+  &:hover{
+    p.caption{
+      visibility:visible;
+    }
+    .also{
+
+        filter:none;
+        border:0px solid #DDD;
+
+
+    }
+  }
+/*
+  .also{
+    position:relative;
+    display:block;
+    //height:950px;
+    width:100%;
+    overflow:hidden;
+    margin:0 auto 0 auto;
+    border:50px solid #DDD;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    filter: grayscale(100%);
+
+
 
   img{
-    max-width:none;
-    position:absolute;
-    left:-50%;
-    height:100%;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+   // max-width:none;
+    //position:absolute;
+    // left:-200%;
+    //margin-top:-50px;
+    //height:100%;
 
-    // black and white
-    // filter: grayscale(100%);
-    // -webkit-filter: grayscale(100%);
+   // opacity:0.5;
 
-    // blurry
-    // -webkit-filter: blur(11px);
-    // filter: blur(11px);
+
+
+
   }
-  p{
+
+
+
+
+
+
+
+  }
+  */
+  /*
+  p.caption{
     text-align:center;
-    position:absolute;
-    bottom:40px;
-    background:rgba(0,0,0,0.5);
-    color:#FFF;
-    padding:20px;
+    bottom:0px;
+    color:#333;
+    font-size:0.8rem;
+    visibility:hidden;
+
+
+    margin:0;
+    padding:0;
     width:100%;
-    left:0;
+
+    position:relative;
+
+
 
 
     a{
-      color:#FFF;
+      color:#000;
+      border-bottom: 5px solid #000;
+      font-style:normal !important;
       text-transform:uppercase;
-      letter-spacing:1em;
-      margin-right: -1em;
+
       &:hover{
-        color:#FFF;
+        border-bottom-color:#68F;
+        color: #68F;
+        text-decoration:none;
         background:none;
       }
     }
   }
-  h2{
-    margin:2px 5px;
-    color:#777;
-
-  }
+  */
 }
 
 
 ////////////////////////////////////
+
+.textwidget{
+  p{
+    letter-spacing: 0.02rem;
+    padding:0 10px 0 10px;
+    font-size:0.8rem;
+  }
+
+}
+.widget_latest_covers{
+
+  margin:0;
+  overflow:hidden;
+  text-align:center;
+  padding:0;
+li{
+  overflow:hidden;
+  //img {
+  //
+  //  -webkit-transition: all .2s ease-in-out;
+  //  transition: all .2s ease-in-out;
+  //  -webkit-transform: translateY(0);
+  //  transform: translateY(0);
+  //  opacity:0.7;
+  //
+  //}
+  //&:hover{
+  //  img{
+  //    -webkit-transform: translateY(50px);
+  //    transform: translateY(50px);
+  //    outline-offset: -1px;
+  //    color: inherit;
+  //    opacity:1.0;
+  //
+  //  }
+  //}
+
+}
+
+}
+
+.primary{
+  .footerlogo{
+    float:left;
+    width: 120px;
+    height: 24px;
+    background-size: 120px 24px;
+    margin-bottom:0px;
+
+  }
+}
+
+.menu-under-front-cover-menu-container{
+  float:right;
+  ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+    li{
+      display:inline;
+      padding:0px 10px;
+    }
+  }
+}
+.dazed{
+  border:1px solid #000;
+padding-top:20px;
+  min-height:590px;
+
+  &.widget_latest_covers{
+    min-height:570px;
+  }
+
+  img{
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    padding:30px;
+    opacity:0.7;
+    &:hover{
+      padding:0;
+      opacity:1;
+    }
+  }
+  h2{
+    font-size: 3rem;
+    line-height:3rem;
+    text-align:right;
+    color:#000;
+    text-align:center;
+
+    @include cgef();
+    margin:0;
+    padding:0.5rem 0.5rem 0 0;
+  }
+
+  p.caption{
+    text-align:center;
+    bottom:0px;
+    color:#333;
+    font-size:0.8rem;
+    margin: 0 0 1rem 0;
+
+
+    padding:0;
+    width:100%;
+
+    position:relative;
+
+
+
+
+    a{
+      color:#000;
+      // border-bottom: 5px solid #000;
+      font-style:normal !important;
+      text-transform:uppercase;
+
+      &:hover{
+        border-bottom-color:#68F;
+        color: #68F;
+        text-decoration:none;
+        background:none;
+      }
+    }
+  }
+
+
+}
+
+/*
+// content of text widget for follow option A
+[instagram-feed]
+<section>
+<h5 class="cgef">Follow.</h5>
+<ul>
+<li><a href="https://www.instagram.com/fantastics/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i>fantastics</a></li>
+<li><a href="https://twitter.com/fantasticsmag?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa fa-twitter" aria-hidden="true"></i>fantasticsmag</a></li>
+<li><a href="https://twitter.com/fantasticsmag?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa fa-facebook-square" aria-hidden="true"></i>fantastics</a></li>
+</ul>
+</section>
+
+ */
+
+.instagram{
+
+  max-width:1130px;
+  margin:0 auto;
+
+  #sbi_load{
+    padding-top:0 !important;
+  }
+  section{
+    background:#000;
+    overflow:hidden;
+    padding:10px;
+    min-height:100px;
+  }
+  h5{
+    color: #fff;
+    font-size:3rem;
+    padding:0;
+    margin:0;
+    font-weight:normal;
+  }
+  ul{
+
+  }
+  li{
+
+    letter-spacing:0.1rem;
+    color:#fff;
+    list-style:none;
+    display:inline;
+    margin:0 20px 0 0;
+
+    a{
+      top:-0.25rem;
+      position:relative;
+      display:inline-block;
+      font-size: 1.0rem;
+      color:#fff;
+      text-transform:uppercase;
+      i{
+        margin-right:0.2em;
+      }
+    }
+  }
+
+}

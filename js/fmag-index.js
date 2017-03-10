@@ -1,6 +1,28 @@
 (function($){
 
 
+    // Losing sidebar schtick...
+    // /* Every time the window is scrolled ... */
+    // $(window).scroll( function(){
+    //
+    //     /* Check the location of each desired element */
+    //     $('.index-side .widget').each( function(i){
+    //
+    //         var middle_of_object = $(this).offset().top + $(this).outerHeight()/2;
+    //         var bottom_of_window = $(window).scrollTop() + $(window).height();
+    //
+    //         /* If the object is completely visible in the window, fade it it */
+    //         if( bottom_of_window > middle_of_object ){
+    //             console.log($(this));
+    //             $(this).animate({'opacity':'1'},500);
+    //
+    //         }
+    //
+    //     });
+    //
+    // });
+
+
     function stickIt() {
 
         var orgElementPos = $('.original').offset();
@@ -36,17 +58,28 @@ if($('body').hasClass('home')){
 // Create a clone of the menu, right next to original.
 $('.site-header').addClass('original').clone().insertAfter('#page').addClass('cloned').css('position','fixed').css('top','0').css('margin-top','0').css('z-index','500').removeClass('original').hide();
 
-    scrollIntervalID = setInterval(stickIt, 10);
+    // scrollIntervalID = setInterval(stickIt, 10);
 
 
 
 
 
     $('document').ready(function(){
-        console.log('document ready');
+
         sidebarStretch();
 
         tumblrStretch();
+
+        $("#menu-footer-menu .menu-item a[href='/']").remove();
+
+        // this matches the heights of the grid of stories...
+
+        var stories = $('.six-up .fmag_story');
+        var tallest = 0;
+        for(var i=0;i<stories.length;i++){
+            if($(stories[i]).height() > tallest) tallest = $(stories[i]).height();
+        }
+        $('.six-up .fmag_story').height(tallest);
 
     });
 
@@ -73,7 +106,7 @@ function tumblrStretch(){
             var firstHeight = articleArray.eq(0).height();
             var secondHeight = articleArray.eq(1).height();
 
-            $('.index-side').eq(i).css('height',firstHeight + secondHeight + 35);
+           // $('.index-side').eq(i).css('height',firstHeight + secondHeight + 35);
 
             // for testing
             // console.log("first: " + firstHeight);

@@ -84,7 +84,7 @@
             </div><!-- .entry-meta -->
         <?php endif; ?>
 
-        <ul class="minispreads">
+        <!--ul class="minispreads">
             <?php
 
 
@@ -111,10 +111,10 @@
             }
 
             ?>
-        </ul>
+        </ul -->
         <?php
-        if($numPages>8){
-            echo('<a class="morepages" href="'.esc_url( get_permalink() ).'">' . ($numPages-8) .' more pages...</a>');
+        if($numPages>2){
+            echo('<a class="morepages" href="'.esc_url( get_permalink() ).'"><em>View all ' . ($numPages) .' pages</em><i class="fa fa fa-long-arrow-right"></i></a>');
         } else {
             echo('<a class="morepages" href="'.esc_url( get_permalink() ).'">view story...</a>');
         }
@@ -134,3 +134,4 @@
 		<?php fantastics_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
+

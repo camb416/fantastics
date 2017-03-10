@@ -1,8 +1,31 @@
-$bgcolor: #ddd;
+$bgcolor: #FFF;
 
 $break-small: 480px;
 $break-medium: 768px;
 $break-large: 1230px;
+
+
+
+@mixin cgef(){
+  font-family:'CGEF',Helvetica, Arial,sans-serif;
+}
+
+@mixin bigblackbottom(){
+  border-bottom:100px solid #000;
+}
+
+
+@font-face {
+  font-family: 'CGEF';
+  src: url('fonts/CGEF.eot');
+  src: local('☺'), url('fonts/CGEF.woff') format('woff'), url('fonts/CGEF.ttf') format('truetype'), url('fonts/CGEF.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.cgef{
+ @include cgef();
+}
 
 
 body{
@@ -29,12 +52,12 @@ div.site-branding{
 
 
 p > a{
-  padding: 0px 5px;
+ // padding: 0px 5px;
 }
 
 a{
-  text-transform:uppercase;
-  font-size:90%;
+ //  text-transform:uppercase;
+
   text-decoration:none;
   letter-spacing:0.05em;
   font-weight:700;
@@ -50,8 +73,8 @@ a{
     //color:#fff;
     //background:#000;
 
-    text-decoration:line-through;
-    color:#FFF;
+    text-decoration:underline;
+    color:#68F;
   }
 }
 

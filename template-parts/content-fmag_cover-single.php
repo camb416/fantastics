@@ -14,6 +14,8 @@
         <?php
         $bigcover = get_queried_object();
         $coverid = $post->ID;
+        $storyLink = "/";
+
 
         if($bigcover === null){
             $bigcover = get_post(get_the_ID());
@@ -33,11 +35,12 @@
         <?php while ( $connected->have_posts() ) : $connected->the_post();
 
         $storyLink = get_the_permalink();
+
         endwhile;
         endif;
 
         if(is_single()) wp_reset_postdata();
-
+        if(is_archive()) $storyLink = "/";
         ?>
 
         <?php
@@ -56,7 +59,8 @@
                 $attachment = $attachments[0];
                 $class = "post-attachment mime-" . sanitize_title( $attachment->post_mime_type );
 
-                $img = wp_get_attachment_image( $attachment->ID, 'thumbnail-size', true );
+                $img = wp_get_attachment_image( $attachment->ID, array(850,1100), true );
+
           echo '<a class="coverlink" href="'.esc_url( $storyLink ).'">';
                 echo ''.$img.'';
 
@@ -82,3 +86,4 @@
         <?php fantastics_entry_footer(); ?>
     </footer><!-- .entry-footer -->
 </article><!-- #post-## -->
+

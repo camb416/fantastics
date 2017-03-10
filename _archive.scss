@@ -4,7 +4,7 @@
 
 
 
-body.archive, body.search{
+body.archive, body.search, body.paged{
 
   a.frontlink{
     float:left;
@@ -12,36 +12,58 @@ body.archive, body.search{
     padding: 50px 20px 0 10px;
   }
 
+  .coverslug{
+    width:200px;
+    position:absolute;
+    z-index:10;
+    top:0px;
+    left:20px;
+  }
 
 header.page-header{
-  float:left;
+  margin: 0 auto;
+  position:relative;
   width: 1200px;
+
+  position:relative;
+  clear:none;
+
+  .category-identifier{
+    padding:110px 0 0 240px;
+    text-transform:uppercase;
+    letter-spacing:0.3rem;
+    font-size:0.6rem;
+  }
+
 
   h1.page-title{
 
-    text-transform: uppercase;
-    letter-spacing: 0.3em;
-    font-size: 1.5rem;
-    color: #fff;
-    background: #000;
+    margin:0;
+    padding:0 0 0 240px;
+    text-transform:capitalize;
+    color: #000;
+    border-bottom: 100px solid #000;
+    // background: #000;
     // max-width: 1280px;
-    padding: 0 0 15px 15px;
-    margin: 30px auto 0px auto;
+    @include cgef();
+    font-size: 3rem;
+    letter-spacing: -.1rem;
 
-    &:before{
 
-      background-image: url("images/masthead_white.png");
-      background-size: auto 100%;
-      display: inline-block;
-      width: 10.5rem;
-      height: 2rem;
-      background-repeat: no-repeat;
-      background-position-y: 0.2rem;
-      opacity: 0.9;
-      content: "";
-      margin-top: 0.4rem;
-
-    }
+    //&:before{
+    //
+    //  background-image: url("images/masthead.png");
+    //  background-size: auto 100%;
+    //  display: inline-block;
+    //  width: 10.5rem;
+    //  height: 2rem;
+    //  background-repeat: no-repeat;
+    //  background-position-y: 0.2rem;
+    //  opacity: 0.9;
+    //  content: "";
+    //  margin-top: 0.4rem;
+    //
+    //}
   }
 }
 
@@ -52,6 +74,24 @@ header.page-header{
   }
 
 
+  div.archive-stories{
+      margin: 0 auto;
+
+    max-width:1187px;
+
+    div.fmag_story{
+      width:375px;
+      margin: 10px;
+      overflow:hidden;
+      float:left;
+      height:360px;
+    }
+    nav{
+      width:100%;
+      margin: 0 auto;
+    }
+  }
+
   div.archive-sidebar{
 
     @media screen and (max-width: $break-small) {
@@ -60,13 +100,14 @@ header.page-header{
 
     // background:#fff;
     width:300px;
-    height:5280px;
+    // height:5280px;
     float:left;
     margin-left:150px;
     z-index:-1;
-    position:absolute;
+
 
     .widget_latest_covers{
+
       h2{
         display:none;
       }
@@ -74,6 +115,7 @@ header.page-header{
       padding: 0;
       ul.covers{
         margin:10px;
+
         li{
           width:400px;
           float:left;
