@@ -470,10 +470,7 @@ body.search{
   nav#site-navigation{
 
   }
-  hr{
-    margin:1.5rem auto;
-    width:50%;
-  }
+
   .nav-links{
 
 
@@ -515,7 +512,8 @@ a.footerlogo{
   background-size: 180px 36px;
   display:inline-block;
   text-indent:-1000%;
-margin:2rem;
+  margin:2rem 0 2rem 0rem;
+
 //  width:100%;
 }
 
@@ -1083,4 +1081,9 @@ nav{
   margin: 30px auto 0 auto;
   overflow: hidden;
 
+}
+
+hr{
+  margin:1.5rem auto;
+  width:50%;
 }

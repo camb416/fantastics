@@ -22,7 +22,7 @@
 			<span class="sep"> | </span>
 			<?php // printf( esc_html__( 'Theme: %1$s by %2$s.', 'fantastics' ), 'fantastics', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
 		</div><!-- .site-info -->
-
+            <a class="footerlogo" href="<?php echo site_url(); ?>" rel="home">Fantastics</a>
 			<?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
 
             <form role="search" method="get" class="search-form" action="/">
@@ -33,7 +33,7 @@
                 <input type="submit" class="search-submit" value="Search">
             </form>
 
-            <a class="footerlogo" href="<?php echo site_url(); ?>" rel="home">Fantastics</a>
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

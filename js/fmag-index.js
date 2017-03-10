@@ -70,6 +70,8 @@ $('.site-header').addClass('original').clone().insertAfter('#page').addClass('cl
 
         tumblrStretch();
 
+        $("#menu-footer-menu .menu-item a[href='/']").remove();
+
         // this matches the heights of the grid of stories...
 
         var stories = $('.six-up .fmag_story');

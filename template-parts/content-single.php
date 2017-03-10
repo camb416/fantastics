@@ -237,4 +237,4 @@
 		<?php fantastics_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
-
+<hr />
