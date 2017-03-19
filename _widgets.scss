@@ -685,10 +685,7 @@ padding-top:20px;
 
   }
   .sbi_item {
-    height: 200px;
-    > div{
-      top: -50%;
-    }
+
     overflow:hidden;
     &:nth-child(n+4) {
       display: none !important;
