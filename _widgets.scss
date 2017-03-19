@@ -610,11 +610,12 @@ padding-top:20px;
 
  */
 
-.instagram{
 
+
+
+.instagram{
   max-width:1130px;
   margin:0 auto;
-
   #sbi_load{
     padding-top:0 !important;
   }
@@ -655,4 +656,39 @@ padding-top:20px;
     }
   }
 
+}
+
+// only show 4 items on mobile
+@media screen and (max-width: $break-small) {
+  .instagram{
+    margin:10px;
+    border:1px solid #000;
+    padding:10px;
+    width: 330px;
+    margin:0 auto;
+
+    section{
+      background: #fff;
+      overflow: hidden;
+      padding: 10px;
+      min-height: 100px;
+      h5, a{
+        color: #000;
+      }
+      a{
+        margin:10px;
+      }
+
+    }
+  }
+  .sbi_item {
+    height: 200px;
+    > div{
+      top: -50%;
+    }
+    overflow:hidden;
+    &:nth-child(n+4) {
+      display: none !important;
+    }
+  }
 }
