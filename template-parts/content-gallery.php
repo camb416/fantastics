@@ -100,7 +100,7 @@
                             while ($r2->have_posts()) {
                                 $r2->the_post();
 
-                                get_template_part('template-parts/content', 'fmag_cover-single');
+                                get_template_part('template-parts/content', 'fmag_cover-slug');
 
 
                             }
