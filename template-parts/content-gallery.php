@@ -70,7 +70,7 @@
                                                             }
                                                         }
                                                         */
-                            get_template_part( 'template-parts/content', 'fmag_cover-single' );
+                            get_template_part( 'template-parts/content', 'fmag_cover-slug' );
 
 
 
