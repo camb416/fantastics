@@ -1,9 +1,17 @@
 // terms page
-body.page{
-  .entry-content{
+body.page .entry-content,
+body.error404 .page-content{
     margin: 1.5em 0 0;
     border-left: 2px solid #ddd;
     border-right: 2px solid #ddd;
     padding: 0 40px;
-  }
+}
+body.error404 section.error-404{
+  max-width:900px;
+  margin: 20px auto 0;
+}
+
+
+body.page, body.error404{
+  margin:30px;
 }
