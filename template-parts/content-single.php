@@ -150,7 +150,7 @@
                     if($i<2){
                         $class .= " active";
                     }
-                    $thumbimg = wp_get_attachment_image( $attachment->ID, 'thumbnail-size', true );
+                    $thumbimg = wp_get_attachment_image( $attachment->ID, array(118,153), true );
                     if(0 === $i%2) echo '<li class="' . $class . ' data-design-thumbnail">';
                     echo $thumbimg;
                     if(0 !== $i%2) echo '</li>';
@@ -184,7 +184,7 @@
                         for ( $i = 0; $i < 2 ; $i++) {
                             $attachment = $nextattachments[$i];
                             $class = "post-attachment mime-" . sanitize_title( $attachment->post_mime_type );
-                            $thumbimg = wp_get_attachment_image( $attachment->ID, 'thumbnail-size', true );
+                            $thumbimg = wp_get_attachment_image( $attachment->ID, array(118,153), true );
                             if(0 === $i%2) echo '<li class="' . $class . ' data-design-thumbnail">';
                             echo $thumbimg;
                             if(0 !== $i%2) echo '</li>';
@@ -213,7 +213,7 @@
                         for ( $i = 0; $i < 2 ; $i++) {
                             $attachment = $prevattachments[$i];
                             $class = "post-attachment mime-" . sanitize_title( $attachment->post_mime_type );
-                            $thumbimg = wp_get_attachment_image( $attachment->ID, 'thumbnail-size', true );
+                            $thumbimg = wp_get_attachment_image( $attachment->ID, array(118,153), true );
                             if(0 === $i%2) echo '<li class="' . $class . ' data-design-thumbnail">';
                             echo $thumbimg;
                             if(0 !== $i%2) echo '</li>';
