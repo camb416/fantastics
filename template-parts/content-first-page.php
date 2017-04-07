@@ -7,8 +7,7 @@
  */
 
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-
-
+global $pagewidth, $pageheight;
 
 
 ///////////////////////////////////////////////////
@@ -198,6 +197,8 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
         <?php /* Start the Loop */
         $i = 0;
+        $pagewidth = 565;
+        $pageheight = 731;
 
         ?>
 
@@ -263,6 +264,9 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             echo '<div class="primary">';
             // echo ' <h2 class="cgef">Latest</h2>';
             echo '<div class="storyroll">';
+
+            $pagewidth =395;
+            $pageheight =511;
 
         } elseif($i === 4 && 1 == $paged){
             // close story roll
@@ -344,6 +348,8 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             //echo ' <h2 class="cgef">Latest</h2>';
             // open the story roll
             echo '<div class="storyroll six-up">';
+            $pagewidth = 178;
+            $pageheight = 230;
         }
 
         ?>

@@ -6,8 +6,6 @@
  *
  * @package fantastics
  */
-
-
 ?>
 
 <article id="post-<?php the_ID();?>" <?php post_class(); ?>>
@@ -44,7 +42,12 @@
                     if($i>=2){
                         $class .= " hidden";
                     }
-                    $thumbimg = wp_get_attachment_image( $attachment->ID, 'thumbnail-size', true );
+                    if($GLOBALS["pagewidth"] !== null && $GLOBALS["pageheight"] !== null){
+                        $args = array($GLOBALS["pagewidth"], $GLOBALS["pageheight"]);
+                    } else {
+                        $arge = array();
+                    }
+                    $thumbimg = wp_get_attachment_image( $attachment->ID, $args, true );
                     if(0 === $i%2) echo '<li class="' . $class . ' data-design-thumbnail"><a href="'.esc_url( get_permalink() ).'">';
                     echo ''.$thumbimg;
                     if(0 !== $i%2) echo '</a></li>';
