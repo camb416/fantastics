@@ -6,6 +6,10 @@
  * Time: 3:43 PM
  */
 
+global $pagewidth, $pageheight;
+$pagewidth = 188;
+$pageheight = 243;
+
 ?>
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
