@@ -25,7 +25,9 @@ add_filter('posts_orderby', 'group_by_post_type', 2, 2);
  */
 function SearchFilter($query) {
     if ($query->is_search) {
-        $query->set('post_type', array('fmag_story', 'fmag_cover'));
+        // re-add fmag_cover in this array to have covers come up in searches
+        // note that the above group_by_post_type method puts covers at the end if you do this
+        $query->set('post_type', array('fmag_story'));
     }
     return $query;
 }
