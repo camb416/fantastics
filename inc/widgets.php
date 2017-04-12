@@ -627,7 +627,6 @@ $myterm = '';
         $r = new WP_Query( apply_filters( 'widget_posts_args',
             $postargs ) );
 
-        // var_dump($r);
 
         if ($r->have_posts()) :
             ?>
@@ -688,6 +687,7 @@ $myterm = '';
                         </li><!--/a -->
                 <?php endwhile; ?>
             </ul>
+            <p class="caption"><a href="/covers">View All Covers</a></p>
             <?php echo $after_widget; ?>
             <?php
 // Reset the global $the_post as this query will have stomped on it
