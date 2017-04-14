@@ -478,6 +478,10 @@ aside.widget_latest_stories{
 }
 .widget_latest_covers{
 
+  @media screen and (max-width: $break-medium) {
+    display:none;
+  }
+
   margin:0;
   overflow:hidden;
   text-align:center;
