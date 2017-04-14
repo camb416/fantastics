@@ -127,9 +127,9 @@ $pageheight = 243;
                     $cat_identifier = "Seach Results";
                     //$cat_identifier = get_search_query();
                 } else if(is_archive()){
-                    $cat_identifier = "Archive";
+                    $cat_identifier = "Gallery";
                 } else if(is_paged()){
-                    $cat_identifier = "Listing"; // display nothing if you get there via "more stories"
+                    $cat_identifier = "Gallery"; // display nothing if you get there via "more stories"
                 }
                 ?>
 
