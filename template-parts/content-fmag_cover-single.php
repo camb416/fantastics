@@ -77,9 +77,9 @@
 
 	</header><!-- .entry-header -->
 
-<?php if(is_front_page()): ?>
-<p class="caption">Frontpage Big Cover caption goes here (but left aligned.) <a href="#">The link will look like this.</a></p>
-<?php endif; ?>
+<?php // if(is_front_page()): ?>
+<?php // <p class="caption">Frontpage Big Cover caption goes here (but left aligned.) <a href="#">The link will look like this.</a></p>
+//<?php // endif; ?>
 
 
     <footer class="entry-footer">
