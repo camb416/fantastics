@@ -184,15 +184,14 @@ body.search{
 
     @media screen and (max-width: $break-small) {
 
-      &::after {
-        content: '';
-        position: absolute;
-        width: 50%;
-        left:25%;
+      //&::after {
+      //  content: '';
+      //  position: absolute;
+      //  width: 50%;
+      //  left:25%;
+      //  border-top: 1px solid #aaa;
+      //}
 
-        border-bottom: 1px solid #aaa;
-
-      }
     }
 
     //  background-image:url(images/right-to-left-01.bowtie);
@@ -255,7 +254,7 @@ body.search{
         @media screen and (max-width: $break-small) {
           width:auto;
           margin: 0 0 40px 0;
-          padding: 0 0 0 15px;
+          padding: 5px;
           // background:rgba(255,255,255,0.5);
           height:auto;
           position:relative;
@@ -473,11 +472,12 @@ body.search{
 
   .nav-links{
 
-
+    line-height:2.25rem;
     overflow:hidden;
+    margin-bottom:0.5rem;
     .nav-previous, .nav-next{
       font-size:2rem;
-
+padding:10px;
 
       a{
 
@@ -1027,7 +1027,7 @@ nav{
       height:100%;
       @include cgef();
       text-transform:none;
-      font-size:2.5rem;
+      font-size:2.25rem;
       letter-spacing:-.1rem;
       padding-right:1px;
       &:hover{

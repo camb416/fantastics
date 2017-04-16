@@ -18,21 +18,33 @@ body.archive, body.search, body.paged{
     z-index:10;
     top:0px;
     left:20px;
+
+    @media screen and (max-width: $break-small) {
+      width:25%;
+    }
+
   }
 
 header.page-header{
   margin: 0 auto;
   position:relative;
   width: 1200px;
-
   position:relative;
   clear:none;
+  max-width:100%;
+
+
 
   .category-identifier{
     padding:110px 0 0 240px;
     text-transform:uppercase;
     letter-spacing:0.3rem;
     font-size:0.6rem;
+
+    @media screen and (max-width: $break-small) {
+      padding:20px 0 0 120px;
+    }
+
   }
 
 
@@ -48,6 +60,10 @@ header.page-header{
     @include cgef();
     font-size: 3rem;
     letter-spacing: -.1rem;
+
+    @media screen and (max-width: $break-small) {
+      padding:0 0 0 120px;
+    }
 
 
     //&:before{
@@ -85,6 +101,12 @@ header.page-header{
       overflow:hidden;
       float:left;
       height:360px;
+
+      @media screen and (max-width: $break-small) {
+        width: 100%;
+        margin: 0;
+      }
+
     }
     nav{
       width:100%;
