@@ -1066,8 +1066,22 @@ nav{
     overflow: hidden;
     float: left;
     min-height:340px;
+
+    @media screen and (max-width: $break-small) {
+      width:44%;
+      height:102px !important;
+      min-height:0;
+      margin:10px;
+      padding:0;
+      float:left;
+    }
+
     .entry-header{
       text-align:left;
+      @media screen and (max-width: $break-small) {
+        display:none;
+      }
+
     }
   }
 
