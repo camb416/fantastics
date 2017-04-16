@@ -645,12 +645,7 @@ div{
   h2{
     display:none;
   }
-  ins{
-    // messing with this might mess up the google ad
-    // rendering...
-    background:#FFF;
-    // text-align:center;
-  }
+
 }
 
 // story rolls
@@ -1086,4 +1081,11 @@ nav{
 hr{
   margin:1.5rem auto;
   width:50%;
+}
+
+ins{
+  // messing with this might mess up the google ad
+  // rendering...
+  background:#FFF;
+  // text-align:center;
 }
