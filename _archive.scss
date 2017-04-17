@@ -89,12 +89,27 @@ header.page-header{
 
   }
 
-
   div.archive-stories{
       margin: 0 auto;
 
     max-width:1187px;
 
+    article.fmag_cover{
+      width:375px;
+      margin: 0px;
+      overflow:hidden;
+      float:left;
+      @media screen and (max-width: $break-small) {
+        width: 100%;
+        margin: 0;
+        pading:0;
+        height:auto;
+      }
+      img{
+        display:block;
+      }
+
+    }
     div.fmag_story{
       width:375px;
       margin: 10px;
