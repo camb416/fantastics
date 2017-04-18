@@ -264,26 +264,18 @@ require get_template_directory() . '/inc/jetpack.php';
 
 
 // TODO: don't remember starting this. Should remove I think...
-function fmag_img($img, $w, $h=""){
-
-    $prefix = "http://i0.wp.com/fantasticsapp.com";
-    // lets check and make sure photon is on and we're not in debug
-    if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'photon' ) && !defined('JETPACK_DEV_DEBUG') ) { // check that we are, in fact, using Photon in the first place
-        return $prefix . $img . "?w=" . $w;
-
-    } else {
-        return $img;
-
-    }
-
-
-
-
-
-
-
-    return "hello, world";
-}
+//function fmag_img($img, $w, $h=""){
+//
+//    $prefix = "http://i0.wp.com/fantasticsapp.com";
+//    // lets check and make sure photon is on and we're not in debug
+//    if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'photon' ) && !defined('JETPACK_DEV_DEBUG') ) { // check that we are, in fact, using Photon in the first place
+//        return $prefix . $img . "?w=" . $w;
+//
+//    } else {
+//        return $img;
+//
+//    }
+//}
 
 /* === Add Thumbnails to Posts/Pages List === */
 if ( !function_exists('o99_add_thumbs_column_2_list') && function_exists('add_theme_support') ) {
