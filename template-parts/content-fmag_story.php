@@ -45,7 +45,7 @@
                     if($GLOBALS["pagewidth"] !== null && $GLOBALS["pageheight"] !== null){
                         $args = array($GLOBALS["pagewidth"], $GLOBALS["pageheight"]);
                     } else {
-                        $arge = array();
+                        $args = array();
                     }
                     $thumbimg = wp_get_attachment_image( $attachment->ID, $args, true );
                     if(0 === $i%2) echo '<li class="' . $class . ' data-design-thumbnail"><a href="'.esc_url( get_permalink() ).'">';

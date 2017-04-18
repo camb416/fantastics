@@ -172,6 +172,10 @@ $pageheight = 243;
                         if("fmag_story" === $postType){
                             echo '<div class="fmag_story wrapper">';
 
+
+                            $pagewidth = 229;
+                            $pageheight = 296;
+
                             get_template_part( 'template-parts/content', get_post_type() );
 
                             echo "</div><!-- wrapper -->";
