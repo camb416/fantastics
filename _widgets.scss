@@ -8,25 +8,21 @@
 // 5. Search
 // 6. Latest Stories
 
-
-
 ////////////////////////////////////
 // 1. General Widget Stuff
 ////////////////////////////////////
 
-aside{
+aside {
 
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 0;
+      padding: 0;
 
-ul{
-  margin:0;
-  padding:0;
-  li{
-    margin:0;
-    padding:0;
-
+    }
   }
-}
-
 
   /*
   ul.covers{
@@ -81,36 +77,32 @@ ul{
 
 }
 
-div#secondary{
- // border-top:1px solid silver;
+div#secondary {
+  // border-top:1px solid silver;
 }
 
 ////////////////////////////////////
-
 
 ////////////////////////////////////
 // 2. Index Intermission (Ad container)
 ////////////////////////////////////
 
-div.intermission-outer{
-  background-image:url(images/bowtie.svg);
+div.intermission-outer {
+  background-image: url(images/bowtie.svg);
   background-position-y: 90px;
   background-repeat-y: no-repeat;
   background-position-x: center;
 
-  div.intermission{
-    margin:0 auto 5px auto;
-//    @media screen and (min-width: $break-large) {
-      max-width:100%;
-      width:1280px;
-//    }
+  div.intermission {
+    margin: 0 auto 5px auto;
+    //    @media screen and (min-width: $break-large) {
+    max-width: 100%;
+    width: 1280px;
+    //    }
 
-
-
-    clear:both;
-    height:550px;
+    clear: both;
+    height: 550px;
     padding: 30px 0 0 0;
-
 
   }
 
@@ -118,27 +110,26 @@ div.intermission-outer{
 
 ////////////////////////////////////
 
-
 ////////////////////////////////////
 // 3. Latest Focus Cover (Fantastics Focus)
 ////////////////////////////////////
 
-aside.widget_latest_focuscover{
- // width:330px;
+aside.widget_latest_focuscover {
+  // width:330px;
   @media screen and (max-width: $break-large) {
-    margin:0 auto;
-    float:none;
+    margin: 0 auto;
+    float: none;
   }
 
-  ul{
+  ul {
     margin: 0;
     background: #DDD;
     padding: 65px;
     margin: 10px;
 
-    li{
+    li {
       list-style: none;
-      margin:0;
+      margin: 0;
 
       //// the little jump
 
@@ -149,10 +140,9 @@ aside.widget_latest_focuscover{
         -webkit-transform: translateY(0);
         transform: translateY(0);
 
-
       }
-      &:hover{
-        img{
+      &:hover {
+        img {
           -webkit-transform: translateY(-4px);
           transform: translateY(-4px);
           outline-offset: -1px;
@@ -167,72 +157,64 @@ aside.widget_latest_focuscover{
 
   }
 
-
 }
 
-.index-side{
+.index-side {
   .widget_text {
     text-align: center;
-    .textwidget{
-      text-align:left;
+    .textwidget {
+      text-align: left;
     }
   }
 }
 
-
-
-
-
 ////////////////////////////////////
-
 
 ////////////////////////////////////
 // 4. Tumblr (Fantastics Flash)
 ////////////////////////////////////
 
-aside.Tumblr{
-  width:330px;
-  margin:0 auto;
+aside.Tumblr {
+  width: 330px;
+  margin: 0 auto;
 
   // background:#EFEFEF;
-  background-image:url(images/tumblrBg.png);
-  background-size:330px ;
+  background-image: url(images/tumblrBg.png);
+  background-size: 330px;
   @media screen and (max-width: $break-large) {
-    display:none;
+    display: none;
   }
 
-  ul{
-    height:2185px;
-    overflow:scroll;
-    margin:0;
+  ul {
+    height: 2185px;
+    overflow: scroll;
+    margin: 0;
     padding: 0 30px;
     // border-bottom: 3px solid #000;
 
+    li {
 
-    li{
-
-      overflow:hidden;
-      text-align:left;
-      list-style:none;
+      overflow: hidden;
+      text-align: left;
+      list-style: none;
       // float:left;
-       display:table;
+      display: table;
       margin: 0 auto;
 
-
-      img{
-       // max-height:400px;
-        width:100%;
+      img {
+        // max-height:400px;
+        width: 100%;
       }
 
-      p{
+      p {
         font-weight: bold;
         font-size: 80%;
         margin: 0 10px 10px 0;
-        display:table-caption;
-        caption-side:bottom;
+        display: table-caption;
+        caption-side: bottom;
 
-        a.tumblr_link{
-          display:none;
+        a.tumblr_link {
+          display: none;
         }
 
       }
@@ -242,9 +224,9 @@ aside.Tumblr{
   }
 
   h2.widget-title {
-    margin:0 auto;
-    padding:0;
-    width:323px;
+    margin: 0 auto;
+    padding: 0;
+    width: 323px;
 
     //TODO: place this file locally in project
     background: url(http://fantasticsmag.com/sites/all/themes/fmag2014/images/focus-flash-bold.png);
@@ -264,119 +246,117 @@ aside.Tumblr{
   }
 
 }
-////////////////////////////////////
 
+////////////////////////////////////
 
 ////////////////////////////////////
 // 5. SEARCH Box (footer)
 ////////////////////////////////////
 
-aside.widget_search{
+aside.widget_search {
 
-  padding-top:20px;
-  clear:both;
+  padding-top: 20px;
+  clear: both;
 }
 
 ////////////////////////////////////
-
 
 ////////////////////////////////////
 // 6. Latest Stories (footer)
 ////////////////////////////////////
 
-aside.widget_latest_stories{
+aside.widget_latest_stories {
 
   @media screen and (max-width: $break-small) {
-    width:auto;
+    width: auto;
   }
-  width:856px;
-  max-width:100%;
+  width: 856px;
+  max-width: 100%;
 
   margin: 60px auto 0 auto !important;
-  ul{
-    li{
-      display:inline-block;
-      float:left;
+  ul {
+    li {
+      display: inline-block;
+      float: left;
     }
   }
-  ul.stories{
-    overflow:hidden;
-    li.story{
-      width:204px;
-      height:132px;
-      float:left;
+  ul.stories {
+    overflow: hidden;
+    li.story {
+      width: 204px;
+      height: 132px;
+      float: left;
       list-style: none;
-      margin-right:10px;
+      margin-right: 10px;
       border: 4px solid $bgcolor;
-      overflow:hidden;
-      position:relative;
+      overflow: hidden;
+      position: relative;
 
       @media screen and (max-width: $break-small) {
-        width:50%;
-        margin:0;
+        width: 50%;
+        margin: 0;
       }
 
-      &.active{
-        border:4px solid black;
+      &.active {
+        border: 4px solid black;
       }
-      &:hover{
-        cursor:pointer;
-        border:4px solid #000;
-        &.active{
-          border:4px solid black;
+      &:hover {
+        cursor: pointer;
+        border: 4px solid #000;
+        &.active {
+          border: 4px solid black;
         }
-        img{
-          width:118px;
-          height:153px;
+        img {
+          width: 118px;
+          height: 153px;
 
-
-          top:-10% !important;
-          left:50% !important;
-          &:first-of-type{
-            left:-10% !important;
+          top: -10% !important;
+          left: 50% !important;
+          &:first-of-type {
+            left: -10% !important;
           }
 
         }
       }
 
-      img{
+      img {
 
         -webkit-transition: .3s ease-in-out;
         -moz-transition: .3s ease-in-out;
         -o-transition: .3s ease-in-out;
 
-        width:98px;
-        height:124px;
-        margin:0;
-        padding:0;
-        position:absolute;
-        top:0 ;
-        left:96px ;
+        width: 98px;
+        height: 124px;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        left: 96px;
 
         @media screen and (max-width: $break-small) {
-          width:50%;
-          margin:0;
-          height:auto;
-          left:50%;
+          width: 50%;
+          margin: 0;
+          height: auto;
+          left: 50%;
         }
 
-        &:first-of-type{
-          top:0px ;
-          left:0px;
+        &:first-of-type {
+          top: 0px;
+          left: 0px;
         }
 
       }
     }
   }
 }
-////////////////////////////////////
 
+////////////////////////////////////
 
 ////////////////////////////////////
 // 7. Index Sides (Tall towers)
 ////////////////////////////////////
 
-.index-side{
+.index-side {
   margin: 0;
   width: 330px;
   overflow: hidden;
@@ -384,53 +364,51 @@ aside.widget_latest_stories{
   position: relative;
 
   @media screen and (max-width: $break-large) {
-    margin:0 auto;
-    float:none;
+    margin: 0 auto;
+    float: none;
   }
 
-
-  &:hover{
-    p.caption{
-      visibility:visible;
+  &:hover {
+    p.caption {
+      visibility: visible;
     }
+    .also {
+
+      filter: none;
+      border: 0px solid #DDD;
+
+    }
+  }
+  /*
     .also{
+      position:relative;
+      display:block;
+      //height:950px;
+      width:100%;
+      overflow:hidden;
+      margin:0 auto 0 auto;
+      border:50px solid #DDD;
+      -webkit-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+      filter: grayscale(100%);
 
-        filter:none;
-        border:0px solid #DDD;
+
+
+    img{
+      -webkit-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+     // max-width:none;
+      //position:absolute;
+      // left:-200%;
+      //margin-top:-50px;
+      //height:100%;
+
+     // opacity:0.5;
+
+
 
 
     }
-  }
-/*
-  .also{
-    position:relative;
-    display:block;
-    //height:950px;
-    width:100%;
-    overflow:hidden;
-    margin:0 auto 0 auto;
-    border:50px solid #DDD;
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-    filter: grayscale(100%);
-
-
-
-  img{
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-   // max-width:none;
-    //position:absolute;
-    // left:-200%;
-    //margin-top:-50px;
-    //height:100%;
-
-   // opacity:0.5;
-
-
-
-
-  }
 
 
 
@@ -438,8 +416,8 @@ aside.widget_latest_stories{
 
 
 
-  }
-  */
+    }
+    */
   /*
   p.caption{
     text-align:center;
@@ -475,138 +453,134 @@ aside.widget_latest_stories{
   */
 }
 
-
 ////////////////////////////////////
 
-.textwidget{
-  p{
+.textwidget {
+  p {
     letter-spacing: 0.02rem;
-    padding:0 10px 0 10px;
-    font-size:0.8rem;
+    padding: 0 10px 0 10px;
+    font-size: 0.8rem;
   }
 
 }
-.widget_latest_covers{
+
+.widget_latest_covers {
 
   @media screen and (max-width: $break-medium) {
-    display:none;
+    display: none;
   }
 
-  margin:0;
-  overflow:hidden;
-  text-align:center;
-  padding:0;
-li{
-  overflow:hidden;
-  //img {
-  //
-  //  -webkit-transition: all .2s ease-in-out;
-  //  transition: all .2s ease-in-out;
-  //  -webkit-transform: translateY(0);
-  //  transform: translateY(0);
-  //  opacity:0.7;
-  //
-  //}
-  //&:hover{
-  //  img{
-  //    -webkit-transform: translateY(50px);
-  //    transform: translateY(50px);
-  //    outline-offset: -1px;
-  //    color: inherit;
-  //    opacity:1.0;
-  //
-  //  }
-  //}
+  margin: 0;
+  overflow: hidden;
+  text-align: center;
+  padding: 0;
+  li {
+    overflow: hidden;
+    //img {
+    //
+    //  -webkit-transition: all .2s ease-in-out;
+    //  transition: all .2s ease-in-out;
+    //  -webkit-transform: translateY(0);
+    //  transform: translateY(0);
+    //  opacity:0.7;
+    //
+    //}
+    //&:hover{
+    //  img{
+    //    -webkit-transform: translateY(50px);
+    //    transform: translateY(50px);
+    //    outline-offset: -1px;
+    //    color: inherit;
+    //    opacity:1.0;
+    //
+    //  }
+    //}
+
+  }
 
 }
 
-}
-
-.primary{
-  .footerlogo{
-    float:left;
+.primary {
+  .footerlogo {
+    float: left;
     width: 120px;
     height: 24px;
     background-size: 120px 24px;
-    margin-bottom:0px;
+    margin-bottom: 0px;
 
   }
 }
 
-.menu-under-front-cover-menu-container{
-  float:right;
-  ul{
+.menu-under-front-cover-menu-container {
+  float: right;
+  ul {
     list-style: none;
-    margin:0;
-    padding:0;
-    li{
-      display:inline;
-      padding:0px 10px;
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline;
+      padding: 0px 10px;
     }
   }
 }
-.dazed{
-  border:1px solid #000;
-padding-top:20px;
-  min-height:590px;
 
-  &.widget_latest_covers{
-    min-height:570px;
+.dazed {
+  border: 1px solid #000;
+  padding-top: 20px;
+  min-height: 590px;
+
+  &.widget_latest_covers {
+    min-height: 570px;
   }
 
-  img{
+  img {
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
-    padding:30px;
-    opacity:0.7;
-    &:hover{
-      padding:0;
-      opacity:1;
+    padding: 30px;
+    opacity: 0.7;
+    &:hover {
+      padding: 0;
+      opacity: 1;
     }
   }
-  h2{
+  h2 {
     font-size: 3rem;
-    line-height:3rem;
-    text-align:right;
-    color:#000;
-    text-align:center;
+    line-height: 3rem;
+    text-align: right;
+    color: #000;
+    text-align: center;
 
     @include cgef();
-    margin:0;
-    padding:0.5rem 0.5rem 0 0;
+    margin: 0;
+    padding: 0.5rem 0.5rem 0 0;
   }
 
-  p.caption{
-    text-align:center;
-    bottom:0px;
-    color:#333;
-    font-size:0.8rem;
+  p.caption {
+    text-align: center;
+    bottom: 0px;
+    color: #333;
+    font-size: 0.8rem;
     margin: 0 0 1rem 0;
 
+    padding: 0;
+    width: 100%;
 
-    padding:0;
-    width:100%;
+    position: relative;
 
-    position:relative;
-
-
-
-
-    a{
-      color:#000;
+    a {
+      color: #000;
       // border-bottom: 5px solid #000;
-      font-style:normal !important;
-      text-transform:uppercase;
+      font-style: normal !important;
+      text-transform: uppercase;
 
-      &:hover{
-        border-bottom-color:#68F;
+      &:hover {
+        border-bottom-color: #68F;
         color: #68F;
-        text-decoration:none;
-        background:none;
+        text-decoration: none;
+        background: none;
       }
     }
   }
-
 
 }
 
@@ -624,48 +598,45 @@ padding-top:20px;
 
  */
 
-
-
-
-.instagram{
-  max-width:1130px;
-  margin:0 auto;
-  #sbi_load{
-    padding-top:0 !important;
+.instagram {
+  max-width: 1130px;
+  margin: 0 auto;
+  #sbi_load {
+    padding-top: 0 !important;
   }
-  section{
-    background:#000;
-    overflow:hidden;
-    padding:10px;
-    min-height:100px;
+  section {
+    background: #000;
+    overflow: hidden;
+    padding: 10px;
+    min-height: 100px;
   }
-  h5{
+  h5 {
     color: #fff;
-    font-size:3rem;
-    padding:0;
-    margin:0;
-    font-weight:normal;
+    font-size: 3rem;
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
   }
-  ul{
+  ul {
 
   }
-  li{
+  li {
 
-    letter-spacing:0.1rem;
-    color:#fff;
-    list-style:none;
-    display:inline;
-    margin:0 20px 0 0;
+    letter-spacing: 0.1rem;
+    color: #fff;
+    list-style: none;
+    display: inline;
+    margin: 0 20px 0 0;
 
-    a{
-      top:-0.25rem;
-      position:relative;
-      display:inline-block;
+    a {
+      top: -0.25rem;
+      position: relative;
+      display: inline-block;
       font-size: 1.0rem;
-      color:#fff;
-      text-transform:uppercase;
-      i{
-        margin-right:0.2em;
+      color: #fff;
+      text-transform: uppercase;
+      i {
+        margin-right: 0.2em;
       }
     }
   }
@@ -674,33 +645,33 @@ padding-top:20px;
 
 // only show 4 items on mobile
 @media screen and (max-width: $break-small) {
-  .instagram{
-    border:1px solid #000;
-    padding:10px;
+  .instagram {
+    border: 1px solid #000;
+    padding: 10px;
     width: 330px;
-    margin:20px auto;
+    margin: 20px auto;
 
-    section{
+    section {
       background: #fff;
       overflow: hidden;
       padding: 10px;
       min-height: 100px;
-      h5, a{
+      h5, a {
         color: #000;
       }
-      a{
-        margin:10px;
+      a {
+        margin: 10px;
       }
 
     }
-    hr{
-      display:none;
+    hr {
+      display: none;
     }
 
   }
   .sbi_item {
 
-    overflow:hidden;
+    overflow: hidden;
     &:nth-child(n+4) {
       display: none !important;
     }

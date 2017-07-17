@@ -1,80 +1,77 @@
-body.search-no-results{
-  main{
-    width:1200px;
-    margin:0 auto;
+body.search-no-results {
+  main {
+    width: 1200px;
+    margin: 0 auto;
   }
-  .page-content{
-    padding:40px 0;
-    text-align:center;
+  .page-content {
+    padding: 40px 0;
+    text-align: center;
   }
 
 }
 
-body.search{
+body.search {
 
-  header{
+  header {
 
   }
 
-  div.results{
+  div.results {
 
-    clear:both;
+    clear: both;
 
-    h2{
-      text-align:left;
-      font-size:90%;
-      margin-bottom:0;
-      text-transform:uppercase;
-      letter-spacing:0.1em;
+    h2 {
+      text-align: left;
+      font-size: 90%;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
       // margin:0 40px;
       // margin: 0 40px;
-      border-bottom:1px solid silver;
+      border-bottom: 1px solid silver;
     }
 
-    max-width:1280px;
+    max-width: 1280px;
     margin: 0 auto;
 
-  &.searchtype-story{
-    h2{
+    &.searchtype-story {
+      h2 {
 
-      max-width:900px;
-      padding-top: 1rem;
+        max-width: 900px;
+        padding-top: 1rem;
+        margin: 0 auto;
+
+      }
+    }
+    &.searchtype-cover {
+      overflow: hidden;
+      article {
+
+        margin: 10px;
+        width: 350px;
+        float: left;
+
+        max-width: 45%;
+
+      }
+
       margin: 0 auto;
+      @media screen and (min-width: $break-large) {
+        // big
+        width: 1120px;
+      }
+      @media screen and (max-width: $break-large) {
+        width: 760px;
 
+      }
+      @media screen and (max-width: $break-small) {
+
+      }
+
+    }
+    nav {
+      clear: both;
     }
   }
-  &.searchtype-cover{
-    overflow:hidden;
-    article{
-
-      margin:10px;
-      width:350px;
-      float:left;
-
-
-      max-width:45%;
-
-    }
-
-    margin:0 auto;
-    @media screen and (min-width: $break-large) {
-      // big
-      width:1120px;
-    }
-    @media screen and (max-width: $break-large) {
-      width:760px;
-
-    }
-    @media screen and (max-width: $break-small) {
-
-    }
-
-  }
-    nav{
-      clear:both;
-    }
-  }
-
-
 
 }

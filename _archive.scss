@@ -2,120 +2,114 @@
 // archives pages
 //
 
+body.archive, body.search, body.paged {
 
-
-body.archive, body.search, body.paged{
-
-  a.frontlink{
-    float:left;
-    display:inline;
+  a.frontlink {
+    float: left;
+    display: inline;
     padding: 50px 20px 0 10px;
   }
 
-  .coverslug{
-    width:200px;
-    position:absolute;
-    z-index:10;
-    top:0px;
-    left:20px;
+  .coverslug {
+    width: 200px;
+    position: absolute;
+    z-index: 10;
+    top: 0px;
+    left: 20px;
 
     @media screen and (max-width: $break-small) {
-      width:25%;
+      width: 25%;
     }
 
   }
 
-header.page-header{
-  margin: 0 auto;
-  position:relative;
-  width: 1200px;
-  position:relative;
-  clear:none;
-  max-width:100%;
+  header.page-header {
+    margin: 0 auto;
+    position: relative;
+    width: 1200px;
+    position: relative;
+    clear: none;
+    max-width: 100%;
 
+    .category-identifier {
+      padding: 110px 0 0 240px;
+      text-transform: uppercase;
+      letter-spacing: 0.3rem;
+      font-size: 0.6rem;
 
+      @media screen and (max-width: $break-small) {
+        padding: 20px 0 0 120px;
+      }
 
-  .category-identifier{
-    padding:110px 0 0 240px;
-    text-transform:uppercase;
-    letter-spacing:0.3rem;
-    font-size:0.6rem;
-
-    @media screen and (max-width: $break-small) {
-      padding:20px 0 0 120px;
     }
 
-  }
+    h1.page-title {
 
+      margin: 0;
+      padding: 0 0 0 240px;
+      text-transform: capitalize;
+      color: #000;
+      border-bottom: 100px solid #000;
+      // background: #000;
+      // max-width: 1280px;
+      @include cgef();
+      font-size: 3rem;
+      letter-spacing: -.1rem;
 
-  h1.page-title{
+      @media screen and (max-width: $break-small) {
+        padding: 0 0 0 120px;
+      }
 
-    margin:0;
-    padding:0 0 0 240px;
-    text-transform:capitalize;
-    color: #000;
-    border-bottom: 100px solid #000;
-    // background: #000;
-    // max-width: 1280px;
-    @include cgef();
-    font-size: 3rem;
-    letter-spacing: -.1rem;
-
-    @media screen and (max-width: $break-small) {
-      padding:0 0 0 120px;
+      //&:before{
+      //
+      //  background-image: url("images/masthead.png");
+      //  background-size: auto 100%;
+      //  display: inline-block;
+      //  width: 10.5rem;
+      //  height: 2rem;
+      //  background-repeat: no-repeat;
+      //  background-position-y: 0.2rem;
+      //  opacity: 0.9;
+      //  content: "";
+      //  margin-top: 0.4rem;
+      //
+      //}
     }
-
-
-    //&:before{
-    //
-    //  background-image: url("images/masthead.png");
-    //  background-size: auto 100%;
-    //  display: inline-block;
-    //  width: 10.5rem;
-    //  height: 2rem;
-    //  background-repeat: no-repeat;
-    //  background-position-y: 0.2rem;
-    //  opacity: 0.9;
-    //  content: "";
-    //  margin-top: 0.4rem;
-    //
-    //}
   }
-}
 
-  div.page-content{
-    width:1280px;
+  div.page-content {
+    width: 1280px;
     margin: 0 auto 30px auto;
 
   }
 
-  div.archive-stories{
-      margin: 0 auto;
+  div.archive-stories {
+    margin: 0 auto;
 
-    max-width:1187px;
+    max-width: 1187px;
 
-    article.fmag_cover{
-      width:375px;
+    article.fmag_cover {
+      width: 375px;
       margin: 0px;
-      overflow:hidden;
-      float:left;
+      overflow: hidden;
+      float: left;
       @media screen and (max-width: $break-small) {
         width: 100%;
         margin: 0;
-        pading:0;
-        height:auto;
+        pading: 0;
+        height: auto;
       }
-      img{
-        display:block;
+      img {
+        display: block;
       }
 
     }
-    div.fmag_story{
-      width:375px;
+    div.fmag_story {
+      width: 375px;
       margin: 10px;
-      overflow:hidden;
-      float:left;
-      height:360px;
+      overflow: hidden;
+      float: left;
+      height: 360px;
 
       @media screen and (max-width: $break-small) {
         width: 100%;
@@ -123,83 +117,79 @@ header.page-header{
       }
 
     }
-    nav{
-      width:100%;
+    nav {
+      width: 100%;
       margin: 0 auto;
     }
   }
 
-  div.archive-sidebar{
+  div.archive-sidebar {
 
     @media screen and (max-width: $break-small) {
-      display:none;
+      display: none;
     }
 
     // background:#fff;
-    width:300px;
+    width: 300px;
     // height:5280px;
-    float:left;
-    margin-left:150px;
-    z-index:-1;
+    float: left;
+    margin-left: 150px;
+    z-index: -1;
 
+    .widget_latest_covers {
 
-    .widget_latest_covers{
-
-      h2{
-        display:none;
+      h2 {
+        display: none;
       }
       margin: 0;
       padding: 0;
-      ul.covers{
-        margin:10px;
+      ul.covers {
+        margin: 10px;
 
-        li{
-          width:400px;
-          float:left;
-          margin:0;
-          padding:0;
-          height:448px;
-          overflow:hidden;
-          img{
-            width:400px;
-            height:518px;
-            max-width:none;
-            position:relative;
-            top:-70px;
-            left:0;
+        li {
+          width: 400px;
+          float: left;
+          margin: 0;
+          padding: 0;
+          height: 448px;
+          overflow: hidden;
+          img {
+            width: 400px;
+            height: 518px;
+            max-width: none;
+            position: relative;
+            top: -70px;
+            left: 0;
             -webkit-filter: grayscale(100%);
             filter: grayscale(100%);
-            opacity:0.3;
-            &:hover{
+            opacity: 0.3;
+            &:hover {
               // -webkit-filter: grayscale(0%);
               // filter: grayscale(0%);
               // opacity:1.0;
 
             }
 
-
           }
         }
       }
     }
   }
-  div.archive-stories{
+  div.archive-stories {
     //width:750px;
 
-
   }
-  div.archive-wrap{
-    clear:both;
+  div.archive-wrap {
+    clear: both;
 
-    position:relative;
-    overflow:hidden;
+    position: relative;
+    overflow: hidden;
   }
 
-
-  div.fmag_story{
-    background:none !important;
-    article{
-      width:750px;
+  div.fmag_story {
+    background: none !important;
+    article {
+      width: 750px;
     }
 
   }
