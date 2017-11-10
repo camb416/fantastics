@@ -74,6 +74,8 @@
                 $credits = get_post_meta($id, 'fmag_credits_block', true);
                 $tempvar = the_content('', true, '');
 
+                if($is_single_col) echo '<hr class="content-closer" />';
+
                 //wp_get_post_terms()
 
                 ?>

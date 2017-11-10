@@ -217,6 +217,38 @@ body.single-fmag_story {
     &.singlecol {
       max-width: 800px;
 
+      h1, h3{
+        @include cgef();
+      }
+      h1{
+        font-size:3rem;
+        text-align:center;
+      }
+      h3{
+        font-size:2rem;
+        border:1px solid #CCC;
+        padding:10px;
+
+      }
+      blockquote{
+        border-left:15px solid #DDD;
+        margin:30px 30px 30px 40px;
+        font-size:2rem;
+        @include cgef();
+        color:#AAA;
+         text-transform:uppercase;
+        //letter-spacing:0.2rem;
+        line-height:2rem;
+      }
+      div.tags{
+        margin-top:40px;
+      }
+      hr.content-closer{
+        margin: 60px auto 40px auto;
+      }
+
+
+
       #rightcol, #leftcol {
         max-width: none;
         clear: both;
