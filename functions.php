@@ -93,7 +93,7 @@ add_action( 'after_setup_theme', 'fantastics_setup' );
  * @global int $content_width
  */
 function fantastics_content_width() {
-    $GLOBALS['content_width'] = apply_filters( 'fantastics_content_width', 640 );
+    $GLOBALS['content_width'] = apply_filters( 'fantastics_content_width', 850 );
 }
 add_action( 'after_setup_theme', 'fantastics_content_width', 0 );
 
@@ -437,3 +437,5 @@ function my_remove_menu_pages() {
     remove_menu_page('tools.php');
     remove_menu_page('edit-comments.php');
 }
+
+

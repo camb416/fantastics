@@ -214,6 +214,39 @@ body.single-fmag_story {
     margin: 20px auto 0 auto;
     overflow: hidden;
 
+    &.singlecol {
+      max-width: 800px;
+
+      #rightcol, #leftcol {
+        max-width: none;
+        clear: both;
+        float: none;
+        width: 100%;
+
+        .tinyspreads {
+
+          display: none;
+
+        }
+
+        div.gallery {
+          figure {
+            margin: 0;
+            div.gallery-icon {
+              margin: 10px;
+            }
+            figcaption {
+              font-size: 50%;
+              margin: 20px;
+              text-transform: uppercase;
+              letter-spacing: 0.1rem;
+            }
+          }
+        }
+      }
+
+    }
+
     h2 {
       margin: 10px 0;
       text-transform: uppercase;
