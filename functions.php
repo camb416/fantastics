@@ -173,6 +173,7 @@ function fantastics_get_posts( $query ) {
 function add_story_metaboxes() {
 
     add_meta_box('fmag_legacy_id', 'Legacy Drupal Node ID', 'fmag_legacy_id', 'fmag_story', 'side', 'default');
+    add_meta_box('fmag_layout', 'Story Layout', 'fmag_layout', 'fmag_story', 'side', 'default');
 
 }
 // Add the Events Meta Boxes
@@ -183,6 +184,55 @@ function add_cover_metaboxes() {
     add_meta_box('fmag_legacy_storyref_id', 'Legacy Drupal Story ID', 'fmag_legacy_storyref_id', 'fmag_cover', 'side', 'default');
 
 
+}
+
+function fmag_layout($post){
+    global $post;
+    wp_nonce_field( basename( __FILE__ ), 'fmag_layout_metabox_nonce' );
+    ?>
+    <p>
+        <label for="my_meta_box_post_type">Columns: </label>
+        <select name='fmag_layout' id='fmag_layout'>
+                <option value="2"  >2</option>
+            <option value="1" <?php if(get_post_meta( $post->ID, 'kvkoolitus-start', true ) == "2") echo "selected=\"selected\""; ?> >1</option>
+        </select>
+    </p>
+    <?php
+}
+add_action('save_post', 'fmag_layout_save_meta', 10,2);
+
+function fmag_layout_save_meta($post_id, $post){
+    /* Verify the nonce before proceeding. */
+    if ( !isset( $_POST['fmag_layout_metabox_nonce'] ) || !wp_verify_nonce( $_POST['fmag_layout_metabox_nonce'], basename( __FILE__ ) ) )
+        return $post_id;
+
+    /* Get the post type object. */
+    $post_type = get_post_type_object( $post->post_type );
+
+    /* Check if the current user has permission to edit the post. */
+    if ( !current_user_can( $post_type->cap->edit_post, $post_id ) )
+        return $post_id;
+
+    /* Get the posted data and sanitize it for use as an HTML class. */
+    $new_meta_value = ( isset( $_POST['fmag_layout'] ) ? sanitize_html_class( $_POST['fmag_layout'] ) : '' );
+
+    /* Get the meta key. */
+    $meta_key = 'fmag_layout';
+
+    /* Get the meta value of the custom field key. */
+    $meta_value = get_post_meta( $post_id, $meta_key, true );
+
+    /* If a new meta value was added and there was no previous value, add it. */
+    if ( $new_meta_value && '' == $meta_value )
+        add_post_meta( $post_id, $meta_key, $new_meta_value, true );
+
+    /* If the new meta value does not match the old value, update it. */
+    elseif ( $new_meta_value && $new_meta_value != $meta_value )
+        update_post_meta( $post_id, $meta_key, $new_meta_value );
+
+    /* If there is no new meta value but an old value exists, delete it. */
+    elseif ( '' == $new_meta_value && $meta_value )
+        delete_post_meta( $post_id, $meta_key, $meta_value );
 }
 
 // The Event Location Metabox
