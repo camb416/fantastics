@@ -193,8 +193,8 @@ function fmag_layout($post){
     <p>
         <label for="my_meta_box_post_type">Columns: </label>
         <select name='fmag_layout' id='fmag_layout'>
-                <option value="2"  >2</option>
-            <option value="1" <?php if(get_post_meta( $post->ID, 'kvkoolitus-start', true ) == "2") echo "selected=\"selected\""; ?> >1</option>
+                <option value="2" <?php if(get_post_meta( $post->ID, 'fmag_layout', true ) == "2") echo "selected=\"selected\""; ?> >2</option>
+            <option value="1" <?php if(get_post_meta( $post->ID, 'fmag_layout', true ) == "1") echo "selected=\"selected\""; ?> >1</option>
         </select>
     </p>
     <?php
