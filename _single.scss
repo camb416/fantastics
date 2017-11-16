@@ -214,7 +214,7 @@ body.single-fmag_story {
   }
 
   /* Hide all comment stuff */
-  .jp-carousel-comment-form-container {
+  #jp-carousel-comment-form-container {
     display: none !important;
   }
 
@@ -225,7 +225,7 @@ body.single-fmag_story {
   .jp-carousel-comments {
     display: none !important;
   }
-  
+
   // layout
   div#bottomcols {
 
