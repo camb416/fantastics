@@ -225,6 +225,17 @@ body.single-fmag_story {
   .jp-carousel-comments {
     display: none !important;
   }
+  .jp-carousel-left-column-wrapper{
+    display:none;
+  }
+
+  .jp-carousel-photo-info h2{
+    font-family: 'News Cycle', sans-serif !important;
+    font-size: 50% !important;
+    margin: 20px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1rem !important;
+  }
 
   // layout
   div#bottomcols {
