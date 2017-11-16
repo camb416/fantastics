@@ -273,8 +273,9 @@ body.single-fmag_story {
       }
       blockquote{
         border-left:15px solid #DDD;
-        margin:30px 30px 30px 40px;
+        margin: 2rem 2rem 2rem 2.5rem;
         font-size:2rem;
+        padding-left:1rem;
         @include cgef();
         color:#AAA;
          text-transform:uppercase;
