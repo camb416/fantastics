@@ -206,6 +206,26 @@ body.single-fmag_story {
     margin: 20px;
   }
 
+
+  // jetpack carousel fixes
+  /* Dont display any meta info */
+  .jp-carousel-image-meta {
+    display: none;
+  }
+
+  /* Hide all comment stuff */
+  .jp-carousel-comment-form-container {
+    display: none !important;
+  }
+
+  #jp-carousel-comments-loading {
+    display: none !important;
+  }
+
+  .jp-carousel-comments {
+    display: none !important;
+  }
+  
   // layout
   div#bottomcols {
 
