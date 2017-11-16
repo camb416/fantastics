@@ -217,7 +217,7 @@ body.single-fmag_story {
     &.singlecol {
       max-width: 800px;
 
-      h1, h3{
+      h1{
         @include cgef();
       }
       h1{
@@ -225,10 +225,16 @@ body.single-fmag_story {
         text-align:center;
       }
       h3{
-        font-size:2rem;
-        border:1px solid #CCC;
-        padding:10px;
+        font-size:1.5rem;
 
+        font-weight:bold;
+        letter-spacing:.1rem;
+        padding:0 0 0 0rem;
+        margin:0.5rem;
+
+      }
+      p{
+       // line-height:1.4rem;
       }
       figure.wp-caption{
         max-width:720px;
