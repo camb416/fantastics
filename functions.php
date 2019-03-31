@@ -438,4 +438,18 @@ function my_remove_menu_pages() {
     remove_menu_page('edit-comments.php');
 }
 
+// ---------------------------
+// RIP Fantasticsmag 2005–2019
+// Sleep well
+// ---------------------------
 
+add_action( 'template_redirect', 'redirect_non_logged_users_to_specific_page' );
+
+function redirect_non_logged_users_to_specific_page() {
+
+    if ( !is_user_logged_in() && $_SERVER['PHP_SELF'] != '/wp-admin/admin-ajax.php' ) {
+
+        wp_redirect( 'http://www.usefuldynamics.com' );
+        exit;
+    }
+}
