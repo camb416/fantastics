@@ -449,7 +449,7 @@ function redirect_non_logged_users_to_specific_page() {
 
     if ( !is_user_logged_in() && $_SERVER['PHP_SELF'] != '/wp-admin/admin-ajax.php' ) {
 
-        wp_redirect( 'http://www.usefuldynamics.com' );
+        wp_redirect( 'http://www.usefuldynamics.com', 301 );
         exit;
     }
 }
